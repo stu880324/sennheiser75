@@ -9,9 +9,4 @@
     <link rel="stylesheet" href="<?= WEB_ROOT ?>fontawesome/css/all.css">
     <!-- 共用CSS樣式 -->
     <link rel="stylesheet" href="./sennheiser75/0_style.css">
-    <!-- 各頁面CSS樣式 -->
-    <link rel="stylesheet" href="<?= WEB_ROOT ?>0_style.css">
-    <title><?= $title ?? '森海塞爾' ?></title>
-
-</head>
-<body>
+  

@@ -1,7 +1,12 @@
 <?php include __DIR__. '/parts/1_config.php'; ?>
 <?php include __DIR__. '/parts/2_html_head.php'; ?>
+        <!-- 請填入各頁面CSS樣式 -->
+        <link rel="stylesheet" href="<?= WEB_ROOT ?>0_style.css">
+<?php include __DIR__. '/parts/2_html_head2.php'; ?>
 <?php include __DIR__. '/parts/3_navbar.php'; ?>
 
+
+<!-- 以下刪除就可以開始編輯 -->
 <div class="container">
     <h2 style="color: red;">Hello！ 請套用此樣版！</h2>
 <br>
@@ -62,6 +67,11 @@
     <a href="" class="a-gold">Book Now</a>
     
 </div>
+<!-- 刪到這裡 -->
+
+
+
+
 
 <?php include __DIR__. '/parts/4_footer.php'; ?>
 <?php include __DIR__. '/parts/5_scripts.php'; ?>
