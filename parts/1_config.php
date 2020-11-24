@@ -6,14 +6,14 @@ define('WEB_ROOT', '/sennheiser75/');
 //  php -S localhost:8000 -t ./
 //define('WEB_ROOT', '/');
 
-if(! isset($_SESSION)){
+if (!isset($_SESSION)) {
     session_start();
 }
 
 $db_host = 'localhost';
-$db_name = 'project57';
-$db_user = 'kim';
-$db_pass = 'adobe30';
+$db_name = 'proj57';
+$db_user = 'root';
+$db_pass = '';
 
 $dsn = "mysql:host={$db_host};dbname={$db_name};charset=utf8";
 $pdo_options = [
@@ -24,4 +24,3 @@ $pdo_options = [
 ];
 
 $pdo = new PDO($dsn, $db_user, $db_pass, $pdo_options);
-
