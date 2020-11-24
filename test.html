@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="0_style1.css">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="bg">
+    <div class="animate wave">
+         <div class="w1"></div>
+         <div class="w2"></div>
+         <div class="w3"></div>
+         <div class="w4"></div>
+    </div>
+     
+    
+</div> 
+
+<div class="container" style="height: 600px;">
+<svg id="mySVG">
+    <path fill="none" stroke="red" stroke-width="3" id="triangle" d="M150 0 L75 200 L225 200 Z"/>
+  </svg>
+ </div>   
+    
+
+
+<div class="container">
+    <div class="row">
+        
+    <div class="col-lg-2">
+        <div class="picture100-wrap  d-flex flex-lg-column justify-content-between">
+            <div class="picture100 mx-auto"><img src="./images/big/product54/picture1.jpg" alt=""></div>
+            <div class="picture100 mx-auto"><img src="./images/big/product54/picture2.jpg" alt=""></div>
+            <div class="picture100 mx-auto"><img src="./images/big/product54/picture3.jpg" alt=""></div>
+            <div class="picture100 mx-auto"><img src="./images/big/product54/picture4.jpg" alt=""></div>
+            <div class="picture100 mx-auto"><img src="./images/big/product54/picture5.jpg" alt=""></div>
+        </div>
+    </div>
+    
+    <div class="col-lg-6">
+        <div  class="demo img-magnifier-container">
+            <img id="myimage" src="./images/big/product54/picture1.jpg" alt="">
+        </div>
+        <!-- <div class="magnifier-glass"></div> -->
+    </div>
+
+
+<div class="container">
+<!-- Rectangular switch -->
+<label class="switch">
+    <input type="checkbox">
+    <span class="slider"></span>
+  </label>
+  
+<!-- Rounded switch -->
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+
+</div>
+
+<div class="container" style="background-color: black;">
+<div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="./images/4_reservation/banner.jpg" alt="">
+      </div>
+      <div class="flip-box-back">
+        <img src="./images/3_productDetail/service4.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt hic numquam neque corrupti nemo deleniti odit, perferendis impedit eum blanditiis laborum sint, quae est. Assumenda ab libero nobis obcaecati nam, dignissimos accusamus repellat veniam error iure sequi. Accusantium minima quae a asperiores delectus, saepe nulla inventore excepturi fuga quaerat rem tempore reprehenderit illo sapiente iusto minus corrupti magni libero molestiae doloribus possimus facere eius neque impedit. Quas nobis omnis a officiis voluptates dolorem? Neque sunt possimus quidem aut laudantium doloremque eveniet, molestias qui, at aperiam quasi obcaecati consectetur accusantium iste ipsum, sed voluptatibus corporis. Rem quia aliquid soluta maiores labore, deleniti totam consequuntur! Sunt excepturi molestias praesentium esse commodi voluptatibus tenetur ducimus asperiores, enim obcaecati consectetur eligendi laudantium non. Expedita iste at sed tempora minima ab nostrum dolor itaque voluptatum corrupti eaque accusantium officiis blanditiis enim laborum veritatis, error libero fugit quam ad assumenda non. Deleniti possimus exercitationem, reprehenderit dolorum, laborum nesciunt dignissimos officiis dicta mollitia laudantium ipsam assumenda eum cumque quo repellendus voluptate quasi nemo doloremque laboriosam? Impedit itaque accusantium perferendis sint tempora ex amet aut? Dolorem ducimus recusandae, deleniti vel soluta veniam, dolorum culpa eum facilis qui tempore, eligendi fugiat! Ab, fugit impedit. Commodi voluptate tempore amet. Libero?
+    </div>
+</div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+<!-- 商品展示功能 -->
+<script>
+    $(".picture100 img").on("click",function(){
+        
+        let imgSrc = $(this).attr("src");
+
+        $(".demo img").attr("src",imgSrc)
+    });
+</script>
+
+
+<!-- 放大鏡功能 -->
+<script>
+   function magnify(imgID, zoom) {
+  var img, glass, w, h, bw;
+  img = document.getElementById(imgID);
+
+  /* Create magnifier glass: */
+  glass = document.createElement("DIV");
+  glass.setAttribute("class", "img-magnifier-glass");
+
+  /* Insert magnifier glass: */
+  img.parentElement.insertBefore(glass, img);
+
+  /* Set background properties for the magnifier glass: */
+  glass.style.backgroundImage = "url('" + img.src + "')";
+  glass.style.backgroundRepeat = "no-repeat";
+  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+  bw = 3;
+  w = glass.offsetWidth / 2;
+  h = glass.offsetHeight / 2;
+
+  /* Execute a function when someone moves the magnifier glass over the image: */
+  glass.addEventListener("mousemove", moveMagnifier);
+  img.addEventListener("mousemove", moveMagnifier);
+
+  /*and also for touch screens:*/
+  glass.addEventListener("touchmove", moveMagnifier);
+  img.addEventListener("touchmove", moveMagnifier);
+  function moveMagnifier(e) {
+    var pos, x, y;
+    /* Prevent any other actions that may occur when moving over the image */
+    e.preventDefault();
+    /* Get the cursor's x and y positions: */
+    pos = getCursorPos(e);
+    x = pos.x;
+    y = pos.y;
+    /* Prevent the magnifier glass from being positioned outside the image: */
+    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+    if (x < w / zoom) {x = w / zoom;}
+    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+    if (y < h / zoom) {y = h / zoom;}
+    /* Set the position of the magnifier glass: */
+    glass.style.left = (x - w) + "px";
+    glass.style.top = (y - h) + "px";
+    /* Display what the magnifier glass "sees": */
+    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+  }
+
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /* Get the x and y positions of the image: */
+    a = img.getBoundingClientRect();
+    /* Calculate the cursor's x and y coordinates, relative to the image: */
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /* Consider any page scrolling: */
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+    
+<script>
+    /* Execute the magnify function: */
+    magnify("myimage", 3);
+    /* Specify the id of the image, and the strength of the magnifier glass: */
+</script>
+
+
+
+<script>
+    // Get the id of the <path> element and the length of <path>
+    var triangle = document.getElementById("triangle");
+    var length = triangle.getTotalLength();
+    
+    // The start position of the drawing
+    triangle.style.strokeDasharray = length;
+    
+    // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+    triangle.style.strokeDashoffset = length;
+    
+    // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+    window.addEventListener("scroll", myFunction);
+    
+    function myFunction() {
+      var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    
+      var draw = length * scrollpercent;
+    
+      // Reverse the drawing (when scrolling upwards)
+      triangle.style.strokeDashoffset = length - draw;
+    }
+    </script>
+
+
+
+
+
+</body>
+</html>

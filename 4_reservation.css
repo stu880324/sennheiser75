@@ -1,0 +1,193 @@
+/* div{
+    border: 1px solid red;
+} */
+
+.body{
+    background-image: url(./images/4_reservation/bgline.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #030101;
+    background-attachment: fixed;
+}
+
+.banner-row{
+    position: relative;
+    /* height: 800px; */
+}
+.turn-back{
+    width: 50px;
+    height: 500px;
+    position: absolute;
+    left: -60px;
+}
+.turn-back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+.turn-next{
+    width: 40px;
+    height:200px;
+    position: absolute;
+    background-color: #d9a26e;
+    right: -40px;
+    top: 40%;
+}
+.number{
+    font-size: 80px;
+    color: #d9a26e;
+}
+.banner-text-area h1{
+    color: #d9a26e;
+}
+.banner-text-area{
+    color: #ffffff;
+}
+.btn-gold{
+    background-color: #d9a26e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+}
+.banner-img-up{
+    width: 100%;
+    height: 60%;
+    padding: 5px;
+}
+.banner-img-up img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner-img-down{
+    width: 100%;
+    height: 40%;
+}
+.banner-img-left{
+    width: 50%;
+    height: 40%;
+    padding: 5px;
+}
+.banner-img-left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner-img-right{
+    width: 50%;
+    height: 40%;
+    padding: 5px;
+}
+.banner-img-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner-number{
+    width: 10%;
+    list-style: none;
+    font-size: 24px;
+    color: #d9a26e;
+}
+.banner-dot-area{
+    width: 80%;
+}
+.banner-dot{
+    width: 20%;
+    height: 3px;
+    list-style: none;
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+這裡編輯大字
+.banner{
+    width: 100%;
+    height: 3000px;
+  
+    /* background-image: url(./images/4_reservation/banner.jpg); */
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* opacity: 0.6; */
+    /* background:rgba(0,0,0,1); */
+    position: relative;
+}
+
+.text-effect{
+    color: #fff;
+    font-family: 'Monoton', cursive;
+    font-size: 90px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.text-effect span{ animation: animate linear 2000ms infinite; }
+.text-effect span:nth-child(1n){ animation-delay: 0s; }
+.text-effect span:nth-child(2n){ animation-delay: 100ms; }
+.text-effect span:nth-child(3n){ animation-delay: 200ms; }
+.text-effect span:nth-child(4n){ animation-delay: 300ms; }
+.text-effect span:nth-child(5n){ animation-delay: 400ms; }
+.text-effect span:nth-child(6n){ animation-delay: 500ms; }
+.text-effect span:nth-child(7n){ animation-delay: 600ms; }
+.text-effect span:nth-child(8n){ animation-delay: 700ms; }
+.text-effect span:nth-child(9n){ animation-delay: 800ms; }
+.text-effect span:nth-child(10n){ animation-delay: 900ms; }
+@keyframes animate{
+    0%{ opacity: 0.3; }
+    100%{
+       opacity:1;
+       text-shadow: 0 0 80px #f80000,0 0 30px #d9a26e,0 0 6px #ffee00;
+    }
+}
+
+@media only screen and (max-width: 460px){  
+    .banner{
+        background-position: top;
+        background-size: contain;
+        height: 500px;
+    }
+    .text-effect{ 
+        font-size: 60px; 
+        top: 100px;
+    }
+}
+
+/* .background{
+    width: 100%;
+    height: 3000px;
+    background: #0C0502; 
+    background-image: url(./images/4_reservation/banner.jpg);
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    position: relative;
+
+} */

@@ -2,7 +2,11 @@
 /* 請務必套用同樣式以維持網頁一致性 */
 
 /* 打開參考線 */
-/* div{border:1px solid turquoise;} */
+/* div{
+    border:1px solid turquoise;
+} */
+
+
 
 /* 此區編輯 btn */
 .cart-icon{
@@ -17,7 +21,7 @@
     font-size: 2rem;
     line-height: 70px;
 }
-.btn-number{
+.btn-quantity{
     border: 1px solid #000000;
     font-size: 0.6rem;
     width: 70px;
@@ -68,16 +72,12 @@
     background-color:#5E5E5E;
     color: #E3B684;
     border: 1px solid #E3B684;
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: lighter;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 .a-gray:hover{
     text-decoration: none;
@@ -92,15 +92,18 @@
     background-color:transparent;
     color: #E3B684;
     border: 1px solid #E3B684;
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: lighter;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
 }
 .a-white:hover{
     text-decoration: none;
     background-color:#E3B684;
-    color: #ffffff;
+    color: #1B1B1B;
     border: 1px solid #E3B684;
 }
 .a-black{
@@ -143,9 +146,48 @@
     transition: 1s;
 }
 
+/* 此區編輯 card */
+.product-card{
+    width: 280px;
+    height: 580px;
+    background-color: #2f2d2c;
+}
+.product-img {
+    width: 280px;
+    height: 375px;
+  }
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+.en {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .ch {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-top: -20px;
+  }
+  .p-price {
+    color: #d9af80;
+    font-size: 18px;
+    text-align: center;
+    /* margin-top: -10px; */
+  }
+  .a-white-div{
+      text-align: center;
+      margin-top: 20px;
+  }
 
 
-/* 此區編輯header */
+
+
+/* 此區編輯navbar */
 
 /* 此區編輯footer */
 footer{
