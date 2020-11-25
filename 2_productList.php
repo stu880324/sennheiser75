@@ -146,7 +146,7 @@
           </div>
 
           <div class="product-img">
-            <img src="images/2_productList/products/product9.jpg" alt="" />
+            <img src="images/small/product9.jpg" alt="" />
           </div>
 
           <div class="product-text">
@@ -172,7 +172,7 @@
           </div>
 
           <div class="product-img">
-            <img src="images/2_productList/products/product1.jpg" alt="" />
+            <img src="images/small/product1.jpg" alt="" />
           </div>
 
           <div class="product-text">
@@ -198,7 +198,7 @@
           </div>
 
           <div class="product-img">
-            <img src="images/2_productList/products/product2.jpg" alt="" />
+            <img src="images/small/product2.jpg" alt="" />
           </div>
 
           <div class="product-text">
@@ -226,7 +226,7 @@
           </div>
 
           <div class="product-img">
-            <img src="images/2_productList/products/product26.jpg" alt="" />
+            <img src="images/small/product26.jpg" alt="" />
           </div>
 
           <div class="product-text">
@@ -251,7 +251,7 @@
           </div>
 
           <div class="product-img">
-            <img src="images/2_productList/products/product33.jpg" alt="" />
+            <img src="images/small/product33.jpg" alt="" />
           </div>
 
           <div class="product-text">
@@ -276,7 +276,7 @@
           </div>
 
           <div class="product-img">
-            <img src="images/2_productList/products/product40.jpg" alt="" />
+            <img src="images/small/product40.jpg" alt="" />
           </div>
 
           <div class="product-text">
