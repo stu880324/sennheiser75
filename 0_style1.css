@@ -768,12 +768,10 @@ header p {
   }
 }
 
-
 /* 此區編輯footer */
-footer{
-    background: #000000;
-    margin-top: 100px;
->>>>>>> 46f437c0ab082163b9baafc105cb7adc8f6c8f41
+footer {
+  background: #000000;
+  margin-top: 100px;
 }
 .footertitle {
   color: #ffffff;
@@ -788,27 +786,16 @@ footer a:hover {
   color: #ffffff;
   text-decoration: none;
 }
-<<<<<<< HEAD
 footer hr {
   margin-top: 100px;
-  margin-bottom: 100px;
-=======
-footer hr{
-    margin-top: 100px;
-    margin-bottom: 10px;
->>>>>>> 46f437c0ab082163b9baafc105cb7adc8f6c8f41
+  margin-bottom: 10px;
 }
 .copyright {
   color: #ffffff;
   font-size: 0.6rem;
 }
-<<<<<<< HEAD
-=======
-.contacticon svg{
-  fill: #E3B684;
+.contacticon svg {
+  fill: #e3b684;
   margin: 10px;
   padding: 5px;
 }
-
-
->>>>>>> 46f437c0ab082163b9baafc105cb7adc8f6c8f41
