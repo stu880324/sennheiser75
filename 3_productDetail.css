@@ -1,0 +1,484 @@
+/* div{
+    border:1px solid khaki;
+} 
+參考線*/
+
+body{
+    transition: 2s;
+}
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: black;
+  }
+  
+  ::selection {
+    color: white;
+    background: black;
+  }
+
+
+
+/* 此區編輯 demo-container */
+.goback{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #c6c6c6;
+}
+.goback a{
+    color:#c6c6c6;
+}
+.goback a:hover{
+    color: #D9A26E;
+    text-decoration: none;
+}
+
+.demo{
+    width: 552px;
+    height: 552px;
+    margin: auto;
+}
+.demo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.picture100{
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid #E5E5E5;
+    overflow: hidden;
+}
+.picture100 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* .picture100-wrap{
+    height: 500px;
+} */
+/* .picture100-wrap img{
+    width: 100%;
+} */
+
+/* 放大鏡 */
+* {box-sizing: border-box;}
+
+.demo {
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 1px solid #1B1412;
+  /* border-radius: 50%; */
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 200px;
+  height: 200px;
+}
+
+
+.intro{
+    /* padding: 50px; */
+    /* margin-top: 50px; */
+}
+
+.intro p{
+    font-weight: lighter;
+}
+.intro p a{
+    color: #000000;
+    text-decoration-line: underline;
+}
+.intro p a:hover{
+    color: #D9A26E;
+}
+
+
+.intro-quantity-area{
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.intro-feature-area{
+    margin-top: 20px;
+}
+.intro-feature{
+    font-size: 0.6rem;
+}
+.btn-buy{
+    width: 200px;
+}
+
+
+
+
+
+/* 此區編輯第一版 detail-container*/
+/* .detail-container{
+    background-color: #242221;
+}
+.detail-area{
+    width: 300px;
+    margin-top: 100px;
+}
+.detail-picture{
+    width: 300px;
+    height: 300px;
+}
+
+.detail-picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.detail-text{
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    
+}
+
+.detail-text h4{
+    color:#D9A26E;
+    margin-top: 40px;
+    font-weight: lighter;
+}
+.detail-text p{
+    color: #E5E5E5;
+    font-weight: lighter;
+} */
+
+/* 此區編輯detail-container */
+.detail-container{
+    margin-top: 50px;
+    background-color:#F8F8F8;
+}
+#tab-demo{ 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 600px;
+}
+.tab-title{
+    /* display:block;  */
+    margin:0;
+    list-style:none;
+    
+}
+.tab-title > li{ 
+    display:inline-block; 
+    /* vertical-align:top; */
+    /* margin:0 -1px -1px 0 ;  */
+    /* border:1px solid red;  */
+    height:50px; 
+    line-height:50px; 
+    /* background:#D9A26E; */
+    padding:0 40px;
+    list-style:none; 
+    /* box-sizing:border-box; */
+}
+.tab-title > li a{ 
+    color: #000000;; 
+    text-decoration:none;
+}
+.tab-title > li.active{ 
+    border-bottom: 3px solid #000000; 
+    /* background:#fff; */
+}
+.tab-inner{ 
+    /* clear:both;  */
+    color:#000000; 
+    /* border:1px #BCBCBC solid; */
+    padding:15px; 
+}
+table{
+    width: 100%;
+}
+tr{
+    border-bottom: 1px dashed #E5E5E5;
+    justify-content: space-around;
+    
+}
+td{
+    padding: 10px 10px;
+}
+.td-right{
+    text-align: right;
+}
+
+
+/* 此區編輯 service-container */
+.service-container{
+   margin-top: 100px;
+}
+/* .service-row{
+    height: 600px;
+ } */
+ .arrow{
+    width: 50px;
+    margin: 0px auto 100px auto;
+    animation: arrow 1s ;
+    animation-iteration-count:infinite;
+    }
+ @keyframes arrow{
+    0%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+ }
+
+.box{
+    width: 0px;
+    height: 0px;
+    margin: 0px auto; 
+}
+.box-show{
+    animation: box 3s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+@keyframes box{
+    0%{
+        width: 0px;
+        height: 0px;
+        border-top: 1px solid #1B1412;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+    }
+    50%{
+        width: 100%;
+        height: 0px;
+        border-top: 1px solid #1B1412;
+        border-left: 1px solid #1B1412;
+        border-right: 1px solid #1B1412;
+        border-bottom: 1px solid transparent;
+    }
+    80%{
+        width: 100%;
+        height: 600px;
+        border-top: 1px solid #1B1412;
+        border-left: 1px solid #1B1412;
+        border-right: 1px solid #1B1412;
+        border-bottom: 1px solid transparent;
+    }    
+    100%{
+        width: 100%;
+        height: 600px;
+        border-top: 1px solid #1B1412;
+        border-left: 1px solid #1B1412;
+        border-right: 1px solid #1B1412;
+        border-bottom: 1px solid #1B1412;
+    }
+}
+.box-title{
+    position: absolute;
+    text-align: center;
+    padding: 0px 60px;
+    background-color: #ffffff;
+    top: -60px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    opacity: 0;
+}
+.box-title p{
+    font-size: 12px;
+    font-weight: lighter;
+}
+.box-title-show{
+    animation: show 0.2s ease-in-out;
+    animation-fill-mode: forwards;
+    /* animation-delay: 3s; */
+}
+
+.line1{
+    width: 300px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    opacity: 0;
+}
+.line1-show{
+    animation: show 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+.service4-text{
+    position: absolute;
+    top: 150px;
+    left: 72%;
+    opacity: 0;
+}
+.service4{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 150px;
+    left: 52%;
+    opacity: 0;
+}
+.service4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.service4:hover{
+    transform: translateY(-50px);
+    transition: 1s;
+}
+.service4-show{
+    animation: show 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.6s;
+}
+.service5-text{
+    position: absolute;
+    top: 100px;
+    left: 12%;
+    opacity: 0;
+}
+.service5{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 100px;
+    left: 20%;
+    opacity: 0;
+}
+.service5 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.service5:hover{
+    transform: translateY(-50px);
+    transition: 1s;
+}
+.service5-show{
+    animation: show 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1.2s;
+}
+.service1-text{
+    position: absolute;
+    top: 500px;
+    left: 58%;
+    opacity: 0;
+}
+.service1{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 220px;
+    left: 40%;
+    opacity: 0;
+}
+.service1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.service1:hover{
+    transform: translateY(50px);
+    transition: 1s;
+}
+.service1-show{
+    animation: show 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+.service2-text{
+    position: absolute;
+    top: 450px;
+    left: 25%;
+    opacity: 0;
+}
+.service2{
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    top: 280px;
+    left: 6%;
+    opacity: 0;
+}
+.service2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.service2:hover{
+    transform: translateY(50px);
+    transition: 1s;
+}
+.service2-show{
+    animation: show 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 2.4s;
+}
+.service3-text{
+    position: absolute;
+    top: 400px;
+    left: 83%;
+    opacity: 0;
+}
+.service3{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 250px;
+    left: 60%;
+    opacity: 0;
+}
+.service3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.service3:hover{
+    transform: translateY(50px);
+    transition: 1s;
+}
+.service3-show{
+    animation: show 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1.8s;
+}
+@keyframes show{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+
+
+
+
+/* 此區編輯 note-container */
+.note-container{
+    margin-top: 100px;
+}
+.note-title{
+    text-align: center;
+    font-size: 12px;
+    font-weight: lighter;
+}
+.note-text{
+    text-align: center;
+    border-left: 1px solid #E5E5E5;
+    margin-bottom: 20px;
+}
+
+
+
+
+

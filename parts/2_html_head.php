@@ -8,5 +8,5 @@
     <link rel="stylesheet" href="<?= WEB_ROOT ?>bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="<?= WEB_ROOT ?>fontawesome/css/all.css">
     <!-- 共用CSS樣式 -->
-    <link rel="stylesheet" href="./sennheiser75/0_style.css">
+    <link rel="stylesheet" href="<?= WEB_ROOT ?>0_style1.css">
   
