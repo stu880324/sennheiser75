@@ -1,6 +1,6 @@
 <?php include __DIR__. '/parts/1_config.php'; ?>
 <?php include __DIR__. '/parts/2_html_head.php'; ?>
-        <!-- 請填入各頁面CSS樣式 -->
+        <!-- 請填入各頁面CSS名稱 -->
         <link rel="stylesheet" href="<?= WEB_ROOT ?>0_style1.css">
 
 <?php include __DIR__. '/parts/2_html_head2.php'; ?>
@@ -87,8 +87,30 @@
 </div>
 
 
+<<<<<<< HEAD
+
+<div class="product-card">
+        
+    <div class="product-img">
+        <img src="images/2_productList/products/product9.jpg" alt="" />
+    </div>
+
+    <div class="product-text">
+        <p class="en">HD 800 S Anniversary Edition</p>
+        <p class="ch"> 經典開放式旗艦 75週年限量商品</p>
+        
+        <p class="p-price">NT$50,990</p>
+    </div>  
+
+    <div class="a-white-div">
+        <a href="" class="a-white">查看商品</a>
+    </div>
+          
+</div>
+=======
 </div>
 
+>>>>>>> 6746b96e33f206fc7f2d6421f41b3608c687f294
 <!-- 刪到這裡 -->
 
 
