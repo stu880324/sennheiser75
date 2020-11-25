@@ -1,5 +1,5 @@
  
-    <nav>
+    <nav id="navbar">
         <div class="wrapper">
           <div class="logo"><a href="#"><img src="./images/0_navbar/logo.svg" alt=""></a></div>
           <input type="radio" name="slider" id="menu-btn">
@@ -216,6 +216,25 @@
 
 <script src="./lib/jquery-3.5.1.js"></script>
 <script>
+
+//navbar scroll hidden 
+// 開始
+
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("#navbar").style.top = "0";
+  } else {
+    document.getElementById("#navbar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+// 結束
+
+
 
 //  navbar title  hover 導覽列滑鼠滑過文字更換 
 //  開始
