@@ -1,16 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>預約頁切版</title>
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="0_style1.css">
-    <link rel="stylesheet" href="4_reservation.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<?php include __DIR__. '/parts/1_config.php'; ?>
+<?php include __DIR__. '/parts/2_html_head.php'; ?>
+        <!-- 請填入各頁面CSS名稱 -->
+        <link rel="stylesheet" href="<?= WEB_ROOT ?>4_reservation.css">
 
-</head>
-<body class="body">
+<?php include __DIR__. '/parts/2_html_head2.php'; ?>
+<?php include __DIR__. '/parts/3_navbar.php'; ?>
+
+
+<div class="container">
+    <div class="row">
+        <!-- Rectangular switch -->
+        <label class="switch ml-auto">
+            <input type="checkbox" onclick="myFunction()">
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
 
 <div class="container banner-container">
 
@@ -19,13 +24,21 @@
     </div>
 
     <div class="row banner-row">
-        <div class="turn-back"><img src="./images/4_reservation/15.jpg" alt=""></div>
-        <div class="turn-next"></div>
+        <div class="turn-back">
+            <div class="back-icon"><img src="./images/4_reservation/back.svg" alt=""></div>
+            <img src="./images/4_reservation/15.jpg" alt="">
+        </div>
+        <div class="turn-next">
+            <div class="next-icon"><img src="./images/4_reservation/next.svg" alt=""></div>
+        </div>
         
         <div class="col-lg-5 banner-text-area">
             <h1>潮音樂</h1>
             <hr>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, beatae. Impedit quibusdam magni ratione doloremque! Est debitis nemo fugiat aut voluptatum officiis aliquid sunt blanditiis, suscipit perferendis beatae sit dicta.</p>
+            <p>活動限定SENNHEISER會員參加，
+                引領著音樂的愛好者用耳機x音樂x香檳來一趟放鬆之旅，
+                讓聽者用音樂洗滌一周的疲憊盡情徜徉在美好的音樂饗宴，
+                透過耳機與音樂的震動，激發令人高潮的腦內啡。</p>
             <button class="btn-gold mt-5">立即預約</button>
             
         </div>
@@ -49,7 +62,7 @@
                         <li class="banner-dot">4</li>                 
                     </ul>
                 </div>
-                <div class="banner-number">04</div>
+                <div class="banner-number text-right">04</div>
             </div>
             
         </div>
@@ -57,7 +70,7 @@
     </div>
 
 
-    
+
 <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, veniam architecto? Fuga architecto perspiciatis quo. Debitis provident dolores, necessitatibus quos quod quidem nulla ea hic exercitationem repellendus nisi illum? Quisquam atque vel pariatur dicta quis nulla, enim illo id harum nostrum voluptatum sit eveniet distinctio at repellendus quae voluptatem? Culpa magnam ut voluptatum sed corrupti. Mollitia molestias voluptatibus quidem eaque itaque explicabo laudantium neque debitis rem. Tenetur quas, qui rerum eos doloremque omnis ut adipisci animi obcaecati amet maxime quasi, quos facere, architecto ducimus odio voluptatibus? Incidunt id deserunt quidem praesentium voluptatem provident tenetur pariatur repellendus. Esse nam magni modi beatae tempora error quae quos natus quis reprehenderit, optio labore explicabo facere quam numquam officia, laudantium eum nesciunt culpa velit, eius itaque. Minus magni labore non obcaecati quae quos accusamus provident ducimus sunt libero, qui hic eius tempora, pariatur quisquam voluptatibus totam delectus? Dolorem doloribus tenetur a saepe sapiente, voluptates eius alias. Numquam nemo officiis, rem, quos harum ab est ipsam et dolor commodi facilis aliquam porro eaque? Culpa consequuntur sapiente perferendis nihil ex hic! Recusandae adipisci, animi quo quis nostrum doloribus porro quisquam nobis aut iusto maiores quasi corporis autem necessitatibus rem consectetur amet soluta suscipit assumenda est officia atque et voluptate! Deleniti nobis doloribus repudiandae hic ad blanditiis eaque, alias ipsam, aut facere laboriosam temporibus fugit nesciunt praesentium rerum rem accusantium vel dicta commodi distinctio esse. Aliquid quod consectetur deserunt nulla exercitationem facilis, velit voluptates dicta laborum rem ab nesciunt, nostrum harum nihil tempore praesentium omnis quos repudiandae. Alias exercitationem, nemo doloremque unde voluptates ipsam odio mollitia velit ab, commodi sapiente. Iure officia maxime explicabo ad? Voluptas cupiditate modi dolores sapiente quaerat, repellat natus? Earum a adipisci ullam soluta aut eaque veniam numquam est fuga ea exercitationem neque ipsum modi ducimus aliquid placeat, hic nulla accusamus eveniet recusandae obcaecati. Sapiente optio aperiam, in sint repellat itaque assumenda nobis necessitatibus vero dolorum voluptatibus vel adipisci. Possimus aperiam aspernatur consequuntur sed cupiditate dolore quos illo maxime. Odit rem recusandae facilis! Eos ipsum, necessitatibus sint suscipit quidem quod. Hic quaerat sequi porro ducimus nisi quod optio qui, perspiciatis dolorem. Accusantium necessitatibus nulla reprehenderit tenetur! Omnis nobis suscipit explicabo totam. In rerum voluptatum, aut odit quasi, dolores id velit accusantium soluta voluptas voluptates vero quod illum exercitationem? Quibusdam deleniti optio ab obcaecati. Natus commodi maiores nam ratione suscipit provident at. Mollitia eum quas accusamus, omnis libero voluptatum ut hic excepturi minima voluptas, perspiciatis cumque! Fuga, voluptas? Iure, numquam amet quas hic accusantium ullam. Aspernatur, ipsum molestiae earum quibusdam, aperiam officia neque excepturi perferendis tenetur reprehenderit reiciendis fugit. Quo vero possimus numquam, sequi consectetur eveniet sapiente asperiores officiis placeat beatae temporibus ipsa nulla quas dolor impedit? Incidunt voluptas neque soluta eos enim, saepe aliquam officia asperiores excepturi rerum ducimus hic, architecto exercitationem, voluptatum nisi ad ratione aliquid culpa suscipit! Quia asperiores nisi repellat qui rem similique, aspernatur non voluptates magnam ipsa ducimus unde porro, itaque vel officiis enim praesentium quis repellendus reiciendis sint quasi pariatur? Inventore culpa fuga saepe doloribus? Similique libero labore sit maxime facilis natus doloremque dicta, corrupti, numquam minus atque ullam tempora, nihil officiis fugiat eum obcaecati sequi at eaque soluta doloribus. Veritatis quam vel odit numquam quas veniam fugiat, laborum, magni pariatur at, minima asperiores amet perspiciatis! Voluptates exercitationem quisquam nam illum dolor expedita molestiae alias maiores delectus nulla maxime voluptatibus tenetur quos fugit, laudantium modi consequatur. Minima facere explicabo ab? Molestias distinctio quam, voluptates nesciunt soluta dolor ipsum placeat voluptatum labore beatae accusantium sunt voluptas, repudiandae ipsa dolorem, pariatur sit nisi! Sint, et, laborum quae omnis magni velit, nam nisi nulla neque voluptas id nihil pariatur labore corrupti!</div>
 
 
@@ -99,17 +112,39 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-
-   
 
 
-</body>
-</html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    
+<!-- 轉變背景顏色功能 -->
+<!-- <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+       $(".number").classList.toggle("dark-mode");
+    };
+</script> -->
+    
+<script>
+    function myFunction() {
+    let body = document.body;
+       body.classList.toggle("dark-mode");
+
+    let number = 
+       $(".number").classList.toggle("dark-mode-textcolor");
+       $('.number').addClass('dark-mode-textcolor');
+    };
+
+</script>
+    
+
+
+
+
+<?php include __DIR__. '/parts/4_footer.php'; ?>
+<?php include __DIR__. '/parts/5_scripts.php'; ?>
+<?php include __DIR__. '/parts/6_html_foot.php'; ?>

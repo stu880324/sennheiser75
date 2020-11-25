@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2詳細頁切版</title>
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="0_style1.css">
-    <link rel="stylesheet" href="3_productDetail.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<?php include __DIR__. '/parts/1_config.php'; ?>
+<?php include __DIR__. '/parts/2_html_head.php'; ?>
+        <!-- 請填入各頁面CSS檔名 -->
+        <link rel="stylesheet" href="<?= WEB_ROOT ?>3_productDetail.css">
 
-</head>
-<body>
-    
+<?php include __DIR__. '/parts/2_html_head2.php'; ?>
+<?php include __DIR__. '/parts/3_navbar.php'; ?>
+
+
 <!-- 此區 demo-container -->
 <div class="container">
     
-<div class="back"><a href="">HOME</a> —— <a href="">ALL PRODUCT</a> —— <a href="">MOMENTUM True Wireless</a></div>
+<div class="goback"><a href="">HOME</a> —— <a href="">ALL PRODUCT</a> —— <a href="">MOMENTUM True Wireless</a></div>
     
 
 <div class="row">
@@ -248,6 +243,7 @@
     
             $(".demo img").attr("src",imgSrc)
         });
+        
     </script>
 
 <!-- 放大鏡功能 -->
@@ -389,5 +385,8 @@
    
 
 
-</body>
-</html>
+
+
+<?php include __DIR__. '/parts/4_footer.php'; ?>
+<?php include __DIR__. '/parts/5_scripts.php'; ?>
+<?php include __DIR__. '/parts/6_html_foot.php'; ?>

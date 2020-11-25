@@ -791,10 +791,9 @@ nav input {
 }
 
 
-
 /* 此區編輯footer */
 footer{
-    background: #1B1B1B;
+    background: #000000;
     margin-top: 100px;
 }
 .footertitle{
@@ -813,10 +812,16 @@ footer a:hover{
 }
 footer hr{
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
 }
 .copyright{
     color: #ffffff;
     font-size: 0.6rem;
 }
+.contacticon svg{
+  fill: #E3B684;
+  margin: 10px;
+  padding: 5px;
+}
+
 

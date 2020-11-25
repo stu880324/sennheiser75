@@ -1,6 +1,6 @@
 <?php include __DIR__. '/parts/1_config.php'; ?>
 <?php include __DIR__. '/parts/2_html_head.php'; ?>
-        <!-- 請填入各頁面CSS樣式 -->
+        <!-- 請填入各頁面CSS名稱 -->
         <link rel="stylesheet" href="<?= WEB_ROOT ?>0_style1.css">
 
 <?php include __DIR__. '/parts/2_html_head2.php'; ?>
