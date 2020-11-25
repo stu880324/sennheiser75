@@ -10,7 +10,7 @@
 
 nav {
   position: fixed;
-  z-index: 99;
+  z-index: 1;
   width: 100%;
   height: 190px;
   background: #000000;
@@ -18,8 +18,8 @@ nav {
 
 /* rwd點選功能 */
 
-nav input{
-    display: none;
+nav input {
+  display: none;
 }
 
 /* mega menu樣式 */
@@ -27,7 +27,7 @@ nav input{
 nav .wrapper {
   position: relative;
   width: 100%;
-  /* max-width: 1300px; */
+  /* max-width: 1920px; */
   padding: 0px 30px;
   height: 70px;
   line-height: 70px;
@@ -35,6 +35,7 @@ nav .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 2;
 }
 
 /* logo */
@@ -42,6 +43,9 @@ nav .wrapper {
 .wrapper .logo {
   width: 180px;
   height: 100px;
+  /* position: absolute;
+  top:15%;
+  left:40%; */
   margin: 80px auto 0;
 }
 
@@ -55,10 +59,11 @@ nav .wrapper {
 /* mega menu 區塊 */
 
 .nav-links {
-  width: 100%;
+
+  width:81%;
   position: absolute;
   top: 170%;
-  left: 12%;
+  left:10%;
 }
 
 .wrapper .nav-links {
@@ -75,8 +80,8 @@ nav .wrapper {
   text-decoration: none;
   font-size: 18px;
   font-weight: lighter;
-  margin: 50px;
-  padding: 5px 15px;
+  margin: 0 55px ;
+  padding: 5px 10px;
   border-bottom: 1px solid #e3b684;
   /* border-radius: 5px; */
   transition: all 0.3s ease;
@@ -97,8 +102,6 @@ nav .wrapper {
   display: none;
   opacity: 1;
 }
-
-
 
 .nav-links li:hover .mega-box {
   transition: all 0.3s ease;
@@ -124,13 +127,12 @@ header p {
 
 /* 內文標題結束 */
 
-
-.mega-box {
+.mega-box{
   position: absolute;
-  left: -12%;
+  top:0;
+  left: -1%;
   width: 100%;
   padding: 0;
-  top: 85px;
   opacity: 0;
   visibility: hidden;
 }
@@ -147,7 +149,7 @@ header p {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
- /* product背景圖 */
+/* product背景圖 */
 .mega-box .content-product {
   background: #000000;
   background-image: url(./images/0_navbar/product-img.jpg);
@@ -169,7 +171,6 @@ header p {
   justify-content: space-around;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
-
 
 .mega-box .content .row {
   width: calc(25% - 30px);
@@ -327,16 +328,11 @@ header p {
   cursor: pointer;
   display: none;
 }
-.wrapper .btn.close-btn {
+.wrapper .btn .close-btn {
   position: absolute;
   right: 30px;
   top: 10px;
 }
-
-
-
-
-
 
 /* Navbar RWD-Hamburger */
 
@@ -346,11 +342,18 @@ header p {
   }
 
   .btn.close-btn {
+   
     color: #e3b684;
   }
 
   .btn.menu-btn {
+
     color: #e3b684;
+  }
+
+  .wrapper{
+    width: 100%;
+    padding: 0;
   }
 
   .wrapper .btn {
@@ -522,8 +525,6 @@ header p {
     line-height: 5px;
   }
 
-  
-
   .content-product .row .mega-links {
     border-left: 0px;
     padding-left: 15px;
@@ -549,54 +550,47 @@ header p {
 
   .content .row header {
     font-size: 18px;
-    border-bottom: 1px solid  rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     line-height: 30px;
   }
 
   .content-product .row header {
     font-size: 18px;
-    border-bottom: 1px solid  rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     line-height: 30px;
   }
 
   .content-member .row header {
     font-size: 18px;
-    border-bottom: 1px solid  rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     line-height: 30px;
   }
 
-  .content .row img { 
-      margin: 0 6px;
-      
-  }
-
-.content-member .row img { 
+  .content .row img {
     margin: 0 6px;
-   
-}
-  .content .imgs .product{
-      padding-top: 20px;
-   
   }
-  
 
-.content-member .imgs .product{
-    padding-top: 20px;
-   
-}
-
-
-  .content .imgs .product img{
+  .content-member .row img {
+    margin: 0 6px;
+  }
+  .content .imgs .product {
     padding-top: 20px;
   }
-    
 
-.content-member .imgs .product img{
+  .content-member .imgs .product {
     padding-top: 20px;
-}
-nav input {
-  display: none;
-}
+  }
+
+  .content .imgs .product img {
+    padding-top: 20px;
+  }
+
+  .content-member .imgs .product img {
+    padding-top: 20px;
+  }
+  nav input {
+    display: none;
+  }
+
 
 }
-
