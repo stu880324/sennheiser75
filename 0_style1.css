@@ -240,7 +240,7 @@ nav .wrapper {
   width: 81%;
   position: absolute;
   top: 170%;
-  left: 0;
+  left: 10%;
 }
 
 .wrapper .nav-links {
@@ -307,7 +307,7 @@ header p {
 .mega-box {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -1%;
   width: 100%;
   padding: 0;
   opacity: 0;
