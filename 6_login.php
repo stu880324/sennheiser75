@@ -26,7 +26,7 @@
                     <p class="mt-3">忘記密碼?</p>
 			
 					<div style="text-align:center;"><button type="button" class="my-2">登入</button></div>
-					<div style="text-align:center;"><button type="button" class="">註冊</button></div>
+                    <div style="text-align:center;"><button type="button" class="">註冊</button></div>
             </form>
         
 </div>
