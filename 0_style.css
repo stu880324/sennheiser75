@@ -770,8 +770,7 @@ header p {
 
 /* 此區編輯footer */
 footer {
-  background: #000000;
-  margin-top: 100px;
+  background-color: #000000;
 }
 .footertitle {
   color: #ffffff;
