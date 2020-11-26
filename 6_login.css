@@ -15,9 +15,8 @@
     padding-bottom: 100px;
   }
  
- 
   h3 {
-    font-size: 35px;
+    /* font-size: 35px; */
     text-align: center;
   }
   p {
@@ -30,10 +29,11 @@
     background-color: #e3b684;
     color: #000000;
     border: none;
-    font-size: 0.6rem;
+    /* font-size: 0.6rem; */
     width: 450px;
     height: 35px;
     cursor: pointer;
+    letter-spacing: 10px;
   }
   
   @media (max-width: 991px) {
