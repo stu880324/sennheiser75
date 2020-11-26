@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>remove-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.299595424" stroke-linecap="square">
+        <g id="shopping-cart" transform="translate(-232.000000, -370.000000)" fill-rule="nonzero" stroke="#000000" stroke-width="2">
+            <g id="remove-icon" transform="translate(232.000000, 371.000000)">
+                <path d="M-0.539844892,6.25304833 L13.858384,6.25304833" id="Line-9-Copy" transform="translate(6.960155, 6.253048) rotate(45.000000) translate(-6.960155, -6.253048) "></path>
+                <path d="M-1.24695167,6.25304833 L13.1512772,6.25304833" id="Line-9-Copy" transform="translate(6.253048, 6.253048) rotate(135.000000) translate(-6.253048, -6.253048) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
