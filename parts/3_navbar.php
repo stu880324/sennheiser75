@@ -72,8 +72,8 @@
 
           <div class="row imgs">
             <div class="mega-links product-1">
-              <img src="./images/0_navbar/about-img-2.jpg" alt="">
-              <img src="./images/0_navbar/about-img-3.png" alt="">
+              <img  src="./images/0_navbar/about-img-2.jpg" alt="">
+              <img  src="./images/0_navbar/about-img-3.png" alt="">
             </div>
 
 
