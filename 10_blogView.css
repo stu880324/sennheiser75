@@ -1,25 +1,152 @@
-
-
-
-
-
-
-
-
-
-
-
-
 /* body {
   font-family: "Century Gothic", "Lato", sans-serif;
 } */
 
 a {
-    text-decoration: none;
-  }
-  
-  /* blog 第一標題區塊 blog-探索耳機 */
-  
+  text-decoration: none;
+}
+
+/* blog 第一標題區塊 blog-探索耳機 */
+
+.et-hero-tabs {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  background-image: url(./images/10_blogView/blog-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+/* 第一區塊標題 BLOG */
+
+.et-hero-tabs h1 {
+  font-size: 4rem;
+  margin: 0;
+  letter-spacing: 0.7rem;
+  color: #e3b684;
+  border-bottom: 2px solid #e3b684;
+  font-weight: 500;
+}
+
+/* 第一區塊小標題 探索耳機 成為日常 */
+
+.et-hero-tabs h3 {
+  font-size: 20px;
+  letter-spacing: 0.3rem;
+  opacity: 0.8;
+  color: #fff;
+  font-weight: normal;
+}
+
+/* blog 其他標題區塊 */
+
+.et-slide {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 80vh;
+  position: relative;
+  background: #fff;
+  text-align: center;
+  padding: 0 2em;
+}
+
+/* 其他標題區塊 大標題 */
+
+.et-slide h1 {
+  font-size: 4rem;
+  margin: 0;
+  letter-spacing: 0.7rem;
+  color: #e3b684;
+  border-bottom: 2px solid #e3b684;
+  font-weight: 500;
+}
+
+/* 其他標題區塊 小標題 */
+
+.et-slide h3 {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  opacity: 0.6;
+}
+
+/* 文章分類列 區塊部分*/
+
+.et-hero-tabs-container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 5;
+}
+
+.et-hero-tabs-container--top {
+  position: fixed;
+  top: 0;
+}
+
+/* 文章分類列 文字樣式  */
+
+.et-hero-tab {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.973);
+  color: #fff;
+  /* box-shadow: 10px 0 10px rgba(107, 107, 107, 0.685); */
+  letter-spacing: 0.1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 1rem;
+  font-weight: 250px;
+}
+
+.et-hero-tab:hover {
+  color: rgb(0, 0, 0);
+  background: #e3b684;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.et-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: #e3b684;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
+}
+
+@media (max-width: 970px) {
   .et-hero-tabs {
     display: -webkit-box;
     display: flex;
@@ -31,184 +158,41 @@ a {
     -webkit-box-align: center;
     align-items: center;
     width: 100%;
-    height: 70vh;
+    height: 25vh;
     position: relative;
     background-image: url(./images/10_blogView/blog-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
   }
-  
-  /* 第一區塊標題 BLOG */
-  
-  .et-hero-tabs h1 {
-    font-size: 4rem;
-    margin: 0;
-    letter-spacing: 0.7rem;
-    color: #e3b684;
-    border-bottom: 2px solid #e3b684;
-    font-weight: 500;
-  }
-  
-  /* 第一區塊小標題 探索耳機 成為日常 */
-  
-  .et-hero-tabs h3 {
-    font-size: 20px;
-    letter-spacing: 0.3rem;
-    opacity: 0.8;
-    color: #fff;
-    font-weight: normal;
-  }
-  
-  /* blog 其他標題區塊 */
-  
-  .et-slide {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    height: 80vh;
-    position: relative;
-    background: #fff;
-    text-align: center;
-    padding: 0 2em;
-  }
-  
-  /* 其他標題區塊 大標題 */
-  
-  .et-slide h1 {
-    font-size: 4rem;
-    margin: 0;
-    letter-spacing: 0.7rem;
-    color: #e3b684;
-    border-bottom: 2px solid #e3b684;
-    font-weight: 500;
-  }
-  
-  /* 其他標題區塊 小標題 */
-  
-  .et-slide h3 {
-    font-size: 1rem;
-    letter-spacing: 0.3rem;
-    opacity: 0.6;
-  }
-  
-  /* 文章分類列 區塊部分*/
-  
-  .et-hero-tabs-container {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 65px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    z-index: 5;
-  }
-  
-  .et-hero-tabs-container--top {
-    position: fixed;
-    top: 0;
-  }
-  
-  /* 文章分類列 文字樣式  */
-  
-  .et-hero-tab {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-flex: 1;
-    flex: 1;
-    background-color: rgba(0, 0, 0, 0.973);
-    color: #fff;
-    /* box-shadow: 10px 0 10px rgba(107, 107, 107, 0.685); */
-    letter-spacing: 0.1rem;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    font-size: 1rem;
-    font-weight: 250px;
-  }
-  
-  .et-hero-tab:hover {
-    color: rgb(0, 0, 0);
-    background: #e3b684;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-  }
-  
-  .et-hero-tab-slider {
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 6px;
-    background: #e3b684;
-    -webkit-transition: left 0.3s ease;
-    transition: left 0.3s ease;
-  }
-  
-  @media (max-width: 970px) {
-    .et-hero-tabs {
-      display: -webkit-box;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      align-items: center;
-      width: 100%;
-      height: 25vh;
-      position: relative;
-      background-image: url(./images/10_blogView/blog-1.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      text-align: center;
-    }
-  
-  .blog-title{
+
+  .blog-title {
     width: 200px;
     height: 80px;
     background-color: rgb(168, 90, 90);
-    margin:0px auto 70px;
+    margin: 0px auto 70px;
   }
-  
-    .et-hero-tabs h1
-    {
-      font-size: 2rem;
-      
-    }
-    .et-hero-tabs h3
-    {
-      font-size: 16px;
-    }
-  
-    .et-hero-tab {
-      font-size: 1rem;
-    }
+
+  .et-hero-tabs h1 {
+    font-size: 2rem;
   }
-  
-  .et-slide h1 {
-    font-size: 3rem;
+  .et-hero-tabs h3 {
+    font-size: 16px;
   }
-  
-  et-slide h3 {
+
+  .et-hero-tab {
     font-size: 1rem;
   }
-  
-  .et-hero-tabs-container {
-   z-index: 1;
-  }
-  
+}
+
+.et-slide h1 {
+  font-size: 3rem;
+}
+
+et-slide h3 {
+  font-size: 1rem;
+}
+
+.et-hero-tabs-container {
+  z-index: 1;
+}

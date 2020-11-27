@@ -1,6 +1,7 @@
 <?php include __DIR__. '/parts/1_config.php'; ?>
 <?php include __DIR__. '/parts/2_html_head.php'; ?>
         <!-- 請填入各頁面CSS名稱 -->
+        <link rel="stylesheet" href="<?= WEB_ROOT ?>10_blogView.css">
         
 
 <?php include __DIR__. '/parts/2_html_head2.php'; ?>
