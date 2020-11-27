@@ -108,6 +108,7 @@ nav input {
 .wrapper .nav-links {
   display: inline-flex;
   z-index: 2;
+  margin: 0;
 }
 .nav-links li {
   list-style: none;
@@ -298,7 +299,7 @@ nav input {
   letter-spacing: 1.5px;
 } */
 
-.content .row .box-title {
+.content .row .nav-title {
   width: 200px;
   height: 80px;
   margin: 20px auto 0;
@@ -319,7 +320,7 @@ nav input {
 
 /* 商品標題 */
 
-.content-product .row .box-title {
+.content-product .row .nav-title {
   width: 200px;
   height: 80px;
   margin: 20px auto 0;
@@ -338,7 +339,7 @@ nav input {
   font-weight: 200;
 }
 
-.content-member .row .box-title {
+.content-member .row .nav-title {
   width: 200px;
   height: 80px;
   margin: 20px auto 0;
@@ -705,13 +706,13 @@ nav input {
     line-height: 30px;
   }
 
-  .content-product .row .box-title {
+  .content-product .row .nav-title {
     font-size: 18px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     line-height: 30px;
   }
 
-  .content-member .row .box-title {
+  .content-member .row .nav-title {
     font-size: 18px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     line-height: 30px;

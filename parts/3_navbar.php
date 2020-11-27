@@ -37,7 +37,7 @@
       <div class="mega-box">
         <div class="content">
           <div class="row">
-            <div class="box-title">
+            <div class="nav-title">
               <h4>關於我們</h4>
               <p>About us</p>
             </div>
@@ -65,7 +65,7 @@
               <li class="all-title">
                 <a href="#" class="item-list">
                   <span>聯絡我們</span>
-                  <small> Content</small></a>
+                  <small> Contant</small></a>
               </li>
             </ul>
           </div>
@@ -96,7 +96,7 @@
       <div class="mega-box">
         <div class="content-product">
           <div class="row">
-            <div class="box-title">
+            <div class="nav-title">
               <h4>耳機</h4>
               <p>Our Product</p>
             </div>
@@ -121,13 +121,13 @@
               <li class="all-title">
                 <a href="#" class="item-list">
                   <span>通勤專區</span>
-                  <small>Commute</small>
+                  <small>Commuting</small>
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
                   <span>運動專區</span>
-                  <small>Sport</small>
+                  <small>Sporting</small>
                 </a>
               </li>
             </ul>
@@ -200,7 +200,7 @@
       <div class="mega-box">
         <div class="content-member">
           <div class="row">
-            <div class="box-title">
+            <div class="nav-title">
               <h4>會員</h4>
               <p>Member</p>
             </div>
