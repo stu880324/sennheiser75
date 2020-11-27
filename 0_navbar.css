@@ -20,7 +20,7 @@ header {
 /* header input {
   display: none;
 } */
-* nav input {
+nav input {
   display: none;
 }
 
@@ -28,7 +28,6 @@ header {
 
 .header-area {
   width: 100%;
-  height: px;
   background-color: #000000;
 }
 
@@ -58,7 +57,7 @@ header {
 /* rwd logo處理 */
 
 .mobile-header-logo {
-  visibility: hidden;
+  display: none;
 }
 
 /* mega menu樣式 */
@@ -455,13 +454,12 @@ header {
 
   /* 手機版logo調整 */
 
-  .mobile-header-logo .mobile-logo {
+  .mobile-header-logo {
     width: 120px;
     height: 70px;
     /* background-color:#000000; */
     margin: 15px 30px;
-    visibility: visible;
-    opacity: 1;
+    display: block;
   }
 
   .mobile-logo .m-img-1 {
