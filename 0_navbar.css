@@ -10,7 +10,7 @@
 
 header {
   /* position: fixed; */
-  z-index: 1;
+  z-index:1;
   width: 100%;
   background: #000000;
 }
@@ -107,6 +107,7 @@ nav input {
 
 .wrapper .nav-links {
   display: inline-flex;
+  z-index: 2;
 }
 .nav-links li {
   list-style: none;
@@ -174,6 +175,7 @@ nav input {
   padding: 0;
   opacity: 0;
   visibility: hidden;
+  z-index: 2;
 }
 
 /* about背景圖 */
