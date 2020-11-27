@@ -65,7 +65,7 @@
               <li class="all-title">
                 <a href="#" class="item-list">
                   <span>聯絡我們</span>
-                  <small> Contant</small></a>
+                  <small> Contact</small></a>
               </li>
             </ul>
           </div>
@@ -87,7 +87,7 @@
 
     <li>
       <div class="list-title">
-        <a ID="about-hover" href="#" class="desktop-item">
+        <a ID="product-hover" href="#" class="desktop-item">
           PRODUCT
         </a>
       </div>
@@ -164,7 +164,7 @@
 
     <li>
       <div class="list-title">
-        <a ID="about-hover" href="#" class="desktop-item">
+        <a ID="reservation-hover" href="#" class="desktop-item">
           RESERVATION
         </a>
       </div>
@@ -177,7 +177,7 @@
 
     <li>
       <div class="list-title">
-        <a ID="about-hover" href="#" class="desktop-item">
+        <a ID="blog-hover" href="#" class="desktop-item">
           BLOG
         </a>
       </div>
@@ -191,7 +191,7 @@
 
     <li>
       <div class="list-title">
-        <a ID="about-hover" href="#" class="desktop-item">
+        <a ID="member-hover" href="#" class="desktop-item">
           MEMBER
         </a>
       </div>
@@ -277,27 +277,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script src="./lib/jquery-3.5.1.js"></script>
 <script>
   //navbar scroll hidden 
@@ -316,4 +295,61 @@
   }
 
   // 結束
+
+
+
+//  navbar title  hover 導覽列滑鼠滑過文字更換 
+//  開始
+  
+$("#about-hover").on('mouseenter mouseleave' ,function(event){
+     if ($(this).is(":contains('ABOUT')")){
+         $(this).text("關於我們");
+     }
+     else{
+         $(this).text("ABOUT");
+     }
+  });
+
+  $("#product-hover").on('mouseenter mouseleave' ,function(event){
+     if ($(this).is(":contains('PRODUCT')")){
+         $(this).text("所有商品");
+     }
+     else{
+         $(this).text("PRODUCT");
+     }
+  });
+
+  $("#reservation-hover").on('mouseenter mouseleave' ,function(event){
+     if ($(this).is(":contains('RESERVATION')")){
+         $(this).text("預約活動");
+     }
+     else{
+         $(this).text("RESERVATION");
+     }
+  });
+
+  $("#blog-hover").on('mouseenter mouseleave' ,function(event){
+     if ($(this).is(":contains('BLOG')")){
+         $(this).text("專欄文章");
+     }
+     else{
+         $(this).text("BLOG");
+     }
+  });
+
+  $("#member-hover").on('mouseenter mouseleave' ,function(event){
+     if ($(this).is(":contains('MEMBER')")){
+         $(this).text("會員專區");
+     }
+     else{
+         $(this).text("MEMBER");
+     }
+  });
+
+  // 結束
+
+
+
+
+
 </script>
