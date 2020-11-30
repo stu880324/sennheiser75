@@ -1,0 +1,232 @@
+/* 購物車css樣式 */
+
+/* 打開參考線 */
+div {
+  border: 1px solid turquoise;
+}
+
+/* 購物進度列 */
+.progressbar {
+  width: 100%;
+  height: 140px ;
+  counter-reset: step;
+  margin-top: 2rem;
+  padding-left:4rem;
+}
+
+.progressbar li {
+  list-style-type: none;
+  float: left;
+  width: 30.33%;
+  position: relative;
+  text-align: center;
+}
+
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #e6e6e6;
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto 0 auto;
+}
+
+
+.progressbar li .active{
+  color: #000;
+}
+
+.progressbar li::before.active{
+  border-color: #000;
+}
+
+
+/* 信用卡頁面 */
+.card-wrapper{
+  width: 86%;
+  margin: 0 auto;
+  display: flex;
+  border-top:1px solid #e6e6e6;
+}
+
+.order-list{
+  width: 45%;
+  padding: 5rem;
+  margin-left: auto;
+  margin-top:2rem;
+  border-right:1px solid #ccc;
+}
+
+.card-info{
+  width: 60%;
+}
+
+.checkout{
+  width: 100%;
+}
+
+.checkout-wrap{
+  width: 100%;
+  margin-left: auto;
+}
+
+
+.order-detail li{
+  list-style: none;
+  font-size: 1.5rem;
+  padding:1rem;
+  border-bottom: 1px solid #e6e6e6;
+  width: 50%;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap');
+
+ * {
+    font-family: "Source Sans Pro", sans-serif;
+} 
+
+.card {
+    border-radius: .50rem;
+}
+
+.card-input_field {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #ced6e0;
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+    padding: 5px 15px;
+    background: none;
+    color: #1a3b5d;
+}
+
+.from-group label{
+    margin-top: 2rem;
+}
+
+
+.card-input_button {
+    margin-top: 1rem;
+    padding: 5px 20px;
+}
+
+.willFlip {
+    height: 260px;
+    position: relative;
+    top: 58px;
+    z-index: 99999;
+    box-shadow: 0 20px 60px 0 rgba(14, 42, 90, 0.55);
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.front{
+    background-color: #000521;
+    border-radius: 5px;
+    box-shadow: 3px 10px 20px 0px rgb(73, 79, 111);
+}
+
+.back{
+    background-color: #000521;
+    border-radius: 5px;
+    box-shadow: 3px 10px 20px 0px rgb(73, 79, 111);
+}
+
+.back-middle {
+    margin-top: .5rem;
+}
+
+.content-parent {
+    height: 80vh;
+}
+
+#cardCcv{
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.front input{
+    background-color: transparent!important;
+    color: white;
+    font-size: 23px;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.front input::placeholder{
+    color: white;
+    font-size: 23px;
+}
+
+#expiredMonth{
+    text-align: right;
+}
+
+#cardNumber{
+    font-size: 39px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.willActive{
+    border: solid 1px white!important;
+}
+
+#cardNumber{
+    height: 100%;
+}
+
+.content-date-input{
+    position: relative;
+}
+
+#cardHolderValue{
+    text-overflow: ellipsis;
+}
+
+.card-bar{
+    margin-top: 10%;
+    background: #ffffff52;
+    height: 40px;
+}
+
+.back .card-body{
+    padding: 0;
+}
+
+.bd-highlight{
+    margin-top: -15px;
+    height: 85px;
+}
+
+.github-link{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.inputFakeFont{
+    font-size: 37px!important;
+    transition: 0.3s;
+    filter: blur(50);
+    animation: bounce;
+}
+
+.btn-primary {
+  background-color: #000000;
+  color: #fff;
+  width: 450px;
+  height: 45px;
+  margin-top: 2rem;
+}

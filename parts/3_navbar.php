@@ -1,226 +1,307 @@
- 
-    <nav>
-        <div class="wrapper">
-          <div class="logo"><a href="#"><img src="./images/0_navbar/logo.svg" alt=""></a></div>
-          <input type="radio" name="slider" id="menu-btn">
-          <input type="radio" name="slider" id="close-btn">
+<header id="navbar" class="header-area">
+  <!-- logo -->
+  <div class="header-logo">
+    <div class="logo">
+      <a href="#"><img src="./images/0_navbar/logo.svg" alt=""></a>
+    </div>
 
-          <ul class="nav-links"> 
-            <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+  </div>
 
-            <!-- 關於我們 -->
+</header>
 
-            <li>          
-                <a ID="about-hover" href="#" class="desktop-item">ABOUT</a>
-                <input type="checkbox" id="showMega">
-                <label for="showMega" class="mobile-item">ABOUT</label>
-                <div class="mega-box">
-                  <div class="content"> 
-                    <div class="row">
-                      <header><h4>關於我們</h4>
-                      <p>About us</p></header>
+<nav class="wrapper">
+  <!-- logo -->
+  <!-- <div class="logo ">
+            <a href="#">
+              <img src="./images/0_navbar/logo.svg" alt="">          
+            </a>
+            </div> -->
+  <input type="radio" name="slider" id="menu-btn">
+  <input type="radio" name="slider" id="close-btn">
+  <ul class="nav-links">
+    <label for="close-btn" class="btn close-btn">
+      <i class="fas fa-times"></i>
+    </label>
 
-                    </div>
-                    <div class="row " >
-                      <ul class="mega-links product">
-                        <li>
-                          <a href="#"> 
-                            <p>品牌故事</p>
-                            <small> Story </small>
-                               
-                        </a>
-                      </li>
-                        <li>
-                          <a href="#">
-                            <p>銷售據點</p>
-                            <small> Fine Us </small>
-                        </a>
-                      </li>
-                        <li>
-                          <a href="#"><p>人才招募</p>
-                            <small> Join Us </small></a>
-                        </li>
-                        <li>
-                          <a href="#"><p>聯絡我們</p>
-                            <small> Content</small></a>
-                        </li>
-                      </ul>
-                    </div>
+    <!-- 關於我們 -->
 
-                    <div class="row imgs">
-                      <div class="mega-links product">
-                        <img src="./images/0_navbar/about-img-2.jpg" alt="">
-                        <img src="./images/0_navbar/about-img-3.png" alt="">
-                      </div>           
-                  
-                      
-                    </div>
-                  
-                  </div>
-                </div>
+    <li class="nav-list">
+      <div class="list-title">
+        <a ID="about-hover" href="#" class="desktop-item">
+          ABOUT
+        </a>
+      </div>
+
+      <input type="checkbox" id="showMega">
+      <label for="showMega" class="mobile-item">ABOUT</label>
+      <div class="mega-box">
+        <div class="content">
+          <div class="row">
+            <div class="nav-title">
+              <h4>關於我們</h4>
+              <p>About us</p>
+            </div>
+          </div>
+          <div class="row ">
+            <ul class="mega-links product-1">
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>品牌故事</span>
+                  <small> Story </small>
+
+                </a>
               </li>
-
-            <!-- 所有商品 -->
-
-              <li>
-                <a ID="product-hover" href="#" class="desktop-item">PRODUCT</a>
-                <input type="checkbox" id="showMega-1">
-                <label for="showMega-1" class="mobile-item">PRODUCT</label>
-                <div class="mega-box">
-                  <div class="content-product"> 
-                    <div class="row">
-                      <header><h4>耳機</h4>
-                      <p>Our Product</p></header>
-
-                    </div>
-                    <div class="row " >
-                      <!-- <header><h4>About Us</h4>
-                        <p>關於我們</p></header> -->
-                      <ul class="mega-links product">
-                        <li>
-                          <a href="#"> 
-                            <p>所有商品</p>
-                            <small>All Porduct</small>           
-                        </a>
-                      </li>
-                        <li>
-                          <a href="#">
-                            <p>電競專區</p>
-                            <small>Gaming</small>
-                        </a>
-                      </li>
-                        <li>
-                          <a href="#">
-                            <p>通勤專區</p>
-                            <small>Commute</small>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <p>運動專區</p>
-                            <small>Sport</small>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="row " >
-                      <!-- <header><h4>About Us</h4>
-                        <p>關於我們</p></header> -->
-                      <ul class="mega-links product">
-                        <li>
-                          <a href="#"> 
-                            <p>錄音專區</p>
-                            <small>Recording</small>              
-                        </a>
-                      </li>
-                        <li>
-                          <a href="#">
-                            <p>會議專區</p>
-                            <small>Meeting</small> 
-                        </a>
-                      </li>
-                        <!-- <li><a href="#"></a></li>
-                        <li><a href="#"></a></li> -->
-                      </ul>
-                    </div>
-           
-
-                  
-                  </div>
-                </div>
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>銷售據點</span>
+                  <small> Fine Us </small>
+                </a>
               </li>
-
-            <!-- 預約活動 -->
-            
-              <li>
-                <a ID="reservation-hover" href="#" class="desktop-item">RESERVATION</a>
-                <input type="checkbox" id="showMega-2">
-                <label for="showMega-2" class="mobile-item">RESERVATION</label>
-                
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>人才招募</span>
+                  <small> Join Us </small></a>
               </li>
-
-            <!-- 部落格 -->
-
-             <li>
-                <a ID="blog-hover" href="#" class="desktop-item">BLOG</a>
-                <input type="checkbox" id="showMega-3">
-                <label for="showMega-3" class="mobile-item">BLOG</label>
-     
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>聯絡我們</span>
+                  <small> Contact</small></a>
               </li>
+            </ul>
+          </div>
+
+          <div class="row imgs">
+            <div class="mega-links product-1">
+              <img  src="./images/0_navbar/about-img-2.jpg" alt="">
+              <img  src="./images/0_navbar/about-img-3.png" alt="">
+            </div>
 
 
-             <!-- 會員專區 -->
+          </div>
 
-             <li>
-                <a ID="member-hover" href="#" class="desktop-item">MEMBER</a>
-                <input type="checkbox" id="showMega-4">
-                <label for="showMega-4" class="mobile-item">MEMBER</label>
-                <div class="mega-box">
-                  <div class="content-member"> 
-                    <div class="row">
-                      <header><h4>會員</h4>
-                      <p>Member</p></header>
-
-                    </div>
-                    <div class="row " >
-                      <ul class="mega-links product">
-                        <li>
-                          <a href="#"> 
-                            <p>歷史訂單</p>
-                            <small>Ordered</small>     
-                        </a>
-                      </li>
-                        <li>
-                          <a href="#">
-                            <p>預約記錄</p>
-                            <small>Reservation</small>  
-                        </a>
-                      </li>
-                        <li>
-                          <a href="#">
-                            <p>常見問題</p>
-                            <small>Q&A</small>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <p>登出</p>
-                            <small>Log out</small>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="row imgs">
-                      <div class="mega-links product">
-                        <img src="./images/0_navbar/member-img-1.jpg" alt="">
-                        <img src="./images/0_navbar/member-img-2.jpg" alt="">
-                      </div>           
-                  
-                      
-                    </div>
-                  
-                  </div>
-                </div>
-              </li>
-          </ul>
-
-          <!-- 漢堡選單 -->
-          <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
         </div>
-      </nav>
+      </div>
+    </li>
+
+    <!-- 所有商品 -->
+
+    <li>
+      <div class="list-title">
+        <a ID="product-hover" href="#" class="desktop-item">
+          PRODUCT
+        </a>
+      </div>
+      <input type="checkbox" id="showMega-1">
+      <label for="showMega-1" class="mobile-item">PRODUCT</label>
+      <div class="mega-box">
+        <div class="content-product">
+          <div class="row">
+            <div class="nav-title">
+              <h4>耳機</h4>
+              <p>Our Product</p>
+            </div>
+
+          </div>
+          <div class="row ">
+            <!-- <header><h4>About Us</h4>
+                          <p>關於我們</p></header> -->
+            <ul class="mega-links product-1">
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>所有商品</span>
+                  <small>All Porduct</small>
+                </a>
+              </li>
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>電競專區</span>
+                  <small>Gaming</small>
+                </a>
+              </li>
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>通勤專區</span>
+                  <small>Commuting</small>
+                </a>
+              </li>
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>運動專區</span>
+                  <small>Sporting</small>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="row ">
+            <!-- <header><h4>About Us</h4>
+                          <p>關於我們</p></header> -->
+            <ul class="mega-links product-1">
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>錄音專區</span>
+                  <small>Recording</small>
+                </a>
+                </liclass="all-title">
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>會議專區</span>
+                  <small>Meeting</small>
+                </a>
+              </li>
+              <!-- <li><a href="#"></a></li>
+                          <li><a href="#"></a></li> -->
+            </ul>
+          </div>
+
+
+
+        </div>
+      </div>
+    </li>
+
+    <!-- 預約活動 -->
+
+    <li>
+      <div class="list-title">
+        <a ID="reservation-hover" href="#" class="desktop-item">
+          RESERVATION
+        </a>
+      </div>
+      <input type="checkbox" id="showMega-2">
+      <label for="showMega-2" class="mobile-item">RESERVATION</label>
+
+    </li>
+
+    <!-- 部落格 -->
+
+    <li>
+      <div class="list-title">
+        <a ID="blog-hover" href="#" class="desktop-item">
+          BLOG
+        </a>
+      </div>
+      <input type="checkbox" id="showMega-3">
+      <label for="showMega-3" class="mobile-item">BLOG</label>
+
+    </li>
+
+
+    <!-- 會員專區 -->
+
+    <li>
+      <div class="list-title">
+        <a ID="member-hover" href="#" class="desktop-item">
+          MEMBER
+        </a>
+      </div>
+      <input type="checkbox" id="showMega-4">
+      <label for="showMega-4" class="mobile-item">MEMBER</label>
+      <div class="mega-box">
+        <div class="content-member">
+          <div class="row">
+            <div class="nav-title">
+              <h4>會員</h4>
+              <p>Member</p>
+            </div>
+
+          </div>
+          <div class="row ">
+            <ul class="mega-links product-1">
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>歷史訂單</span>
+                  <small>Ordered</small>
+                </a>
+              </li>
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>預約記錄</span>
+                  <small>Book</small>
+                </a>
+              </li>
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>常見問題</span>
+                  <small>Q&A</small>
+                </a>
+              </li>
+              <li class="all-title">
+                <a href="#" class="item-list">
+                  <span>登出</span>
+                  <small>Log out</small>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="row imgs">
+            <div class="mega-links product-1">
+              <img src="./images/0_navbar/member-img-1.jpg" alt="">
+              <img src="./images/0_navbar/member-img-2.jpg" alt="">
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+    </li>
+  </ul>
+
+
+
+
+  <!-- RWD 架構 -->
+  <!-- logo -->
+  <div class="mobile-header-logo">
+    <div class="mobile-logo">
+      <a href="#"><img class="m-img-1" src="./images/0_navbar/logo.svg" alt=""></a>
+    </div>
+
+  </div>
+
+
+
+  <!-- 漢堡選單 -->
+  <label for="menu-btn" class="btn menu-btn">
+    <i class="fas fa-bars"></i>
+  </label>
+
+</nav>
+
+
+
+
 
 
 
 
 <script src="./lib/jquery-3.5.1.js"></script>
 <script>
+  //navbar scroll hidden 
+  // 開始
+
+
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("#navbar").style.top = "0";
+    } else {
+      document.getElementById("#navbar").style.top = "-200px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+
+  // 結束
+
+
 
 //  navbar title  hover 導覽列滑鼠滑過文字更換 
 //  開始
   
-  $("#about-hover").on('mouseenter mouseleave' ,function(event){
+$("#about-hover").on('mouseenter mouseleave' ,function(event){
      if ($(this).is(":contains('ABOUT')")){
          $(this).text("關於我們");
      }
@@ -269,5 +350,6 @@
 
 
 
-  </script>
-  
+
+
+</script>
