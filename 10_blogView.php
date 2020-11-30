@@ -9,59 +9,246 @@
 
 
 <!-- 以下刪除就可以開始編輯 -->
-<section class="et-hero-tabs">
-		<div class="blog-title">
-		  <h1>BLOG</h1>
-		  <h3>探索耳機 成為日常</h3>
+ <!-- blogView架構開始 -->
+      
+ <section class="et-hero-tabs">
+          <div class="blog-title">
+            <h1 class="blog-h1">BLOG</h1>
+            <h3 class="blog-h3">探索耳機 成為日常</h3>
 
-		</div>
-	  
-	  <div class="et-hero-tabs-container">
-		<a class="et-hero-tab" href="#tab-es6">最新資訊</a>
-		<a class="et-hero-tab" href="#tab-flexbox">熱門文章</a>
-		<a class="et-hero-tab" href="#tab-react">耳機知識</a>
-		<a class="et-hero-tab" href="#tab-angular">創新科技</a>
-		<!-- <a class="et-hero-tab" href="#tab-other">Other</a> -->
-		<span class="et-hero-tab-slider"></span>
-	  </div>
-	</section>
+          </div>
+        
+        <div class="et-hero-tabs-container">
+          <a class="et-hero-tab" href="#tab-newsinfo">最新資訊</a>
+          <a class="et-hero-tab" href="#tab-hotnews">熱門文章</a>
+          <a class="et-hero-tab" href="#tab-knowinfo">耳機知識</a>
+          <a class="et-hero-tab" href="#tab-newidea">創新科技</a>
+          <!-- <a class="et-hero-tab" href="#tab-other">Other</a> -->
+          <span class="et-hero-tab-slider"></span>
+        </div>
+      </section>
+    
+      <!-- Main -->
+      <main class="et-main">
+
+        <!-- 最新資訊架構區 -->
+        <section class="et-slide" id="tab-newsinfo">
+          <div id="blog-title-h4">
+            <h4 class="blog-h4">耳機新消息</h4>
+            <p id="blog-p">News</p>
+          </div>
+
+          <div class="news-area">
+            <div class="top-newBox">
+              <div class="top-left">
+                <div class="top-lable">
+                  <p id="top-lable-p">TOP <br> NEWS</p>
+                </div>
+
+                <div class="topnews-area"> 
+                  <div class="alltop-date">
+                    <p id="alltop-p">11-20-2020</p>
+                  </div>
   
-	<!-- Main -->
-	<main class="et-main">
-	  <section class="et-slide" id="tab-es6">
-		<h1>ES6</h1>
-		<h3>something about es6</h3>
-	  </section>
-	  <section class="et-slide" id="tab-flexbox">
-		<h1>Flexbox</h1>
-		<h3>something about flexbox</h3>
-	  </section>
-	  <section class="et-slide" id="tab-react">
-		<h1>React</h1>
-		<h3>something about react</h3>
-	  </section>
-	  <section class="et-slide" id="tab-angular">
-		<h1>Angular</h1>
-		<h3>something about angular</h3>
-	  </section>
-	  <section class="et-slide" id="tab-other">
-		<h1>Other</h1>
-		<h3>something about other</h3>
-	  </section>
-	</main>
+                  <div class="topnew-info">
+                    <div class="topnew-title">
+                      <a id="topnew-title-hover" href="#">
+                        <h3 id="topnew-title-h3">Google手機的AirPods？！
+                        <br>
+                         外媒評測Google Pixel Buds 2真無線藍牙耳機</h3>
+                      </a>
+                    </div>
+
+                    <p class="topnew-more" >
+                    Pixel Buds 2是Google的AirPods，是真無線藍牙耳機，外觀與Pixel 5手機非常相似。
+                      使用者能夠舒適地戴著它們來跑步或在健身房運動，並且能夠免持使用....
+                    </p>
+ 
+
+  
+                  </div>
+                </div>
+
+                <div class="topnew-bt-read">
+                  <a  id="topnew-href" href="#">
+                    <h4 id="top-read-h4">
+                      Read
+                    </h4>
+                  </a>
+                  <div class="gold-read-arrow">
+                   <a id="gold-arrow-hover" href="#">
+                    <img  id="gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
+                   </a>  
+                  </div>
+ 
+
+                </div>
+
+              </div>
+             
+              <div class="topnew-right-area ">
+                <div class="topnew-right-img ">
+                  <img id="topnew-img" src="./images/10_blogView/blognew.jpg" alt="">
+
+
+                </div>
+
+              </div>
+              
 
 
 
-<script src="./lib/jquery-3.5.1.js"></script>
+              </div>
+   
 
-<script>
 
-class StickyNavigation {
+
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+        </section>
+
+
+
+
+        <!-- 熱門文章架構區 -->
+
+        <section class="et-slide" id="tab-hotnews">
+          <div id="blog-title-h4">
+            <h4 class="blog-h4">熱門文章</h4>
+          </div>
+        </section>
+
+
+
+
+        <!-- 耳機知識架構區 -->
+        <section class="et-slide" id="tab-knowinfo">
+          <div id="blog-title-h4">
+            <h4 class="blog-h4">耳機知識</h4>
+          </div>
+         
+        </section>
+
+
+
+        <!-- 創新科技架構區 -->
+        <section class="et-slide" id="tab-newidea">
+          <div id="blog-title-h4">
+            <h4 class="blog-h4">創新科技</h4>
+          </div>
+        </section>
+
+        
+        <!-- <section class="et-slide" id="tab-other">
+          <h1>Other</h1>
+          <h3>something about other</h3>
+        </section> -->
+      </main>
+
+
+
+
+
+
+
+
+
+   <script src="./lib/jquery-3.5.1.js"></script>
+   <script>
+      
+
+      //navbar scroll hidden 
+// 開始
+
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("#navbar").style.top = "0";
+  } else {
+    document.getElementById("#navbar").style.top = "-200px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+// 結束
+
+
+
+
+
+
+
+//  navbar title  hover 導覽列滑鼠滑過文字更換 
+//  開始
+  
+  $("#about-hover").on('mouseenter mouseleave' ,function(event){
+     if ($(this).is(":contains('ABOUT')")){
+         $(this).text("關於我們");
+     }
+     else{
+         $(this).text("ABOUT");
+     }
+  });
+
+  $("#product-hover").on('mouseenter mouseleave' ,function(event){
+     if ($(this).is(":contains('PRODUCT')")){
+         $(this).text("所有商品");
+     }
+     else{
+         $(this).text("PRODUCT");
+     }
+  });
+
+  $("#reservation-hover").on('mouseenter mouseleave' ,function(event){
+     if ($(this).is(":contains('RESERVATION')")){
+         $(this).text("預約活動");
+     }
+     else{
+         $(this).text("RESERVATION");
+     }
+  });
+
+  $("#blog-hover").on('mouseenter mouseleave' ,function(event){
+     if ($(this).is(":contains('BLOG')")){
+         $(this).text("專欄文章");
+     }
+     else{
+         $(this).text("BLOG");
+     }
+  });
+
+  $("#member-hover").on('mouseenter mouseleave' ,function(event){
+     if ($(this).is(":contains('MEMBER')")){
+         $(this).text("會員專區");
+     }
+     else{
+         $(this).text("MEMBER");
+     }
+  });
+
+  // 結束
+
+
+
+
+
+
+  class StickyNavigation {
 	
 	constructor() {
 		this.currentId = null;
 		this.currentTab = null;
-		this.tabContainerHeight = 70;
+		this.tabContainerHeight = 58;
 		let self = this;
 		$('.et-hero-tab').click(function() { 
 			self.onTabClick(event, $(this)); 
@@ -135,7 +322,7 @@ new StickyNavigation();
 
 
 
-</script>
+   </script>
 <!-- 刪到這裡 -->
 
 

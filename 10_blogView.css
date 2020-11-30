@@ -4,6 +4,7 @@
 
 a {
   text-decoration: none;
+  list-style: none;
 }
 
 /* blog 第一標題區塊 blog-探索耳機 */
@@ -27,9 +28,11 @@ a {
   text-align: center;
 }
 
-/* 第一區塊標題 BLOG */
+/* 文章分類列表編輯 開始 */
 
-.et-hero-tabs h1 {
+/* 文章分類列標題 BLOG */
+
+.et-hero-tabs .blog-h1 {
   font-size: 4rem;
   margin: 0;
   letter-spacing: 0.7rem;
@@ -38,52 +41,14 @@ a {
   font-weight: 500;
 }
 
-/* 第一區塊小標題 探索耳機 成為日常 */
+/* 文章分類列 小標題 探索耳機 成為日常 */
 
-.et-hero-tabs h3 {
+.et-hero-tabs .blog-h3 {
   font-size: 20px;
   letter-spacing: 0.3rem;
   opacity: 0.8;
   color: #fff;
   font-weight: normal;
-}
-
-/* blog 其他標題區塊 */
-
-.et-slide {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  align-items: center;
-  height: 80vh;
-  position: relative;
-  background: #fff;
-  text-align: center;
-  padding: 0 2em;
-}
-
-/* 其他標題區塊 大標題 */
-
-.et-slide h1 {
-  font-size: 4rem;
-  margin: 0;
-  letter-spacing: 0.7rem;
-  color: #e3b684;
-  border-bottom: 2px solid #e3b684;
-  font-weight: 500;
-}
-
-/* 其他標題區塊 小標題 */
-
-.et-slide h3 {
-  font-size: 1rem;
-  letter-spacing: 0.3rem;
-  opacity: 0.6;
 }
 
 /* 文章分類列 區塊部分*/
@@ -122,16 +87,16 @@ a {
   background-color: rgba(0, 0, 0, 0.973);
   color: #fff;
   /* box-shadow: 10px 0 10px rgba(107, 107, 107, 0.685); */
-  letter-spacing: 0.1rem;
+  letter-spacing: 1.5px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 250px;
 }
 
 .et-hero-tab:hover {
   color: rgb(0, 0, 0);
-  background: #e3b684;
+  background: #e3b784d0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -145,6 +110,209 @@ a {
   -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
 }
+
+/* 文章分類列表編輯 結束 */
+
+/* blog 所有分類項目區塊 */
+
+.et-slide {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  /* -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center; */
+  height: 150vh;
+  position: relative;
+  background: #fff;
+  text-align: center;
+  padding: 0 2em;
+}
+
+/* 所有分類項目標題區塊 大標題 */
+
+.et-slide #blog-title-h4 {
+  width: 150px;
+  height: 60px;
+  background-color: rgba(137, 43, 226, 0.582);
+  border-bottom: 2px solid #e3b684;
+  margin: 50px 0px 30px 85px;
+}
+
+#blog-title-h4 .blog-h4 {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  color: #000000;
+  text-align: center;
+  font-weight: 400;
+}
+
+#blog-p {
+  font-size: 17px;
+  color: rgb(121, 121, 121);
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
+/* 最新資訊編輯區  開始*/
+
+.top-newBox {
+  width: 65%;
+  height: 350px;
+  /* background-color: cadetblue; */
+  margin: 10px auto;
+  display: flex;
+  box-shadow: 4px 4px 15px #0000003a;
+}
+
+/* 左方資訊編輯  */
+
+.top-left {
+  width: 60%;
+  height: 370px;
+  /* background-color: chocolate; */
+}
+
+.top-newBox .top-lable {
+  width: 75px;
+  height: 70px;
+  background-color: #e3b684;
+  margin-left: 40px;
+}
+
+#top-lable-p {
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 2px 2px #000000;
+  letter-spacing: 1.5px;
+}
+
+.alltop-date {
+  width: 100px;
+  height: 25px;
+  /* background-color: aquamarine; */
+  margin: 40px 40px 10px 40px;
+  border-bottom: 2px solid #3131317e;
+}
+
+#alltop-date {
+  font-size: 14px;
+  text-align: center;
+}
+
+.topnew-info {
+  width: 90%;
+  height: 90px;
+  /* background-color: tomato; */
+  margin: 20px 0 10px 40px;
+}
+
+.topnew-title #topnew-title-hover:hover{
+  text-decoration: none;
+
+}
+
+#topnew-title-h3 {
+  font-size: 22px;
+  color: #000000;
+  text-align: start;
+  list-style: none;
+}
+
+
+.topnew-bt-read {
+  width: 50%;
+  height: 40px;
+  margin: 50px 0 30px 40px;
+  display: flex;
+  /* background-color: cornflowerblue; */
+}
+
+ #topnew-href:hover {
+  text-decoration: none;
+}
+
+#top-read-h4 {
+  width: 100%;
+  text-align: start;
+  color: #e3b684;
+  font-weight: lighter;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  /* display: flex; */
+  /* background-color: yellow; */
+}
+
+.topnew-bt-read .gold-read-arrow {
+  width: 90px;
+  height: 18px;
+  /* background-color: steelblue; */
+  /* display: inline-block; */
+  margin-left: 25px;
+  margin-top: 1px;
+
+
+}
+
+#gold-arrow{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  
+}
+
+
+.topnew-right-area{
+  width: 35%;
+  height: 370px;
+  /* background-color: yellowgreen; */
+  margin: 0 auto;
+}
+
+.topnew-right-img{
+  width: 250px;
+  height: 180px;
+  /* background-color: yellow; */
+  margin: 80px auto 0px; 
+}
+
+#topnew-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.topnew-info .topnew-more{
+  width: 100%;
+  height: 70px;
+  /* background-color: yellow; */
+  text-align: start;
+  font-size: 14px;
+  margin-top: 10px;
+  color: rgb(114, 114, 114);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 970px) {
   .et-hero-tabs {
@@ -189,7 +357,7 @@ a {
   font-size: 3rem;
 }
 
-et-slide h3 {
+.et-slide h3 {
   font-size: 1rem;
 }
 
