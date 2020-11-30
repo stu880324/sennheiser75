@@ -9,5 +9,4 @@
       <link rel="stylesheet" href="<?= WEB_ROOT ?>fontawesome/css/all.css">
       <!-- 共用CSS樣式 -->
       <link rel="stylesheet" href="<?= WEB_ROOT ?>0_style1.css">
-      <link rel="stylesheet" href="<?= WEB_ROOT ?>0_navbar.css">
-     
+      <link rel="stylesheet" href="<?= WEB_ROOT ?>0_navbar2.css">

@@ -9,7 +9,7 @@
 
 </header>
 
-<nav class="wrapper">
+<nav class="nav-wrapper">
   <!-- logo -->
   <!-- <div class="logo ">
             <a href="#">
