@@ -99,7 +99,7 @@
     <div class="row threefeatures">
         <div class="col-sm-12 col-lg-4">
             <div class="feature-image">
-                <img src="images/1_index/icon desing/icon/德國工藝icon-黑.svg" alt="" />
+                <img src="images/1_index/icon desing/icon/crafticon-black.svg" alt="" />
             </div>
 
             <p class="feature-title">精美的德國工藝設計</p>
@@ -111,7 +111,7 @@
 
         <div class="col-sm-12 col-lg-4">
             <div class="feature-image">
-                <img src="images/1_index/icon desing/icon/2年保固-黑.svg" alt="" />
+                <img src="images/1_index/icon desing/icon/warranty-black.svg" alt="" />
             </div>
             <p class="feature-title">全系列保固二年</p>
             <p class="feature-description">
@@ -122,7 +122,7 @@
         </div>
         <div class="col-sm-12 col-lg-4">
             <div class="feature-image">
-                <img src="images/1_index/icon desing/icon/出色音質-黑.svg" alt="" />
+                <img src="images/1_index/icon desing/icon/sound-black.svg" alt="" />
             </div>
 
             <p class="feature-title">均衡精確的音頻重現</p>
