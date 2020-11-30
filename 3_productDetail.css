@@ -64,7 +64,7 @@ body{
 } */
 
 /* 放大鏡 */
-* {box-sizing: border-box;}
+/* * {box-sizing: border-box;}
 
 .demo {
   position: relative;
@@ -73,12 +73,10 @@ body{
 .img-magnifier-glass {
   position: absolute;
   border: 1px solid #1B1412;
-  /* border-radius: 50%; */
   cursor: none;
-  /*Set the size of the magnifier glass:*/
   width: 200px;
   height: 200px;
-}
+} */
 
 
 .intro{
