@@ -11,12 +11,11 @@
 
 <div class="container">
     
-    <h2 class="welcome text-center">WELCOME BACK</h2>
+    <h2 class="welcome text-center mt-5">WELCOME BACK</h2>
     <div class="goback  text-center"><a style="color: black;" href="#">會員中心 </a> / <a style="color: black;" href="#"> 歷史訂單</a></div>
     
-    <p>線上帳戶</p>
-    <table class="coupon">
-        <th>線上帳戶</th>
+    <div class="coupon-title">線上帳戶</div>
+    <table class="coupon">       
         <tr>
             <td>折價券編號</td>
             <td>折價券序號</td>

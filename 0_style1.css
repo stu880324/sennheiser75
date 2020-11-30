@@ -1,0 +1,209 @@
+/********** 共用CSS樣式 **********/
+/* 請務必套用同樣式以維持網頁一致性 */
+
+/* 打開參考線 */
+/* div{
+    border:1px solid turquoise;
+} */
+
+/* 此區編輯 btn */
+.cart-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #d4d5d5;
+  border-radius: 50%;
+  text-align: center;
+}
+.fas.fa-shopping-cart {
+  color: #e3b684;
+  font-size: 2rem;
+  line-height: 70px;
+}
+.btn-quantity {
+  border: 1px solid #000000;
+  font-size: 0.6rem;
+  width: 70px;
+  height: 35px;
+  line-height: 35px;
+}
+.btn-add-sub {
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1rem;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+}
+.btn-buy {
+  background-color: #000000;
+  color: white;
+  border: none;
+  font-size: 0.6rem;
+  width: 140px;
+  height: 35px;
+}
+.btn-send {
+  background-color: #e3b684;
+  color: #000000;
+  border: 1px solid transparent;
+  font-size: 0.6rem;
+  width: 140px;
+  height: 35px;
+}
+.btn-send:hover {
+  background-color: transparent;
+  color: #e3b684;
+  border: 1px solid #e3b684;
+  font-size: 0.6rem;
+  width: 140px;
+  height: 35px;
+}
+
+/* 此區編輯 a */
+.a-gray {
+  background-color: #5e5e5e;
+  color: #e3b684;
+  border: 1px solid #e3b684;
+  font-size: 18px;
+  font-weight: lighter;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.a-gray:hover {
+  text-decoration: none;
+  background-color: #e3b684;
+  color: #1b1b1b;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.a-white {
+  background-color: transparent;
+  color: #e3b684;
+  border: 1px solid #e3b684;
+  font-size: 18px;
+  font-weight: lighter;
+  /* border-radius: 20px; */
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.a-white:hover {
+  text-decoration: none;
+  background-color: #e3b684;
+  color: #1b1b1b;
+  border: 1px solid #e3b684;
+}
+.a-black {
+  /* background-color:#1B1B1B; */
+  color: #000000;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  font-weight: lighter;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.a-black:hover {
+  text-decoration: none;
+  color: #000000;
+  border-bottom: 5px solid #e3b684;
+}
+.a-gold {
+  background-color: #e3b684;
+  color: #ffffff;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  font-weight: lighter;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: 1s;
+}
+.a-gold:hover {
+  text-decoration: none;
+  background-color: #e3b684;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 300px;
+  transition: 1s;
+}
+
+/* 此區編輯 card */
+.product-card {
+  width: 280px;
+  height: 580px;
+  background-color: #2f2d2c;
+}
+.product-img {
+  width: 280px;
+  height: 375px;
+}
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.en {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15px;
+}
+.ch {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin-top: -20px;
+}
+.p-price {
+  color: #d9af80;
+  font-size: 18px;
+  text-align: center;
+  /* margin-top: -10px; */
+}
+.a-white-div {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* 此區編輯navbar */
+
+/* 此區編輯footer */
+footer {
+  background-color: #000000;
+}
+.footertitle {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 50px;
+}
+footer a {
+  color: #707070;
+  font-size: 0.8rem;
+}
+footer a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+footer hr {
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+.copyright {
+  color: #ffffff;
+  font-size: 0.6rem;
+}
+.contacticon svg {
+  fill: #e3b684;
+  margin: 10px;
+  padding: 5px;
+}
