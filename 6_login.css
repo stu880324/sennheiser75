@@ -39,6 +39,10 @@ button {
   height: fit-content;
 }
 
+.swal2-popup {
+  border-radius: 0;
+}
+
 @media (max-width: 991px) {
   .inner {
     min-width: auto;
