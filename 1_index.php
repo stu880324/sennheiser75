@@ -302,7 +302,7 @@
       <img src="images/1_index/situation/e-sport.jpg" alt="" />
     </div>
 
-    <div class="svg-wrapper col-lg-6">
+    <div class="svg-wrapper col-lg-6 mb-5">
       <svg height="60" width="450" xmlns="http://www.w3.org/2000/svg">
         <rect class="shape" height="60" width="450" />
       </svg>
