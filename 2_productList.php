@@ -24,17 +24,17 @@
         <div class="earphonebtnleft">
           <ul class="select-earphone">
             <li>
-              <button class="earphone-btn">
+              <button class="earphone-btn" data-type="circumaural">
                 <p class="earphone-p">頭戴式</p>
               </button>
             </li>
             <li>
-              <button class="earphone-btn">
+              <button class="earphone-btn" data-type="in-ear">
                 <p class="earphone-p">入耳式</p>
               </button>
             </li>
             <li>
-              <button class="earphone-btn">
+              <button class="earphone-btn" data-type="supra-aural">
                 <p class="earphone-p">耳掛式</p>
               </button>
             </li>
@@ -117,7 +117,7 @@
 
 <!-- product-card -->
 <div class="container">
-  <div class="row product-list">
+  <div class="row product-list mx-auto">
     <div class="product-card wow slideInUp">
       <div class="icons-part">
         <a href="" class="icons">
@@ -195,9 +195,8 @@
         <a href="" class="a-white">查看商品</a>
       </div>
     </div>
-  </div>
 
-  <div class="row product-list">
+
     <div class="product-card wow slideInUp">
       <div class="icons-part">
         <a href="" class="icons">
@@ -483,6 +482,56 @@
   });
 </script>
 <!-- 刪到這裡 -->
+
+<script>
+  $('.earphone-btn').on('click', function() {
+    console.log('hi earphone-btn', $(this).data('type'))
+    $.post('./2_productList_api.php', {
+      type: $(this).data('type')
+    }, function(data) {
+      console.log(data);
+      if (JSON.parse(data).success) {
+
+        let data2 = JSON.parse(data);
+        let html = '';
+
+        for (let i = 0; i < data2.result.length; i++) {
+          html += `<div class="product-card wow slideInUp">
+      <div class="icons-part">
+        <a href="" class="icons">
+          <img class="iconsvg" src="images/2_productList/icons/shopcar.svg" alt="" />
+        </a>
+
+        <a href="" class="icons">
+          <img class="iconsvg" src="images/2_productList/icons/heart.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="product-img">
+        <img src="images/small/product${data2.result[i].sid}.jpg" alt="" />
+      </div>
+
+      <div class="product-text">
+        <p class="en">${data2.result[i].english_name}</p>
+        <p class="ch">${data2.result[i].chinese_name}</p>
+        <p class="p-price">NT$ ${data2.result[i].price}</p>
+      </div>
+
+      <div class="a-white-div">
+        <a href="" class="a-white">查看商品</a>
+      </div>
+    </div>`
+        }
+
+
+        $('.product-list').html(html)
+
+      } else {
+
+      }
+    });
+  })
+</script>
 
 
 
