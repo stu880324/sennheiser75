@@ -24,7 +24,7 @@
     </div>
 </div>
 <div class="col-lg-6">
-    <div class="demo img-magnifier-container">
+    <div class="demo">
         <img id="myimage" src="./images/big/product54/picture1.jpg" alt="">
     </div>
 </div>
@@ -247,8 +247,8 @@
     </script>
 
 <!-- 放大鏡功能 -->
-<script>
-    function magnify(imgID, zoom) {
+<!-- <script> -->
+    <!-- function magnify(imgID, zoom) {
    var img, glass, w, h, bw;
    img = document.getElementById(imgID);
  
@@ -307,14 +307,14 @@
      y = y - window.pageYOffset;
      return {x : x, y : y};
    }
- }
- </script>
+ } -->
+ <!-- </script> -->
      
- <script>
+ <!-- <script>
      /* Execute the magnify function: */
      magnify("myimage", 3);
      /* Specify the id of the image, and the strength of the magnifier glass: */
- </script>
+ </script> -->
 
 
 
