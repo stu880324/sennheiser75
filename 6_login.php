@@ -49,7 +49,9 @@
                                 Swal.fire({
                                         title: '登入成功',
                                         icon: 'success',
-                                        confirmButtonText: '好'
+                                        confirmButtonText: '好',
+                                        confirmButtonColor: '#000',
+
                                 })
                         } else {
                                 Swal.fire({

@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__. './config.php';
+require __DIR__. './parts/1_config.php';
 
 $output = [
     'success' => false,
@@ -32,4 +32,3 @@ echo json_encode($output, JSON_UNESCAPED_UNICODE);
 //         $msg = '帳號或密碼錯誤';
 //     }
 // }
-?>
