@@ -1,17 +1,24 @@
+.goback {
+  text-align: center;
+  font-size: 25px;
+}
 
-
-table{
+table {
   margin: 0px auto 100px auto;
   width: 60%;
 }
-.coupon-title{
+.coupon-title {
   background-color: #000000;
   width: 60%;
   color: #ffffff;
   margin: 100px auto 0px auto;
   padding: 10px;
 }
-.coupon td{
+.coupon td {
   border-bottom: 1px solid #cccccc;
   padding: 10px;
+}
+.form-control {
+  width: 60%;
+  margin: auto;
 }

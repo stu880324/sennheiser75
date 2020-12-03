@@ -1,23 +1,21 @@
 <?php
 
-require __DIR__. './parts/1_config.php';
+require __DIR__ . './parts/1_config.php';
 
 $output = [
     'success' => false,
-    'account' => $_POST['account'],
-    'password' => $_POST['password']
+    'type' => $_POST['type']
 ];
-$sql = "SELECT * FROM `member` WHERE `account`=? AND `password`=?";
+$sql = "SELECT * FROM `products` WHERE `wearing`=?";
 //$output['sql'] = $sql;
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
-        $_POST['account'],
-        $_POST['password'],
+    $_POST['type']
 ]);
 
-if($stmt->rowCount()>0){
+if ($stmt->rowCount() > 0) {
     $output['success'] = true;
-    $_SESSION['user'] = $stmt->fetch();
+    $output['result'] = $stmt->fetchAll();
 }
 
 echo json_encode($output, JSON_UNESCAPED_UNICODE);
