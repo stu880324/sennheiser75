@@ -11,13 +11,9 @@ if (!isset($_SESSION)) {
 }
 
 $db_host = 'localhost';
-<<<<<<< HEAD
-$db_name = 'proj57';
-=======
-$db_name = 'proj59';
->>>>>>> 2294612aef44c1ea5d6baceb289483d15ab89ec6
-$db_user = 'root';
-$db_pass = '';
+$db_name = 'project57';
+$db_user = 'kim';
+$db_pass = 'adobe30';
 
 $dsn = "mysql:host={$db_host};dbname={$db_name};charset=utf8";
 $pdo_options = [
