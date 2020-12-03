@@ -191,11 +191,11 @@
     <h2>線上預約</h2>
     <div class="row">
         
-        <form>
+        <form action="4_reservation_insertAPI.php" method="post">
             <!-- 選地區 -->
             <div class="form-group">
-                <label class="label-title" for="store">STORE</label>
-                <select class="form-control" id="store">
+                <label class="label-title" for="location">STORE</label>
+                <select class="form-control" id="location" name="location">
                   <option>台北三創店</option>
                   <option>台中展示中心</option>
                   <option>高雄展示中心</option>
@@ -204,39 +204,39 @@
             <!-- 選日期 -->
             <div class="form-group">
               <label class="label-title" for="date">DATE</label>
-              <input type="date" class="form-control" id="date">
+              <input type="date" class="form-control" id="date" name="reservation_date">
             </div>
             <!-- 選時間 -->
             <div class="time-form-group">
             
-                    <label class="label-title" for="date">TIME</label>
+                    <label class="label-title">TIME</label>
                   <div>
                     <div class="form-check">
-                      <input class="input-time" type="radio" name="gridRadios" id="time10" value="10" checked>
+                      <input class="input-time" type="radio" name="time" id="time10" value="10:00 - 12:00" checked>
                       <label class="label-time" for="time10">
                         10:00 - 12:00
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="input-time" type="radio" name="gridRadios" id="time12" value="12">
+                      <input class="input-time" type="radio" name="time" id="time12" value="12:00 - 14:00">
                       <label class="label-time" for="time12">
                         12:00 - 14:00
                       </label>
                     </div>
                     <div class="form-check disabled">
-                      <input class="input-time" type="radio" name="gridRadios" id="time14" value="14" disabled>
+                      <input class="input-time" type="radio" name="time" id="time14" value="14:00 - 16:00" disabled>
                       <label class="label-time" for="time14">
                         14:00 - 16:00
                       </label>
                     </div>
                     <div class="form-check">
-                        <input class="input-time" type="radio" name="gridRadios" id="time16" value="16">
+                        <input class="input-time" type="radio" name="time" id="time16" value="16:00 - 18:00">
                         <label class="label-time" for="time16">
                           16:00 - 18:00
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="input-time" type="radio" name="gridRadios" id="time18" value="18">
+                        <input class="input-time" type="radio" name="time" id="time18" value="18:00 - 20:00">
                         <label class="label-time" for="time18">
                           18:00 - 20:00
                         </label>
