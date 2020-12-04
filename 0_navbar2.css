@@ -1,16 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"); */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 /* navbar 背景色 */
 
 header {
   /* position: fixed; */
-  z-index: 1;
+  z-index: 99;
   width: 100%;
   background: #000000;
 }
@@ -473,9 +473,10 @@ nav input {
   }
 
   nav {
-    height: 100px;
+    height: 85px;
     background-color: #000000;
     position: fixed;
+    z-index: 99;
   }
 
   .btn.close-btn {
@@ -499,7 +500,7 @@ nav input {
     padding: 0;
   }
 
-.nav-wrapper .btn {
+  .nav-wrapper .btn {
     display: block;
     width: 35px;
     height: 35px;
