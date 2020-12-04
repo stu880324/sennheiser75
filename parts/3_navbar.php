@@ -206,7 +206,7 @@
             </div>
 
           </div>
-          <div class="row ">
+          <div id="nav-info" class="row">
             <ul class="mega-links product-1">
               <li class="all-title">
                 <a href="#" class="item-list">
