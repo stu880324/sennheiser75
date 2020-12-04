@@ -11,7 +11,11 @@ if (!isset($_SESSION)) {
 }
 
 $db_host = 'localhost';
+<<<<<<< HEAD
 $db_name = 'proj57';
+=======
+$db_name = 'sennheiser75';
+>>>>>>> 71eaaa6ef482da3c492a0e1956e0c2a5fbecb867
 $db_user = 'root';
 $db_pass = '';
 

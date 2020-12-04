@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__. './config.php';
+require __DIR__ . './parts/1_config.php';
 
 $output = [
     'success' => false,
@@ -19,11 +19,11 @@ $o_stmt = $pdo->prepare($o_sql);
 
 //帶問號的地方,順序要對
 $o_stmt->execute([
-        $_POST['mobile'],
-        $_POST['password'],
-        $_POST['name'],
-        $_POST['birthday'],
-        $_POST['email']
+    $_POST['mobile'],
+    $_POST['password'],
+    $_POST['name'],
+    $_POST['birthday'],
+    $_POST['email']
 ]);
 
 $order_sid = $pdo->lastInsertId();

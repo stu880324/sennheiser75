@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS名稱 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>7_registered.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>7_registered1.css">
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
@@ -64,6 +64,20 @@
         password: $('#password').val()
       }, function(data) {
         console.log(data);
+        Swal.fire({
+          title: '註冊成功',
+          icon: 'success',
+          confirmButtonText: '好',
+          confirmButtonColor: '#000',
+
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = "./8_member.php"
+
+          }
+        })
+
+
       });
     } else {
       //密碼不一致
@@ -71,7 +85,9 @@
       Swal.fire({
         title: '密碼不一致',
         icon: 'error',
-        confirmButtonText: '好'
+        confirmButtonText: '好',
+        confirmButtonColor: '#e3b684',
+
       })
     }
 

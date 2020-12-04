@@ -1,0 +1,59 @@
+.goback {
+  text-align: center;
+  font-size: 25px;
+}
+
+table {
+  margin: 0px auto 100px auto;
+  width: 60%;
+}
+.coupon-title {
+  background-color: #000000;
+  width: 60%;
+  color: #ffffff;
+  margin: 100px auto 0px auto;
+  padding: 10px;
+}
+.coupon td {
+  border-bottom: 1px solid #cccccc;
+  padding: 10px;
+}
+.form-control {
+  width: 100%;
+  margin: auto;
+}
+
+button {
+  border: none;
+  width: 60%;
+  height: 40px;
+  background: #e3b684;
+  color: #000000;
+  letter-spacing: 10px;
+}
+
+.form-group {
+  margin-bottom: 21px;
+}
+
+/* .form-holder span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #333;
+}
+.form-holder span.lnr-lock {
+  left: 2px;
+} */
+
+.form-holder {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.form-holder p {
+  margin-left: 5px;
+}
