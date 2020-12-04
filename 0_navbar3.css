@@ -363,8 +363,6 @@ nav input {
   border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-
-
 .all-title {
   width: 260px;
   height: 60px;
@@ -374,9 +372,7 @@ nav input {
   /* padding: 0 20px; */
 }
 
-
-
-.nav-imgs{
+.nav-imgs {
   width: 70%;
   height: 170px;
   /* background-color: rgb(122, 165, 42); */
@@ -389,9 +385,7 @@ nav input {
   object-fit: cover;
   background-color: darkgoldenrod;
   /* padding: 0 40px; */
- 
 }
-
 
 .mega-links {
   width: 100%;
@@ -420,15 +414,12 @@ nav input {
   /* background-color: rgb(132, 132, 202); */
 }
 
-
-#nav-s-title{
+#nav-s-title {
   margin-left: 40px;
 }
-#nav-s-title-pr{
+#nav-s-title-pr {
   margin-left: 20px;
 }
-
-
 
 .row .mega-links li .item-list:hover {
   font-weight: 500;
@@ -450,16 +441,7 @@ nav input {
   top: 10px;
 }
 
-
-
-
 /* Navbar RWD-Hamburger */
-
-
-
-
-
-
 
 /* -------分隔線---------------- */
 
@@ -576,21 +558,20 @@ nav input {
 
   .content .row .nav-title,
   .content-product .row .nav-title,
-  .content-member .row .nav-title{
+  .content-member .row .nav-title {
     margin: 0 0 0 50px;
     /* background-color: tomato; */
   }
 
   .mega-box .content,
   .mega-box .content-product,
-  .mega-box .content-member{
+  .mega-box .content-member {
     background-repeat: repeat;
   }
 
-
   .content,
   .content-product,
-  .content-member{
+  .content-member {
     height: auto;
   }
 
@@ -633,8 +614,6 @@ nav input {
     flex-direction: column;
     padding: 20px 20px 0 20px;
   }
-
-  
 
   .mega-box .content .row {
     width: 100%;
@@ -681,8 +660,6 @@ nav input {
     margin-left: 20px;
   }
 
- 
-
   .row .mega-links .all-title {
     /* margin: 20px auto;
     padding: 30px 30px 20px; */
@@ -705,7 +682,7 @@ nav input {
     /* background-color: darkblue; */
   }
 
-  #nav-s-title{
+  #nav-s-title {
     margin-left: 10px;
     font-size: 20px;
   }
@@ -759,9 +736,5 @@ nav input {
     display: none;
   }
 
-
-
   /* rwd結束 */
 }
-
-
