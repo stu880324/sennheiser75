@@ -46,25 +46,25 @@
             <ul class="mega-links product-1">
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>品牌故事</span>
+                  <small>品牌故事</small>
                   <small> Story </small>
 
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>銷售據點</span>
+                  <small>銷售據點</small>
                   <small> Fine Us </small>
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>人才招募</span>
+                  <small>人才招募</small>
                   <small> Join Us </small></a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>聯絡我們</span>
+                  <small>聯絡我們</small>
                   <small> Contact</small></a>
               </li>
             </ul>
@@ -108,25 +108,25 @@
             <ul class="mega-links product-1">
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>所有商品</span>
+                  <small>所有商品</small>
                   <small>All Porduct</small>
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>電競專區</span>
+                  <small>電競專區</small>
                   <small>Gaming</small>
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>通勤專區</span>
+                  <small>通勤專區</small>
                   <small>Commuting</small>
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>運動專區</span>
+                  <small>運動專區</small>
                   <small>Sporting</small>
                 </a>
               </li>
@@ -139,13 +139,13 @@
             <ul class="mega-links product-1">
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>錄音專區</span>
+                  <small>錄音專區</small>
                   <small>Recording</small>
                 </a>
                 </liclass="all-title">
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>會議專區</span>
+                  <small>會議專區</small>
                   <small>Meeting</small>
                 </a>
               </li>
@@ -210,25 +210,25 @@
             <ul class="mega-links product-1">
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>歷史訂單</span>
+                  <small>歷史訂單</small>
                   <small>Ordered</small>
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>預約記錄</span>
+                  <small>預約記錄</small>
                   <small>Book</small>
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>常見問題</span>
+                  <small>常見問題</small>
                   <small>Q&A</small>
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>登出</span>
+                  <small>登出</small>
                   <small>Log out</small>
                 </a>
               </li>
