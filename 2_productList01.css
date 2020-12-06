@@ -49,6 +49,12 @@ ul {
   background-color: #2f2d2c;
   cursor: pointer;
 }
+.earphone-btn.active {
+  background-color: #d9af80;
+}
+.earphone-btn:focus {
+  outline: none;
+}
 .earphone-btn:hover {
   background-color: #d9af80;
 }
@@ -105,19 +111,19 @@ ul {
   cursor: pointer;
 }
 .select-color-w.active {
-  border: 1px solid #000;
+  outline: 1px solid #000;
 }
 .select-color-g.active {
-  border: 1px solid #000;
+  outline: 1px solid #000;
 }
 .select-color-b.active {
-  border: 1px solid #000;
+  outline: 1px solid #ffef09;
 }
 .select-color-gold.active {
-  border: 1px solid #000;
+  outline: 1px solid #000;
 }
 .select-color-y.active {
-  border: 1px solid #000;
+  outline: 1px solid #000;
 }
 
 .earphone-feature {
@@ -173,6 +179,7 @@ ul {
   display: flex;
   justify-content: space-around;
   width: 90%;
+  overflow: hidden;
 }
 .product-card {
   width: 280px;
@@ -266,6 +273,7 @@ ul.pagination li {
   border: 1px solid #ddd;
   text-align: center;
   margin: 0 4px;
+  padding: 4px;
 }
 
 ul.pagination li:hover {
@@ -424,7 +432,7 @@ img {
   font-weight: normal;
 }
 .carousel-heading:before {
-  content: "SENNHEISER";
+  content: 'SENNHEISER';
   font-size: 0.5rem;
   text-transform: uppercase;
   display: block;
@@ -597,4 +605,20 @@ html {
     padding: 20px 15px;
     background-color: #1b1b1b;
   }
+}
+
+.earphone-1 {
+  margin: 26px;
+}
+
+.earphone-2 {
+  margin: 26px auto 26px 26px;
+}
+
+.earphone-onlyOne {
+  margin: 26px auto 26px 26px;
+}
+
+.pagination li.active {
+  background-color: #e3b684;
 }

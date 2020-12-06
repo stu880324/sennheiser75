@@ -242,7 +242,7 @@
 </div>
 
 <!-- 情境介紹 -->
-<div class="container situation-area"></div>
+<div class="container situation-area">
   <div class="row situation-title">
     <p class="situation-p-en">Situation</p>
     <p class="situation-p-ch">情境介紹</p>

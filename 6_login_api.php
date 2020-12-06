@@ -1,6 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+require __DIR__ . '/parts/1_config.php';
+=======
 require __DIR__. './parts/1_config.php';
+>>>>>>> 068b053de1b54014fd0b37962b3f428ea1f65405
 
 $output = [
     'success' => false,
@@ -11,13 +15,13 @@ $sql = "SELECT * FROM `member` WHERE `account`=? AND `password`=?";
 //$output['sql'] = $sql;
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
-        $_POST['account'],
-        $_POST['password'],
+    $_POST['account'],
+    $_POST['password'],
 ]);
 
-if($stmt->rowCount()>0){
+if ($stmt->rowCount() > 0) {
     $output['success'] = true;
-    $_SESSION['user'] = $stmt->fetch();
+    $_SESSION['userAccount'] = $stmt->fetch();
 }
 
 echo json_encode($output, JSON_UNESCAPED_UNICODE);
