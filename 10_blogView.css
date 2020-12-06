@@ -99,6 +99,7 @@ a {
   background: #e3b784d0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  text-decoration: none;
 }
 
 .et-hero-tab-slider {
@@ -125,7 +126,6 @@ a {
     justify-content: center;
     -webkit-box-align: center;
     align-items: center; */
-
   position: relative;
   background: #fff;
   /* text-align: center; */
@@ -227,35 +227,58 @@ a {
 }
 
 .topnew-bt-read {
-  width: 50%;
-  height: 40px;
-  margin: 50px 0 30px 40px;
+  width: 160px;
+  height: 35px;
+  margin-top: 50px;
+  margin-left: 40px;
+  /* margin: 50px 0 30px 40px; */
   display: flex;
   /* background-color: cornflowerblue; */
 }
 
-#topnew-href:hover {
+
+
+#topnew-href:hover
+{
   text-decoration: none;
+  font-weight: 700;
+  background-color: black;
+  width: 200px;
+  /* letter-spacing: 5px; */
+}
+
+
+#topnew-href #top-read-h4:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 100%;
+}
+
+.topnew {
+  display: flex;
 }
 
 #top-read-h4 {
-  width: 100%;
   text-align: start;
   color: #e3b684;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 22px;
   letter-spacing: 1.5px;
   /* display: flex; */
   /* background-color: yellow; */
+  margin-top: 5px;
+
 }
 
 .topnew-bt-read .gold-read-arrow {
-  width: 90px;
+  width: 80px;
   height: 18px;
-  /* background-color: steelblue; */
+  /* background-color: rgb(28, 57, 82); */
   /* display: inline-block; */
-  margin-left: 25px;
-  margin-top: 1px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 8px;
+  
 }
 
 #gold-arrow {
@@ -308,8 +331,7 @@ a {
 
 /* slider 區塊開始 */
 
-.blog-card,
-.know-card {
+.blog-card{
   width: 300px;
   min-width: 300px;
   height: 300px;
@@ -325,7 +347,7 @@ a {
 }
 
 .blog-card:hover,
-.blog-card:hover {
+.top-newBox:hover {
   transform: translate(0, -10px);
   box-shadow: 0px 17px 35px 0px rgba(0, 0, 0, 0.07);
 }
@@ -344,7 +366,7 @@ a {
   padding-top: 50px;
   padding-left: 60px;
   padding-right: 50px;
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 
 .blog-card-content::-webkit-scrollbar,
@@ -353,14 +375,14 @@ a {
   height: 0px;
 }
 
-.blog-card-content:after,
+/* .blog-card-content:after,
 .know-card-content:after {
   content: "";
   display: block;
   min-width: 20px;
   height: 100px;
   position: relative;
-}
+} */
 
 /* slider左右箭頭編輯 開始 */
 
@@ -429,8 +451,7 @@ a {
   padding: 15px;
 } */
 
-.blog-card .blog-card-text,
-.know-card .know-card-text {
+.blog-card .blog-card-text {
   padding: 20px;
 }
 
@@ -475,17 +496,19 @@ a {
   transform: translate(0px, -10px);
 }
 
+
 .blog-slider,
 .know-slider,
 .idea-slider {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background:rgb(242,243,248); */
   width: 100%;
-  /* height:70vh; */
   overflow: hidden;
 }
+ /* height:70vh; */
+ /* background:rgb(242,243,248); */
+
 
 .blog-slider:after,
 .know-slider:after,
@@ -495,10 +518,12 @@ a {
   height: 70vh;
   position: absolute;
   width: 150px;
-  /* z-index:1; */
-  /* background: linear-gradient(90deg, rgb(249, 250, 253) 0%,rgba(242,243,248,0)  100%); */
+  
   pointer-events: none;
 }
+
+/* z-index:1; */
+  /* background: linear-gradient(90deg, rgb(249, 250, 253) 0%,rgba(242,243,248,0)  100%); */
 
 .blog-slider:before,
 .know-slider:before,
@@ -508,10 +533,9 @@ a {
   height: 70vh;
   position: absolute;
   width: 150px;
-  /* z-index:1; */
-  /* background: linear-gradient(90deg, rgba(242,243,248,0) 0%,rgba(242,243,248,1)  100%); */
   pointer-events: none;
 }
+
 
 .news-bt-read {
   width: 100%;
@@ -533,12 +557,13 @@ a {
   width: 100%;
   /* text-align: start; */
   color: #e3b684;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 18px;
   letter-spacing: 1.5px;
   display: flex;
   /* background-color: yellow; */
   margin-top: 30px;
+  box-shadow: #000000;
 }
 
 .news-bt-read .news-gold-read-arrow {
@@ -546,7 +571,7 @@ a {
   height: 18px;
   /* background-color: steelblue; */
   display: inline-block;
-  margin-left: 25px;
+  margin-left: 15px;
   margin-top: 30px;
 }
 
@@ -716,7 +741,7 @@ a {
   width: 100%;
   /* text-align: start; */
   color: #e3b684;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 18px;
   letter-spacing: 1.5px;
   display: flex;
@@ -856,6 +881,7 @@ a {
   width: 100%;
   height: 50px;
   display: flex;
+  text-align: center;
   /* margin-left: 1px; */
   /* background-color: cornflowerblue; */
 }
@@ -872,20 +898,21 @@ a {
   width: 100%;
   /* text-align: start; */
   color: #e3b684;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 14px;
   letter-spacing: 1.5px;
   display: flex;
   /* background-color: yellow; */
-  /* margin-top: 30px; */
+  margin-top: 2.5px;
 }
 
 .hotRight-bt-read .hotRight-gold-read-arrow {
   width: 30px;
-  height: 16px;
+  height: 14px;
   /* background-color: steelblue; */
   display: inline-block;
   margin-left: 10px;
+  margin-bottom: 10px;
   /* margin-top: 30px; */
 }
 
@@ -929,7 +956,12 @@ a {
   opacity: 1;
 }
 
-/* 耳機知識 */
+
+
+
+
+
+/* RWD RWD RWD */
 
 @media screen and (max-width: 970px) {
   .et-hero-tabs {
@@ -951,11 +983,12 @@ a {
     text-align: center;
   }
 
-  .blog-title {
+  
+.et-slide #blog-title-h4 {
     width: 180px;
     height: 80px;
-    background-color: rgb(168, 90, 90);
-    margin: 60px auto 30px;
+    /* background-color: rgb(168, 90, 90); */
+    margin: 50px auto ;
   }
 
   .et-hero-tabs .blog-h1 {
@@ -988,19 +1021,19 @@ a {
   #tab-newsinfo {
     width: 100%;
     height: 1200px;
-    background-color: darkblue;
+    /* background-color: darkblue; */
   }
 
   .news-area {
     width: 100%;
     height: 330px;
-    background-color: brown;
+    /* background-color: brown; */
   }
 
   .top-newBox {
     width: 100%;
-    height: 450px;
-    background-color: cadetblue;
+    height: 480px;
+    /* background-color: cadetblue; */
     margin: 0px auto;
     /* display: flex; */
     box-shadow: 4px 4px 15px #0000003a;
@@ -1010,7 +1043,7 @@ a {
   .topnew-right-area {
     width: 100%;
     height: 200px;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     margin: 0 auto;
     position: absolute;
     top: 0;
@@ -1033,20 +1066,20 @@ a {
   .top-left {
     width: 100%;
     height: 300px;
-    background-color: chocolate;
+    /* background-color: chocolate; */
     position: absolute;
-    top: 41%;
+    top: 39%;
     left: 0;
     /* margin-top: 100px; */
   }
 
   .top-newBox .top-lable {
-    width: 65px;
-    height: 60px;
+    width: 60px;
+    height: 65px;
     background-color: #e3b684;
     margin-left: 10px;
     position: absolute;
-    top: -62%;
+    top: -60%;
     left: 0;
     z-index: 1;
   }
@@ -1054,7 +1087,6 @@ a {
   #top-lable-p {
     font-size: 16px;
     line-height: 30px;
-    text-align: center;
     font-weight: 500;
     color: #fff;
     box-shadow: 2px 2px #000000;
@@ -1064,9 +1096,10 @@ a {
   .alltop-date {
     width: 100px;
     height: 25px;
-    background-color: aquamarine;
-    margin: 20px auto;
+    /* background-color: aquamarine; */
+    margin: 10px auto 20px;
     border-bottom: 2px solid #3131317e;
+    text-align: center;
   }
 
   #alltop-date {
@@ -1077,7 +1110,7 @@ a {
   .topnew-info {
     width: 90%;
     height: 90px;
-    background-color: tomato;
+    /* background-color: tomato; */
     margin: 10px auto;
   }
 
@@ -1093,67 +1126,49 @@ a {
   }
 
   .topnew-bt-read {
-    width: 50%;
-    height: 40px;
-    margin: 90px auto;
+    width: 160px;
+    height: 35px;
+    margin-top: 100px;
+    margin-left: 20px;
+    /* margin: 50px 0 30px 40px; */
     display: flex;
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
   }
-
-  #topnew-href:hover {
+  
+  
+  
+  #topnew-href:hover
+  {
     text-decoration: none;
+    font-weight: 700;
+    background-color: black;
+    width: 200px;
+    /* letter-spacing: 5px; */
   }
-
-  #top-read-h4 {
+  
+  
+  #topnew-href #top-read-h4:hover:before {
+    bottom: auto;
+    top: 0;
     width: 100%;
-    text-align: start;
-    color: #e3b684;
-    font-weight: lighter;
-    font-size: 22px;
-    letter-spacing: 1.5px;
-    /* display: flex; */
-    background-color: yellow;
   }
-
-  .topnew-info .topnew-more {
-    width: 100%;
-    height: 80px;
-    background-color: yellow;
-    text-align: start;
-    font-size: 14px;
-    margin: 15px auto;
-    color: rgb(114, 114, 114);
-  }
-
-  .topnew-bt-read .gold-read-arrow {
-    width: 90px;
-    height: 18px;
-    background-color: steelblue;
-    /* display: inline-block; */
-    margin-left: 25px;
-    margin-top: 1px;
-  }
-
-  #gold-arrow {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  
+  .topnew {
+    display: flex;
   }
 
   /* news slider */
 
   .blog-slider {
     width: 100%;
-    height: 600px;
-    background-color: darkgoldenrod;
+    /* background-color: darkgoldenrod; */
   }
 
-  .blog-card,
-  .know-card {
+  .blog-card {
     width: 100%;
     min-width: 260px;
     height: 300px;
-    background-color: rgb(248, 169, 169);
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     position: relative;
     /* z-index:1; */
@@ -1165,7 +1180,6 @@ a {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.08);
   }
 
-  .blog-card:hover,
   .blog-card:hover {
     transform: translate(0, -10px);
     box-shadow: 0px 17px 35px 0px rgba(0, 0, 0, 0.07);
@@ -1176,7 +1190,7 @@ a {
   .idea-card-content {
     width: 100%;
     height: 500px;
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     display: flex;
     /* align-items:center; */
     justify-content: space-between;
@@ -1193,16 +1207,7 @@ a {
   .know-card-content::-webkit-scrollbar {
     height: 0px;
   }
-  /* 
-.blog-card-content:after,
-.know-card-content:after {
-  content:'';
-  display:block;
-  min-width:20px;
-  height:100px;
-  position:relative;
-  background-color: darkgreen;
-} */
+
 
   /* slider左右箭頭編輯 開始 */
 
@@ -1210,7 +1215,7 @@ a {
   #know-next,
   #idea-next {
     min-width: 35px;
-    margin: 0;
+    margin: 5px;
     height: 35px;
     background: transparent;
     border: 1px solid #e3b684;
@@ -1225,7 +1230,7 @@ a {
   #know-prev,
   #idea-prev {
     min-width: 35px;
-    margin: 0;
+    margin: 5px;
     height: 35px;
     background: transparent;
     border: 1px solid #e3b684;
@@ -1300,7 +1305,7 @@ a {
     align-items: center;
     justify-content: center;
     transition: all 0.35s ease-out;
-    background-color: darkseagreen;
+    /* background-color: darkseagreen; */
   }
 
   .blog-card .b-imgs,
@@ -1327,7 +1332,7 @@ a {
     width: 100%;
     /* height:70vh; */
     overflow: hidden;
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
   }
 
   .blog-slider:after,
@@ -1362,8 +1367,8 @@ a {
     width: 100%;
     height: 50px;
     display: flex;
-    margin-left: 15px;
-    background-color: cornflowerblue;
+    margin-left: 2px;
+    /* background-color: cornflowerblue; */
   }
 
   .news-bt-read #news-href {
@@ -1391,7 +1396,7 @@ a {
     height: 18px;
     /* background-color: steelblue; */
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 10px;
     margin-top: 30px;
   }
 
@@ -1411,25 +1416,31 @@ a {
 
   .all-hots {
     width: 100%;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0;
+    display: flex;
   }
 
   #tab-hotnews {
     width: 100%;
-
-    background-color: darkolivegreen;
+    padding: 0px;
+    /* background-color: darkolivegreen; */
   }
 
   .all-hot-cards {
     width: 100%;
     height: 100%;
-    background-color: rgb(2, 40, 41);
+    /* background-color: rgb(2, 40, 41); */
     align-content: center;
-    margin: 20px auto;
+    margin: 0;
   }
+
+  .all-hot-cards .row{
+        margin-left: 0;
+  }
+  
 
   .hot-card--Top .hot-Top-img--hover {
     background-image: url("./images/10_blogView/hotblog-1.jpg");
@@ -1461,16 +1472,11 @@ a {
   }
 
   .hot-card--Top {
-    /* margin-right: 25px;
-  margin-left: 25px; 
-  /* margin: 80px 50px 100px 150px; */
-    margin: 0 auto;
+    margin:0 auto 10px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-    background-color: rgb(255, 255, 255);
-    width: 90%;
+    width: 95%;
     height: 370px;
     position: relative;
-    /* border-radius: 12px; */
     overflow: hidden;
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
   }
@@ -1482,8 +1488,6 @@ a {
     background-repeat: no-repeat;
     width: 100%;
     height: 200px;
-    /* border-top-left-radius: 12px;
-  border-top-right-radius: 12px; */
   }
 
   .hot-Top-img--hover {
@@ -1494,8 +1498,6 @@ a {
     width: 100%;
     position: absolute;
     height: 200px;
-    /* border-top-left-radius: px;
-  border-top-right-radius: 12px; */
     top: 0;
   }
 
@@ -1506,11 +1508,8 @@ a {
 
   .hot-cardTop-info {
     /* z-index: 2; */
-    background-color: rgb(53, 26, 26);
-    /* border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px; */
-    /* padding: 16px 24px 24px 24px; */
-    height: 350px;
+    /* background-color: rgb(53, 26, 26); */
+    height: 150px;
   }
 
   .hot-card--Top:hover .hot-Top-img--hover {
@@ -1600,14 +1599,15 @@ a {
 
   .all-right {
     width: 100%;
-    margin-top: 10px;
-    background-color: cornflowerblue;
+   margin: 10px auto;
+    /* background-color: cornflowerblue; */
+   
   }
 
   .right-top {
     width: 100%;
     height: 300px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     margin: 10px auto 0px;
     display: flex;
     position: relative;
@@ -1616,7 +1616,7 @@ a {
   .down-right-top {
     width: 100%;
     height: 300px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     margin: 10px auto 0;
     display: flex;
     position: relative;
@@ -1688,7 +1688,7 @@ a {
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: 14px;
-    background-color: darksalmon;
+    /* background-color: darksalmon; */
     width: 100%;
     height: 80px;
   }
@@ -1699,7 +1699,7 @@ a {
     display: flex;
     margin-top: 10px;
     /* margin-left: 1px; */
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
   }
 
   .hotRight-bt-read #hotRight-href {
@@ -1718,17 +1718,16 @@ a {
     font-size: 14px;
     letter-spacing: 1.5px;
     display: flex;
-    background-color: yellow;
-    /* margin-top: 30px; */
+    /* background-color: yellow; */
+   
   }
 
   .hotRight-bt-read .hotRight-gold-read-arrow {
     width: 30px;
     height: 16px;
-    background-color: steelblue;
+    /* background-color: steelblue; */
     display: inline-block;
-    /* margin-left:10px; */
-    /* margin-top: 30px; */
+
   }
 
   #hotRight-gold-arrow {

@@ -72,16 +72,16 @@
           <!-- Read箭頭 -->
 
           <div class="topnew-bt-read">
-            <a id="topnew-href" href="#">
+            <a id="topnew-href" class="topnew" href="#">
               <h4 id="top-read-h4">
                 Read
               </h4>
-            </a>
-            <div class="gold-read-arrow">
-              <a id="gold-arrow-hover" href="#">
+              <div class="gold-read-arrow">
                 <img id="gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
-              </a>
-            </div>
+              </div>
+            </a>
+
+            <!-- topnew-bt-read 結束-->
           </div>
         </div>
 
@@ -296,7 +296,7 @@
 
 
     <div class="all-hot-cards">
-      <div class="row all-hots">
+      <div class="all-hots row">
 
         <div calss="left-top">
           <div class="hot-card--Top">
@@ -951,7 +951,15 @@
 
 
 
+
+
+
+  <!-- <section class="et-slide" id="tab-other">
+          <h1>Other</h1>
+          <h3>something about other</h3>
+        </section> -->
 </main>
+
 
 
 
@@ -1046,6 +1054,57 @@
   new StickyNavigation();
 
 
+  // slider開始
+
+
+  const next = document.querySelector('#blog-next')
+  const prev = document.querySelector('#blog-prev')
+
+  function handleScrollNext(scrollDiv) {
+    scrollDiv.scrollLeft = scrollDiv.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : 320
+  }
+
+  function handleScrollPrev(scrollDiv) {
+    scrollDiv.scrollLeft = scrollDiv.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : 320
+
+  }
+
+  next.addEventListener('click', function() {
+    handleScrollNext(document.querySelector('.blog-card-content'));
+  })
+  prev.addEventListener('click', function() {
+    handleScrollPrev(document.querySelector('.blog-card-content'));
+  });
+
+
+  // 耳機知識 slider
+
+
+  const knowNext = document.querySelector('#know-next')
+  const knowPrev = document.querySelector('#know-prev')
+
+
+
+  knowNext.addEventListener('click', function() {
+    handleScrollNext(document.querySelector('.know-card-content'));
+  })
+  knowPrev.addEventListener('click', function() {
+    handleScrollPrev(document.querySelector('.know-card-content'));
+  });
+
+
+  // 創新科技 idea
+
+
+  const ideaNext = document.querySelector('#idea-next')
+  const ideaPrev = document.querySelector('#idea-prev')
+
+  ideaNext.addEventListener('click', function() {
+    handleScrollNext(document.querySelector('.idea-card-content'));
+  })
+  ideaPrev.addEventListener('click', function() {
+    handleScrollPrev(document.querySelector('.idea-card-content'));
+  });
 
   // scroll 指定頁面 結束
 
