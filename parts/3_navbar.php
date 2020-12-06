@@ -46,25 +46,25 @@
             <ul class="mega-links product-1">
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>品牌故事</span>
+                  <small id="nav-s-title">品牌故事</small>
                   <small> Story </small>
 
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>銷售據點</span>
+                  <small id="nav-s-title">銷售據點</small>
                   <small> Fine Us </small>
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>人才招募</span>
+                  <small id="nav-s-title">人才招募</small>
                   <small> Join Us </small></a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>聯絡我們</span>
+                  <small id="nav-s-title">聯絡我們</small>
                   <small> Contact</small></a>
               </li>
             </ul>
@@ -72,8 +72,12 @@
 
           <div class="row imgs">
             <div class="mega-links product-1">
-              <img  src="./images/0_navbar/about-img-2.jpg" alt="">
-              <img  src="./images/0_navbar/about-img-3.png" alt="">
+              <div class="nav-imgs">
+                <img id="n-img" src="./images/0_navbar/about-img-2.jpg" alt="">
+              </div>
+              <div class="nav-imgs">
+                <img id="n-img" src="./images/0_navbar/about-img-3.png" alt="">
+              </div>
             </div>
 
 
@@ -107,26 +111,26 @@
                           <p>關於我們</p></header> -->
             <ul class="mega-links product-1">
               <li class="all-title">
-                <a href="#" class="item-list">
-                  <span>所有商品</span>
+                <a href="#" class="item-list-pr">
+                  <small id="nav-s-title-pr">所有商品</small>
                   <small>All Porduct</small>
                 </a>
               </li>
               <li class="all-title">
-                <a href="#" class="item-list">
-                  <span>電競專區</span>
+                <a href="#" class="item-list-pr">
+                  <small id="nav-s-title-pr">電競專區</small>
                   <small>Gaming</small>
                 </a>
               </li>
               <li class="all-title">
-                <a href="#" class="item-list">
-                  <span>通勤專區</span>
+                <a href="#" class="item-list-pr">
+                  <small id="nav-s-title-pr">通勤專區</small>
                   <small>Commuting</small>
                 </a>
               </li>
               <li class="all-title">
-                <a href="#" class="item-list">
-                  <span>運動專區</span>
+                <a href="#" class="item-list-pr">
+                  <small id="nav-s-title-pr">運動專區</small>
                   <small>Sporting</small>
                 </a>
               </li>
@@ -138,14 +142,14 @@
                           <p>關於我們</p></header> -->
             <ul class="mega-links product-1">
               <li class="all-title">
-                <a href="#" class="item-list">
-                  <span>錄音專區</span>
+                <a href="#" class="item-list-pr">
+                  <small id="nav-s-title-pr">錄音專區</small>
                   <small>Recording</small>
                 </a>
                 </liclass="all-title">
               <li class="all-title">
-                <a href="#" class="item-list">
-                  <span>會議專區</span>
+                <a href="#" class="item-list-pr">
+                  <small id="nav-s-title-pr">會議專區</small>
                   <small>Meeting</small>
                 </a>
               </li>
@@ -206,29 +210,29 @@
             </div>
 
           </div>
-          <div class="row ">
+          <div id="nav-info" class="row">
             <ul class="mega-links product-1">
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>歷史訂單</span>
-                  <small>Ordered</small>
+                  <small id="nav-s-title">歷史訂單</small>
+                  <small >Ordered</small>
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>預約記錄</span>
+                  <small id="nav-s-title">預約記錄</small>
                   <small>Book</small>
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>常見問題</span>
+                  <small id="nav-s-title">常見問題</small>
                   <small>Q&A</small>
                 </a>
               </li>
               <li class="all-title">
                 <a href="#" class="item-list">
-                  <span>登出</span>
+                  <small id="nav-s-title">登出</small>
                   <small>Log out</small>
                 </a>
               </li>
@@ -237,8 +241,12 @@
 
           <div class="row imgs">
             <div class="mega-links product-1">
-              <img src="./images/0_navbar/member-img-1.jpg" alt="">
-              <img src="./images/0_navbar/member-img-2.jpg" alt="">
+              <div class="nav-imgs">
+                <img id="n-img" src="./images/0_navbar/member-img-1.jpg" alt="">
+              </div>
+              <div class="nav-imgs">
+                <img id="n-img" src="./images/0_navbar/member-img-2.jpg" alt="">
+              </div>
             </div>
 
 
@@ -287,9 +295,9 @@
   window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-      document.getElementById("#navbar").style.top = "0";
+      document.getElementById("navbar").style.top = "0";
     } else {
-      document.getElementById("#navbar").style.top = "-200px";
+      document.getElementById("navbar").style.top = "-200px";
     }
     prevScrollpos = currentScrollPos;
   }
@@ -298,58 +306,48 @@
 
 
 
-//  navbar title  hover 導覽列滑鼠滑過文字更換 
-//  開始
-  
-$("#about-hover").on('mouseenter mouseleave' ,function(event){
-     if ($(this).is(":contains('ABOUT')")){
-         $(this).text("關於我們");
-     }
-     else{
-         $(this).text("ABOUT");
-     }
+  //  navbar title  hover 導覽列滑鼠滑過文字更換 
+  //  開始
+
+  $("#about-hover").on('mouseenter mouseleave', function(event) {
+    if ($(this).is(":contains('ABOUT')")) {
+      $(this).text("關於我們");
+    } else {
+      $(this).text("ABOUT");
+    }
   });
 
-  $("#product-hover").on('mouseenter mouseleave' ,function(event){
-     if ($(this).is(":contains('PRODUCT')")){
-         $(this).text("所有商品");
-     }
-     else{
-         $(this).text("PRODUCT");
-     }
+  $("#product-hover").on('mouseenter mouseleave', function(event) {
+    if ($(this).is(":contains('PRODUCT')")) {
+      $(this).text("所有商品");
+    } else {
+      $(this).text("PRODUCT");
+    }
   });
 
-  $("#reservation-hover").on('mouseenter mouseleave' ,function(event){
-     if ($(this).is(":contains('RESERVATION')")){
-         $(this).text("預約活動");
-     }
-     else{
-         $(this).text("RESERVATION");
-     }
+  $("#reservation-hover").on('mouseenter mouseleave', function(event) {
+    if ($(this).is(":contains('RESERVATION')")) {
+      $(this).text("預約活動");
+    } else {
+      $(this).text("RESERVATION");
+    }
   });
 
-  $("#blog-hover").on('mouseenter mouseleave' ,function(event){
-     if ($(this).is(":contains('BLOG')")){
-         $(this).text("專欄文章");
-     }
-     else{
-         $(this).text("BLOG");
-     }
+  $("#blog-hover").on('mouseenter mouseleave', function(event) {
+    if ($(this).is(":contains('BLOG')")) {
+      $(this).text("專欄文章");
+    } else {
+      $(this).text("BLOG");
+    }
   });
 
-  $("#member-hover").on('mouseenter mouseleave' ,function(event){
-     if ($(this).is(":contains('MEMBER')")){
-         $(this).text("會員專區");
-     }
-     else{
-         $(this).text("MEMBER");
-     }
+  $("#member-hover").on('mouseenter mouseleave', function(event) {
+    if ($(this).is(":contains('MEMBER')")) {
+      $(this).text("會員專區");
+    } else {
+      $(this).text("MEMBER");
+    }
   });
 
   // 結束
-
-
-
-
-
 </script>
