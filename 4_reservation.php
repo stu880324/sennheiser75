@@ -6,6 +6,68 @@
 <?php include __DIR__. '/parts/2_html_head2.php'; ?>
 <?php include __DIR__. '/parts/3_navbar.php'; ?>
 
+<!-- 這裡banner-container -->
+<div class="container-fluid banner-container">
+    <div class="row banner">
+        <div class="gradient-bg"></div>
+        <div class="room1"><img src="./images/4_reservation/room1.jpg" alt=""></div>
+        <div class="banner-text">
+                <p class="animate__animated animate__slideInLeft animate__delay-0s">K E E P</p>
+                <p class="animate__animated animate__slideInLeft animate__delay-1s">L I S T E N I N G</p>
+                <p class="animate__animated animate__slideInLeft animate__delay-2s">K E E P</p>
+                <p class="animate__animated animate__slideInLeft animate__delay-3s">F E E L I N G</p>
+        </div>
+        <div class="now"><a href="">立即報名</a></div>
+    </div>
+</div>
+
+
+<!-- 這裡room-container -->
+<div class="container-fluid room-container">
+    <div class="row">
+        <div class="col-lg-4 col-sm-12">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="./images/4_reservation/room7.jpg" alt="">
+                    </div>
+                    <div class="flip-box-back">
+                        <img src="./images/4_reservation/room8.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-12 align-self-center">
+            <div class="room-text">
+                <h5>台北旗艦店</h5>
+                <p>台北市中正區市民大道三段2號</p>
+                <h5>台中展示中心</h5>
+                <p>台中市西屯區文心路三段526號</p>
+                <h5>高雄展示中心</h5>
+                <p>高雄市三民區建國二路162號</p>
+            </div>  
+        </div>
+        
+
+        <div class="col-lg-4 col-sm-12">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="./images/4_reservation/room15.jpg" alt="">
+                    </div>
+                    <div class="flip-box-back">
+                        <img src="./images/4_reservation/room14.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+           
 
 <!-- 這裡HE1 he1-container -->
 <div class="container-fluid he1-container">
@@ -77,7 +139,7 @@
         <div class="step">
             <div class="step-pic">
                 <div class="step-pic-black"><img src="./images/4_reservation/person1.jpeg" alt=""></div>
-                <div class="step-pic-color" data-stellar-ratio="2"><img src="./images/4_reservation/person1copy.png" alt=""></div>
+                <div class="step-pic-color" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person1copy.png" alt=""></div>
             </div>
             <div class="step-text">
                 <h4>活動方式</h4>
@@ -95,14 +157,14 @@
             </div>
             <div class="step-pic">
                 <div class="step-pic-black"><img src="./images/4_reservation/person2.jpg" alt=""></div>
-                <div class="step-pic-color"><img src="./images/4_reservation/person2copy.png" alt=""></div>
+                <div class="step-pic-color" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person2copy.png" alt=""></div>
             </div>
         </div>
         <!-- step2 -->
         <div class="step">
             <div class="step-pic">
                 <div class="step-pic-black"><img src="./images/4_reservation/person3.jpg" alt=""></div>
-                <div class="step-pic-color"><img src="./images/4_reservation/person3copy.png" alt=""></div>
+                <div class="step-pic-color" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person3copy.png" alt=""></div>
             </div>
             <div class="step-text">
                 <h4>STEP 2</h4>
@@ -117,7 +179,7 @@
             </div>
             <div class="step-pic">
                 <div class="step-pic-black"><img src="./images/4_reservation/person4.jpg" alt=""></div>
-                <div class="step-pic-color"><img src="./images/4_reservation/person4copy.png" alt=""></div>
+                <div class="step-pic-color" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person4copy.png" alt=""></div>
             </div>
         </div>
         
@@ -129,57 +191,58 @@
     <h2>線上預約</h2>
     <div class="row">
         
-        <form>
+        <form action="4_reservation_insertAPI.php" method="post">
+            <!-- 選地區 -->
             <div class="form-group">
-                <label class="label-title" for="store">STORE</label>
-                <select class="form-control" id="store">
+                <label class="label-title" for="location">STORE</label>
+                <select class="form-control" id="location" name="location">
                   <option>台北三創店</option>
                   <option>台中展示中心</option>
                   <option>高雄展示中心</option>
                 </select>
               </div>
-
+            <!-- 選日期 -->
             <div class="form-group">
               <label class="label-title" for="date">DATE</label>
-              <input type="date" class="form-control" id="date">
+              <input type="date" class="form-control" id="date" name="reservation_date">
             </div>
-
-            <fieldset class="form-group">
+            <!-- 選時間 -->
+            <div class="time-form-group">
             
-                    <label class="label-title" for="date">TIME</label>
+                    <label class="label-title">TIME</label>
                   <div>
                     <div class="form-check">
-                      <input class="input-time" type="radio" name="gridRadios" id="time10" value="10" checked>
+                      <input class="input-time" type="radio" name="time" id="time10" value="10:00 - 12:00" checked>
                       <label class="label-time" for="time10">
                         10:00 - 12:00
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="input-time" type="radio" name="gridRadios" id="time12" value="12">
+                      <input class="input-time" type="radio" name="time" id="time12" value="12:00 - 14:00">
                       <label class="label-time" for="time12">
                         12:00 - 14:00
                       </label>
                     </div>
                     <div class="form-check disabled">
-                      <input class="input-time" type="radio" name="gridRadios" id="time14" value="14" disabled>
+                      <input class="input-time" type="radio" name="time" id="time14" value="14:00 - 16:00" disabled>
                       <label class="label-time" for="time14">
                         14:00 - 16:00
                       </label>
                     </div>
                     <div class="form-check">
-                        <input class="input-time" type="radio" name="gridRadios" id="time16" value="16">
+                        <input class="input-time" type="radio" name="time" id="time16" value="16:00 - 18:00">
                         <label class="label-time" for="time16">
                           16:00 - 18:00
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="input-time" type="radio" name="gridRadios" id="time18" value="18">
+                        <input class="input-time" type="radio" name="time" id="time18" value="18:00 - 20:00">
                         <label class="label-time" for="time18">
                           18:00 - 20:00
                         </label>
                       </div>
                   </div>
-              </fieldset>
+              </div>
 
               <button class="submit-btn" type="submit">SEND</button>
 
@@ -196,16 +259,11 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-<script
-    src="https://code.jquery.com/jquery-3.5.1.slim.js"
-    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
-    crossorigin="anonymous"></script>
-
-
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <!-- 轉變背景顏色功能 -->
 <!-- <script>
     function myFunction() {
@@ -230,22 +288,23 @@
 </script> -->
 
 <!-- 滾動視差 -->
-<!-- <script src="./stellar.js-master/jquery.stellar.min.js"></script>
+<script src="./stellar.js-master/jquery.stellar.min.js"></script>
     
 <script>
     $(document).ready(function () {
         // For example:
         $(window).stellar();
         // or:
-        $('.step-pic-color').stellar();
+        // $('.step-pic-color').stellar();
         });
 </script>
 
 <script>
     $(document).ready(function () {
-    $.stellar();
+    // $.stellar();
     });
-</script> -->
+</script>
+
 
 <!-- 背景圖上升功能 -->
 <script>
@@ -253,7 +312,7 @@
 
         let scrollTop = $(this).scrollTop();
 
-        console.log(scrollTop)
+        // console.log(scrollTop)
 
         if (scrollTop > 2750) {
             $('.bg3d').addClass('move-up');

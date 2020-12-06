@@ -1,16 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"); */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  /* box-sizing: border-box; */
+  /* font-family: "Poppins", sans-serif; */
 }
 
 /* navbar 背景色 */
 
 header {
   /* position: fixed; */
-  z-index:1;
+  z-index: 99;
   width: 100%;
   background: #000000;
 }
@@ -105,7 +105,7 @@ nav input {
   left:10%; */
 }
 
-.wrapper .nav-links {
+.nav-wrapper .nav-links {
   display: inline-flex;
   z-index: 2;
   margin: 0;
@@ -144,7 +144,7 @@ nav input {
 
 /* 導覽列滑鼠滑過 */
 
-.wrapper .list-title a:hover {
+.nav-wrapper .list-title a:hover {
   text-decoration: none;
   color: #e3b684;
   font-weight: 500;
@@ -414,7 +414,7 @@ nav input {
 }
 
 .row .mega-links li .item-list {
-  text-align: center;
+  text-align: start;
   padding: 0px;
   /* padding: 0 20px; */
   /* line-height: 30px; */
@@ -434,13 +434,13 @@ nav input {
 /* .row .mega-links li a:hover {
   color: #f2f2f2;
 } */
-.wrapper .btn {
+.nav-wrapper .btn {
   color: #fff;
   font-size: 20px;
   cursor: pointer;
   display: none;
 }
-.wrapper .btn .close-btn {
+.nav-wrapper .btn .close-btn {
   position: absolute;
   right: 30px;
   top: 10px;
@@ -473,9 +473,10 @@ nav input {
   }
 
   nav {
-    height: 100px;
+    height: 85px;
     background-color: #000000;
     position: fixed;
+    z-index: 99;
   }
 
   .btn.close-btn {
@@ -494,19 +495,19 @@ nav input {
     color: #e3b684;
   }
 
-  .wrapper {
+  .nav-wrapper {
     width: 100%;
     padding: 0;
   }
 
-  .wrapper .btn {
+  .nav-wrapper .btn {
     display: block;
     width: 35px;
     height: 35px;
     /* background-color: greenyellow; */
   }
 
-  .wrapper .nav-links {
+  .nav-wrapper .nav-links {
     position: fixed;
     height: 100vh;
     width: 100%;

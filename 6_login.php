@@ -52,6 +52,7 @@ if (!isset($_SESSION)) {
                         if (result.success) {
 
                                 Swal.fire({
+<<<<<<< HEAD
                                                 title: '登入成功',
                                                 icon: 'success',
                                                 confirmButtonText: '好',
@@ -63,6 +64,14 @@ if (!isset($_SESSION)) {
                                                         window.location.href = "./8_member.php"
                                                 }
                                         })
+=======
+                                        title: '登入成功',
+                                        icon: 'success',
+                                        confirmButtonText: '好',
+                                        confirmButtonColor: '#000',
+
+                                })
+>>>>>>> 068b053de1b54014fd0b37962b3f428ea1f65405
                         } else {
                                 Swal.fire({
                                         title: '登入失敗',

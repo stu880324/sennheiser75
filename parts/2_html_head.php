@@ -7,7 +7,7 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <link rel="stylesheet" href="<?= WEB_ROOT ?>bootstrap/css/bootstrap.css">
       <link rel="stylesheet" href="<?= WEB_ROOT ?>fontawesome/css/all.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
       <!-- 共用CSS樣式 -->
       <link rel="stylesheet" href="<?= WEB_ROOT ?>0_style1.css">
-      <link rel="stylesheet" href="<?= WEB_ROOT ?>0_navbar.css">
-     
+      <link rel="stylesheet" href="<?= WEB_ROOT ?>0_navbar3.css">

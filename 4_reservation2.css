@@ -1,0 +1,445 @@
+div{
+    border: 1px solid red;
+}
+
+
+/* 這裡banner-container */
+.banner-container{
+    background-color: #000000;
+    height: 800px;
+
+}
+.banner{
+    position: relative;
+}
+.gradient-bg{
+    width:500px;
+    height:400px;
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    background: linear-gradient(to bottom right,#d9a26e,#457C86);
+    opacity: 30%;
+}
+.room1{
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+} 
+.room1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.banner-text{
+    color: #457C86;
+    font-size: 50px;
+    line-height: 40px;
+    position: absolute;
+    top: 200px;
+    /* left: 100px; */
+    z-index: 3;
+}
+
+/* 這裡編輯room-container */
+.room-container{
+    background: linear-gradient(to bottom,#000000,#1a1a1a);
+    padding: 0px 100px 0px 100px;
+
+}
+ /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ .flip-box {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  .flip-box-front img, .flip-box-back img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  /* Style the front side */
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .room-text{
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+   
+  }
+  .room-text h5{
+    color: #FBA674; 
+    font-weight: lighter;
+  }
+  .room-text p{
+    color: #ffffff;
+    font-weight: lighter;
+}
+
+
+/* 這裡編輯HE1 he1-container */
+.he1-container{
+    background-color: #1a1a1a;
+}
+
+/* 這裡編輯大字 */
+.text-effect{
+    width: 100%;
+    margin-left: 200px;
+    color: #fff;
+    font-family: serif;
+    font-size: 90px;
+    font-weight: lighter;
+    z-index: 2;
+    transform: translateY(140px);
+    /* display: block; */
+}
+.text-effect span{ animation: animate linear 2000ms infinite; }
+.text-effect span:nth-child(1n){ animation-delay: 0s; }
+.text-effect span:nth-child(2n){ animation-delay: 100ms; }
+.text-effect span:nth-child(3n){ animation-delay: 200ms; }
+.text-effect span:nth-child(4n){ animation-delay: 300ms; }
+.text-effect span:nth-child(5n){ animation-delay: 400ms; }
+.text-effect span:nth-child(6n){ animation-delay: 500ms; }
+.text-effect span:nth-child(7n){ animation-delay: 600ms; }
+.text-effect span:nth-child(8n){ animation-delay: 700ms; }
+.text-effect span:nth-child(9n){ animation-delay: 800ms; }
+.text-effect span:nth-child(10n){ animation-delay: 900ms; }
+@keyframes animate{
+    0%{ opacity: 0.3; }
+    100%{
+       opacity:1;
+       text-shadow: 0 0 80px #f80000,0 0 30px #d9a26e,0 0 6px #ffee00;
+    }
+}
+
+@media only screen and (max-width: 460px){  
+    .banner{
+        background-position: top;
+        background-size: contain;
+        height: 500px;
+    }
+    .text-effect{ 
+        font-size: 60px; 
+        top: 100px;
+    }
+}
+.he1-container h1{
+    font-weight: lighter;
+    background: -webkit-linear-gradient(#000000, #FBA674, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 200px;
+}
+.he1-small{
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    margin-left: auto;
+    /* transform: rotate(5deg); */
+}
+.he1-small img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.he1-small img:hover{
+    -webkit-filter:invert(1);
+}
+.he1-area{
+    position: relative;
+}
+.he1-bg{
+    width: 100%;
+    height: 600px;
+    margin: 0px auto 0px auto;
+}
+.he1-bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.focus-text{
+    width: 300px;
+    font-family: serif;
+}
+.focus-text h4{
+    color: #d9a26e;
+    font-weight: lighter;
+    margin: 20px 0px 20px 0px;
+}
+.focus-text p{
+    font-family: serif;
+    color: #ffffff;
+    font-weight: lighter;
+}
+.focus1 img, .focus2 img, .focus3 img{
+    width: 80px;
+    height: 80px;
+}
+.focus1{
+    position: absolute;
+    top: 300px;
+    left: 150px;
+}
+.focus2{
+    position: absolute;
+    top: 250px;
+    left: 980px;
+}
+.focus3{
+    position: absolute;
+    top: 450px;
+    left: 1000px;
+}
+
+
+
+
+/* 這裡編輯 step-container */
+.step-container{
+    background-image: url(./images/4_reservation/bgline.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.step-wrap{
+    margin: 200px auto 0 auto;
+}
+.step{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+.step-pic{
+    width: 55%;
+    flex-shrink: 0;
+    position: relative;
+}
+.step-pic-black{
+    width: 100%;
+    height: 100%;
+}
+.step-pic-black img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-filter:grayscale(1);
+    opacity: 0.8;
+}
+.step-pic-color{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 150px;
+}
+.step-pic-color img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+
+}
+.step .step-text{
+    width: 55%;
+    flex-shrink: 0;
+    color: #ffffff;
+    background-color:rgba(0, 0, 0, 0.9);
+    padding: 50px 30px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+.step-text h4{
+    color: #d9a26e;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
+.step-text p{
+    font-weight: lighter;
+}
+.step > :first-child{
+    margin-right: -10%;
+}
+
+/* 這裡編輯報名區 form-container */
+.form-container{
+    background-color:#000000;
+    margin: 100px 0px 0px 0px;
+    padding: 20px;
+    background-attachment: fixed;
+}
+.form-container h2{
+    color: #457C86;
+    text-align: center;
+}
+form{
+    margin: 50px auto 120px auto;
+}
+.label-title{
+    color:#d9a26e;
+}
+.input-time{
+
+}
+.label-time{
+    color: azure;
+}
+.label-time input:disabled{
+    color: #CCCCCC;
+}
+.submit-btn{
+    width: 200px;
+    padding: 10px;
+    color:#457C86;
+    background-color: transparent;
+    border: 1px solid #457C86;
+}
+.submit-btn:hover{
+    color:azure;
+    background-color:#457C86;
+
+}
+.bg3d{
+    width: 100%;
+    height: 120px;
+    /* transform: translateY(-200px); */
+    transition: 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.bg3d img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+.bg3d.move-up{
+    transform: translateY(-100px);
+}
+/* 這裡編輯customer UI kit */
+.form-control{
+    border-radius: 0%;
+    background-color: #CCCCCC;
+}
+/* Customize the label (the container) */
+.time-form-group {
+    display: block;
+    position: relative;
+    /* padding-left: 35px; */
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .time-form-group input {
+    position: absolute;
+    opacity: 1;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+
+    background-color:red;
+  }
+/* Create a custom radio button */
+.input-time {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color:#CCCCCC;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .time-form-group:hover input ~ .input-time {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .input-time:checked{
+    background-color: #d9a26e;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .input-time:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .time-form-group input:checked ~ .input-time:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .time-form-group .input-time:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -38,11 +38,12 @@ body{
     width: 552px;
     height: 552px;
     margin: auto;
+    overflow: hidden;
 }
 .demo img{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 .picture100{
     width: 100px;
@@ -64,7 +65,7 @@ body{
 } */
 
 /* 放大鏡 */
-* {box-sizing: border-box;}
+/* * {box-sizing: border-box;}
 
 .demo {
   position: relative;
@@ -73,12 +74,10 @@ body{
 .img-magnifier-glass {
   position: absolute;
   border: 1px solid #1B1412;
-  /* border-radius: 50%; */
   cursor: none;
-  /*Set the size of the magnifier glass:*/
   width: 200px;
   height: 200px;
-}
+} */
 
 
 .intro{

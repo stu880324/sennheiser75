@@ -2,184 +2,158 @@
     border: 1px solid red;
 } */
 
-/* .body{
-    background-image: url(./images/4_reservation/bgline.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #030101;
-    background-attachment: fixed;
-    color: #CCCCCC;
-} */
-/* .dark-mode {
-    background-color: #CCCCCC;
-    color: black;
-  } */
 
+/* 這裡banner-container */
+.banner-container{
+    background-color: #000000;
+    height: 800px;
 
-/* The switch - the box around the slider */
-.switch {
+}
+.banner{
     position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
+}
+.gradient-bg{
+    width:60%;
+    /* height:400px; */
     position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color:#CCCCCC;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #030101;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
+    z-index: 1;
+    right: 10%;
+    background: linear-gradient(to bottom right,#d9a26e,#000000);
+    opacity: 30%;
 
-.banner-row{
-    position: relative;
-    /* height: 800px; */
-}
-.turn-back{
-    width: 50px;
-    height: 500px;
-    position: absolute;
-    left: -60px;
-}
-.turn-back img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: right;
-}
-.back-icon{
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 50%;
-    right: 0px;
-}
-.turn-next{
-    width: 40px;
-    height:200px;
-    position: absolute;
-    background-color: #d9a26e;
-    right: -40px;
-    top: 40%;
-}
-.next-icon{
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    transform: translateY(-50%);
-}
-.next-icon img{
-    width: 100%;
-    height: 100%;
-}
-.number{
-    font-size: 80px;
-    color: #d9a26e;
-}
-.banner-text-area h1{
-    color: #d9a26e;
-}
-.banner-text-area{
-    color: #ffffff;
-}
-.btn-gold{
-    background-color: #d9a26e;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    width: 150px;
-    height: 50px;
-}
-.banner-img-up{
-    width: 100%;
-    height: 60%;
-    padding: 5px;
-}
-.banner-img-up img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.banner-img-down{
-    width: 100%;
-    height: 40%;
-}
-.banner-img-left{
-    width: 50%;
-    height: 40%;
-    padding: 5px;
-}
-.banner-img-left img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.banner-img-right{
-    width: 50%;
-    height: 40%;
-    padding: 5px;
-}
-.banner-img-right img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.banner-number{
-    width: 10%;
-    list-style: none;
-    font-size: 24px;
-    color: #d9a26e;
-}
-.banner-dot-area{
+    animation: gradient-bg 4s ;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count:infinite; */
+    }
+ @keyframes gradient-bg{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 600px;
+    }
+ }
+.room1{
     width: 80%;
+    height: 600px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    }
+ 
+.room1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
-.banner-dot{
-    width: 25%;
-    height: 2px;
-    list-style: none;
-    background-color: #ffffff;
+.banner-text{
+    color: #457C86;
+    font-size: 50px;
+    line-height: 40px;
+    position: absolute;
+    top: 200px;
+    /* padding-left: 10%; */
+    left: 10%;
+    z-index: 3;
+    overflow: hidden;
+}
+.now{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 1px solid #d9a26e;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+    right: 15%;
+    top: 350px;
+    transform: rotate(15deg);
+}
+
+.now a{
+    color:#d9a26e;
+    text-align: center;
+    line-height: 100px;
+    font-weight: lighter;
+}
+.now a:hover{
+    text-decoration: none;
+    font-weight: bolder;
+
+}
+
+
+/* 這裡編輯room-container */
+.room-container{
+    background: linear-gradient(to bottom,#000000,#1a1a1a);
+    padding: 0px 100px 0px 100px;
+
+}
+ /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ .flip-box {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  .flip-box-front img, .flip-box-back img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  /* Style the front side */
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .room-text{
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+   
+  }
+  .room-text h5{
+    color: #FBA674; 
+    font-weight: lighter;
+  }
+  .room-text p{
     color: #ffffff;
+    font-weight: lighter;
 }
 
 
@@ -187,12 +161,43 @@
 .he1-container{
     background-color: #1a1a1a;
 }
+
+/* 這裡編輯大字 */
+.text-effect{
+    width: 100%;
+    margin-left: 200px;
+    color: #fff;
+    font-family: serif;
+    font-size: 90px;
+    font-weight: lighter;
+    z-index: 2;
+    transform: translateY(140px);
+    /* display: block; */
+}
+.text-effect span{ animation: animate linear 2000ms infinite; }
+.text-effect span:nth-child(1n){ animation-delay: 0s; }
+.text-effect span:nth-child(2n){ animation-delay: 100ms; }
+.text-effect span:nth-child(3n){ animation-delay: 200ms; }
+.text-effect span:nth-child(4n){ animation-delay: 300ms; }
+.text-effect span:nth-child(5n){ animation-delay: 400ms; }
+.text-effect span:nth-child(6n){ animation-delay: 500ms; }
+.text-effect span:nth-child(7n){ animation-delay: 600ms; }
+.text-effect span:nth-child(8n){ animation-delay: 700ms; }
+.text-effect span:nth-child(9n){ animation-delay: 800ms; }
+.text-effect span:nth-child(10n){ animation-delay: 900ms; }
+@keyframes animate{
+    0%{ opacity: 0.3; }
+    100%{
+       opacity:1;
+       text-shadow: 0 0 80px #f80000,0 0 30px #d9a26e,0 0 6px #ffee00;
+    }
+}
 .he1-container h1{
     font-weight: lighter;
     background: -webkit-linear-gradient(#000000, #FBA674, #000000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-left: 200px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 200px;
 }
 .he1-small{
     width: 200px;
@@ -330,8 +335,8 @@
 
 /* 這裡編輯報名區 form-container */
 .form-container{
-    background-color: #000000;
-    margin: 100px 0px 100px 0px;
+    background-color:#000000;
+    margin: 100px 0px 0px 0px;
     padding: 20px;
     background-attachment: fixed;
 }
@@ -384,61 +389,6 @@ form{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 這裡編輯大字 */
-.text-effect{
-    width: 100%;
-    margin-left: 200px;
-    color: #fff;
-    font-family: serif;
-    font-size: 90px;
-    font-weight: lighter;
-    z-index: 2;
-    transform: translateY(140px);
-    /* display: block; */
-}
-.text-effect span{ animation: animate linear 2000ms infinite; }
-.text-effect span:nth-child(1n){ animation-delay: 0s; }
-.text-effect span:nth-child(2n){ animation-delay: 100ms; }
-.text-effect span:nth-child(3n){ animation-delay: 200ms; }
-.text-effect span:nth-child(4n){ animation-delay: 300ms; }
-.text-effect span:nth-child(5n){ animation-delay: 400ms; }
-.text-effect span:nth-child(6n){ animation-delay: 500ms; }
-.text-effect span:nth-child(7n){ animation-delay: 600ms; }
-.text-effect span:nth-child(8n){ animation-delay: 700ms; }
-.text-effect span:nth-child(9n){ animation-delay: 800ms; }
-.text-effect span:nth-child(10n){ animation-delay: 900ms; }
-@keyframes animate{
-    0%{ opacity: 0.3; }
-    100%{
-       opacity:1;
-       text-shadow: 0 0 80px #f80000,0 0 30px #d9a26e,0 0 6px #ffee00;
-    }
-}
-
-@media only screen and (max-width: 460px){  
-    .banner{
-        background-position: top;
-        background-size: contain;
-        height: 500px;
-    }
-    .text-effect{ 
-        font-size: 60px; 
-        top: 100px;
-    }
-}
 
 
 
