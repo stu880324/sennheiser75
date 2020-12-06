@@ -17,7 +17,7 @@
 
 <?php include __DIR__. '/parts/2_html_head.php'; ?>
         <!-- 請填入各頁面CSS檔名 -->
-        <link rel="stylesheet" href="<?= WEB_ROOT ?>3_productDetail.css">
+        <link rel="stylesheet" href="<?= WEB_ROOT ?>3_productDetail01.css">
 
 <?php include __DIR__. '/parts/2_html_head2.php'; ?>
 <?php include __DIR__. '/parts/3_navbar.php'; ?>
@@ -48,7 +48,7 @@
         <img id="myimage" src="./images/big/product<?= $row['sid']?>/picture1.jpg" alt="">
     </div>
 </div>
-<div class="col-lg-4 my-auto">
+<div class="col-lg-4 my-auto product-item" data-sid="<?= $row['sid']?>">
     <div class="intro">
         <h4><?= $row['english_name']?></h4>
         <h4><?= $row['chinese_name']?></h4><br>
@@ -60,9 +60,19 @@
                 <div id="quantity" class="btn-quantity text-center">1</div>
                 <div id="add" class="btn-add-sub text-center">+</div>
             </div>
+        
+            <button class="btn-buy" data-toggle="modal" data-target=".bd-example-modal-sm">加入購物車</button>
 
-            <button class="btn-buy">加入購物車</button>
-
+                <!-- Small modal -->
+                <!-- <button type="button" class="btn btn-primary" >Small modal</button> -->
+                <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content text-center" 
+                    style="background-color: #000; color:#fff; height:200px; line-height:200px;">
+                    已加入購物車
+                    </div>
+                </div>
+                </div>
         </div>
 
         <br>
@@ -81,6 +91,9 @@
 
 </div>
 </div>
+
+
+
 
 <!-- 此區 detail-container -->
 <div class="container detail-container">
@@ -238,15 +251,16 @@
 
 <!-- 加入購物車功能 -->
 <script>
-    $('.buy-btn').on('click', function(event){
+    $('.btn-buy').on('click', function(event){
         const item  = $(this).closest('.product-item');
         const sid = item.attr('data-sid');
-        const qty = item.find('.quantity').val();
+        const qty = item.find('.btn-quantity').text();
 
         console.log({sid:sid, quantity: qty});
-        $.get('handle-cart.php', {sid:sid, quantity: qty, action:'add'}, function(data){
+        $.get('5_addToCart-API.php', {sid:sid, quantity: qty, action:'add'}, function(data){
             console.log(data);
-            countCart(data.cart);
+            // TODO:購物車budge
+            // countCart(data.cart);
         }, 'json');
     });
 
@@ -260,7 +274,7 @@
 
 
 <!-- 增減數量功能 -->
-<script>
+    <script>
     // const dallorCommas = function(n){
     //     return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
