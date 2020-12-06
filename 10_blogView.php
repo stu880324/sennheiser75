@@ -1051,10 +1051,15 @@
 
   }
 
+  // tab結束
+
+
+    // slider開始
+
   new StickyNavigation();
 
 
-  // slider開始
+
 
 
   const next = document.querySelector('#blog-next')
@@ -1109,63 +1114,8 @@
   // scroll 指定頁面 結束
 
 
-  // slider 開始
+  // slider 結束
 
-  // 最新資訊
-  const next = document.querySelector('#blog-next')
-  const prev = document.querySelector('#blog-prev')
-
-  function handleScrollNext(direction) {
-    const cards = document.querySelector('.blog-card-content')
-    cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-  }
-
-  function handleScrollPrev(direction) {
-    const cards = document.querySelector('.blog-card-content')
-    cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-  }
-
-  next.addEventListener('click', handleScrollNext)
-  prev.addEventListener('click', handleScrollPrev);
-
-
-  // 熱門文章
-
-  const knowNext = document.querySelector('#know-next')
-  const knowPrev = document.querySelector('#know-prev')
-
-  function handleScrollknowNext(direction) {
-    const knowCards = document.querySelector('.know-card-content')
-    knowCards.scrollLeft = knowCards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-  }
-
-  function handleScrollknowPrev(direction) {
-    const knowCards = document.querySelector('.know-card-content')
-    knowCards.scrollLeft = knowCards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-  }
-
-  knowNext.addEventListener('click', handleScrollknowNext)
-  knowPrev.addEventListener('click', handleScrollknowPrev);
-
-
-  // 創新科技 idea
-
-
-  const ideaNext = document.querySelector('#idea-next')
-  const ideaPrev = document.querySelector('#idea-prev')
-
-  function handleScrollideaNext(direction) {
-    const ideaCards = document.querySelector('.idea-card-content')
-    ideaCards.scrollLeft = ideaCards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-  }
-
-  function handleScrollideaPrev(direction) {
-    const ideaCards = document.querySelector('.idea-card-content')
-    ideaCards.scrollLeft = ideaCards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-  }
-
-  ideaNext.addEventListener('click', handleScrollideaNext)
-  ideaPrev.addEventListener('click', handleScrollideaPrev);
 </script>
 <!-- 刪到這裡 -->
 
