@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__. './config.php';
+require __DIR__ . '/parts/1_config.php';
 
 $output = [
     'success' => false,
@@ -11,13 +11,13 @@ $sql = "SELECT * FROM `member` WHERE `account`=? AND `password`=?";
 //$output['sql'] = $sql;
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
-        $_POST['account'],
-        $_POST['password'],
+    $_POST['account'],
+    $_POST['password'],
 ]);
 
-if($stmt->rowCount()>0){
+if ($stmt->rowCount() > 0) {
     $output['success'] = true;
-    $_SESSION['user'] = $stmt->fetch();
+    $_SESSION['userAccount'] = $stmt->fetch();
 }
 
 echo json_encode($output, JSON_UNESCAPED_UNICODE);
@@ -32,4 +32,3 @@ echo json_encode($output, JSON_UNESCAPED_UNICODE);
 //         $msg = '帳號或密碼錯誤';
 //     }
 // }
-?>

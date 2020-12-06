@@ -1,39 +1,40 @@
-<?php include __DIR__. '/parts/1_config.php'; ?>
-<?php include __DIR__. '/parts/2_html_head.php'; ?>
-        <!-- 請填入各頁面CSS名稱 -->
-        <link rel="stylesheet" href="<?= WEB_ROOT ?>8_member.css">
+<?php include __DIR__ . '/parts/1_config.php'; ?>
+<?php include __DIR__ . '/parts/2_html_head.php'; ?>
+<!-- 請填入各頁面CSS名稱 -->
+<link rel="stylesheet" href="<?= WEB_ROOT ?>8_member.css">
 
-<?php include __DIR__. '/parts/2_html_head2.php'; ?>
-<?php include __DIR__. '/parts/3_navbar.php'; ?>
+<?php include __DIR__ . '/parts/2_html_head2.php'; ?>
+<?php include __DIR__ . '/parts/3_navbar.php'; ?>
+
 
 
 <!-- 以下刪除就可以開始編輯 -->
 
 <div class="container">
-    
-    <h2 class="welcome text-center mt-5">WELCOME BACK</h2>
-    <div class="goback  text-center"><a style="color: black;" href="#">會員中心 </a> / <a style="color: black;" href="#"> 歷史訂單</a></div>
-    
-    <div class="coupon-title">線上帳戶</div>
-    <table class="coupon">       
-        <tr>
-            <td>折價券編號</td>
-            <td>折價券序號</td>
-            <td>折扣</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>ZXC123</td>
-            <td>-$100</td>
-        </tr>
 
-       
+  <h2 class="welcome text-center mt-5">WELCOME BACK</h2>
+  <div class="goback  text-center"><a style="color: black;" href="#">會員中心 </a> / <a style="color: black;" href="#"> 歷史訂單</a></div>
 
-    </table>
-    
+  <div class="coupon-title">線上帳戶</div>
+  <table class="coupon">
+    <tr>
+      <td>折價券編號</td>
+      <td>折價券序號</td>
+      <td>折扣</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>ZXC123</td>
+      <td>-$100</td>
+    </tr>
+
+
+
+  </table>
+
 </div>
 
-    <!-- <div class="row">
+<!-- <div class="row">
    
         <h6 class="mt-5">線上帳戶</h6>
         <hr>
@@ -121,6 +122,6 @@
 
 
 
-<?php include __DIR__. '/parts/4_footer.php'; ?>
-<?php include __DIR__. '/parts/5_scripts.php'; ?>
-<?php include __DIR__. '/parts/6_html_foot.php'; ?>
+<?php include __DIR__ . '/parts/4_footer.php'; ?>
+<?php include __DIR__ . '/parts/5_scripts.php'; ?>
+<?php include __DIR__ . '/parts/6_html_foot.php'; ?>

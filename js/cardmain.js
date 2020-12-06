@@ -50,11 +50,15 @@ const action = {
         $(document).on('click', function (e) {
             if (!$(e.target).is('#cwInput')) {
                 cardToFlip.flip(false);
+                $('#cardHolderValue').show();
+                console.log('document click')
             }
         });
 
         inputCw.on('click', function () {
             cardToFlip.flip(true);
+            $('#cardHolderValue').hide();
+
         });
 
         return action;

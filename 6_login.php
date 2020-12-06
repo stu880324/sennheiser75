@@ -6,7 +6,10 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
-
+<?php
+if (!isset($_SESSION)) {
+        session_start();
+} ?>
 
 <!-- 以下刪除就可以開始編輯 -->
 
@@ -45,12 +48,21 @@
                         password: $('#passInput').val()
                 }, function(data) {
                         console.log(data);
-                        if (JSON.parse(data).success) {
+                        let result = JSON.parse(data);
+                        if (result.success) {
+
                                 Swal.fire({
-                                        title: '登入成功',
-                                        icon: 'success',
-                                        confirmButtonText: '好'
-                                })
+                                                title: '登入成功',
+                                                icon: 'success',
+                                                confirmButtonText: '好',
+                                                confirmButtonColor: '#000',
+
+                                        })
+                                        .then((btnclick) => {
+                                                if (btnclick.isConfirmed) {
+                                                        window.location.href = "./8_member.php"
+                                                }
+                                        })
                         } else {
                                 Swal.fire({
                                         title: '登入失敗',
