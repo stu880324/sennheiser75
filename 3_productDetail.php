@@ -21,6 +21,7 @@
 
 <?php include __DIR__. '/parts/2_html_head2.php'; ?>
 <?php include __DIR__. '/parts/3_navbar.php'; ?>
+<?php include __DIR__. '/parts/7_fix-icon.php'; ?>
 
 
 <!-- 此區 demo-container -->
@@ -260,7 +261,7 @@
         $.get('5_addToCart-API.php', {sid:sid, quantity: qty, action:'add'}, function(data){
             console.log(data);
             // TODO:購物車budge
-            // countCart(data.cart);
+            countCart(data.cart);
         }, 'json');
     });
 
