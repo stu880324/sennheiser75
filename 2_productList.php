@@ -570,7 +570,7 @@
               </div>
 
               <div class="a-white-div">
-                <a href="" class="a-white">查看商品</a>
+                <a href="3_productDetail.php?sid=${result.result[i].sid}" class="a-white">查看商品</a>
               </div>
             </div>`
         }
@@ -672,7 +672,7 @@
               </div>
 
               <div class="a-white-div">
-                <a href="" class="a-white">查看商品</a>
+                <a href="3_productDetail.php?sid=${earphoneData[i].sid}" class="a-white">查看商品</a>
               </div>
             </div>`
     }
