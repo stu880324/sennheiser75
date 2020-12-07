@@ -12,7 +12,7 @@
             header('Location: 2_productList.php'); exit;
         }
 
-        echo json_encode($row, JSON_UNESCAPED_UNICODE);
+        // echo json_encode($row, JSON_UNESCAPED_UNICODE);
         ?>
 
 <?php include __DIR__. '/parts/2_html_head.php'; ?>

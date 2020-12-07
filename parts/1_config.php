@@ -12,9 +12,14 @@ if (!isset($_SESSION)) {
 
 
 $db_host = 'localhost';
-$db_name = 'proj57';
+$db_name = 'sennheiser75';
+<<<<<<< HEAD
 $db_user = 'root';
 $db_pass = '';
+=======
+$db_user = 'kim';
+$db_pass = 'adobe30';
+>>>>>>> 0943d3cc96e51e0cfb11fa36d3d9bc3a218d8ae8
 
 $dsn = "mysql:host={$db_host};dbname={$db_name};charset=utf8";
 $pdo_options = [

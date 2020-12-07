@@ -432,7 +432,7 @@ img {
   font-weight: normal;
 }
 .carousel-heading:before {
-  content: 'SENNHEISER';
+  content: "SENNHEISER";
   font-size: 0.5rem;
   text-transform: uppercase;
   display: block;
@@ -506,18 +506,18 @@ img {
   margin-bottom: 60px;
 }
 
-*,
+/* *,
 *:before,
 *:after {
   box-sizing: border-box;
-  /* position: relative; */
-  /* transition-property: opacity, -webkit-transform, -webkit-filter;
+  position: relative; 
+  transition-property: opacity, -webkit-transform, -webkit-filter;
               transition-property: transform, opacity, filter;
               transition-property: transform, opacity, filter, -webkit-transform,
-                -webkit-filter; */
+                -webkit-filter;
   transition-duration: 0.7s, 0.7s, 0.7s;
   transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
-}
+} */
 
 body,
 html {
