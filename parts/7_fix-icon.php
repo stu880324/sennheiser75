@@ -76,3 +76,22 @@
         countCart(data.cart);
     }, 'json');
 </script>
+
+<!-- 回到頂端功能 -->
+<script>
+    $(function(){
+        let $gotop = $(".top-fix-icon")
+
+        // $(window).scroll(function(){
+        //     if($(window).scrollTop()>600){
+        //         $gotop.show();
+        //     }else{
+        //         $gotop.hide();
+        //     }
+        // });
+
+        $gotop.click(function(){
+            $('html, body').animate({scrollTop:0},200)
+        });
+    });
+</script>
