@@ -1,7 +1,7 @@
 <?php include __DIR__. '/parts/1_config.php'; ?>
 <?php include __DIR__. '/parts/2_html_head.php'; ?>
         <!-- 請填入各頁面CSS名稱 -->
-        <link rel="stylesheet" href="<?= WEB_ROOT ?>4_reservation.css">
+        <link rel="stylesheet" href="<?= WEB_ROOT ?>4_reservation01.css">
 
 <?php include __DIR__. '/parts/2_html_head2.php'; ?>
 <?php include __DIR__. '/parts/3_navbar.php'; ?>
@@ -191,7 +191,8 @@
     <h2>線上預約</h2>
     <div class="row">
         
-        <form action="4_reservation_insertAPI.php" method="post">
+        <!-- <form action="4_reservation_insertAPI.php" method="post"> -->
+        <form name="form1" onsubmit="sendForm(); return false;">
             <!-- 選地區 -->
             <div class="form-group">
                 <label class="label-title" for="location">STORE</label>
@@ -244,8 +245,22 @@
                   </div>
               </div>
 
-              <button class="submit-btn" type="submit">SEND</button>
-
+              <?php if(empty( $_SESSION['userAccount'])): ?>
+                <a href="./6_login.php"><div class="submit-btn">請先登入會員</div></a>
+              <?php else: ?>
+              <button class="submit-btn"  data-toggle="modal" data-target=".bd-example-modal-sm" type="submit">SEND</button>
+        
+                <!-- Small modal -->
+                    <!-- <button type="button" class="btn btn-primary" >Small modal</button> -->
+                    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content text-center" 
+                        style="background-color: #000; color:#fff; height:200px; line-height:200px;">
+                        預約成功
+                        </div>
+                    </div>
+                    </div>
+              <?php endif ?>
           </form>
     </div>
     <div class="bg3d"><img src="./images/4_reservation/bg3d.png" alt=""></div>
@@ -264,6 +279,21 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+<!-- 送出預約表單功能 -->
+<script>
+    function sendForm(){
+        $.post('4_reservation_insertAPI.php',
+            $(document.form1).serialize(), 
+            function(data){
+            console.log(data);
+            
+        }, 'json');
+    }
+
+</script>
+
+
 <!-- 轉變背景顏色功能 -->
 <!-- <script>
     function myFunction() {

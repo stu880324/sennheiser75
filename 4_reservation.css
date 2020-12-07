@@ -362,14 +362,18 @@ form{
 .submit-btn{
     width: 200px;
     padding: 10px;
-    color:#457C86;
+    color:red;
     background-color: transparent;
     border: 1px solid #457C86;
+    text-align: center;
 }
 .submit-btn:hover{
     color:azure;
     background-color:#457C86;
-
+}
+.submit-btn a{
+    color: #457C86;
+    text-align: center;
 }
 .bg3d{
     width: 100%;
