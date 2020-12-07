@@ -3,11 +3,11 @@
         position: fixed;
         right: 20px;
         bottom: 100px;
+        z-index: 99;
     }
     .cart-fix-icon{
         border-radius: 10px;
         background-color: #000000;
-        color:#FFFFFF;
         width: 60px;
         height: 60px;
         text-align: center;
@@ -15,7 +15,9 @@
         position: relative;
     }
     .fa-shopping-cart{
-        color: #FFFFFF;
+        color:  #d9a26e;
+        font-size: 24px;
+        line-height: 60px;
     }
     .badge{
         background-color: rgba(217, 0, 0, 0.8);
@@ -29,20 +31,28 @@
     .top-fix-icon{
         border-radius: 10px;
         background-color: #000000;
-        color:#FFFFFF;
-        font-size: 30px;
         width: 60px;
         height: 60px;
         text-align: center;
-        padding-top: 10px;
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     }
+    .fa-arrow-up{
+        color:#FFFFFF;
+        font-size: 24px;
+        line-height: 60px;
+    }
+    
 </style>
 
 <!-- 開始HTML -->
 <div class="fix-icon">
     <!-- 購物車 -->
-    <div class="cart-fix-icon"><span class="badge count-badge badge-pill badge-danger">0</span><i class="fas fa-shopping-cart"></i></div>
+    <div class="cart-fix-icon">
+        <a href="5_cart1.php">
+            <span class="badge count-badge badge-pill badge-danger">0</span>
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+    </div>
     <!-- 返回頂端 -->
     <div class="top-fix-icon mt-3"><i class="fas fa-arrow-up"></i></div>
 
