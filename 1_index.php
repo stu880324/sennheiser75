@@ -12,7 +12,7 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
-<?php include __DIR__. '/parts/7_fix-icon.php'; ?>
+<?php include __DIR__ . '/parts/7_fix-icon.php'; ?>
 
 <!-- 以下刪除就可以開始編輯 -->
 <!-- 輪播牆 -->
@@ -236,7 +236,7 @@
       <img src="images/1_index/icon desing/arrow-left.svg" alt="" />
     </div>
     <div class="reservation-text">
-      <a href="#">預約試聽 Book Now</a>
+      <a href="4_reservation.php">預約試聽 Book Now</a>
     </div>
   </div>
 </div>
@@ -266,7 +266,7 @@
       </p>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="2_productList.php" class="a-white">查看商品</a>
       </div>
     </div>
   </div>
@@ -291,7 +291,7 @@
       </p>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="2_productList.php" class="a-white">查看商品</a>
       </div>
     </div>
 
@@ -315,7 +315,7 @@
       </p>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="2_productList.php" class="a-white">查看商品</a>
       </div>
     </div>
   </div>
@@ -450,24 +450,31 @@
 
 <!-- 加入購物車功能 -->
 <script>
-    $('.btn-buy').on('click', function(event){
-        const item  = $(this).closest('.product-item');
-        const sid = item.attr('data-sid');
-        const qty = item.find('.btn-quantity').text();
+  $('.btn-buy').on('click', function(event) {
+    const item = $(this).closest('.product-item');
+    const sid = item.attr('data-sid');
+    const qty = item.find('.btn-quantity').text();
 
-        console.log({sid:sid, quantity: qty});
-        $.get('5_addToCart-API.php', {sid:sid, quantity: qty, action:'add'}, function(data){
-            console.log(data);
-            // TODO:購物車budge
-            countCart(data.cart);
-        }, 'json');
+    console.log({
+      sid: sid,
+      quantity: qty
     });
+    $.get('5_addToCart-API.php', {
+      sid: sid,
+      quantity: qty,
+      action: 'add'
+    }, function(data) {
+      console.log(data);
+      // TODO:購物車budge
+      countCart(data.cart);
+    }, 'json');
+  });
 
-    function showProductModal(sid){
-        $('iframe')[0].src = "product-detail02.php?sid=" + sid;
-        // product-detail02.php?sid=17
-        $('#exampleModal').modal('show')
-    }
+  function showProductModal(sid) {
+    $('iframe')[0].src = "product-detail02.php?sid=" + sid;
+    // product-detail02.php?sid=17
+    $('#exampleModal').modal('show')
+  }
 </script>
 <!-- 刪到這裡 -->
 
