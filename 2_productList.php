@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS樣式 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>2_productList01.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>2_productList1.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
@@ -249,7 +249,7 @@
     </div>
     <div class="product-card">
       <div class="icons-part">
-        <a href="" class="icons btn-buy">
+        <a href="" class="icons">
           <img src="images/2_productList/icons/shopcar.svg" alt="" />
         </a>
 
