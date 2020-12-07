@@ -140,7 +140,7 @@
       </div>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="3_productDetail.php?sid=9" class="a-white">查看商品</a>
       </div>
     </div>
 
@@ -166,7 +166,7 @@
       </div>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="3_productDetail.php?sid=1" class="a-white">查看商品</a>
       </div>
     </div>
 
@@ -192,7 +192,7 @@
       </div>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="3_productDetail.php?sid=2" class="a-white">查看商品</a>
       </div>
     </div>
 
@@ -219,7 +219,7 @@
       </div>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="3_productDetail.php?sid=26" class="a-white">查看商品</a>
       </div>
     </div>
     <div class="product-card">
@@ -244,7 +244,7 @@
       </div>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="3_productDetail.php?sid=33" class="a-white">查看商品</a>
       </div>
     </div>
     <div class="product-card">
@@ -269,7 +269,7 @@
       </div>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="3_productDetail.php?sid=40" class="a-white">查看商品</a>
       </div>
     </div>
   </div>
