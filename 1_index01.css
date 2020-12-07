@@ -305,9 +305,9 @@ hr {
     rgba(0, 0, 0, 0)
   );
 }
-.a-white-div {
+.a-white-div01 {
   text-align: center;
-  margin-top: 0px;
+  margin-top: -25px;
 }
 .a-white {
   background-color: transparent;

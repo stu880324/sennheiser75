@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS樣式 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>1_index.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>1_index01.css">
 
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" /> -->
 <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -192,8 +192,8 @@
           或是實現自然的聲音，都可以依據各型喜好設定，因此深受大眾喜愛。
         </p>
 
-        <div class="a-white-div">
-          <a href="" class="a-white">查看商品</a>
+        <div class="a-white-div01">
+          <a href="2_productList.php" class="a-white">查看商品</a>
         </div>
       </div>
     </div>
