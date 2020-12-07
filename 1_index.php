@@ -12,7 +12,7 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
-
+<?php include __DIR__. '/parts/7_fix-icon.php'; ?>
 
 <!-- 以下刪除就可以開始編輯 -->
 <!-- 輪播牆 -->
@@ -446,6 +446,28 @@
     }
 
   });
+</script>
+
+<!-- 加入購物車功能 -->
+<script>
+    $('.btn-buy').on('click', function(event){
+        const item  = $(this).closest('.product-item');
+        const sid = item.attr('data-sid');
+        const qty = item.find('.btn-quantity').text();
+
+        console.log({sid:sid, quantity: qty});
+        $.get('5_addToCart-API.php', {sid:sid, quantity: qty, action:'add'}, function(data){
+            console.log(data);
+            // TODO:購物車budge
+            countCart(data.cart);
+        }, 'json');
+    });
+
+    function showProductModal(sid){
+        $('iframe')[0].src = "product-detail02.php?sid=" + sid;
+        // product-detail02.php?sid=17
+        $('#exampleModal').modal('show')
+    }
 </script>
 <!-- 刪到這裡 -->
 

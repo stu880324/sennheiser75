@@ -7,7 +7,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
-
+<?php include __DIR__ . '/parts/7_fix-icon.php'; ?>
 
 <!-- 以下刪除就可以開始編輯 -->
 <!-- select-section -->
@@ -92,7 +92,7 @@
                 <input id="gaming" type="radio" name="situation_radio" value="2" /> <label for="gaming">電競</label>
               </li>
               <li class="radio">
-                <input id="recording" name="situation_radio" type="radio" value="3" /> <label for="recording">錄音</label>
+                <input id="recording" name="situation_radio" type="radio" value="3" /> <label for="recording">監聽</label>
               </li>
               <li class="radio">
                 <input id="meeting" name="situation_radio" type="radio" value="4" /> <label for="meeting">會議</label>
@@ -136,7 +136,7 @@
       <div class="product-text">
         <p class="en">HD 800 S Anniversary Edition</p>
         <p class="ch">經典開放式旗艦 75週年限量商品</p>
-        <p class="p-price">NT$50,990</p>
+        <p class="p-price">NT$ 50990</p>
       </div>
 
       <div class="a-white-div">
@@ -160,9 +160,9 @@
       </div>
 
       <div class="product-text">
-        <p class="en">HD 800 S Anniversary Edition</p>
-        <p class="ch">經典開放式旗艦 75週年限量商品</p>
-        <p class="p-price">NT$50,990</p>
+        <p class="en">MOMENTUM 3 Wireless</p>
+        <p class="ch">無線藍牙降噪耳機(白)</p>
+        <p class="p-price">NT$ 13900</p>
       </div>
 
       <div class="a-white-div">
@@ -186,9 +186,9 @@
       </div>
 
       <div class="product-text">
-        <p class="en">HD 800 S Anniversary Edition</p>
-        <p class="ch">經典開放式旗艦 75週年限量商品</p>
-        <p class="p-price">NT$50,990</p>
+        <p class="en">MOMENTUM 3 Wireless</p>
+        <p class="ch">無線藍牙降噪耳機(黑)</p>
+        <p class="p-price">NT$ 13900</p>
       </div>
 
       <div class="a-white-div">
@@ -213,9 +213,9 @@
       </div>
 
       <div class="product-text">
-        <p class="en">HD 800 S Anniversary Edition</p>
-        <p class="ch">經典開放式旗艦 75週年限量商品</p>
-        <p class="p-price">NT$50,990</p>
+        <p class="en">PXC 550 Wireless</p>
+        <p class="ch">旅行藍牙抗噪</p>
+        <p class="p-price">NT$ 10900</p>
       </div>
 
       <div class="a-white-div">
@@ -238,9 +238,9 @@
       </div>
 
       <div class="product-text">
-        <p class="en">HD 800 S Anniversary Edition</p>
-        <p class="ch">經典開放式旗艦 75週年限量商品</p>
-        <p class="p-price">NT$50,990</p>
+        <p class="en">CX 400BT True Wireless</p>
+        <p class="ch">真無線藍牙耳機</p>
+        <p class="p-price">NT$ 6490</p>
       </div>
 
       <div class="a-white-div">
@@ -249,7 +249,7 @@
     </div>
     <div class="product-card">
       <div class="icons-part">
-        <a href="" class="icons">
+        <a href="" class="icons btn-buy">
           <img src="images/2_productList/icons/shopcar.svg" alt="" />
         </a>
 
@@ -263,9 +263,9 @@
       </div>
 
       <div class="product-text">
-        <p class="en">HD 800 S Anniversary Edition</p>
-        <p class="ch">經典開放式旗艦 75週年限量商品</p>
-        <p class="p-price">NT$50,990</p>
+        <p class="en">CX SPORT</p>
+        <p class="ch">經典運動藍牙款</p>
+        <p class="p-price">NT$ 4290</p>
       </div>
 
       <div class="a-white-div">
@@ -685,7 +685,34 @@
   })
 </script>
 
+// 加入購物車功能
+<script>
+  $('.btn-buy').on('click', function(event) {
+    const item = $(this).closest('.product-item');
+    const sid = item.attr('data-sid');
+    const qty = item.find('.btn-quantity').text();
 
+    console.log({
+      sid: sid,
+      quantity: qty
+    });
+    $.get('5_addToCart-API.php', {
+      sid: sid,
+      quantity: qty,
+      action: 'add'
+    }, function(data) {
+      console.log(data);
+      // TODO:購物車budge
+      countCart(data.cart);
+    }, 'json');
+  });
+
+  function showProductModal(sid) {
+    $('iframe')[0].src = "product-detail02.php?sid=" + sid;
+    // product-detail02.php?sid=17
+    $('#exampleModal').modal('show')
+  }
+</script>
 
 
 

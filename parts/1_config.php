@@ -12,7 +12,7 @@ if (!isset($_SESSION)) {
 
 
 $db_host = 'localhost';
-$db_name = 'proj57';
+$db_name = 'sennheiser75';
 $db_user = 'root';
 $db_pass = '';
 
