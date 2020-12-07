@@ -24,7 +24,7 @@ a {
     height: 80vh;
     position: relative;
     background-image: url(./images/11_blogAritcle/article-banner.jpg);
-    background-size: fill;
+    background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
   }
