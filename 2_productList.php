@@ -682,10 +682,10 @@
 
   $(function() {
     updateEarphoneList();
-  })
+  });
 </script>
 
-// 加入購物車功能
+<!-- 加入購物車功能 -->
 <script>
   $('.btn-buy').on('click', function(event) {
     const item = $(this).closest('.product-item');
@@ -711,7 +711,7 @@
     $('iframe')[0].src = "product-detail02.php?sid=" + sid;
     // product-detail02.php?sid=17
     $('#exampleModal').modal('show')
-  }
+  };
 </script>
 
 

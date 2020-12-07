@@ -3,6 +3,7 @@
         position: fixed;
         right: 20px;
         bottom: 100px;
+        z-index: 99;
     }
     .cart-fix-icon{
         border-radius: 10px;
