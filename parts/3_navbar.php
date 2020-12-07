@@ -2,7 +2,7 @@
   <!-- logo -->
   <div class="header-logo">
     <div class="logo">
-      <a href="#"><img src="./images/0_navbar/logo.svg" alt=""></a>
+      <a href="http://localhost/sennheiser75/1_index.php"><img src="./images/0_navbar/logo.svg" alt=""></a>
     </div>
 
   </div>
@@ -111,25 +111,25 @@
                           <p>關於我們</p></header> -->
             <ul class="mega-links product-1">
               <li class="all-title">
-                <a href="#" class="item-list-pr">
+                <a href="http://localhost/sennheiser75/2_productList.php" class="item-list-pr">
                   <small id="nav-s-title-pr">所有商品</small>
                   <small>All Porduct</small>
                 </a>
               </li>
               <li class="all-title">
-                <a href="#" class="item-list-pr">
+                <a href="http://localhost/sennheiser75/2_productList.php" class="item-list-pr">
                   <small id="nav-s-title-pr">電競專區</small>
                   <small>Gaming</small>
                 </a>
               </li>
               <li class="all-title">
-                <a href="#" class="item-list-pr">
+                <a href="http://localhost/sennheiser75/2_productList.php" class="item-list-pr">
                   <small id="nav-s-title-pr">通勤專區</small>
                   <small>Commuting</small>
                 </a>
               </li>
               <li class="all-title">
-                <a href="#" class="item-list-pr">
+                <a href="http://localhost/sennheiser75/2_productList.php" class="item-list-pr">
                   <small id="nav-s-title-pr">運動專區</small>
                   <small>Sporting</small>
                 </a>
@@ -142,13 +142,13 @@
                           <p>關於我們</p></header> -->
             <ul class="mega-links product-1">
               <li class="all-title">
-                <a href="#" class="item-list-pr">
+                <a href="http://localhost/sennheiser75/2_productList.php" class="item-list-pr">
                   <small id="nav-s-title-pr">錄音專區</small>
                   <small>Recording</small>
                 </a>
                 </liclass="all-title">
               <li class="all-title">
-                <a href="#" class="item-list-pr">
+                <a href="http://localhost/sennheiser75/2_productList.php" class="item-list-pr">
                   <small id="nav-s-title-pr">會議專區</small>
                   <small>Meeting</small>
                 </a>
@@ -168,7 +168,7 @@
 
     <li>
       <div class="list-title">
-        <a ID="reservation-hover" href="#" class="desktop-item">
+        <a ID="reservation-hover" href="http://localhost/sennheiser75/4_reservation.php" class="desktop-item">
           RESERVATION
         </a>
       </div>
@@ -181,7 +181,7 @@
 
     <li>
       <div class="list-title">
-        <a ID="blog-hover" href="#" class="desktop-item">
+        <a ID="blog-hover" href="http://localhost/sennheiser75/10_blogView.php" class="desktop-item">
           BLOG
         </a>
       </div>
@@ -195,7 +195,7 @@
 
     <li>
       <div class="list-title">
-        <a ID="member-hover" href="#" class="desktop-item">
+        <a ID="member-hover" href="http://localhost/sennheiser75/8_member.php" class="desktop-item">
           MEMBER
         </a>
       </div>
@@ -213,7 +213,7 @@
           <div id="nav-info" class="row">
             <ul class="mega-links product-1">
               <li class="all-title">
-                <a href="#" class="item-list">
+                <a href="http://localhost/sennheiser75/9_order.php" class="item-list">
                   <small id="nav-s-title">歷史訂單</small>
                   <small >Ordered</small>
                 </a>
