@@ -215,7 +215,7 @@
               <li class="all-title">
                 <a href="http://localhost/sennheiser75/9_order.php" class="item-list">
                   <small id="nav-s-title">歷史訂單</small>
-                  <small >Ordered</small>
+                  <small>Ordered</small>
                 </a>
               </li>
               <li class="all-title">
