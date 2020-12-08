@@ -13,8 +13,13 @@ if (!isset($_SESSION)) {
 
 $db_host = 'localhost';
 $db_name = 'sennheiser75';
+<<<<<<< HEAD
+$db_user = 'root';
+$db_pass = '';
+=======
 $db_user = 'kim';
 $db_pass = 'adobe30';
+>>>>>>> 0a774c29e911f9517f1f60a7b96e09a4cdbf29c9
 
 $dsn = "mysql:host={$db_host};dbname={$db_name};charset=utf8";
 $pdo_options = [
