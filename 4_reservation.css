@@ -43,15 +43,18 @@
 }
 .banner-text{
     /* color: #00BBC3; */
+    font-family: "Poppins", sans-serif;
     color: #000000;
     text-align: center;
     margin-top: 100px;
     /* font-weight: lighter; */
 }
 .banner-text h1{
+    color: #d9a26e;
     font-size: 90px;
 }
 .banner-text h3{
+    color: #d9a26e;
     font-size: 50px;
 }
 
