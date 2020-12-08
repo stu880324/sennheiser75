@@ -1,10 +1,11 @@
 <?php include __DIR__. '/parts/1_config.php'; ?>
 <?php include __DIR__. '/parts/2_html_head.php'; ?>
         <!-- 請填入各頁面CSS名稱 -->
-        <link rel="stylesheet" href="<?= WEB_ROOT ?>4_reservation01.css">
+        <link rel="stylesheet" href="<?= WEB_ROOT ?>4_reservation02.css">
 
 <?php include __DIR__. '/parts/2_html_head2.php'; ?>
 <?php include __DIR__. '/parts/3_navbar.php'; ?>
+<?php include __DIR__. '/parts/7_fix-icon.php'; ?>
 
 <!-- 這裡banner-container -->
 <div class="container-fluid banner-container">
@@ -248,15 +249,32 @@
               <?php if(empty( $_SESSION['userAccount'])): ?>
                 <a href="./6_login.php"><div class="submit-btn">請先登入會員</div></a>
               <?php else: ?>
-              <button class="submit-btn"  data-toggle="modal" data-target=".bd-example-modal-sm" type="submit">SEND</button>
+              <button class="submit-btn"  data-toggle="modal" data-target=".bd-example-modal-lg" type="submit">SEND</button>
         
+
                 <!-- Small modal -->
                     <!-- <button type="button" class="btn btn-primary" >Small modal</button> -->
-                    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-sm">
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content text-center" 
-                        style="background-color: #000; color:#fff; height:200px; line-height:200px;">
-                        預約成功
+                        style=" 
+                                background:url(./images/4_reservation/model-bg.jpg);
+                                background-repeat:no-repeat;
+                                background-size:contain;
+                                background-position:center;
+                                color:#000; 
+                                height:400px;
+                                border:none;">
+                        <h3 class="mt-5">預約成功</h3>
+                        我們竭誠歡迎您的到來<br>
+                        抵達時向請服務人員出示此畫面<br>
+                        亦可至會員中心查詢預約記錄<br>
+                        非常感謝您!<br>
+                        <br>
+                        日期：${sid}<br>
+                        時間：${sid}<br>
+                        店名：${sid}<br>
+                        地址：${sid}<br>
                         </div>
                     </div>
                     </div>
