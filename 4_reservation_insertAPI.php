@@ -31,7 +31,7 @@ $sql = "INSERT INTO `reservation`(
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
-        // $_POST['member_sid'],
+        $_SESSION['userAccount']['account'],
         $_POST['location'],
         $_POST['reservation_date'],
         $_POST['time'],

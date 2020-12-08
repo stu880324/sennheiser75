@@ -1,6 +1,4 @@
-<?php
-
-require __DIR__. '/parts/1_config.php';
+<?php require __DIR__. '/parts/1_config.php';
 
 $output = [
     'success' => false,

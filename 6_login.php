@@ -7,9 +7,13 @@
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
 <?php
-if (!isset($_SESSION)) {
-        session_start();
-} ?>
+if(isset($_SERVER['HTTP_REFERER'])){
+        $gotoURL = $_SERVER['HTTP_REFERER'];
+    } else {
+        $gotoURL = '1_index.php';
+    } 
+    
+?>
 
 <!-- 以下刪除就可以開始編輯 -->
 
@@ -60,7 +64,7 @@ if (!isset($_SESSION)) {
                                         })
                                         .then((btnclick) => {
                                                 if (btnclick.isConfirmed) {
-                                                        window.location.href = "./8_member.php"
+                                                        window.location.href = "<?= $gotoURL ?>"
                                                 }
                                         })
                         } else {
@@ -77,7 +81,7 @@ if (!isset($_SESSION)) {
 
         $('.gotoRegPageBtn').on('click', function() {
                 window.location.href = "./7_registered.php"
-        })
+        });
 </script>
 
 
