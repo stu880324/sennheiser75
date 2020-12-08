@@ -1,7 +1,7 @@
 <?php include __DIR__. '/parts/1_config.php'; ?>
 <?php include __DIR__. '/parts/2_html_head.php'; ?>
         <!-- 請填入各頁面CSS名稱 -->
-        <link rel="stylesheet" href="<?= WEB_ROOT ?>4_reservation02.css">
+        <link rel="stylesheet" href="<?= WEB_ROOT ?>4_reservation1.css">
 
 <?php include __DIR__. '/parts/2_html_head2.php'; ?>
 <?php include __DIR__. '/parts/3_navbar.php'; ?>
@@ -9,22 +9,185 @@
 
 <!-- 這裡banner-container -->
 <div class="container-fluid banner-container">
-    <div class="row banner">
-        <div class="gradient-bg"></div>
-        <div class="room1"><img src="./images/4_reservation/room1.jpg" alt=""></div>
-        <div class="banner-text">
-                <p class="animate__animated animate__slideInLeft animate__delay-0s">K E E P</p>
-                <p class="animate__animated animate__slideInLeft animate__delay-1s">L I S T E N I N G</p>
-                <p class="animate__animated animate__slideInLeft animate__delay-2s">K E E P</p>
-                <p class="animate__animated animate__slideInLeft animate__delay-3s">F E E L I N G</p>
+    <div class="row">
+        <!-- 左邊 -->
+        <div class="col-lg-4 mt-5">
+            <div class="layer d-flex justify-content-center">
+                <!-- 左上左 -->
+                <div class="pic200"></div>
+                <!-- 左上右 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig1.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig2.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig3.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig4.jpg" alt="">
+                    </div>
+                </div>                    
+            </div>
+            <div class="layer d-flex justify-content-center">
+                <!-- 左中左 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig5.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig6.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig7.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig8.jpg" alt="">
+                    </div>
+                </div>                       
+                <!-- 左中右 -->
+                <div class="pic200"></div>
+            </div>
+            <div class="layer d-flex justify-content-center">
+                <!-- 左下左 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig9.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig10.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig11.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig12.jpg" alt="">
+                    </div>
+                </div>                
+                <!-- 左下右 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig13.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig14.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig15.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig16.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="now"><a href="">立即報名</a></div>
+        <!-- 中間 -->
+        <div class="col-lg-4 mt-5">
+            <div class="banner-text">
+                <h1>75th</h1>
+                <h3>anniversary</h3>
+                <p>
+                    我們萬分期待與你分享這個特別週年，<br>
+                    全因你 - <br>
+                    我們的員工、顧客、朋友以及愛好者 -<br>
+                    塑造了我們的團隊！<br>
+                    這些記憶將帶你展開一段走訪 <br>
+                    關於Sennheiser 歷史、精神、<br>
+                    特別時刻與專業級產品的旅程。
+                </p>
+                <p>
+                    無論身處何方，<br>
+                    我們深信，<br>
+                    動聽的聲音能連結彼此。
+                </p>
+            </div>
+        </div>
+         <!-- 右邊 -->
+         <div class="col-lg-4 mt-5">
+            <div class="layer d-flex justify-content-center">
+                <!-- 右上左 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig21.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig22.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig23.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig24.jpg" alt="">
+                    </div>
+                </div>  
+                <!-- 右上右 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig17.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig18.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig19.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig20.jpg" alt="">
+                    </div>
+                </div>                    
+            </div>
+            <div class="layer d-flex justify-content-center">
+                <!-- 右中左 -->
+                <div class="pic200"></div>                     
+                <!-- 右中右 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig6.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig7.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig8.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig9.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="layer d-flex justify-content-center">
+                <!-- 右下左 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig2.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig3.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig4.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig5.jpg" alt="">
+                    </div>
+                </div>                
+                <!-- 右下右 -->
+                <div class="pic200"></div>
+            </div>
+        </div>
+
+
     </div>
+
+
+
 </div>
 
 
-<!-- 這裡room-container -->
-<div class="container-fluid room-container">
+<!-- 這裡room-container (不要)-->
+<!-- <div class="container-fluid room-container">
     <div class="row">
         <div class="col-lg-4 col-sm-12">
             <div class="flip-box">
@@ -65,7 +228,7 @@
         </div>
 
     </div>
-</div>
+</div> -->
 
 
            
@@ -140,7 +303,7 @@
         <div class="step">
             <div class="step-pic">
                 <div class="step-pic-black"><img src="./images/4_reservation/person1.jpeg" alt=""></div>
-                <div class="step-pic-color" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person1copy.png" alt=""></div>
+                <div class="step-pic-color-odd" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person1copy.png" alt=""></div>
             </div>
             <div class="step-text">
                 <h4>活動方式</h4>
@@ -158,14 +321,14 @@
             </div>
             <div class="step-pic">
                 <div class="step-pic-black"><img src="./images/4_reservation/person2.jpg" alt=""></div>
-                <div class="step-pic-color" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person2copy.png" alt=""></div>
+                <div class="step-pic-color-even" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person2copy.png" alt=""></div>
             </div>
         </div>
         <!-- step2 -->
         <div class="step">
             <div class="step-pic">
                 <div class="step-pic-black"><img src="./images/4_reservation/person3.jpg" alt=""></div>
-                <div class="step-pic-color" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person3copy.png" alt=""></div>
+                <div class="step-pic-color-odd" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person3copy.png" alt=""></div>
             </div>
             <div class="step-text">
                 <h4>STEP 2</h4>
@@ -180,7 +343,7 @@
             </div>
             <div class="step-pic">
                 <div class="step-pic-black"><img src="./images/4_reservation/person4.jpg" alt=""></div>
-                <div class="step-pic-color" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person4copy.png" alt=""></div>
+                <div class="step-pic-color-even" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person4copy.png" alt=""></div>
             </div>
         </div>
         
@@ -370,11 +533,32 @@
         }
     });
 </script>
+
+
+
+<script>
+    setInterval(()=>{
+        $('.pic200-img-wrap.active').each(function(){
+            // console.log('this',$(this))
+            if($(this).index() === 3){
+                // console.log('hiiii')
+                $(this).removeClass('active')
+                $(this).parent().find('.pic200-img-wrap').first().addClass('active')
+
+            }
+            else{
+                $(this).removeClass('active').next().addClass('active')
+                
+            }
+            
+        })
+    },2000);
+</script>
     
 
 
 
 
 <?php include __DIR__. '/parts/4_footer.php'; ?>
-<?php include __DIR__. '/parts/5_scripts.php'; ?>
+
 <?php include __DIR__. '/parts/6_html_foot.php'; ?>
