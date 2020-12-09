@@ -6,6 +6,7 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
+<?php include __DIR__. '/parts/7_fix-icon.php'; ?>
 
 
 <!-- 以下刪除就可以開始編輯 -->
@@ -52,7 +53,7 @@
 
             <div class="topnew-info">
               <div class="topnew-title">
-                <a id="topnew-title-hover" href="#">
+                <a id="topnew-title-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                   <h3 id="topnew-title-h3">Google手機的AirPods？！
                     <br>
                     外媒評測Google Pixel Buds 2真無線藍牙耳機</h3>
@@ -72,16 +73,16 @@
           <!-- Read箭頭 -->
 
           <div class="topnew-bt-read">
-            <a id="topnew-href" href="#">
+            <a id="topnew-href" class="topnew" href="http://localhost/sennheiser75/11_blogArticle.php">
               <h4 id="top-read-h4">
                 Read
               </h4>
-            </a>
-            <div class="gold-read-arrow">
-              <a id="gold-arrow-hover" href="#">
+              <div class="gold-read-arrow">
                 <img id="gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
-              </a>
-            </div>
+              </div>
+            </a>
+
+            <!-- topnew-bt-read 結束-->
           </div>
         </div>
 
@@ -118,13 +119,13 @@
                   <h2 id="blog-h2">Bose SoundSport Free V.S. JBL Reflect Flow：哪副真無線運動耳機最適合您？</h2>
 
                   <div class="news-bt-read">
-                    <a id="news-href" href="#">
+                    <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <h4 id="news-read-h4">
                         Read
                       </h4>
                     </a>
                     <div class="news-gold-read-arrow">
-                      <a id="news-gold-arrow-hover" href="#">
+                      <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                         <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                       </a>
                     </div>
@@ -144,13 +145,13 @@
                   <h2 id="blog-h2">Jabra Elite 85t降噪真無線正式在台上市　27日前預購即Mark Gazza無線充電板</h2>
 
                   <div class="news-bt-read">
-                    <a id="news-href" href="#">
+                    <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <h4 id="news-read-h4">
                         Read
                       </h4>
                     </a>
                     <div class="news-gold-read-arrow">
-                      <a id="news-gold-arrow-hover" href="#">
+                      <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                         <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                       </a>
                     </div>
@@ -171,13 +172,13 @@
                   <h2 id="blog-h2">不用再暫停、拿下耳罩　Apple未來的頭戴式耳機之間可以建立無線語音通訊</h2>
 
                   <div class="news-bt-read">
-                    <a id="news-href" href="#">
+                    <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <h4 id="news-read-h4">
                         Read
                       </h4>
                     </a>
                     <div class="news-gold-read-arrow">
-                      <a id="news-gold-arrow-hover" href="#">
+                      <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                         <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                       </a>
                     </div>
@@ -197,13 +198,13 @@
                   <h2 id="blog-h2">藍牙耳機過度充電會容易損壞嗎？　四個方法延長藍牙耳機的電池壽命</h2>
 
                   <div class="news-bt-read">
-                    <a id="news-href" href="#">
+                    <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <h4 id="news-read-h4">
                         Read
                       </h4>
                     </a>
                     <div class="news-gold-read-arrow">
-                      <a id="news-gold-arrow-hover" href="#">
+                      <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                         <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                       </a>
                     </div>
@@ -222,13 +223,13 @@
                   <h2 id="blog-h2">2020 最佳無線運動耳機大盤點 | 讓跑步玩家都想擁有的耳機</h2>
 
                   <div class="news-bt-read">
-                    <a id="news-href" href="#">
+                    <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <h4 id="news-read-h4">
                         Read
                       </h4>
                     </a>
                     <div class="news-gold-read-arrow">
-                      <a id="news-gold-arrow-hover" href="#">
+                      <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                         <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                       </a>
                     </div>
@@ -248,13 +249,13 @@
                   <h2 id="blog-h2">誠意十足的有感升級｜開箱Jabra Elite 85t降噪真無線藍牙耳機</h2>
 
                   <div class="news-bt-read">
-                    <a id="news-href" href="#">
+                    <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <h4 id="news-read-h4">
                         Read
                       </h4>
                     </a>
                     <div class="news-gold-read-arrow">
-                      <a id="news-gold-arrow-hover" href="#">
+                      <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                         <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                       </a>
                     </div>
@@ -296,13 +297,13 @@
 
 
     <div class="all-hot-cards">
-      <div class="row all-hots">
+      <div class="all-hots row">
 
         <div calss="left-top">
           <div class="hot-card--Top">
 
             <div class="hot-Top-img"></div>
-            <a href="#" class="hot-card-link">
+            <a href="http://localhost/sennheiser75/11_blogArticle.php" class="hot-card-link">
               <div class="hot-Top-img--hover"></div>
             </a>
             <div class="hot-lable">
@@ -317,13 +318,13 @@
                 2020年10大真無線藍牙耳機推薦</h3>
 
               <div class="hot-bt-read">
-                <a id="hot-href" href="#">
+                <a id="hot-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                   <h4 id="hot-read-h4">
                     Read
                   </h4>
                 </a>
                 <div class="hot-gold-read-arrow">
-                  <a id="hot-gold-arrow-hover" href="#">
+                  <a id="hot-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <img id="hot-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                   </a>
                 </div>
@@ -340,7 +341,7 @@
 
             <div class="hot-cards hot-card--1">
               <div class="hot-card-img"></div>
-              <a href="#" class="hot-card-link">
+              <a href="http://localhost/sennheiser75/11_blogArticle.php" class="hot-card-link">
                 <div class="hot-card-img--hover"></div>
               </a>
               <div class="hot-lable2-5">
@@ -351,13 +352,13 @@
                 <span class="hot-card-category">05-28-2020</span>
                 <h3 class="hot-card-title">平價CP值第一! 2020 專家推薦10款真無線藍牙耳機</h3>
                 <div class="hotRight-bt-read">
-                  <a id="hotRight-href" href="#">
+                  <a id="hotRight-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="hotRight-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="hotRight-gold-read-arrow">
-                    <a id="hotRight-gold-arrow-hover" href="#">
+                    <a id="hotRight-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="hotRight-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -367,7 +368,7 @@
 
             <div class="hot-cards hot-card--2">
               <div class="hot-card-img"></div>
-              <a href="#" class="hot-card-link">
+              <a href="http://localhost/sennheiser75/11_blogArticle.php" class="hot-card-link">
                 <div class="hot-card-img--hover"></div>
               </a>
               <div class="hot-lable2-5">
@@ -378,13 +379,13 @@
                 <span class="hot-card-category"> 11-04-2020</span>
                 <h3 class="hot-card-title">Apple正式宣布AirPods Pro的免費維修方案　快來檢查是否符合資格</h3>
                 <div class="hotRight-bt-read">
-                  <a id="hotRight-href" href="#">
+                  <a id="hotRight-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="hotRight-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="hotRight-gold-read-arrow">
-                    <a id="hotRight-gold-arrow-hover" href="#">
+                    <a id="hotRight-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="hotRight-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -403,7 +404,7 @@
 
             <div class="hot-cards hot-card--3">
               <div class="hot-card-img"></div>
-              <a href="#" class="hot-card-link">
+              <a href="http://localhost/sennheiser75/11_blogArticle.php" class="hot-card-link">
                 <div class="hot-card-img--hover"></div>
               </a>
               <div class="hot-lable2-5">
@@ -414,13 +415,13 @@
                 <span class="hot-card-category">10-23-2020</span>
                 <h3 class="hot-card-title">這些都兼容iOS手機！2020年最佳iPhone真無線藍牙耳機推薦</h3>
                 <div class="hotRight-bt-read">
-                  <a id="hotRight-href" href="#">
+                  <a id="hotRight-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="hotRight-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="hotRight-gold-read-arrow">
-                    <a id="hotRight-gold-arrow-hover" href="#">
+                    <a id="hotRight-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="hotRight-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -430,7 +431,7 @@
 
             <div class="hot-cards hot-card--4">
               <div class="hot-card-img"></div>
-              <a href="#" class="hot-card-link">
+              <a href="http://localhost/sennheiser75/11_blogArticle.php" class="hot-card-link">
                 <div class="hot-card-img--hover"></div>
               </a>
               <div class="hot-lable2-5">
@@ -441,13 +442,13 @@
                 <span class="hot-card-category"> 11-20-2020</span>
                 <h3 class="hot-card-title">Google手機的AirPods?!外媒評測Google Pixel Buds 2真無線藍牙耳機</h3>
                 <div class="hotRight-bt-read">
-                  <a id="hotRight-href" href="#">
+                  <a id="hotRight-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="hotRight-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="hotRight-gold-read-arrow">
-                    <a id="hotRight-gold-arrow-hover" href="#">
+                    <a id="hotRight-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="hotRight-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -513,13 +514,13 @@
                 <h2 id="blog-h2">電競耳機怎麼挑? 2020 優質電競耳機推薦</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -539,13 +540,13 @@
                 <h2 id="blog-h2">為什麼真無線藍牙耳機會有延遲？　關鍵在於聽筒之間的連線方式</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -566,13 +567,13 @@
                 <h2 id="blog-h2">選購耳機時都會有的疑問》什麼是頻率響應？其如何影響音樂？</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -592,13 +593,13 @@
                 <h2 id="blog-h2">AirPods Pro快速切換反而造成麻煩？　有2個方法可以避免</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -617,13 +618,13 @@
                 <h2 id="blog-h2">選購耳機時都會有的疑問》IP等級夠高就一定能在水中使用？</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -643,13 +644,13 @@
                 <h2 id="blog-h2">選購耳機時都會有的疑問》什麼是藍牙多點連線？</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -668,13 +669,13 @@
                 <h2 id="blog-h2">使用藍牙耳機時的疑問》如何和桌電、PS4以及Switch連線？Creative BT-W3發射器幫你達成願望</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -693,13 +694,13 @@
                 <h2 id="blog-h2">買耳機必學選購全攻略! 嚴選 10款 2020 真無線藍牙耳機</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -718,13 +719,13 @@
                 <h2 id="blog-h2">選購耳機時都會有的疑問》驅動單元如何選擇？單體越大音質就越好嗎？</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -789,13 +790,13 @@
                 <h2 id="blog-h2">搭載三驅動單體又支援aptX HD、aptX LL｜外媒評測Creative Aurvana Trio頸掛式藍牙耳機</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -815,13 +816,13 @@
                 <h2 id="blog-h2">Creative推出Outlier Air V2：高通cVc 8.0通話降噪、續航力變長、改為觸控按鍵</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -842,13 +843,13 @@
                 <h2 id="blog-h2">低延遲、高音質的平價精美耳機｜開箱Marley Champion真無線藍牙耳機</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -868,13 +869,13 @@
                 <h2 id="blog-h2">比Elite 75系列更強大的主動降噪｜外媒評測Jabra Elite 85t真無線藍牙耳機</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -893,13 +894,13 @@
                 <h2 id="blog-h2">Bose QuietComfort Earbuds V.S. Sony WF-1000XM3：真無線降噪王者拱手讓出？</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -919,13 +920,13 @@
                 <h2 id="blog-h2">到底該買Sennheiser哪一款真無線藍牙耳機？ 詳細分析Momentum True Wireless 2和CX 400BT的差異</h2>
 
                 <div class="news-bt-read">
-                  <a id="news-href" href="#">
+                  <a id="news-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                     <h4 id="news-read-h4">
                       Read
                     </h4>
                   </a>
                   <div class="news-gold-read-arrow">
-                    <a id="news-gold-arrow-hover" href="#">
+                    <a id="news-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                       <img id="news-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                     </a>
                   </div>
@@ -951,7 +952,15 @@
 
 
 
+
+
+
+  <!-- <section class="et-slide" id="tab-other">
+          <h1>Other</h1>
+          <h3>something about other</h3>
+        </section> -->
 </main>
+
 
 
 
@@ -1043,50 +1052,51 @@
 
   }
 
+  // tab結束
+
+
+    // slider開始
+
   new StickyNavigation();
 
 
 
-  // scroll 指定頁面 結束
 
 
-  // slider 開始
-
-  // 最新資訊
   const next = document.querySelector('#blog-next')
   const prev = document.querySelector('#blog-prev')
 
-  function handleScrollNext(direction) {
-    const cards = document.querySelector('.blog-card-content')
-    cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+  function handleScrollNext(scrollDiv) {
+    scrollDiv.scrollLeft = scrollDiv.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : 320
   }
 
-  function handleScrollPrev(direction) {
-    const cards = document.querySelector('.blog-card-content')
-    cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+  function handleScrollPrev(scrollDiv) {
+    scrollDiv.scrollLeft = scrollDiv.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : 320
+
   }
 
-  next.addEventListener('click', handleScrollNext)
-  prev.addEventListener('click', handleScrollPrev);
+  next.addEventListener('click', function() {
+    handleScrollNext(document.querySelector('.blog-card-content'));
+  })
+  prev.addEventListener('click', function() {
+    handleScrollPrev(document.querySelector('.blog-card-content'));
+  });
 
 
-  // 熱門文章
+  // 耳機知識 slider
+
 
   const knowNext = document.querySelector('#know-next')
   const knowPrev = document.querySelector('#know-prev')
 
-  function handleScrollknowNext(direction) {
-    const knowCards = document.querySelector('.know-card-content')
-    knowCards.scrollLeft = knowCards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-  }
 
-  function handleScrollknowPrev(direction) {
-    const knowCards = document.querySelector('.know-card-content')
-    knowCards.scrollLeft = knowCards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-  }
 
-  knowNext.addEventListener('click', handleScrollknowNext)
-  knowPrev.addEventListener('click', handleScrollknowPrev);
+  knowNext.addEventListener('click', function() {
+    handleScrollNext(document.querySelector('.know-card-content'));
+  })
+  knowPrev.addEventListener('click', function() {
+    handleScrollPrev(document.querySelector('.know-card-content'));
+  });
 
 
   // 創新科技 idea
@@ -1095,18 +1105,18 @@
   const ideaNext = document.querySelector('#idea-next')
   const ideaPrev = document.querySelector('#idea-prev')
 
-  function handleScrollideaNext(direction) {
-    const ideaCards = document.querySelector('.idea-card-content')
-    ideaCards.scrollLeft = ideaCards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-  }
+  ideaNext.addEventListener('click', function() {
+    handleScrollNext(document.querySelector('.idea-card-content'));
+  })
+  ideaPrev.addEventListener('click', function() {
+    handleScrollPrev(document.querySelector('.idea-card-content'));
+  });
 
-  function handleScrollideaPrev(direction) {
-    const ideaCards = document.querySelector('.idea-card-content')
-    ideaCards.scrollLeft = ideaCards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-  }
+  // scroll 指定頁面 結束
 
-  ideaNext.addEventListener('click', handleScrollideaNext)
-  ideaPrev.addEventListener('click', handleScrollideaPrev);
+
+  // slider 結束
+
 </script>
 <!-- 刪到這裡 -->
 

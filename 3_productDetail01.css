@@ -22,15 +22,16 @@ body{
 .goback{
     margin-top: 50px;
     margin-bottom: 50px;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     font-weight: lighter;
     color: #c6c6c6;
 }
 .goback a{
     color:#c6c6c6;
+    font-weight: lighter;
 }
 .goback a:hover{
-    color: #D9A26E;
+    color: #d9a26e;
     text-decoration: none;
 }
 

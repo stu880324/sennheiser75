@@ -6,10 +6,22 @@ $output = [
     'error' => '沒有表單資料',
 ];
 
-// if(empty($_POST['name'])){
-//     echo json_encode($output, JSON_UNESCAPED_UNICODE); exit;
-// }
+if(empty( $_SESSION['userAccount'])){
+    $output['error'] = '沒有登入';
+    echo json_encode($output, JSON_UNESCAPED_UNICODE); exit;
+}
+if(empty($_POST['location']) or empty($_POST['location']) or empty($_POST['location'])){
+    echo json_encode($output, JSON_UNESCAPED_UNICODE); exit;
+}
 // TODO: 檢查資料格式
+
+// $_SESSION['reservation'] = $_POST;
+// $output = [
+//     'success' => true,
+//     'post' => $_POST,
+// ];
+// echo json_encode($output, JSON_UNESCAPED_UNICODE);
+// exit;
 
 $sql = "INSERT INTO `reservation`(
        `member_sid`, `location`, `reservation_date`, `time`, `create_date`
@@ -19,7 +31,7 @@ $sql = "INSERT INTO `reservation`(
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
-        // $_POST['member_sid'],
+        $_SESSION['userAccount']['account'],
         $_POST['location'],
         $_POST['reservation_date'],
         $_POST['time'],

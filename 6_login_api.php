@@ -1,10 +1,4 @@
-<?php
-
-<<<<<<< HEAD
-require __DIR__ . '/parts/1_config.php';
-=======
-require __DIR__. './parts/1_config.php';
->>>>>>> 068b053de1b54014fd0b37962b3f428ea1f65405
+<?php require __DIR__. '/parts/1_config.php';
 
 $output = [
     'success' => false,
