@@ -72,7 +72,7 @@
 
         }).then((result) => {
           if (result.isConfirmed) {
-            window.location.href = "./8_member.php"
+            window.location.href = "./6_login.php"
 
           }
         })
