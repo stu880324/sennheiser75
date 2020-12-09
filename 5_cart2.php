@@ -63,7 +63,7 @@ if ($stmt->rowCount() > 0) {
                                     <p>經典開放式旗艦 75週年限量商品</p>
                                 </div>
                                 <div class="item-price"> NT$ 7,490</div>
-                                <p>數量: 3</p>
+                                <p>數量: 2</p>
                                 <p>小計: NT$ 7,490</p>
                             </div>
 

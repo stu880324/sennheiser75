@@ -167,7 +167,7 @@ var_dump($_SESSION['userAccount'])
                 </div>
                 <div class="item-total-wrap ">
                     <p>小計</p>
-                    <div class="item-wrap-total">NT$ 9,900</div>
+                    <div class="item-wrap-total">NT$ 10,900</div>
                 </div>
             </div>
         </div>
