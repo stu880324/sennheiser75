@@ -4,7 +4,7 @@
 }
 
 table {
-  margin: 0px auto 100px auto;
+  margin: 20px auto 20px auto;
   width: 60%;
 }
 .coupon-title {
@@ -22,3 +22,39 @@ table {
   width: 60%;
   margin: auto;
 }
+
+.order-detail-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.order-detail-btn:hover {
+  color: #fff;
+}
+
+.order-detail {
+  height: 15px;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.5s;
+}
+
+.order-detail-tr {
+  display: none;
+}
+
+.order-detail-tr.active {
+  display: table-row;
+}
+
+.order-detail-table {
+  border: 1px solid #ccc;
+}
+
+/* .order-detail:hover {
+  height: auto;
+  width: auto;
+} */

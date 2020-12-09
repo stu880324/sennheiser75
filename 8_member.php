@@ -5,7 +5,14 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
+<?php
+if (!isset($_SESSION)) {
+  session_start();
+} ?>
 
+<?php
+// var_dump($_SESSION['userAccount'])
+?>
 
 <!-- 以下刪除就可以開始編輯 -->
 
@@ -47,22 +54,23 @@
   <div class="form-holder mt-3">
     <span class="lnr lnr-user "></span>
     <p>姓名</p>
-    <input style=" border-radius:0;" type="text" class="form-control" value="王小明" />
+    <input style=" border-radius:0;" type="text" class="form-control" value="<?= $_SESSION['userAccount']['name'] ?>" />
   </div>
   <div class="form-holder mt-3">
     <span class="lnr lnr-phone-handset"></span>
     <p class="text">電話</p>
-    <input style=" border-radius:0;" type="text" class="form-control" value="0912345678" />
+    <input style=" border-radius:0;" type="text" class="form-control" value="<?= $_SESSION['userAccount']['account'] ?>" />
   </div>
   <div class="form-holder mt-3">
     <span class="lnr lnr-envelope"></span>
     <p>E-mail</p>
-    <input style=" border-radius:0;" type="text" class="form-control" value="123@gmail.com" />
+    <input style=" border-radius:0;" type="text" class="form-control" value="<?= $_SESSION['userAccount']['email'] ?>" />
   </div>
   <div class="form-holder mt-3">
     <span class="lnr lnr-envelope"></span>
     <p>生日</p>
-    <input style=" border-radius:0;" type="text" class="form-control" value="1992/01/01" />
+    <input id="birthday" style=" border-radius:0;" type="date" class="form-control" value="<?= $_SESSION['userAccount']['birthday'] ?>" />
+    <!-- <input style=" border-radius:0;" type="text" class="form-control"  /> -->
   </div>
   <div style="text-align:center;"><button type="button" class="login-btn mb-5 mt-4">確定修改</button></div>
 
