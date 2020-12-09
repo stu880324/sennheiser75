@@ -418,6 +418,30 @@
 
 <!-- 彈出服務區塊功能 -->
     <script>
+
+        $(window).scroll(function(){
+            // console.log('scorll',$(window).scrollTop())
+            let nowScroll = $(window).scrollTop();
+            if( nowScroll > $('.service-row').offset().top - $(window).height()){
+                // console.log('hiii')
+                $('.service-row').css('height', '600px');
+                $('.box-title').addClass('box-title-show');
+                $('.line1').addClass('line1-show');
+                $('.box').addClass('box-show');
+                $('.service4').addClass('service4-show');
+                $('.service4-text').addClass('service4-show');
+                $('.service5').addClass('service5-show');
+                $('.service5-text').addClass('service5-show');
+                $('.service3').addClass('service3-show');
+                $('.service3-text').addClass('service3-show');
+                $('.service2').addClass('service2-show');
+                $('.service2-text').addClass('service2-show');
+                $('.service1').addClass('service1-show');
+                $('.service1-text').addClass('service1-show');
+            }
+        })
+
+
         $(".arrow").on("click",function(){
             
             $('.service-row').css('height', '600px');

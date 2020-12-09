@@ -6,8 +6,21 @@
     border:1px solid turquoise;
 } */
 
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
+}
+
+
+
 /* 此區編輯 btn */
-.cart-icon {
+/* .cart-icon {
   width: 70px;
   height: 70px;
   background-color: #d4d5d5;
@@ -18,7 +31,7 @@
   color: #e3b684;
   font-size: 2rem;
   line-height: 70px;
-}
+} */
 .btn-quantity {
   border: 1px solid #000000;
   font-size: 0.6rem;

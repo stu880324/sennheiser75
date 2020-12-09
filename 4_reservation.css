@@ -6,83 +6,56 @@
 /* 這裡banner-container */
 .banner-container{
     background-color: #000000;
+    background-image: url(./images/4_reservation/room1-black.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     height: 800px;
-
 }
-.banner{
+.pic200{
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+    background-color: transparent;
+    border: 2px solid #CCCCCC;
     position: relative;
 }
-.gradient-bg{
-    width:60%;
-    /* height:400px; */
-    position: absolute;
-    z-index: 1;
-    right: 10%;
-    background: linear-gradient(to bottom right,#d9a26e,#000000);
-    opacity: 30%;
 
-    animation: gradient-bg 4s ;
-    animation-fill-mode: forwards;
-    /* animation-iteration-count:infinite; */
-    }
- @keyframes gradient-bg{
-    0%{
-        height: 0;
-    }
-    100%{
-        height: 600px;
-    }
- }
-.room1{
-    width: 80%;
-    height: 600px;
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    }
- 
-.room1 img{
+.pic200-img-wrap{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    /* display: none; */
+    transform: perspective(1000px) rotateX(-90deg);
+    transition: 1s;
+    position: absolute;
+    transform-origin: center top 0px
+}
+
+.pic200-img-wrap.active{
+    display: block;
+    transform: perspective(1000px) rotateX(0deg);
+}
+.pic200 img, .pic200-img-wrap img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .banner-text{
-    color: #457C86;
+    /* color: #00BBC3; */
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    text-align: center;
+    margin-top: 100px;
+    /* font-weight: lighter; */
+}
+.banner-text h1{
+    color: #d9a26e;
+    font-size: 90px;
+}
+.banner-text h3{
+    color: #d9a26e;
     font-size: 50px;
-    line-height: 40px;
-    position: absolute;
-    top: 200px;
-    /* padding-left: 10%; */
-    left: 10%;
-    z-index: 3;
-    overflow: hidden;
-}
-.now{
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border: 1px solid #d9a26e;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 3;
-    text-align: center;
-    right: 15%;
-    top: 350px;
-    transform: rotate(15deg);
-}
-
-.now a{
-    color:#d9a26e;
-    text-align: center;
-    line-height: 100px;
-    font-weight: lighter;
-}
-.now a:hover{
-    text-decoration: none;
-    font-weight: bolder;
-
 }
 
 
@@ -159,7 +132,7 @@
 
 /* 這裡編輯HE1 he1-container */
 .he1-container{
-    background-color: #1a1a1a;
+    background-color: #000000;
 }
 
 /* 這裡編輯大字 */
@@ -296,15 +269,24 @@
     -webkit-filter:grayscale(1);
     opacity: 0.8;
 }
-.step-pic-color{
+.step-pic-color-odd{
     width: 90%;
     height: 90%;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: -20%;
+    /* transform: translateX(-50%); */
     top: 150px;
 }
-.step-pic-color img{
+
+.step-pic-color-even{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: -120%;
+    /* transform: translateX(-50%); */
+    top: 150px;
+}
+.step-pic-color-odd img, .step-pic-color-even img{
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -362,14 +344,20 @@ form{
 .submit-btn{
     width: 200px;
     padding: 10px;
-    color:#457C86;
+    color: #457C86;
     background-color: transparent;
     border: 1px solid #457C86;
+    text-align: center;
 }
 .submit-btn:hover{
     color:azure;
     background-color:#457C86;
-
+     text-decoration: none;
+}
+.submit-btn a{
+    color: #457C86;
+    text-align: center;
+   
 }
 .bg3d{
     width: 100%;

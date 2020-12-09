@@ -1,49 +1,60 @@
-div{
+/* div{
     border: 1px solid red;
-}
+} */
 
 
 /* 這裡banner-container */
 .banner-container{
     background-color: #000000;
+    background-image: url(./images/4_reservation/room1-black.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     height: 800px;
-
 }
-.banner{
+.pic200{
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+    background-color: transparent;
+    border: 2px solid #CCCCCC;
     position: relative;
 }
-.gradient-bg{
-    width:500px;
-    height:400px;
-    position: absolute;
-    z-index: 1;
-    right: 100px;
-    background: linear-gradient(to bottom right,#d9a26e,#457C86);
-    opacity: 30%;
-}
-.room1{
-    width: 800px;
-    height: 600px;
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-} 
-.room1 img{
+
+.pic200-img-wrap{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    /* display: none; */
+    transform: perspective(1000px) rotateX(-90deg);
+    transition: 1s;
+    position: absolute;
+    transform-origin: center top 0px
+}
+
+.pic200-img-wrap.active{
+    display: block;
+    transform: perspective(1000px) rotateX(0deg);
+}
+.pic200 img, .pic200-img-wrap img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .banner-text{
-    color: #457C86;
-    font-size: 50px;
-    line-height: 40px;
-    position: absolute;
-    top: 200px;
-    /* left: 100px; */
-    z-index: 3;
+    /* color: #00BBC3; */
+    color: #000000;
+    text-align: center;
+    margin-top: 100px;
+    /* font-weight: lighter; */
 }
+.banner-text h1{
+    font-size: 90px;
+}
+.banner-text h3{
+    font-size: 50px;
+}
+
 
 /* 這裡編輯room-container */
 .room-container{
@@ -118,7 +129,7 @@ div{
 
 /* 這裡編輯HE1 he1-container */
 .he1-container{
-    background-color: #1a1a1a;
+    background-color: #000000;
 }
 
 /* 這裡編輯大字 */
@@ -149,18 +160,6 @@ div{
     100%{
        opacity:1;
        text-shadow: 0 0 80px #f80000,0 0 30px #d9a26e,0 0 6px #ffee00;
-    }
-}
-
-@media only screen and (max-width: 460px){  
-    .banner{
-        background-position: top;
-        background-size: contain;
-        height: 500px;
-    }
-    .text-effect{ 
-        font-size: 60px; 
-        top: 100px;
     }
 }
 .he1-container h1{
@@ -267,15 +266,24 @@ div{
     -webkit-filter:grayscale(1);
     opacity: 0.8;
 }
-.step-pic-color{
+.step-pic-color-odd{
     width: 90%;
     height: 90%;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: -20%;
+    /* transform: translateX(-50%); */
     top: 150px;
 }
-.step-pic-color img{
+
+.step-pic-color-even{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: -120%;
+    /* transform: translateX(-50%); */
+    top: 150px;
+}
+.step-pic-color-odd img, .step-pic-color-even img{
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -333,14 +341,20 @@ form{
 .submit-btn{
     width: 200px;
     padding: 10px;
-    color:#457C86;
+    color: #457C86;
     background-color: transparent;
     border: 1px solid #457C86;
+    text-align: center;
 }
 .submit-btn:hover{
     color:azure;
     background-color:#457C86;
-
+     text-decoration: none;
+}
+.submit-btn a{
+    color: #457C86;
+    text-align: center;
+   
 }
 .bg3d{
     width: 100%;
@@ -356,86 +370,6 @@ form{
 .bg3d.move-up{
     transform: translateY(-100px);
 }
-/* 這裡編輯customer UI kit */
-.form-control{
-    border-radius: 0%;
-    background-color: #CCCCCC;
-}
-/* Customize the label (the container) */
-.time-form-group {
-    display: block;
-    position: relative;
-    /* padding-left: 35px; */
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 20px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* Hide the browser's default radio button */
-  .time-form-group input {
-    position: absolute;
-    opacity: 1;
-    cursor: pointer;
-    height: 20px;
-    width: 20px;
-
-    background-color:red;
-  }
-/* Create a custom radio button */
-.input-time {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color:#CCCCCC;
-    border-radius: 50%;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .time-form-group:hover input ~ .input-time {
-    background-color: #ccc;
-  }
-  
-  /* When the radio button is checked, add a blue background */
-  .input-time:checked{
-    background-color: #d9a26e;
-  }
-  
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .input-time:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the indicator (dot/circle) when checked */
-  .time-form-group input:checked ~ .input-time:after {
-    display: block;
-  }
-  
-  /* Style the indicator (dot/circle) */
-  .time-form-group .input-time:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: white;
-  }
-
-
-
-
-
-
-
-
-
 
 
 

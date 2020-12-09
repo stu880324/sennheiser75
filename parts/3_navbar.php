@@ -231,7 +231,7 @@
                 </a>
               </li>
               <li class="all-title">
-                <a href="#" class="item-list">
+                <a href="6_logout_api.php" class="item-list">
                   <small id="nav-s-title">登出</small>
                   <small>Log out</small>
                 </a>
