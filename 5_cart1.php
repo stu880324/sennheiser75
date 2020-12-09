@@ -9,7 +9,6 @@
 if (!isset($_SESSION)) {
     session_start();
 }
-
 var_dump($_SESSION['userAccount'])
 ?>
 
@@ -18,8 +17,8 @@ var_dump($_SESSION['userAccount'])
 <div class="container">
     <div class="row">
         <ul class="progressbar">
-            <li>
-                <span class=active>購物車 </span>
+            <li class="active">
+                <span>購物車 </span>
             </li>
             <li>
                 <span>結帳 </span>
@@ -44,15 +43,18 @@ var_dump($_SESSION['userAccount'])
                 <div class="item-img">
                     <img src="./images/small/product17.jpg" alt="">
                 </div>
-                <div class="item-info">
-                    <div class="item-name">
-                        <p>HD 800 S Anniversary Edition</p>
-                        <p>經典開放式旗艦 75週年限量商品</p>
-                    </div>
-                    <div class="item-price"> NT$ 7,490</div>
-                </div>
+
             </a>
             <div class="item-total-wrapper">
+                <div class="item-total-wrap">
+                    <div class="item-info">
+                        <div class="item-name">
+                            <p>HD 800 S Anniversary Edition</p>
+                            <p>經典開放式旗艦 75週年限量商品</p>
+                        </div>
+                        <div class="item-price"> NT$ 7,490</div>
+                    </div>
+                </div>
                 <div class="item-total-wrap">
                     <p>數量</p>
                     <div class="quantity d-flex">
@@ -74,12 +76,19 @@ var_dump($_SESSION['userAccount'])
                 <div class="item-img">
                     <img src="./images/small/product19.jpg" alt="">
                 </div>
-                <div class="item-info">
-                    <div class="item-name">GSP 670 頂級無線電競耳機</div>
-                    <div class="item-price">NT$ 10,900</div>
-                </div>
+
             </a>
             <div class="item-total-wrapper">
+                <div class="item-total-wrap">
+                    <div class="item-info">
+                        <div class="item-name">
+                            <p>GSP 670</p>
+                            <p>頂級無線電競耳機</p>
+                        </div>
+                        <div class="item-price">NT$ 10,900</div>
+                    </div>
+                </div>
+
                 <div class="item-total-wrap">
                     <p>數量</p>
                     <div class="quantity d-flex">
@@ -101,12 +110,19 @@ var_dump($_SESSION['userAccount'])
                 <div class="item-img">
                     <img src="./images/small/product19.jpg" alt="">
                 </div>
-                <div class="item-info">
-                    <div class="item-name">GSP 670 頂級無線電競耳機</div>
-                    <div class="item-price">NT$ 10,900</div>
-                </div>
+
             </a>
             <div class="item-total-wrapper">
+                <div class="item-total-wrap">
+                    <div class="item-info">
+                        <div class="item-name">
+                            <p>GSP 670</p>
+                            <p>頂級無線電競耳機</p>
+                        </div>
+                        <div class="item-price">NT$ 10,900</div>
+                    </div>
+                </div>
+
                 <div class="item-total-wrap">
                     <p>數量</p>
                     <div class="quantity d-flex">
@@ -128,12 +144,53 @@ var_dump($_SESSION['userAccount'])
                 <div class="item-img">
                     <img src="./images/small/product19.jpg" alt="">
                 </div>
-                <div class="item-info">
-                    <div class="item-name">GSP 670 頂級無線電競耳機</div>
-                    <div class="item-price">NT$ 10,900</div>
-                </div>
+
             </a>
             <div class="item-total-wrapper">
+                <div class="item-total-wrap">
+                    <div class="item-info">
+                        <div class="item-name">
+                            <p>GSP 670</p>
+                            <p>頂級無線電競耳機</p>
+                        </div>
+                        <div class="item-price">NT$ 10,900</div>
+                    </div>
+                </div>
+
+                <div class="item-total-wrap">
+                    <p>數量</p>
+                    <div class="quantity d-flex">
+                        <input class="min" name="" type="button" value="-" />
+                        <input class="text-box" name="" type="text" value="0" />
+                        <input class="add" name="" type="button" value="+" />
+                    </div>
+                </div>
+                <div class="item-total-wrap ">
+                    <p>小計</p>
+                    <div class="item-wrap-total">NT$ 10,900</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item1">
+            <a class="remove-icon"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
+            <a href="#" class="item">
+                <div class="item-img">
+                    <img src="./images/small/product19.jpg" alt="">
+                </div>
+
+            </a>
+            <div class="item-total-wrapper">
+                <div class="item-total-wrap">
+                    <div class="item-info">
+                        <div class="item-name">
+                            <p>GSP 670</p>
+                            <p>頂級無線電競耳機</p>
+                        </div>
+                        <div class="item-price">NT$ 10,900</div>
+                    </div>
+                </div>
+
                 <div class="item-total-wrap">
                     <p>數量</p>
                     <div class="quantity d-flex">
@@ -149,32 +206,7 @@ var_dump($_SESSION['userAccount'])
             </div>
         </div>
 
-        <div class="item1">
-            <a class="remove-icon"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
-            <a href="#" class="item">
-                <div class="item-img">
-                    <img src="./images/small/product19.jpg" alt="">
-                </div>
-                <div class="item-info">
-                    <div class="item-name">GSP 670 頂級無線電競耳機</div>
-                    <div class="item-price">NT$ 10,900</div>
-                </div>
-            </a>
-            <div class="item-total-wrapper">
-                <div class="item-total-wrap">
-                    <p>數量</p>
-                    <div class="quantity d-flex">
-                        <input class="min" name="" type="button" value="-" />
-                        <input class="text-box" name="" type="text" value="0" />
-                        <input class="add" name="" type="button" value="+" />
-                    </div>
-                </div>
-                <div class="item-total-wrap ">
-                    <p>小計</p>
-                    <div class="item-wrap-total">NT$ 9,900</div>
-                </div>
-            </div>
-        </div>
+
 
 
     </div>
@@ -200,7 +232,6 @@ var_dump($_SESSION['userAccount'])
 </div>
 
 
-
 <script>
     $(function() {
         $(".add").click(function() {
@@ -214,7 +245,7 @@ var_dump($_SESSION['userAccount'])
 
 
             //取得單價
-            let priceNT = $(this).parents('.item-total-wrapper').prev().find('.item-price').text()
+            let priceNT = $(this).parents('.item-total-wrap').prev().find('.item-price').text()
             //取得數字版本的單價
             let priceNumber = numberWithoutCommas(priceNT);
 

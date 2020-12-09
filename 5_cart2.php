@@ -11,8 +11,6 @@ if (!isset($_SESSION)) {
 }
 
 
-
-
 $sql = "SELECT * FROM `coupon` WHERE `member_sid`=? ";
 //$output['sql'] = $sql;
 $stmt = $pdo->prepare($sql);
@@ -32,9 +30,9 @@ if ($stmt->rowCount() > 0) {
     <div class="row">
         <ul class="progressbar">
             <li>
-                <span classactive>購物車 </span>
+                <span>購物車 </span>
             </li>
-            <li>
+            <li class="active">
                 <span>結帳 </span>
             </li>
             <li>
@@ -53,61 +51,101 @@ if ($stmt->rowCount() > 0) {
             <div class="product-list">
                 <ul>
                     <li>
-                        <div class="cover"><img src="./images/small/product17.jpg" alt=""></div>
-                        <div class="item-info">
-                            <div class="item-name">GSP 500 頂級開放式電競</div>
-                            <div class="item-price"> NT$ 7,490</div>
+                        <div class="cover">
+                            <img src="./images/small/product17.jpg" alt="">
+
                         </div>
+
                         <div class="item-total-wrap">
-                            <p>數量: 1</p>
-                            <p>NT$ 7,490</p>
+                            <div class="item-info">
+                                <div class="item-name">
+                                    <p>HD 800 S Anniversary Edition</p>
+                                    <p>經典開放式旗艦 75週年限量商品</p>
+                                </div>
+                                <div class="item-price"> NT$ 7,490</div>
+                                <p>數量: 2</p>
+                                <p>小計: NT$ 7,490</p>
+                            </div>
+
                         </div>
                     </li>
                     <li>
-                        <div class="cover"><img src="./images/small/product19.jpg" alt=""></div>
-                        <div class="item-info">
-                            <div class="item-name">GSP 670 頂級無線電競耳機</div>
-                            <div class="item-price">NT$ 10,900</div>
+                        <div class="cover"><img src="./images/small/product19.jpg" alt="">
+
                         </div>
+
                         <div class="item-total-wrap">
-                            <p>數量: 1</p>
-                            <p>NT$ 10,900</p>
+                            <div class="item-info">
+                                <div class="item-name">
+                                    <p>HD 800 S Anniversary Edition</p>
+                                    <p>經典開放式旗艦 75週年限量商品</p>
+                                </div>
+                                <div class="item-price">NT$ 10,900</div>
+                                <p>數量: 1</p>
+                                <p>小計: NT$ 10,900</p>
+                            </div>
+
                         </div>
                     </li>
                     <li>
-                        <div class="cover"><img src="./images/small/product19.jpg" alt=""></div>
-                        <div class="item-info">
-                            <div class="item-name">GSP 670 頂級無線電競耳機</div>
-                            <div class="item-price">NT$ 10,900</div>
+                        <div class="cover"><img src="./images/small/product19.jpg" alt="">
+
                         </div>
+
                         <div class="item-total-wrap">
-                            <p>數量: 1</p>
-                            <p>NT$ 10,900</p>
+                            <div class="item-info">
+                                <div class="item-name">
+                                    <p>GSP 670</p>
+                                    <p>頂級無線電競耳機</p>
+                                </div>
+                                <div class="item-price">NT$ 10,900</div>
+                                <p>數量: 1</p>
+                                <p>小計: NT$ 10,900</p>
+                            </div>
+
                         </div>
                     </li>
                     <li>
-                        <div class="cover"><img src="./images/small/product19.jpg" alt=""></div>
-                        <div class="item-info">
-                            <div class="item-name">GSP 670 頂級無線電競耳機</div>
-                            <div class="item-price">NT$ 10,900</div>
+                        <div class="cover"><img src="./images/small/product19.jpg" alt="">
+
                         </div>
+
                         <div class="item-total-wrap">
-                            <p>數量: 2</p>
-                            <p>NT$ 10,900</p>
+                            <div class="item-info">
+                                <div class="item-name">
+                                    <p>GSP 670</p>
+                                    <p>頂級無線電競耳機</p>
+                                </div>
+                                <div class="item-price">NT$ 10,900</div>
+                                <p>數量: 1</p>
+                                <p>小計: NT$ 10,900</p>
+                            </div>
+
                         </div>
                     </li>
                     <li>
-                        <div class="cover"><img src="./images/small/product19.jpg" alt=""></div>
-                        <div class="item-info">
-                            <div class="item-name">GSP 670 頂級無線電競耳機</div>
-                            <div class="item-price">NT$ 10,900</div>
+                        <div class="cover"><img src="./images/small/product19.jpg" alt="">
+
                         </div>
+
                         <div class="item-total-wrap">
-                            <p>數量: 2</p>
-                            <p>NT$ 2,310,900</p>
+                            <div class="item-info">
+                                <div class="item-name">
+                                    <p>GSP 670</p>
+                                    <p>頂級無線電競耳機</p>
+                                </div>
+                                <div class="item-price">NT$ 10,900</div>
+                                <p>數量: 1</p>
+                                <p>小計: NT$ 10,900</p>
+                            </div>
+
                         </div>
                     </li>
+
+
                 </ul>
+
+
 
 
             </div>
@@ -199,12 +237,12 @@ if ($stmt->rowCount() > 0) {
         let subTotal = 0;
         let shipfee = numberWithoutCommas($('#shipfee').text())
         let discount = numberWithoutCommas($('#discount').text())
-        $('.item-total-wrap p:last-child').each(function(index) {
+        $('.item-info > p:last-child').each(function(index) {
             console.log('number', $(this).prev().text().replace('數量: ', ''))
             console.log('price', numberWithoutCommas($(this).parent().prev().find('.item-price').text()))
 
             let number = $(this).prev().text().replace('數量: ', '');
-            let price = numberWithoutCommas($(this).parent().prev().find('.item-price').text());
+            let price = numberWithoutCommas($(this).parent().find('.item-price').text());
 
             $(this).text(numberWithCommas(number * price))
 

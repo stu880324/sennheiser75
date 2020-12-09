@@ -41,7 +41,7 @@
   color: #000;
 }
 
-.progressbar li::before.active{
+.progressbar li.active::before{
   border-color: #000;
 }
 
@@ -106,7 +106,7 @@
 .card-input_field {
     width: 100%;
     height: 50px;
-    border-radius: 5px;
+    border-radius: 0px;
     box-shadow: none;
     border: 1px solid #ced6e0;
     transition: all 0.3s ease-in-out;
