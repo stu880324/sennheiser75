@@ -122,9 +122,14 @@
   /* 進度列 */
   .progressbar {
     width: 100%;
-    height: 120px;
+    height: 100px;
     padding-left:1rem;
   }
+
+  ul.progressbar
+ {
+    margin-top: 7rem;
+}
 
   .product-detail{
     width: 100%;
