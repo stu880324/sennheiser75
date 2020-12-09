@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS樣式 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart4.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart4_1.css">
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
 
@@ -71,7 +71,7 @@
 
 <script>
     $('.btn-buy').on('click', function() {
-        location.href = "./5_cart2.php"
+        location.href = "./9_order.php"
     })
     $('.btn-back').on('click', function() {
         location.href = "1_index.php"
