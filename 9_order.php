@@ -5,7 +5,12 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
-
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+// var_dump($_SESSION['userAccount'])
+?>
 
 <!-- 以下刪除就可以開始編輯 -->
 <div class="ctainer">
@@ -22,23 +27,111 @@
             <td>收件人</td>
             <td>收件地址</td>
             <td>付款方式</td>
+            <td></td>
         </tr>
-        <tr>
+        <!-- 模版範例用假資料 -->
+        <!-- <tr>
             <td>12345678</td>
             <td>$3,000</td>
             <td>2020/11/25</td>
             <td>王小明</td>
             <td>台北市大安區</td>
             <td>信用卡</td>
+            <td><a class="order-detail-btn">訂單詳細</a></td>
         </tr>
+        <tr class="order-detail-tr">
+            <td colspan="7">
+                <div class="order-detail-div">
+                    <table class="order-detail-table w-100 text-center">
+                        <tr>
+                            <td>商品</td>
+                            <td>數量</td>
+                            <td>單價</td>
+                            <td>小計</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:100px 0">無線藍牙降噪耳機 HD450BT</td>
+                            <td>1</td>
+                            <td>TWD 3000</td>
+                            <td>TWD 3000</td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+
+        </tr> -->
     </table>
 </div>
 <!-- 刪到這裡 -->
 
 
 
-
-
 <?php include __DIR__ . '/parts/4_footer.php'; ?>
 <?php include __DIR__ . '/parts/5_scripts.php'; ?>
+
+
+
+<script>
+    $.post('./9_order_api.php', {
+        member_sid: <?= $_SESSION['userAccount']['sid'] ?>,
+    }, function(data) {
+        let result = JSON.parse(data);
+        console.log(result);
+        if (result.success) {
+            console.log('response', result)
+            let html = '';
+            let table = document.querySelector('.coupon');
+            for (let i = 0; i < result.orders.length; i++) {
+                html += `
+                        <tr>
+                            <td>${result.orders[i].sid}</td>
+                            <td>$${result.orders[i].amount}</td>
+                            <td>${result.orders[i].order_date.substring(0, 9).replaceAll('-','/')}</td>
+                            <td>${result.orders[i].receiver_name}</td>
+                            <td>${result.orders[i].receiver_address}</td>
+                            <td>${result.orders[i].pay}</td>
+                            <td><a class="order-detail-btn">訂單詳細</a></td>
+                        </tr>
+                        `
+
+                html += `<tr class="order-detail-tr">
+            <td colspan="7" class="border-bottom-0">
+                <div class="order-detail-div">
+                    <table class="order-detail-table w-100 text-center">
+                        <tr>
+                            <td>商品</td>
+                            <td>數量</td>
+                            <td>單價</td>
+                            <td>小計</td>
+                        </tr>`;
+
+                for (let k = 0; k < result.order_detail[i].length; k++) {
+                    html += `<tr>
+                            <td style="padding:100px 0">${result.order_detail[i][k].product_name}</td>
+                            <td>${result.order_detail[i][k].quantity}</td>
+                            <td>TWD ${result.order_detail[i][k].price}</td>
+                            <td>TWD ${result.order_detail[i][k].quantity * result.order_detail[i][k].price}</td>
+                        </tr>`
+                }
+                html += `
+                    </table>
+                </div>
+            </td>
+
+        </tr>`
+            }
+
+            table.innerHTML += html;
+
+            $('.order-detail-btn').on('click', function() {
+                console.log('hi')
+                $(this).parents('tr').next().toggleClass('active');
+            })
+        } else {
+            // $('.product-list').html('<h2 style="padding:100px 0">查無歷史訂單</h2>')
+        }
+    });
+</script>
+
+
 <?php include __DIR__ . '/parts/6_html_foot.php'; ?>
