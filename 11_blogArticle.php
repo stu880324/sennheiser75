@@ -6,6 +6,7 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
+<?php include __DIR__ . '/parts/7_fix-icon.php'; ?>
 
 
 <!-- 以下刪除就可以開始編輯 -->
@@ -237,13 +238,13 @@
                                                                 <h2 id="ar-like-h2">Bose SoundSport Free V.S. JBL Reflect Flow：哪副真無線運動耳機最適合您？</h2>
 
                                                                 <div class="ar-bt-read">
-                                                                        <a id="ar-href" href="#">
+                                                                        <a id="ar-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                                                                                 <h4 id="ar-read-h4">
                                                                                         Read
                                                                                 </h4>
                                                                         </a>
                                                                         <div class="ar-gold-read-arrow">
-                                                                                <a id="ar-gold-arrow-hover" href="#">
+                                                                                <a id="ar-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                                                                                         <img id="ar-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                                                                                 </a>
                                                                         </div>
@@ -262,13 +263,13 @@
                                                                 <h2 id="ar-like-h2">2020 最佳無線運動耳機大盤點 | 讓跑步玩家都想擁有的耳機</h2>
 
                                                                 <div class="ar-bt-read">
-                                                                        <a id="ar-href" href="#">
+                                                                        <a id="ar-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                                                                                 <h4 id="ar-read-h4">
                                                                                         Read
                                                                                 </h4>
                                                                         </a>
                                                                         <div class="ar-gold-read-arrow">
-                                                                                <a id="ar-gold-arrow-hover" href="#">
+                                                                                <a id="ar-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                                                                                         <img id="ar-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                                                                                 </a>
                                                                         </div>
@@ -287,13 +288,13 @@
                                                                 <h2 id="ar-like-h2">誠意十足的有感升級｜開箱Jabra Elite 85t降噪真無線藍牙耳機</h2>
 
                                                                 <div class="ar-bt-read">
-                                                                        <a id="ar-href" href="#">
+                                                                        <a id="ar-href" href="http://localhost/sennheiser75/11_blogArticle.php">
                                                                                 <h4 id="ar-read-h4">
                                                                                         Read
                                                                                 </h4>
                                                                         </a>
                                                                         <div class="ar-gold-read-arrow">
-                                                                                <a id="ar-gold-arrow-hover" href="#">
+                                                                                <a id="ar-gold-arrow-hover" href="http://localhost/sennheiser75/11_blogArticle.php">
                                                                                         <img id="ar-gold-arrow" src="./images/10_blogView/arrow-blog.svg" alt="">
                                                                                 </a>
                                                                         </div>
@@ -311,7 +312,7 @@
 
                         <div class="ar-back-area">
                                 <button class="ar-bt-back">
-                                        <a id="ar-back-herf" href="#">
+                                        <a id="ar-back-herf" href="http://localhost/sennheiser75/10_blogView.php">
                                                 <img id="ar-back-arrow" src="./images/11_blogAritcle/back-arrow.svg" alt="">
                                                 <p id="ar-back-p">Back</p>
                                         </a>

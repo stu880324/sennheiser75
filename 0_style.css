@@ -6,6 +6,19 @@
     border:1px solid turquoise;
 } */
 
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
+}
+
+
+
 /* 此區編輯 btn */
 /* .cart-icon {
   width: 70px;
