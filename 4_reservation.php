@@ -5,7 +5,233 @@
 
 <?php include __DIR__. '/parts/2_html_head2.php'; ?>
 <?php include __DIR__. '/parts/3_navbar.php'; ?>
+<?php include __DIR__. '/parts/7_fix-icon.php'; ?>
 
+<!-- 這裡banner-container -->
+<div class="container-fluid banner-container">
+    <div class="row">
+        <!-- 左邊 -->
+        <div class="col-lg-4 mt-5">
+            <div class="layer d-flex justify-content-center">
+                <!-- 左上左 -->
+                <div class="pic200"></div>
+                <!-- 左上右 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig1.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig2.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig3.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig4.jpg" alt="">
+                    </div>
+                </div>                    
+            </div>
+            <div class="layer d-flex justify-content-center">
+                <!-- 左中左 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig5.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig6.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig7.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig8.jpg" alt="">
+                    </div>
+                </div>                       
+                <!-- 左中右 -->
+                <div class="pic200"></div>
+            </div>
+            <div class="layer d-flex justify-content-center">
+                <!-- 左下左 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig9.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig10.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig11.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig12.jpg" alt="">
+                    </div>
+                </div>                
+                <!-- 左下右 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig13.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig14.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig15.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig16.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 中間 -->
+        <div class="col-lg-4 mt-5">
+            <div class="banner-text">
+                <h1>75th</h1>
+                <h3>anniversary</h3>
+                <p>
+                    我們萬分期待與你分享這個特別週年，<br>
+                    全因你 - <br>
+                    我們的員工、顧客、朋友以及愛好者 -<br>
+                    塑造了我們的團隊！<br>
+                    這些記憶將帶你展開一段走訪 <br>
+                    關於Sennheiser 歷史、精神、<br>
+                    特別時刻與專業級產品的旅程。
+                </p>
+                <p>
+                    無論身處何方，<br>
+                    我們深信，<br>
+                    動聽的聲音能連結彼此。
+                </p>
+            </div>
+        </div>
+         <!-- 右邊 -->
+         <div class="col-lg-4 mt-5">
+            <div class="layer d-flex justify-content-center">
+                <!-- 右上左 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig21.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig22.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig23.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig24.jpg" alt="">
+                    </div>
+                </div>  
+                <!-- 右上右 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig17.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig18.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig19.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig20.jpg" alt="">
+                    </div>
+                </div>                    
+            </div>
+            <div class="layer d-flex justify-content-center">
+                <!-- 右中左 -->
+                <div class="pic200"></div>                     
+                <!-- 右中右 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig6.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig7.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig8.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig9.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="layer d-flex justify-content-center">
+                <!-- 右下左 -->
+                <div class="pic200">
+                    <div class="pic200-img-wrap active">
+                        <img src="./images/4_reservation/ig2.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig3.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig4.jpg" alt="">
+                    </div>
+                    <div class="pic200-img-wrap">
+                        <img src="./images/4_reservation/ig5.jpg" alt="">
+                    </div>
+                </div>                
+                <!-- 右下右 -->
+                <div class="pic200"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+
+<!-- 這裡room-container (不要)-->
+<!-- <div class="container-fluid room-container">
+    <div class="row">
+        <div class="col-lg-4 col-sm-12">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="./images/4_reservation/room7.jpg" alt="">
+                    </div>
+                    <div class="flip-box-back">
+                        <img src="./images/4_reservation/room8.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-12 align-self-center">
+            <div class="room-text">
+                <h5>台北旗艦店</h5>
+                <p>台北市中正區市民大道三段2號</p>
+                <h5>台中展示中心</h5>
+                <p>台中市西屯區文心路三段526號</p>
+                <h5>高雄展示中心</h5>
+                <p>高雄市三民區建國二路162號</p>
+            </div>  
+        </div>
+        
+
+        <div class="col-lg-4 col-sm-12">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="./images/4_reservation/room15.jpg" alt="">
+                    </div>
+                    <div class="flip-box-back">
+                        <img src="./images/4_reservation/room14.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div> -->
+
+
+           
 
 <!-- 這裡HE1 he1-container -->
 <div class="container-fluid he1-container">
@@ -77,7 +303,7 @@
         <div class="step">
             <div class="step-pic">
                 <div class="step-pic-black"><img src="./images/4_reservation/person1.jpeg" alt=""></div>
-                <div class="step-pic-color" data-stellar-ratio="2"><img src="./images/4_reservation/person1copy.png" alt=""></div>
+                <div class="step-pic-color-odd" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person1copy.png" alt=""></div>
             </div>
             <div class="step-text">
                 <h4>活動方式</h4>
@@ -95,14 +321,14 @@
             </div>
             <div class="step-pic">
                 <div class="step-pic-black"><img src="./images/4_reservation/person2.jpg" alt=""></div>
-                <div class="step-pic-color"><img src="./images/4_reservation/person2copy.png" alt=""></div>
+                <div class="step-pic-color-even" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person2copy.png" alt=""></div>
             </div>
         </div>
         <!-- step2 -->
         <div class="step">
             <div class="step-pic">
                 <div class="step-pic-black"><img src="./images/4_reservation/person3.jpg" alt=""></div>
-                <div class="step-pic-color"><img src="./images/4_reservation/person3copy.png" alt=""></div>
+                <div class="step-pic-color-odd" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person3copy.png" alt=""></div>
             </div>
             <div class="step-text">
                 <h4>STEP 2</h4>
@@ -117,7 +343,7 @@
             </div>
             <div class="step-pic">
                 <div class="step-pic-black"><img src="./images/4_reservation/person4.jpg" alt=""></div>
-                <div class="step-pic-color"><img src="./images/4_reservation/person4copy.png" alt=""></div>
+                <div class="step-pic-color-even" data-stellar-ratio="2" data-stellar-vertical-offset="150"><img src="./images/4_reservation/person4copy.png" alt=""></div>
             </div>
         </div>
         
@@ -129,60 +355,93 @@
     <h2>線上預約</h2>
     <div class="row">
         
-        <form>
+        <!-- <form action="4_reservation_insertAPI.php" method="post"> -->
+        <form name="form1" onsubmit="sendForm(); return false;">
+            <!-- 選地區 -->
             <div class="form-group">
-                <label class="label-title" for="store">STORE</label>
-                <select class="form-control" id="store">
+                <label class="label-title" for="location">STORE</label>
+                <select class="form-control" id="location" name="location">
                   <option>台北三創店</option>
                   <option>台中展示中心</option>
                   <option>高雄展示中心</option>
                 </select>
               </div>
-
+            <!-- 選日期 -->
             <div class="form-group">
               <label class="label-title" for="date">DATE</label>
-              <input type="date" class="form-control" id="date">
+              <input type="date" class="form-control" id="date" name="reservation_date">
             </div>
-
-            <fieldset class="form-group">
+            <!-- 選時間 -->
+            <div class="time-form-group">
             
-                    <label class="label-title" for="date">TIME</label>
+                    <label class="label-title">TIME</label>
                   <div>
                     <div class="form-check">
-                      <input class="input-time" type="radio" name="gridRadios" id="time10" value="10" checked>
+                      <input class="input-time" type="radio" name="time" id="time10" value="10:00 - 12:00" checked>
                       <label class="label-time" for="time10">
                         10:00 - 12:00
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="input-time" type="radio" name="gridRadios" id="time12" value="12">
+                      <input class="input-time" type="radio" name="time" id="time12" value="12:00 - 14:00">
                       <label class="label-time" for="time12">
                         12:00 - 14:00
                       </label>
                     </div>
                     <div class="form-check disabled">
-                      <input class="input-time" type="radio" name="gridRadios" id="time14" value="14" disabled>
+                      <input class="input-time" type="radio" name="time" id="time14" value="14:00 - 16:00" disabled>
                       <label class="label-time" for="time14">
                         14:00 - 16:00
                       </label>
                     </div>
                     <div class="form-check">
-                        <input class="input-time" type="radio" name="gridRadios" id="time16" value="16">
+                        <input class="input-time" type="radio" name="time" id="time16" value="16:00 - 18:00">
                         <label class="label-time" for="time16">
                           16:00 - 18:00
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="input-time" type="radio" name="gridRadios" id="time18" value="18">
+                        <input class="input-time" type="radio" name="time" id="time18" value="18:00 - 20:00">
                         <label class="label-time" for="time18">
                           18:00 - 20:00
                         </label>
                       </div>
                   </div>
-              </fieldset>
+              </div>
 
-              <button class="submit-btn" type="submit">SEND</button>
+              <?php if(empty( $_SESSION['userAccount'])): ?>
+                <a href="./6_login.php"><div class="submit-btn">請先登入會員</div></a>
+              <?php else: ?>
+              <button class="submit-btn"  data-toggle="modal" data-target=".bd-example-modal-lg" type="submit">SEND</button>
+        
 
+                <!-- Small modal -->
+                    <!-- <button type="button" class="btn btn-primary" >Small modal</button> -->
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content text-center" 
+                        style=" 
+                                background:url(./images/4_reservation/model-bg.jpg);
+                                background-repeat:no-repeat;
+                                background-size:contain;
+                                background-position:center;
+                                color:#000; 
+                                height:400px;
+                                border:none;">
+                        <h3 class="mt-5">預約成功</h3>
+                        我們竭誠歡迎您的到來<br>
+                        抵達時向請服務人員出示此畫面<br>
+                        亦可至會員中心查詢預約記錄<br>
+                        非常感謝您!<br>
+                        <br>
+                        日期：${sid}<br>
+                        時間：${sid}<br>
+                        店名：${sid}<br>
+                        地址：${sid}<br>
+                        </div>
+                    </div>
+                    </div>
+              <?php endif ?>
           </form>
     </div>
     <div class="bg3d"><img src="./images/4_reservation/bg3d.png" alt=""></div>
@@ -196,14 +455,24 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-<script
-    src="https://code.jquery.com/jquery-3.5.1.slim.js"
-    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
-    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+<!-- 送出預約表單功能 -->
+<script>
+    function sendForm(){
+        $.post('4_reservation_insertAPI.php',
+            $(document.form1).serialize(), 
+            function(data){
+            console.log(data);
+            
+        }, 'json');
+    }
+
+</script>
 
 
 <!-- 轉變背景顏色功能 -->
@@ -230,22 +499,23 @@
 </script> -->
 
 <!-- 滾動視差 -->
-<!-- <script src="./stellar.js-master/jquery.stellar.min.js"></script>
+<script src="./stellar.js-master/jquery.stellar.min.js"></script>
     
 <script>
     $(document).ready(function () {
         // For example:
         $(window).stellar();
         // or:
-        $('.step-pic-color').stellar();
+        // $('.step-pic-color').stellar();
         });
 </script>
 
 <script>
     $(document).ready(function () {
-    $.stellar();
+    // $.stellar();
     });
-</script> -->
+</script>
+
 
 <!-- 背景圖上升功能 -->
 <script>
@@ -253,7 +523,7 @@
 
         let scrollTop = $(this).scrollTop();
 
-        console.log(scrollTop)
+        // console.log(scrollTop)
 
         if (scrollTop > 2750) {
             $('.bg3d').addClass('move-up');
@@ -263,11 +533,32 @@
         }
     });
 </script>
+
+
+
+<script>
+    setInterval(()=>{
+        $('.pic200-img-wrap.active').each(function(){
+            // console.log('this',$(this))
+            if($(this).index() === 3){
+                // console.log('hiiii')
+                $(this).removeClass('active')
+                $(this).parent().find('.pic200-img-wrap').first().addClass('active')
+
+            }
+            else{
+                $(this).removeClass('active').next().addClass('active')
+                
+            }
+            
+        })
+    },2000);
+</script>
     
 
 
 
 
 <?php include __DIR__. '/parts/4_footer.php'; ?>
-<?php include __DIR__. '/parts/5_scripts.php'; ?>
+
 <?php include __DIR__. '/parts/6_html_foot.php'; ?>

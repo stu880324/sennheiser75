@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS樣式 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>1_index.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>1_index01.css">
 
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" /> -->
 <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -12,7 +12,7 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
-
+<?php include __DIR__ . '/parts/7_fix-icon.php'; ?>
 
 <!-- 以下刪除就可以開始編輯 -->
 <!-- 輪播牆 -->
@@ -192,8 +192,8 @@
           或是實現自然的聲音，都可以依據各型喜好設定，因此深受大眾喜愛。
         </p>
 
-        <div class="a-white-div">
-          <a href="" class="a-white">查看商品</a>
+        <div class="a-white-div01">
+          <a href="2_productList.php" class="a-white">查看商品</a>
         </div>
       </div>
     </div>
@@ -236,7 +236,7 @@
       <img src="images/1_index/icon desing/arrow-left.svg" alt="" />
     </div>
     <div class="reservation-text">
-      <a href="#">預約試聽 Book Now</a>
+      <a href="4_reservation.php">預約試聽 Book Now</a>
     </div>
   </div>
 </div>
@@ -266,7 +266,7 @@
       </p>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="2_productList.php" class="a-white">查看商品</a>
       </div>
     </div>
   </div>
@@ -291,7 +291,7 @@
       </p>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="2_productList.php" class="a-white">查看商品</a>
       </div>
     </div>
 
@@ -315,7 +315,7 @@
       </p>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="2_productList.php" class="a-white">查看商品</a>
       </div>
     </div>
   </div>
@@ -325,10 +325,14 @@
 
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<!-- 刪到這裡 -->
 
+
+
+
+
+<?php include __DIR__ . '/parts/4_footer.php'; ?>
+<?php include __DIR__ . '/parts/5_scripts.php'; ?>
 <script>
   new WOW().init();
 </script>
@@ -447,12 +451,34 @@
 
   });
 </script>
-<!-- 刪到這裡 -->
 
+<!-- 加入購物車功能 -->
+<script>
+  $('.btn-buy').on('click', function(event) {
+    const item = $(this).closest('.product-item');
+    const sid = item.attr('data-sid');
+    const qty = item.find('.btn-quantity').text();
 
+    console.log({
+      sid: sid,
+      quantity: qty
+    });
+    $.get('5_addToCart-API.php', {
+      sid: sid,
+      quantity: qty,
+      action: 'add'
+    }, function(data) {
+      console.log(data);
+      // TODO:購物車budge
+      countCart(data.cart);
+    }, 'json');
+  });
 
+  function showProductModal(sid) {
+    $('iframe')[0].src = "product-detail02.php?sid=" + sid;
+    // product-detail02.php?sid=17
+    $('#exampleModal').modal('show')
+  }
+</script>
 
-
-<?php include __DIR__ . '/parts/4_footer.php'; ?>
-<?php include __DIR__ . '/parts/5_scripts.php'; ?>
 <?php include __DIR__ . '/parts/6_html_foot.php'; ?>

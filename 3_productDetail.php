@@ -1,38 +1,59 @@
-<?php include __DIR__. '/parts/1_config.php'; ?>
+<?php include __DIR__. '/parts/1_config.php';
+
+        if(! isset($_GET['sid'])){
+            header('Location: 2_productList.php'); exit;
+        }
+
+        $sid = intval($_GET['sid']);
+
+        $sql = "SELECT * FROM products WHERE sid=$sid";
+        $row = $pdo->query($sql)->fetch();
+        if(empty($row)){
+            header('Location: 2_productList.php'); exit;
+        }
+
+        // echo json_encode($row, JSON_UNESCAPED_UNICODE);
+        ?>
+
 <?php include __DIR__. '/parts/2_html_head.php'; ?>
         <!-- 請填入各頁面CSS檔名 -->
-        <link rel="stylesheet" href="<?= WEB_ROOT ?>3_productDetail.css">
+        <link rel="stylesheet" href="<?= WEB_ROOT ?>3_productDetail01.css">
 
 <?php include __DIR__. '/parts/2_html_head2.php'; ?>
 <?php include __DIR__. '/parts/3_navbar.php'; ?>
+<?php include __DIR__. '/parts/7_fix-icon.php'; ?>
 
 
 <!-- 此區 demo-container -->
 <div class="container">
     
-<div class="goback"><a href="">HOME</a> —— <a href="">ALL PRODUCT</a> —— <a href="">MOMENTUM True Wireless</a></div>
+<div class="goback">
+    <a href="./1_index.php">HOME</a>
+     —— <a href="./2_productList.php">ALL PRODUCT</a>
+     —— <a href="#"><?= $row['english_name']?></a>
+</div>
     
 
 <div class="row">
 <div class="col-lg-2">
     <div class="picture100-wrap  d-flex flex-lg-column justify-content-between">
-        <div class="picture100 mx-auto"><img src="./images/big/product54/picture1.jpg" alt=""></div>
-        <div class="picture100 mx-auto"><img src="./images/big/product54/picture2.jpg" alt=""></div>
-        <div class="picture100 mx-auto"><img src="./images/big/product54/picture3.jpg" alt=""></div>
-        <div class="picture100 mx-auto"><img src="./images/big/product54/picture4.jpg" alt=""></div>
-        <div class="picture100 mx-auto"><img src="./images/big/product54/picture5.jpg" alt=""></div>
+        <div class="picture100 mx-auto"><img src="./images/big/product<?= $row['sid']?>/picture1.jpg" alt=""></div>
+        <div class="picture100 mx-auto"><img src="./images/big/product<?= $row['sid']?>/picture2.jpg" alt=""></div>
+        <div class="picture100 mx-auto"><img src="./images/big/product<?= $row['sid']?>/picture3.jpg" alt=""></div>
+        <div class="picture100 mx-auto"><img src="./images/big/product<?= $row['sid']?>/picture4.jpg" alt=""></div>
+        <div class="picture100 mx-auto"><img src="./images/big/product<?= $row['sid']?>/picture5.jpg" alt=""></div>
     </div>
 </div>
 <div class="col-lg-6">
     <div class="demo">
-        <img id="myimage" src="./images/big/product54/picture1.jpg" alt="">
+        <img id="myimage" src="./images/big/product<?= $row['sid']?>/picture1.jpg" alt="">
     </div>
 </div>
-<div class="col-lg-4 my-auto">
+<div class="col-lg-4 my-auto product-item" data-sid="<?= $row['sid']?>">
     <div class="intro">
-        <h4>MOMENTUM True Wireless</h4>
-        <h4>旗艦真無線藍牙耳機</h4><br>
-        <h6>NT$9,900</h6><br>
+        <h4><?= $row['english_name']?></h4>
+        <h4><?= $row['chinese_name']?></h4><br>
+        <h6> $ <?= $row['price']?></h6><br>
     
         <div class="intro-quantity-area d-flex">
             <div class="d-flex">
@@ -40,12 +61,26 @@
                 <div id="quantity" class="btn-quantity text-center">1</div>
                 <div id="add" class="btn-add-sub text-center">+</div>
             </div>
+        
+            <button class="btn-buy" data-toggle="modal" data-target=".bd-example-modal-sm">加入購物車</button>
 
-            <button class="btn-buy">加入購物車</button>
-
+                <!-- Small modal -->
+                <!-- <button type="button" class="btn btn-primary" >Small modal</button> -->
+                <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content text-center" 
+                    style="background-color: #000; color:#fff; height:200px; line-height:200px;">
+                    已加入購物車
+                    </div>
+                </div>
+                </div>
         </div>
 
-        <br><p>立即擁有？<br><a href="">預約試聽</a> 或 <a href="">聯繫客服</a></p>
+        <br>
+        <p>立即擁有？<br>
+            <a href="./4_reservation.php">預約試聽</a> 或 
+            <a href="#">聯繫客服</a>
+        </p>
         
         <hr>
 
@@ -57,6 +92,9 @@
 
 </div>
 </div>
+
+
+
 
 <!-- 此區 detail-container -->
 <div class="container detail-container">
@@ -164,15 +202,15 @@
         <div class="box"></div>
 
         <p class="service5-text">親身體驗</p>
-        <div class="service5"><a href="#"><img src="./images/3_productDetail/service5.jpg" alt=""></a></div>
+        <div class="service5"><a href="./4_reservation.php"><img src="./images/3_productDetail/service5.jpg" alt=""></a></div>
         <p class="service4-text">公司的成立</p>
-        <div class="service4"><a href=""><img src="./images/3_productDetail/service4.jpg" alt=""></a></div>
+        <div class="service4"><a href="#"><img src="./images/3_productDetail/service4.jpg" alt=""></a></div>
         <p class="service1-text">如何挑選耳機</p>
-        <div class="service1"><a href=""><img src="./images/3_productDetail/service1.png" alt=""></a></div>
+        <div class="service1"><a href="./10_blogView.php"><img src="./images/3_productDetail/service1.png" alt=""></a></div>
         <p class="service2-text">為您打造</p>
-        <div class="service2"><a href=""><img src="./images/3_productDetail/service2.png" alt=""></a></div>
+        <div class="service2"><a href="./2_productList.php"><img src="./images/3_productDetail/service2.png" alt=""></a></div>
         <p class="service3-text">科學與工程獎</p>
-        <div class="service3"><a href=""><img src="./images/3_productDetail/service3.png" alt=""></a></div>
+        <div class="service3"><a href="#"><img src="./images/3_productDetail/service3.png" alt=""></a></div>
 
         
 
@@ -204,16 +242,36 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 
 
-<script
-    src="https://code.jquery.com/jquery-3.5.1.slim.js"
-    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
-    crossorigin="anonymous"></script>
+
+
+<?php include __DIR__. '/parts/4_footer.php'; ?>
+<?php include __DIR__. '/parts/5_scripts.php'; ?>
+
+<!-- 加入購物車功能 -->
+<script>
+    $('.btn-buy').on('click', function(event){
+        const item  = $(this).closest('.product-item');
+        const sid = item.attr('data-sid');
+        const qty = item.find('.btn-quantity').text();
+
+        console.log({sid:sid, quantity: qty});
+        $.get('5_addToCart-API.php', {sid:sid, quantity: qty, action:'add'}, function(data){
+            console.log(data);
+            // TODO:購物車budge
+            countCart(data.cart);
+        }, 'json');
+    });
+
+    function showProductModal(sid){
+        $('iframe')[0].src = "product-detail02.php?sid=" + sid;
+        // product-detail02.php?sid=17
+        $('#exampleModal').modal('show')
+    }
+</script>
+
 
 
 <!-- 增減數量功能 -->
@@ -360,6 +418,30 @@
 
 <!-- 彈出服務區塊功能 -->
     <script>
+
+        $(window).scroll(function(){
+            // console.log('scorll',$(window).scrollTop())
+            let nowScroll = $(window).scrollTop();
+            if( nowScroll > $('.service-row').offset().top - $(window).height()){
+                // console.log('hiii')
+                $('.service-row').css('height', '600px');
+                $('.box-title').addClass('box-title-show');
+                $('.line1').addClass('line1-show');
+                $('.box').addClass('box-show');
+                $('.service4').addClass('service4-show');
+                $('.service4-text').addClass('service4-show');
+                $('.service5').addClass('service5-show');
+                $('.service5-text').addClass('service5-show');
+                $('.service3').addClass('service3-show');
+                $('.service3-text').addClass('service3-show');
+                $('.service2').addClass('service2-show');
+                $('.service2-text').addClass('service2-show');
+                $('.service1').addClass('service1-show');
+                $('.service1-text').addClass('service1-show');
+            }
+        })
+
+
         $(".arrow").on("click",function(){
             
             $('.service-row').css('height', '600px');
@@ -384,9 +466,4 @@
 
    
 
-
-
-
-<?php include __DIR__. '/parts/4_footer.php'; ?>
-<?php include __DIR__. '/parts/5_scripts.php'; ?>
 <?php include __DIR__. '/parts/6_html_foot.php'; ?>

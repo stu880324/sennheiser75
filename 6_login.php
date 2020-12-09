@@ -6,7 +6,14 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
-
+<?php
+if(isset($_SERVER['HTTP_REFERER'])){
+        $gotoURL = $_SERVER['HTTP_REFERER'];
+    } else {
+        $gotoURL = '1_index.php';
+    } 
+    
+?>
 
 <!-- 以下刪除就可以開始編輯 -->
 
@@ -45,14 +52,21 @@
                         password: $('#passInput').val()
                 }, function(data) {
                         console.log(data);
-                        if (JSON.parse(data).success) {
-                                Swal.fire({
-                                        title: '登入成功',
-                                        icon: 'success',
-                                        confirmButtonText: '好',
-                                        confirmButtonColor: '#000',
+                        let result = JSON.parse(data);
+                        if (result.success) {
 
-                                })
+                                Swal.fire({
+                                                title: '登入成功',
+                                                icon: 'success',
+                                                confirmButtonText: '好',
+                                                confirmButtonColor: '#000',
+
+                                        })
+                                        .then((btnclick) => {
+                                                if (btnclick.isConfirmed) {
+                                                        window.location.href = "<?= $gotoURL ?>"
+                                                }
+                                        })
                         } else {
                                 Swal.fire({
                                         title: '登入失敗',
@@ -67,7 +81,7 @@
 
         $('.gotoRegPageBtn').on('click', function() {
                 window.location.href = "./7_registered.php"
-        })
+        });
 </script>
 
 

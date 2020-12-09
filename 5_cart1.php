@@ -5,12 +5,21 @@
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
 
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+var_dump($_SESSION['userAccount'])
+?>
+
+
 <!-- 進度列 -->
 <div class="container">
     <div class="row">
         <ul class="progressbar">
             <li>
-                <span classactive>購物車 </span>
+                <span class=active>購物車 </span>
             </li>
             <li>
                 <span>結帳 </span>
@@ -30,13 +39,16 @@
     <div class="items-wrapper">
 
         <div class="item1">
-            <a id="remove-icon"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
+            <a class="remove-icon"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
             <a href="#" class="item">
                 <div class="item-img">
                     <img src="./images/small/product17.jpg" alt="">
                 </div>
                 <div class="item-info">
-                    <div class="item-name">GSP 500 頂級開放式電競</div>
+                    <div class="item-name">
+                        <p>HD 800 S Anniversary Edition</p>
+                        <p>經典開放式旗艦 75週年限量商品</p>
+                    </div>
                     <div class="item-price"> NT$ 7,490</div>
                 </div>
             </a>
@@ -57,7 +69,7 @@
         </div>
 
         <div class="item1">
-            <a id="remove-icon"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
+            <a class="remove-icon"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
             <a href="#" class="item">
                 <div class="item-img">
                     <img src="./images/small/product19.jpg" alt="">
@@ -84,7 +96,7 @@
         </div>
 
         <div class="item1">
-            <a id="remove-icon"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
+            <a class="remove-icon"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
             <a href="#" class="item">
                 <div class="item-img">
                     <img src="./images/small/product19.jpg" alt="">
@@ -111,7 +123,7 @@
         </div>
 
         <div class="item1">
-            <a id="remove-icon"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
+            <a class="remove-icon"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
             <a href="#" class="item">
                 <div class="item-img">
                     <img src="./images/small/product19.jpg" alt="">
@@ -138,7 +150,7 @@
         </div>
 
         <div class="item1">
-            <a id="remove-icon"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
+            <a class="remove-icon"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
             <a href="#" class="item">
                 <div class="item-img">
                     <img src="./images/small/product19.jpg" alt="">
@@ -170,13 +182,13 @@
     <!-- 小計總計區 -->
     <div class="list-inner">
         <div class="total-wrapper">
-            <div class="subtotal">小計 <span>NT$ <span>18,390</span></span>
+            <div class="subtotal">小計 <span id="subtotal">0</span>
             </div>
-            <div class="shipfee">運費<span>NT$ <span id="shipfee">0</span></span>
+            <div class="shipfee">運費<span id="shipfee">0</span>
             </div>
 
             <hr>
-            <div class="final_price">總計<span>NT$ <span id="final_price">18,390</span></span>
+            <div class="final_price">總計<span id="final_price">0</span>
             </div>
         </div>
 
@@ -184,45 +196,123 @@
             <button class="btn-buy">結帳</button>
             <button class="btn-back">繼續購物</button>
         </div>
-
     </div>
-
 </div>
 
-
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 
 <script>
     $(function() {
         $(".add").click(function() {
-            var t = $(this).parent().find('input[class*=text-box]');
-            t.val(parseInt(t.val()) + 1)
-            setTotal();
-        })
-        $(".min").click(function() {
-            var t = $(this).parent().find('input[class*=text-box]');
-            t.val(parseInt(t.val()) - 1)
-            if (parseInt(t.val()) < 0) {
-                t.val(0);
-            }
-            setTotal();
+
+            //取得數量
+            console.log('value', $(this).prev().val())
+
+            let number = $(this).prev().val();
+            number = +number + 1
+            $(this).prev().val(number);
+
+
+            //取得單價
+            let priceNT = $(this).parents('.item-total-wrapper').prev().find('.item-price').text()
+            //取得數字版本的單價
+            let priceNumber = numberWithoutCommas(priceNT);
+
+            //取得數量＊單價
+            let totalPriceNumber = priceNumber * number
+            console.log('totalPriceNumber', totalPriceNumber)
+
+
+            //將總計變成有 NT 的版本
+            let totalPriceNT = numberWithCommas(totalPriceNumber);
+            console.log('totalPriceNT', totalPriceNT);
+
+            let totalNumber = numberWithoutCommas($(this).parents('.item-total-wrapper').prev().find('.item-price').text()) * (number)
+
+            $(this).parents('.item-total-wrapper').find('.item-wrap-total').text(totalPriceNT)
+
+            updateSubtotal();
+            updateFinalPrice();
         })
 
-        function setTotal() {
-            var s = 0;
-            $(".qual").each(function() {
-                s += parseInt($(this).find('input[class*=text-box]').val()) * parseFloat($(this).find('span[class*=price]').text());
-            });
-            $("#total").html(s.toFixed(2));
-        }
-        setTotal();
+
+
+        $(".min").click(function() {
+            //取得數量
+            console.log('value', $(this).next().val())
+            let number = $(this).next().val();
+            number = +number - 1
+            $(this).next().val(number);
+
+            //取得單價
+            let priceNT = $(this).parents('.item-total-wrapper').prev().find('.item-price').text()
+
+            //取得數字版本的單價
+            let priceNumber = numberWithoutCommas(priceNT);
+
+            //取得數量＊單價
+            let totalPriceNumber = priceNumber * number
+            console.log('totalPriceNumber', totalPriceNumber)
+
+            //將總計變成有 NT 的版本
+            let totalPriceNT = numberWithCommas(totalPriceNumber);
+            console.log('totalPriceNT', totalPriceNT);
+
+            let totalNumber = numberWithoutCommas($(this).parents('.item-total-wrapper').prev().find('.item-price').text()) * (number)
+
+            $(this).parents('.item-total-wrapper').find('.item-wrap-total').text(totalPriceNT)
+
+            updateSubtotal();
+        })
+
+
     })
+
+    function numberWithCommas(x) {
+        return 'NT$ ' + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    function numberWithoutCommas(x) {
+        return x.toString().replace('NT$ ', '').replace(/,/g, "");;
+    }
+
+    function updateSubtotal() {
+        let total = 0;
+        $('.item-wrap-total').each(function(index, value) {
+            console.log('index', index, ',value', numberWithoutCommas(value.innerHTML))
+            total += +numberWithoutCommas(value.innerHTML);
+        })
+
+        console.log('total', total)
+        $('#subtotal').text(numberWithCommas(total))
+    }
+
+    $('.remove-icon').on('click', function() {
+        console.log('hi remove')
+        $(this).parent().remove();
+    })
+
+    function updateFinalPrice() {
+
+        let subTotal = numberWithoutCommas($("#subtotal").text())
+        let shipFee = numberWithoutCommas($("#shipfee").text())
+        let finalPrice = subTotal + shipFee
+
+        $("#final_price").text(numberWithCommas(finalPrice))
+    }
 </script>
 
 
+
+
+<script>
+    $('.btn-buy').on('click', function() {
+        location.href = "./6_login.php"
+    })
+    $('.btn-back').on('click', function() {
+        location.href = "2_productList.php"
+    })
+</script>
 
 
 <?php include __DIR__ . '/parts/4_footer.php'; ?>

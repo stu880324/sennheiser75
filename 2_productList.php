@@ -1,13 +1,13 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS樣式 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>2_productList.css">
-<link rel="stylesheet" href="./0_style.css" />
+<link rel="stylesheet" href="<?= WEB_ROOT ?>2_productList1.css">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
-
+<?php include __DIR__ . '/parts/7_fix-icon.php'; ?>
 
 <!-- 以下刪除就可以開始編輯 -->
 <!-- select-section -->
@@ -24,17 +24,17 @@
         <div class="earphonebtnleft">
           <ul class="select-earphone">
             <li>
-              <button class="earphone-btn">
+              <button class="earphone-btn" data-type="circumaural">
                 <p class="earphone-p">頭戴式</p>
               </button>
             </li>
             <li>
-              <button class="earphone-btn">
+              <button class="earphone-btn" data-type="in-ear">
                 <p class="earphone-p">入耳式</p>
               </button>
             </li>
             <li>
-              <button class="earphone-btn">
+              <button class="earphone-btn" data-type="supra-aural">
                 <p class="earphone-p">耳掛式</p>
               </button>
             </li>
@@ -46,11 +46,11 @@
           <div class="earphone-color-area">
             <p class="earphone-color-title">顏色</p>
             <ul class="select-colorbox">
-              <li class="earphone-color select-color-w"></li>
-              <li class="earphone-color select-color-g"></li>
-              <li class="earphone-color select-color-b"></li>
-              <li class="earphone-color select-color-gold"></li>
-              <li class="earphone-color select-color-y"></li>
+              <li class="earphone-color select-color-w" data-color="white"></li>
+              <li class="earphone-color select-color-g" data-color="gray"></li>
+              <li class="earphone-color select-color-b" data-color="black"></li>
+              <li class="earphone-color select-color-gold" data-color="golden"></li>
+              <li class="earphone-color select-color-y" data-color="yellow"></li>
               <input id="earphoneColorInput" name="earphone-color" type="text" value="" hidden />
             </ul>
           </div>
@@ -59,22 +59,22 @@
             <ul class="select-feature">
               <li class="earphone-feature">特色</li>
               <li class="checkbox">
-                <input type="checkbox" value="" /> 藍芽
+                <input id="bluetooth" type="checkbox" value="0" /> <label for="bluetooth">藍芽</label>
               </li>
               <li class="checkbox">
-                <input type="checkbox" value="" /> 降噪
+                <input id="noise-canceling" type="checkbox" value="1" /> <label for="noise-canceling">降噪</label>
               </li>
               <li class="checkbox">
-                <input type="checkbox" value="" /> 可旋轉式耳罩
+                <input id="rotatable" type="checkbox" value="2" /> <label for="rotatable">可旋轉式耳罩</label>
               </li>
               <li class="checkbox">
-                <input type="checkbox" value="" /> 防汗防水
+                <input id="water-proof" type="checkbox" value="3" /> <label for="water-proof">防汗防水</label>
               </li>
               <li class="checkbox">
-                <input type="checkbox" value="" /> 大尺寸環形振膜
+                <input id="big-size" type="checkbox" value="4" /> <label for="big-size">大尺寸環形振膜</label>
               </li>
               <li class="checkbox">
-                <input type="checkbox" value="" /> 超寬頻動圈單體
+                <input id="ultra-wideband" type="checkbox" value="5" /> <label for="ultra-wideband">超寬頻動圈單體</label>
               </li>
             </ul>
           </div>
@@ -83,19 +83,19 @@
             <ul class="select-situation">
               <li class="earphone-situation">情境</li>
               <li class="radio">
-                <input type="radio" name="situation_radio" value="0" /> 運動
+                <input id="sporting" type="radio" name="situation_radio" value="0" /> <label for="sporting">運動</label>
               </li>
               <li class="radio">
-                <input type="radio" name="situation_radio" value="1" /> 通勤
+                <input id="commuting" type="radio" name="situation_radio" value="1" /> <label for="commuting">通勤</label>
               </li>
               <li class="radio">
-                <input type="radio" name="situation_radio" value="2" /> 電競
+                <input id="gaming" type="radio" name="situation_radio" value="2" /> <label for="gaming">電競</label>
               </li>
               <li class="radio">
-                <input name="situation_radio" type="radio" value="3" /> 錄音
+                <input id="recording" name="situation_radio" type="radio" value="3" /> <label for="recording">監聽</label>
               </li>
               <li class="radio">
-                <input name="situation_radio" type="radio" value="4" /> 會議
+                <input id="meeting" name="situation_radio" type="radio" value="4" /> <label for="meeting">會議</label>
               </li>
             </ul>
           </div>
@@ -117,8 +117,8 @@
 
 <!-- product-card -->
 <div class="container">
-  <div class="row product-list">
-    <div class="product-card wow slideInUp">
+  <div class="row product-list mx-auto">
+    <div class="product-card">
       <div class="icons-part">
         <a href="" class="icons">
           <img class="iconsvg" src="images/2_productList/icons/shopcar.svg" alt="" />
@@ -136,15 +136,15 @@
       <div class="product-text">
         <p class="en">HD 800 S Anniversary Edition</p>
         <p class="ch">經典開放式旗艦 75週年限量商品</p>
-        <p class="p-price">NT$50,990</p>
+        <p class="p-price">NT$ 50990</p>
       </div>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="3_productDetail.php?sid=9" class="a-white">查看商品</a>
       </div>
     </div>
 
-    <div class="product-card wow slideInUp">
+    <div class="product-card">
       <div class="icons-part">
         <a href="" class="icons">
           <img src="images/2_productList/icons/shopcar.svg" alt="" />
@@ -160,17 +160,17 @@
       </div>
 
       <div class="product-text">
-        <p class="en">HD 800 S Anniversary Edition</p>
-        <p class="ch">經典開放式旗艦 75週年限量商品</p>
-        <p class="p-price">NT$50,990</p>
+        <p class="en">MOMENTUM 3 Wireless</p>
+        <p class="ch">無線藍牙降噪耳機(白)</p>
+        <p class="p-price">NT$ 13900</p>
       </div>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="3_productDetail.php?sid=1" class="a-white">查看商品</a>
       </div>
     </div>
 
-    <div class="product-card wow slideInUp">
+    <div class="product-card">
       <div class="icons-part">
         <a href="" class="icons">
           <img src="images/2_productList/icons/shopcar.svg" alt="" />
@@ -186,19 +186,18 @@
       </div>
 
       <div class="product-text">
-        <p class="en">HD 800 S Anniversary Edition</p>
-        <p class="ch">經典開放式旗艦 75週年限量商品</p>
-        <p class="p-price">NT$50,990</p>
+        <p class="en">MOMENTUM 3 Wireless</p>
+        <p class="ch">無線藍牙降噪耳機(黑)</p>
+        <p class="p-price">NT$ 13900</p>
       </div>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="3_productDetail.php?sid=2" class="a-white">查看商品</a>
       </div>
     </div>
-  </div>
 
-  <div class="row product-list">
-    <div class="product-card wow slideInUp">
+
+    <div class="product-card">
       <div class="icons-part">
         <a href="" class="icons">
           <img src="images/2_productList/icons/shopcar.svg" alt="" />
@@ -214,16 +213,16 @@
       </div>
 
       <div class="product-text">
-        <p class="en">HD 800 S Anniversary Edition</p>
-        <p class="ch">經典開放式旗艦 75週年限量商品</p>
-        <p class="p-price">NT$50,990</p>
+        <p class="en">PXC 550 Wireless</p>
+        <p class="ch">旅行藍牙抗噪</p>
+        <p class="p-price">NT$ 10900</p>
       </div>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="3_productDetail.php?sid=26" class="a-white">查看商品</a>
       </div>
     </div>
-    <div class="product-card wow slideInUp">
+    <div class="product-card">
       <div class="icons-part">
         <a href="" class="icons">
           <img src="images/2_productList/icons/shopcar.svg" alt="" />
@@ -239,16 +238,16 @@
       </div>
 
       <div class="product-text">
-        <p class="en">HD 800 S Anniversary Edition</p>
-        <p class="ch">經典開放式旗艦 75週年限量商品</p>
-        <p class="p-price">NT$50,990</p>
+        <p class="en">CX 400BT True Wireless</p>
+        <p class="ch">真無線藍牙耳機</p>
+        <p class="p-price">NT$ 6490</p>
       </div>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="3_productDetail.php?sid=33" class="a-white">查看商品</a>
       </div>
     </div>
-    <div class="product-card wow slideInUp">
+    <div class="product-card">
       <div class="icons-part">
         <a href="" class="icons">
           <img src="images/2_productList/icons/shopcar.svg" alt="" />
@@ -264,13 +263,13 @@
       </div>
 
       <div class="product-text">
-        <p class="en">HD 800 S Anniversary Edition</p>
-        <p class="ch">經典開放式旗艦 75週年限量商品</p>
-        <p class="p-price">NT$50,990</p>
+        <p class="en">CX SPORT</p>
+        <p class="ch">經典運動藍牙款</p>
+        <p class="p-price">NT$ 4290</p>
       </div>
 
       <div class="a-white-div">
-        <a href="" class="a-white">查看商品</a>
+        <a href="3_productDetail.php?sid=40" class="a-white">查看商品</a>
       </div>
     </div>
   </div>
@@ -281,8 +280,8 @@
   <div class="row pagination-area">
     <ul class="pagination">
       <li><a href="#">«</a></li>
-      <li><a href="#">1</a></li>
-      <li class="active"><a class="active-a" href="#">2</a></li>
+      <li class="active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
       <li><a href="#">3</a></li>
       <li><a href="#">4</a></li>
       <li><a href="#">5</a></li>
@@ -484,7 +483,236 @@
 </script>
 <!-- 刪到這裡 -->
 
+<script>
+  let earphoneData = null;
+  let earphoneType = null;
+  $('.earphone-btn').on('click', function() {
+    $('.earphone-btn').removeClass('active');
+    $(this).addClass('active');
+    console.log('hi earphone-btn', $(this).data('type'))
+    earphoneType = $(this).data('type');
+    updateEarphoneList()
+  })
 
+
+  let earphoneColor = null;
+  $('.earphone-color').on('click', function() {
+    console.log('hi earphone-btn', $(this).data('color'))
+    earphoneColor = $(this).data('color');
+    updateEarphoneList()
+  })
+
+  let featureArray = [false, false, false, false, false, false]
+  $('input[type="checkbox"]').on('change', function() {
+    console.log($(this).prop('checked'));
+    console.log($(this).val());
+    featureArray[$(this).val()] = $(this).prop('checked');
+    console.log('featureArray', featureArray);
+    updateEarphoneList()
+  })
+
+  let moodOption = null;
+  $('input[type="radio"]').on('change', function() {
+    console.log($(this).prop('checked'));
+    console.log($(this).val());
+    moodOption = $(this).val();
+    // featureArray[$(this).val()] = $(this).prop('checked');
+    // console.log('featureArray', featureArray);
+    updateEarphoneList()
+  })
+
+  let pageNum = 1;
+  let totalPage = null;
+
+
+  let isFirstTimeGettingData = true;
+
+  function updateEarphoneList() {
+    console.log('$', $)
+    $.post('./2_productList_api.php', {
+      type: earphoneType,
+      color: earphoneColor,
+      featureArray: featureArray,
+      moodOption: moodOption,
+      pageNum: pageNum,
+      totalPage: totalPage,
+    }, function(data) {
+      let result = JSON.parse(data);
+      earphoneData = result.result;
+      console.log(result);
+      if (result.success) {
+        let html = '';
+        // pageNum = 1;
+        totalPage = Math.ceil(result.result.length / 6);
+        updatePagination();
+        let shouldAdjustCSS = (result.result.length === 5) ? true : false;
+        let shouldAdjustCSS2 = (result.result.length === 4) ? true : false;
+        for (let i = 0; i < Math.min(result.result.length, 6); i++) {
+          html += `<div class="product-card wow slideInUp ${(shouldAdjustCSS && i === 3 )? 'earphone-1':''} ${(shouldAdjustCSS && i === 4 )? 'earphone-2':''} ${(shouldAdjustCSS2 && i === 3 )? 'earphone-onlyOne':''}">
+              <div class="icons-part">
+                <a href="" class="icons">
+                  <img class="iconsvg" src="images/2_productList/icons/shopcar.svg" alt="" />
+                </a>
+
+                <a href="" class="icons">
+                  <img class="iconsvg" src="images/2_productList/icons/heart.svg" alt="" />
+                </a>
+              </div>
+
+              <div class="product-img">
+                <img src="images/small/product${result.result[i].sid}.jpg" alt="" />
+              </div>
+
+              <div class="product-text">
+                <p class="en">${result.result[i].english_name}</p>
+                <p class="ch">${result.result[i].chinese_name}</p>
+                <p class="p-price">NT$ ${result.result[i].price}</p>
+              </div>
+
+              <div class="a-white-div">
+                <a href="3_productDetail.php?sid=${result.result[i].sid}" class="a-white">查看商品</a>
+              </div>
+            </div>`
+        }
+
+        //初次不變更資料
+        if (!isFirstTimeGettingData) {
+          $('.product-list').html(html)
+        } else {
+          isFirstTimeGettingData = false;
+        }
+
+      } else {
+        totalPage = 1;
+        updatePagination();
+        $('.product-list').html('<h2 style="padding:100px 0">查無耳機資料</h2>')
+      }
+    });
+  }
+
+  function updatePagination() {
+    console.log('updatePagination');
+    let html = `<li><a href="#">«</a></li>`;
+
+    for (var i = 0; i < totalPage; i++) {
+      html += `<li ${(i===pageNum-1)?'class="active"' : ''}><a href="#">${i+1}</a></li>`
+    }
+    html += `<li><a href="#">»</a></li>`
+
+    $('.pagination').html(html);
+
+    $('.pagination li').on('click', function(e) {
+      e.preventDefault();
+
+
+      console.log($(this).text());
+      let text = $(this).text();
+      let shouldUpdate = false;
+
+      if (text === '«' && pageNum > 1) {
+        pageNum -= 1;
+        shouldUpdate = true;
+      } else if (text === '»' && pageNum < totalPage) {
+        pageNum += 1;
+        shouldUpdate = true;
+      } else if (text !== '«' && text !== '»' && pageNum !== +text) {
+        pageNum = +text;
+        shouldUpdate = true;
+      }
+      console.log('pagination li on click and pageNum=', pageNum);
+      $('.pagination li').removeClass('active').eq(pageNum).addClass('active');
+
+      if (shouldUpdate) {
+        updateEarphoneShowData();
+      }
+
+    })
+    // <ul class="pagination">
+    //   <li><a href="#">«</a></li>
+    //   <li><a href="#">1</a></li>
+    //   <li class="active"><a class="active-a" href="#">2</a></li>
+    //   <li><a href="#">3</a></li>
+    //   <li><a href="#">4</a></li>
+    //   <li><a href="#">5</a></li>
+    //   <li><a href="#">6</a></li>
+    //   <li><a href="#">7</a></li>
+    //   <li><a href="#">»</a></li>
+    // </ul>
+  }
+
+  function updateEarphoneShowData() {
+    let startNum = (pageNum - 1) * 6;
+    let endNum = Math.min((startNum + 6), earphoneData.length);
+    console.log('min', Math.min((startNum + 6), earphoneData.length));
+    console.log('endNum - startNum', endNum - startNum);
+    let shouldAdjustCSS = (endNum - startNum === 5) ? true : false;
+    let shouldAdjustCSS2 = (endNum - startNum === 4) ? true : false;
+    console.log('shouldAdjustCSS', shouldAdjustCSS);
+    let html = '';
+    for (let i = startNum; i < endNum; i++) {
+      html += `<div class="product-card ${(shouldAdjustCSS && i === startNum+3 )? 'earphone-1':''} ${(shouldAdjustCSS && i === startNum+4 )? 'earphone-2':''} ${(shouldAdjustCSS2 && i === startNum+3 )? 'earphone-onlyOne':''}">
+              <div class="icons-part">
+                <a href="" class="icons">
+                  <img class="iconsvg" src="images/2_productList/icons/shopcar.svg" alt="" />
+                </a>
+
+                <a href="" class="icons">
+                  <img class="iconsvg" src="images/2_productList/icons/heart.svg" alt="" />
+                </a>
+              </div>
+
+              <div class="product-img">
+                <img src="images/small/product${earphoneData[i].sid}.jpg" alt="" />
+              </div>
+
+              <div class="product-text">
+                <p class="en">${earphoneData[i].english_name}</p>
+                <p class="ch">${earphoneData[i].chinese_name}</p>
+                <p class="p-price">NT$ ${earphoneData[i].price}</p>
+              </div>
+
+              <div class="a-white-div">
+                <a href="3_productDetail.php?sid=${earphoneData[i].sid}" class="a-white">查看商品</a>
+              </div>
+            </div>`
+    }
+
+    $('.product-list').html(html)
+  }
+
+  $(function() {
+    updateEarphoneList();
+  });
+</script>
+
+<!-- 加入購物車功能 -->
+<script>
+  $('.btn-buy').on('click', function(event) {
+    const item = $(this).closest('.product-item');
+    const sid = item.attr('data-sid');
+    const qty = item.find('.btn-quantity').text();
+
+    console.log({
+      sid: sid,
+      quantity: qty
+    });
+    $.get('5_addToCart-API.php', {
+      sid: sid,
+      quantity: qty,
+      action: 'add'
+    }, function(data) {
+      console.log(data);
+      // TODO:購物車budge
+      countCart(data.cart);
+    }, 'json');
+  });
+
+  function showProductModal(sid) {
+    $('iframe')[0].src = "product-detail02.php?sid=" + sid;
+    // product-detail02.php?sid=17
+    $('#exampleModal').modal('show')
+  };
+</script>
 
 
 

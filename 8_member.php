@@ -1,5 +1,6 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <!-- 請填入各頁面CSS名稱 -->
 <link rel="stylesheet" href="<?= WEB_ROOT ?>8_member2.css">
 
@@ -72,29 +73,46 @@ if (!isset($_SESSION)) {
     <input id="birthday" style=" border-radius:0;" type="date" class="form-control" value="<?= $_SESSION['userAccount']['birthday'] ?>" />
     <!-- <input style=" border-radius:0;" type="text" class="form-control"  /> -->
   </div>
-  <div style="text-align:center;"><button type="button" class="login-btn mb-5 mt-4">確定修改</button></div>
+  <div style="text-align:center;"><button type="button" class="update-user-btn mb-5 mt-4">確定修改</button></div>
 
   <div class="coupon-title">個人資料修改</div>
   <div class="form-holder mt-3">
     <span class="lnr lnr-lock"></span>
     <p>舊密碼</p>
-    <input style=" border-radius:0;" type="text" class="form-control" value="" />
+    <input style=" border-radius:0;" type="password" class="form-control" value="" />
   </div>
   <div class="form-holder mt-3">
     <span class="lnr lnr-lock"></span>
     <p>新密碼</p>
-    <input style=" border-radius:0;" type="text" class="form-control" value="" />
+    <input style=" border-radius:0;" type="password" class="form-control" value="" />
   </div>
   <div class="form-holder mt-3">
     <span class="lnr lnr-lock"></span>
     <p>確認新密碼</p>
-    <input style=" border-radius:0;" type="text" class="form-control" value="" />
+    <input style=" border-radius:0;" type="password" class="form-control" value="" />
   </div>
-  <div style="text-align:center;"><button type="button" class="login-btn mb-5 mt-4">確定密碼</button></div>
+  <div style="text-align:center;"><button type="button" class="update-user-btn mb-5 mt-4">確定密碼</button></div>
 
 
 
 </div>
+
+<script>
+  $('.update-user-btn').on('click', function() {
+    Swal.fire({
+        title: '修改成功',
+        icon: 'success',
+        confirmButtonText: '好',
+        confirmButtonColor: '#000',
+
+      })
+      .then((btnclick) => {
+        if (btnclick.isConfirmed) {
+          // window.location.href = "8_member.php"
+        }
+      })
+  })
+</script>
 
 <!-- <script>
         $('.button').on('click', function() {

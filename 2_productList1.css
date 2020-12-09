@@ -49,6 +49,12 @@ ul {
   background-color: #2f2d2c;
   cursor: pointer;
 }
+.earphone-btn.active {
+  background-color: #d9af80;
+}
+.earphone-btn:focus {
+  outline: none;
+}
 .earphone-btn:hover {
   background-color: #d9af80;
 }
@@ -105,19 +111,19 @@ ul {
   cursor: pointer;
 }
 .select-color-w.active {
-  border: 1px solid #000;
+  outline: 1px solid #000;
 }
 .select-color-g.active {
-  border: 1px solid #000;
+  outline: 1px solid #000;
 }
 .select-color-b.active {
-  border: 1px solid #000;
+  outline: 1px solid #ffef09;
 }
 .select-color-gold.active {
-  border: 1px solid #000;
+  outline: 1px solid #000;
 }
 .select-color-y.active {
-  border: 1px solid #000;
+  outline: 1px solid #000;
 }
 
 .earphone-feature {
@@ -172,6 +178,8 @@ ul {
 .product-list {
   display: flex;
   justify-content: space-around;
+  width: 90%;
+  overflow: hidden;
 }
 .product-card {
   width: 280px;
@@ -265,6 +273,7 @@ ul.pagination li {
   border: 1px solid #ddd;
   text-align: center;
   margin: 0 4px;
+  padding: 4px;
 }
 
 ul.pagination li:hover {
@@ -497,18 +506,18 @@ img {
   margin-bottom: 60px;
 }
 
-*,
+/* *,
 *:before,
 *:after {
   box-sizing: border-box;
-  /* position: relative; */
-  /* transition-property: opacity, -webkit-transform, -webkit-filter;
+  position: relative; 
+  transition-property: opacity, -webkit-transform, -webkit-filter;
               transition-property: transform, opacity, filter;
               transition-property: transform, opacity, filter, -webkit-transform,
-                -webkit-filter; */
+                -webkit-filter;
   transition-duration: 0.7s, 0.7s, 0.7s;
   transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
-}
+} */
 
 body,
 html {
@@ -596,4 +605,20 @@ html {
     padding: 20px 15px;
     background-color: #1b1b1b;
   }
+}
+
+.earphone-1 {
+  margin: 26px;
+}
+
+.earphone-2 {
+  margin: 26px auto 26px 26px;
+}
+
+.earphone-onlyOne {
+  margin: 26px auto 26px 26px;
+}
+
+.pagination li.active {
+  background-color: #e3b684;
 }
