@@ -7,12 +7,12 @@
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
 <?php
-if(isset($_SERVER['HTTP_REFERER'])){
+if (isset($_SERVER['HTTP_REFERER'])) {
         $gotoURL = $_SERVER['HTTP_REFERER'];
-    } else {
+} else {
         $gotoURL = '1_index.php';
-    } 
-    
+}
+
 ?>
 
 <!-- 以下刪除就可以開始編輯 -->
@@ -64,7 +64,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                         })
                                         .then((btnclick) => {
                                                 if (btnclick.isConfirmed) {
-                                                        window.location.href = "<?= $gotoURL ?>"
+                                                        window.location.href = "./8_member.php"
                                                 }
                                         })
                         } else {

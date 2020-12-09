@@ -13,11 +13,10 @@ if (!isset($_SESSION)) {
 
 $db_host = 'localhost';
 $db_name = 'sennheiser75';
-<<<<<<< HEAD
-
 $db_user = 'root';
 $db_pass = '';
 
+<<<<<<< HEAD
 =======
 $db_user = 'root';
 $db_pass = '';
@@ -32,6 +31,8 @@ $db_pass = 'adobe30';
 >>>>>>> 72267228f3e7043cad533bf9ccc9b7622f3978ad
 >>>>>>> c4bb2a5477c05fd4985aae0b1398541153068ae2
 >>>>>>> 7b53ac9d982d4c70dda223728fbb96e73525a942
+=======
+>>>>>>> 7a26c1bc932fb4a1ed6794652d705c0375a7f86b
 
 $dsn = "mysql:host={$db_host};dbname={$db_name};charset=utf8";
 $pdo_options = [
