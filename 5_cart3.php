@@ -8,7 +8,7 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
-<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart3.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart3_1.css">
 
 <!-- 進度列 -->
 <div class="container">
