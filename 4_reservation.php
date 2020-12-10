@@ -351,7 +351,7 @@
 </div>
 
 <!-- 這裡報名區 form-container-->
-<div class="container-fluid form-container">
+<div id="resForm" class="container-fluid form-container">
     <h2>線上預約</h2>
     <div class="row">
         
@@ -434,10 +434,9 @@
                         亦可至會員中心查詢預約記錄<br>
                         非常感謝您!<br>
                         <br>
-                        日期：${sid}<br>
-                        時間：${sid}<br>
-                        店名：${sid}<br>
-                        地址：${sid}<br>
+                        日期：<span id="date-input"></span><br>
+                        時間：<span id="time-input"></span><br>
+                        店名：<span id="shop-input"></span><br>
                         </div>
                     </div>
                     </div>
@@ -464,6 +463,7 @@
 <!-- 送出預約表單功能 -->
 <script>
     function sendForm(){
+        console.log('hi')
         $.post('4_reservation_insertAPI.php',
             $(document.form1).serialize(), 
             function(data){
@@ -472,6 +472,17 @@
         }, 'json');
     }
 
+    $('#location').on('change',function(){
+        $('#shop-input').text($(this).val())
+    })
+
+    $('#date').on('change',function(){
+        $('#date-input').text($(this).val())
+    })
+
+    $('input[name="time"]').on('change',function(){
+        $('#time-input').text($(this).val())
+    });
 </script>
 
 

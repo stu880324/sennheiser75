@@ -11,7 +11,7 @@ table {
   background-color: #000000;
   width: 60%;
   color: #ffffff;
-  margin: 100px auto 0px auto;
+  margin: 30px auto 0px auto;
   padding: 10px;
 }
 .coupon td {
@@ -52,6 +52,10 @@ table {
 
 .order-detail-table {
   border: 1px solid #ccc;
+}
+
+.ctainer{
+  margin-bottom: 200px;
 }
 
 /* .order-detail:hover {

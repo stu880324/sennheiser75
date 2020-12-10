@@ -9,8 +9,6 @@ define('WEB_ROOT', '/sennheiser75/');
 if (!isset($_SESSION)) {
     session_start();
 }
-
-
 $db_host = 'localhost';
 $db_name = 'sennheiser75';
 $db_user = 'root';
