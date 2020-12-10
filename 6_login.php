@@ -9,6 +9,7 @@
 <?php
 if(isset($_SERVER['HTTP_REFERER'])){
         $gotoURL = $_SERVER['HTTP_REFERER'];
+        // var_dump($gotoURL);
     } else {
         $gotoURL = '1_index.php';
     } 
@@ -64,14 +65,16 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                         })
                                         .then((btnclick) => {
                                                 if (btnclick.isConfirmed) {
-                                                        window.location.href = "<?= $gotoURL ?>"
+                                                        <?php if($gotoURL === "http://localhost/sennheiser75/4_reservation.php"):?>
+                                                        window.location.href = "4_reservation.php#resForm";
+                                                        <?php endif ;?>
                                                 }
                                         })
                         } else {
                                 Swal.fire({
                                         title: '登入失敗',
                                         icon: 'error',
-                                        confirmButtonColor: '#e3b684',
+                                        confirmButtonColor: 'E34842',
                                         confirmButtonText: '好'
                                 })
 

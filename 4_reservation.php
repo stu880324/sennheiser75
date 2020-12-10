@@ -351,7 +351,7 @@
 </div>
 
 <!-- 這裡報名區 form-container-->
-<div class="container-fluid form-container">
+<div id="resForm" class="container-fluid form-container">
     <h2>線上預約</h2>
     <div class="row">
         
