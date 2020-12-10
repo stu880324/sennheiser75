@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS樣式 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart4_1.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart4.css">
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
 
@@ -16,7 +16,7 @@
             <li>
                 <span>結帳 </span>
             </li>
-            <li>
+            <li class="active">
                 <span>完成</span>
             </li>
         </ul>

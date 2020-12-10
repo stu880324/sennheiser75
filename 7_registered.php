@@ -69,10 +69,11 @@
           icon: 'success',
           confirmButtonText: '好',
           confirmButtonColor: '#000',
+          iconColor: '#457c86',
 
         }).then((result) => {
           if (result.isConfirmed) {
-            window.location.href = "./8_member.php"
+            window.location.href = "./6_login.php"
 
           }
         })

@@ -2,18 +2,17 @@
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <!-- 請填入各頁面CSS名稱 -->
-<link rel="stylesheet" href="./6_login.css">
+<link rel="stylesheet" href="./6_login1.css">
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
 <?php
-if(isset($_SERVER['HTTP_REFERER'])){
+if (isset($_SERVER['HTTP_REFERER'])) {
         $gotoURL = $_SERVER['HTTP_REFERER'];
-        // var_dump($gotoURL);
-    } else {
+} else {
         $gotoURL = '1_index.php';
-    } 
-    
+}
+
 ?>
 
 <!-- 以下刪除就可以開始編輯 -->
@@ -61,7 +60,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                                 icon: 'success',
                                                 confirmButtonText: '好',
                                                 confirmButtonColor: '#000',
-
+                                                iconColor: '#457c86',
                                         })
                                         .then((btnclick) => {
                                                 if (btnclick.isConfirmed) {
@@ -74,8 +73,9 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                 Swal.fire({
                                         title: '登入失敗',
                                         icon: 'error',
-                                        confirmButtonColor: 'E34842',
-                                        confirmButtonText: '好'
+                                        confirmButtonColor: '#000',
+                                        confirmButtonText: '好',
+                                        iconColor: '#d90000'
                                 })
 
                         }

@@ -40,10 +40,9 @@
   color: #000;
 }
 
-.progressbar li::before.active{
+.progressbar li.active::before{
   border-color: #000;
 }
-
 
 /* 購物頁面 */
 .main-wrap.d-flex{
@@ -55,17 +54,17 @@
 .product-list {
   width: 45%;
   height: fit-content;
-  padding: 1rem 3rem 0 3rem;
   border-top:1px solid #e6e6e6;
 }
 
 .product-list ul {
   list-style-type: none;
   padding: 0;
+  margin-left:3rem;
 }
 
 .cover img {
-  width: 150px;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -75,15 +74,16 @@
   position: relative;
   margin: auto;
   align-items: center;
-  padding: 1rem 7rem 1.5rem 0;
   border-bottom: 1px solid #e6e6e6;
+  margin:1rem 4rem 3rem 0;
 }
 
-.product-list .item-total-wrap {
-  position: absolute;
-  top: 1rem;
-  right: 0;
+
+.item-total-wrap {
+  margin-left: 4rem;
+  margin-bottom: 5rem;
 }
+
 
 /* 右半部結帳資訊 */
 .check-info {
@@ -93,7 +93,6 @@
 
 .item-info{
   margin-top:2rem;
-  margin-left:1rem;
 }
 
 .check-info .form {
@@ -101,17 +100,12 @@
     margin-bottom: 1rem;
 }
 
-.item-name, .item-price{
-  font-size:1.2rem;
-}
 
-.item-total-wrap p{
-  font-size:1rem;
-}
+
 
 /* 資訊填寫表格 */
 .check-info-wrap{
-  margin-left:2rem;
+  margin-left:6rem;
   border-top:1px solid #e6e6e6;
   background-color: #F9F9F9;
   padding-left: 3rem;
@@ -140,7 +134,7 @@
 
 /* 優惠碼下拉選單 */
 #coupon_list,#coupon_code{
-  width: 400px;
+  width: 500px;
   height: 45px;
   padding-bottom: 1rem;
 }
@@ -151,7 +145,7 @@
   color: #fff;
   border: none;
   font-size: .6rem;
-  width: 400px;
+  width: 500px;
   height: 50px;
 }
 
@@ -159,24 +153,18 @@
 /* 收件人資訊表格 */
 .form label{
   margin-right:1rem;
-  font-size:1rem;
 }
 
-.form .check-item p{
-  font-size:1rem;
-}
 
 
 .form input[type="text"]{
   width: 450px;
   height: 50px;
   margin-bottom: 1rem;
-  border-color:#e6e6e6;
 }
 
 .agree.check-item p{
   margin-top:1.2rem;
-  font-size:1.2rem;
 }
 
 /* 小計 */
@@ -185,7 +173,6 @@
   margin-top:2rem;
 }
 .total-wrapper span{
-  font-size:1.2rem;
   padding-right: 6rem;
 }
 
@@ -215,7 +202,7 @@
     padding-left: 1rem;
   }
 
-/* 購物頁面 */
+
 /* 左半部商品列 */
 
 .main-wrap.d-flex{
@@ -234,7 +221,7 @@
 }
 
 .cover img {
-  width: 140px;
+  width: 250px;
   overflow: hidden;
 }
 

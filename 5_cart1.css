@@ -35,13 +35,15 @@
   margin: 0 auto 0 auto;
 }
 
-.progressbar li .active{
+.progressbar li.active span{
   color: #000;
 }
 
-.progressbar li::before.active{
+.progressbar li.active::before{
   border-color: #000;
 }
+
+
 /* 購物車頁面 */
 .cart-wrapper {
   width: 86%;
@@ -58,7 +60,6 @@
   width: 50%;
   margin-top:2rem;
   height: 100%;
-  margin-left:2.5rem;
 }
 
 .items-wrapper .item1 {
@@ -77,12 +78,11 @@
   width: 30px;
   height: 30px;
   margin-bottom: auto;
-  margin-left: .8rem;
 }
 
 /* 商品圖 */
 .cart-wrapper .item1 .item-img img {
-  width: 150px;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -128,13 +128,13 @@ a {
 /* 數量＆小計區 */
 .cart-wrapper .item1 .item-total-wrapper {
   margin-bottom: auto;
-  margin-left:auto;
-  margin-right:2rem;
+  margin-left:1rem;
+ 
 }
 
 .cart-wrapper .item1 .item-total-wrapper .item-total-wrap {
   display: flex;
-  width: 80%;
+  width: 100%;
   justify-content: space-between;
   border-top: 1px solid #e6e6e6;
   padding:.5rem;
@@ -162,7 +162,7 @@ a {
 
 /* 總計 */
 .cart-wrapper .list-inner {
-  width: 35%;
+  width: 38%;
   margin-top: 2rem;
   margin-right:4.5rem;
   padding-left: 1.5rem;
@@ -173,6 +173,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding: .35rem 0;
+  margin-left: 1rem;
 }
 
 .cart-wrapper .list-inner .total-wrapper hr {
@@ -237,7 +238,7 @@ a {
 
   /* 商品圖 */
   .cart-wrapper .item1 .item-img img {
-    width: 220px;
+    width: 100%;
     overflow: hidden;
 }
 

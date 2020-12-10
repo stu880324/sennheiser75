@@ -40,7 +40,7 @@
   color: #000;
 }
 
-.progressbar li::before.active{
+.progressbar li.active::before{
   border-color: #000;
 }
 
