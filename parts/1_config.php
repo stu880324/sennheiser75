@@ -16,6 +16,23 @@ $db_name = 'sennheiser75';
 $db_user = 'root';
 $db_pass = '';
 
+<<<<<<< HEAD
+=======
+$db_user = 'root';
+$db_pass = '';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+$db_user = 'kim';
+$db_pass = 'adobe30';
+>>>>>>> bcce2a745f38381a6b8d86d0d172d05189e05e7c
+>>>>>>> 72267228f3e7043cad533bf9ccc9b7622f3978ad
+>>>>>>> c4bb2a5477c05fd4985aae0b1398541153068ae2
+>>>>>>> 7b53ac9d982d4c70dda223728fbb96e73525a942
+=======
+>>>>>>> 7a26c1bc932fb4a1ed6794652d705c0375a7f86b
 
 $dsn = "mysql:host={$db_host};dbname={$db_name};charset=utf8";
 $pdo_options = [
