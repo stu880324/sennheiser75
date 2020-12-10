@@ -9,6 +9,7 @@
 <?php
 if (isset($_SERVER['HTTP_REFERER'])) {
         $gotoURL = $_SERVER['HTTP_REFERER'];
+        var_dump($gotoURL);
 } else {
         $gotoURL = '1_index.php';
 }
@@ -64,7 +65,7 @@ if (isset($_SERVER['HTTP_REFERER'])) {
                                         })
                                         .then((btnclick) => {
                                                 if (btnclick.isConfirmed) {
-                                                        <?php if($gotoURL === "http://localhost/sennheiser75/4_reservation.php"):?>
+                                                        <?php if($gotoURL === "http://localhost/sennheiser75/7_registered.php"):?>
                                                         window.location.href = "4_reservation.php#resForm";
                                                         <?php endif ;?>
                                                 }

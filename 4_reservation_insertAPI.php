@@ -4,6 +4,7 @@ $output = [
     'success' => false,
     'code' => 0,
     'error' => '沒有表單資料',
+    'post' => $_POST
 ];
 
 if(empty( $_SESSION['userAccount'])){
@@ -26,12 +27,12 @@ if(empty($_POST['location']) or empty($_POST['location']) or empty($_POST['locat
 $sql = "INSERT INTO `reservation`(
        `member_sid`, `location`, `reservation_date`, `time`, `create_date`
         ) VALUES (
-        '5', ?, ?, ?, NOW()
+        ?, ?, ?, ?, NOW()
     )";
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
-        $_SESSION['userAccount']['account'],
+        $_SESSION['userAccount']['sid'],
         $_POST['location'],
         $_POST['reservation_date'],
         $_POST['time'],
