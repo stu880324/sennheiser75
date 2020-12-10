@@ -16,7 +16,7 @@ $stmt->execute([
 function getDetails(PDO $pdo, $orderSid)
 {
     $output['getDetails'] = true;
-    $sql2 = "SELECT * FROM `order_detail` WHERE `orders_sid`=?";
+    $sql2 = "SELECT * FROM `order_detail` a LEFT JOIN products b on a.products_sid = b.sid WHERE `orders_sid`=?";
 
     $stmt2 = $pdo->prepare($sql2);
     $stmt2->execute([
@@ -33,14 +33,13 @@ function getDetails(PDO $pdo, $orderSid)
 if ($stmt->rowCount() > 0) {
     $output['success'] = true;
     $output['orders'] = $stmt->fetchAll();
-}
+    $output['count'] = count($output['orders']);
 
-$output['count'] = count($output['orders']);
-
-if (count($output['orders']) > 0) {
-    foreach ($output['orders'] as $order) {
-        $output['orders111'] = $order['sid'];
-        $output['order_detail'][] = getDetails($pdo, $order['sid']);
+    if (count($output['orders']) > 0) {
+        foreach ($output['orders'] as $order) {
+            $output['orders111'] = $order['sid'];
+            $output['order_detail'][] = getDetails($pdo, $order['sid']);
+        }
     }
 }
 

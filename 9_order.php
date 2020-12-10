@@ -107,7 +107,7 @@ if (!isset($_SESSION)) {
 
                 for (let k = 0; k < result.order_detail[i].length; k++) {
                     html += `<tr>
-                            <td style="padding:100px 0">${result.order_detail[i][k].product_name}</td>
+                            <td style="padding:30px 0">${result.order_detail[i][k].english_name}<br>${result.order_detail[i][k].chinese_name}</td>
                             <td>${result.order_detail[i][k].quantity}</td>
                             <td>TWD ${result.order_detail[i][k].price}</td>
                             <td>TWD ${result.order_detail[i][k].quantity * result.order_detail[i][k].price}</td>
@@ -128,7 +128,7 @@ if (!isset($_SESSION)) {
                 $(this).parents('tr').next().toggleClass('active');
             })
         } else {
-            // $('.product-list').html('<h2 style="padding:100px 0">查無歷史訂單</h2>')
+            $('.coupon').html('<h4 style="padding:30px 0;text-align:center;">查無歷史訂單</h4>')
         }
     });
 </script>
