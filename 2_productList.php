@@ -120,7 +120,7 @@
   <div class="row product-list mx-auto">
     <div class="product-card">
       <div class="icons-part">
-        <a href="" class="icons">
+        <a href="" class="icons add-cart-btn" data-sid="9">
           <img class="iconsvg" src="images/2_productList/icons/shopcar.svg" alt="" />
         </a>
 
@@ -146,7 +146,7 @@
 
     <div class="product-card">
       <div class="icons-part">
-        <a href="" class="icons">
+        <a href="" class="icons add-cart-btn" data-sid="1">
           <img src="images/2_productList/icons/shopcar.svg" alt="" />
         </a>
 
@@ -172,7 +172,7 @@
 
     <div class="product-card">
       <div class="icons-part">
-        <a href="" class="icons">
+        <a href="" class="icons add-cart-btn" data-sid="2">
           <img src="images/2_productList/icons/shopcar.svg" alt="" />
         </a>
 
@@ -199,7 +199,7 @@
 
     <div class="product-card">
       <div class="icons-part">
-        <a href="" class="icons">
+        <a href="" class="icons add-cart-btn" data-sid="26">
           <img src="images/2_productList/icons/shopcar.svg" alt="" />
         </a>
 
@@ -224,7 +224,7 @@
     </div>
     <div class="product-card">
       <div class="icons-part">
-        <a href="" class="icons">
+        <a href="" class="icons add-cart-btn" data-sid="33">
           <img src="images/2_productList/icons/shopcar.svg" alt="" />
         </a>
 
@@ -249,7 +249,7 @@
     </div>
     <div class="product-card">
       <div class="icons-part">
-        <a href="" class="icons">
+        <a href="" class="icons add-cart-btn" data-sid="40">
           <img src="images/2_productList/icons/shopcar.svg" alt="" />
         </a>
 
@@ -382,6 +382,15 @@
         </p>
       </article>
     </div>
+  </div>
+</div>
+
+<button class="btn-buy" data-toggle="modal" data-target=".bd-example-modal-sm" hidden>加入購物車</button>
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content text-center" style="background-color: #000; color:#fff; height:200px; line-height:200px;">
+      已加入購物車
+      </div>
   </div>
 </div>
 
@@ -550,7 +559,7 @@
         for (let i = 0; i < Math.min(result.result.length, 6); i++) {
           html += `<div class="product-card wow slideInUp ${(shouldAdjustCSS && i === 3 )? 'earphone-1':''} ${(shouldAdjustCSS && i === 4 )? 'earphone-2':''} ${(shouldAdjustCSS2 && i === 3 )? 'earphone-onlyOne':''}">
               <div class="icons-part">
-                <a href="" class="icons">
+                <a href="" class="icons add-cart-btn" data-sid="${earphoneData[i].sid}">
                   <img class="iconsvg" src="images/2_productList/icons/shopcar.svg" alt="" />
                 </a>
 
@@ -652,7 +661,7 @@
     for (let i = startNum; i < endNum; i++) {
       html += `<div class="product-card ${(shouldAdjustCSS && i === startNum+3 )? 'earphone-1':''} ${(shouldAdjustCSS && i === startNum+4 )? 'earphone-2':''} ${(shouldAdjustCSS2 && i === startNum+3 )? 'earphone-onlyOne':''}">
               <div class="icons-part">
-                <a href="" class="icons">
+                <a href="" class="icons  add-cart-btn" data-sid="${earphoneData[i].sid}">
                   <img class="iconsvg" src="images/2_productList/icons/shopcar.svg" alt="" />
                 </a>
 
@@ -687,31 +696,18 @@
 
 <!-- 加入購物車功能 -->
 <script>
-  $('.btn-buy').on('click', function(event) {
-    const item = $(this).closest('.product-item');
-    const sid = item.attr('data-sid');
-    const qty = item.find('.btn-quantity').text();
-
-    console.log({
-      sid: sid,
-      quantity: qty
-    });
+  $('.product-list').on('click','.add-cart-btn', function(event) {
+    event.preventDefault();
+    console.log('btn',$(this).data('sid'))
     $.get('5_addToCart-API.php', {
-      sid: sid,
-      quantity: qty,
+      sid: $(this).data('sid'),
+      quantity: 1,
       action: 'add'
     }, function(data) {
-      console.log(data);
-      // TODO:購物車budge
+      $('.btn-buy').click();
       countCart(data.cart);
     }, 'json');
-  });
-
-  function showProductModal(sid) {
-    $('iframe')[0].src = "product-detail02.php?sid=" + sid;
-    // product-detail02.php?sid=17
-    $('#exampleModal').modal('show')
-  };
+  })
 </script>
 
 
