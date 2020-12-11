@@ -42,11 +42,13 @@
     object-fit: cover;
 }
 .banner-text{
+    background-color: rgba(0, 0, 0, 0.8);
     /* color: #00BBC3; */
     font-family: "Poppins", sans-serif;
     color: #000000;
     text-align: center;
     margin-top: 100px;
+    /* border-bottom:5px solid hsl(29, 58%, 64%); */
     /* font-weight: lighter; */
 }
 .banner-text h1{
@@ -57,6 +59,12 @@
     color: #d9a26e;
     font-size: 50px;
 }
+.booknow{
+    height: 20px;
+    width: 100px;
+    /* transform: rotateX(90deg); */
+}
+
 
 
 /* 這裡編輯room-container */
@@ -355,7 +363,7 @@ form{
      text-decoration: none;
 }
 .submit-btn a{
-    color: #457C86;
+    color: #457c86;
     text-align: center;
    
 }
@@ -373,6 +381,8 @@ form{
 .bg3d.move-up{
     transform: translateY(-100px);
 }
+
+
 
 
 

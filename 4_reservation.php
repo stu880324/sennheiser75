@@ -88,7 +88,8 @@
             <div class="banner-text">
                 <h1>75th</h1>
                 <h3>anniversary</h3>
-                <p>
+                
+                <!-- <p>
                     我們萬分期待與你分享這個特別週年，<br>
                     全因你 - <br>
                     我們的員工、顧客、朋友以及愛好者 -<br>
@@ -101,7 +102,7 @@
                     無論身處何方，<br>
                     我們深信，<br>
                     動聽的聲音能連結彼此。
-                </p>
+                </p> -->
             </div>
         </div>
          <!-- 右邊 -->
@@ -421,22 +422,21 @@
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content text-center" 
                         style=" 
-                                background:url(./images/4_reservation/model-bg.jpg);
-                                background-repeat:no-repeat;
-                                background-size:contain;
-                                background-position:center;
-                                color:#000; 
-                                height:400px;
-                                border:none;">
+                                background-color:#000;
+                                color:#fff;
+                                border:2px solid transparent;
+                                border-image: linear-gradient(45deg, #457c86 0%, #d9a26e 100%);
+                                border-image-slice: 1;
+                                height:500px;">
                         <h3 class="mt-5">預約成功</h3>
                         我們竭誠歡迎您的到來<br>
                         抵達時向請服務人員出示此畫面<br>
                         亦可至會員中心查詢預約記錄<br>
                         非常感謝您!<br>
                         <br>
-                        日期：<span id="date-input"></span><br>
-                        時間：<span id="time-input"></span><br>
-                        店名：<span id="shop-input"></span><br>
+                        日期<span id="date-input"></span><br>
+                        時間<span id="time-input"></span><br>
+                        店名<span id="shop-input"></span><br>
                         </div>
                     </div>
                     </div>
@@ -486,28 +486,7 @@
 </script>
 
 
-<!-- 轉變背景顏色功能 -->
-<!-- <script>
-    function myFunction() {
-       var element = document.body;
-       element.classList.toggle("dark-mode");
-       $(".number").classList.toggle("dark-mode");
-    };
-</script> -->
 
-
-<!-- 轉換背景功能 -->
-<!-- <script>
-    function myFunction() {
-    let body = document.body;
-       body.classList.toggle("dark-mode");
-
-    let number = 
-       $(".number").classList.toggle("dark-mode-textcolor");
-       $('.number').addClass('dark-mode-textcolor');
-    };
-
-</script> -->
 
 <!-- 滾動視差 -->
 <script src="./stellar.js-master/jquery.stellar.min.js"></script>
@@ -546,7 +525,7 @@
 </script>
 
 
-
+<!-- 小格子自動播放功能 -->
 <script>
     setInterval(()=>{
         $('.pic200-img-wrap.active').each(function(){
