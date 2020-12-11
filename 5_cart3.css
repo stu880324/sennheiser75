@@ -238,8 +238,8 @@
   background-color: #000000;
   color: #fff;
   width: 450px;
-  height: 45px;
   margin-top: 2rem;
+  line-height: 3;
 }
 
 /* RWD部分 */

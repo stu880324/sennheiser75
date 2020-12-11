@@ -50,97 +50,27 @@ if ($stmt->rowCount() > 0) {
         <div class="main-wrap d-flex">
             <div class="product-list">
                 <ul>
+                <?php foreach ($_SESSION['cart'] as $cart): ?>
                     <li>
                         <div class="cover">
-                            <img src="./images/small/product17.jpg" alt="">
+                            <img src="./images/small/product<?= $cart['sid'] ?>.jpg" alt="">
 
                         </div>
 
                         <div class="item-total-wrap">
                             <div class="item-info">
                                 <div class="item-name">
-                                    <p>HD 800 S Anniversary Edition</p>
-                                    <p>經典開放式旗艦 75週年限量商品</p>
+                                    <p><?= $cart['english_name'] ?></p>
+                                    <p><?= $cart['chinese_name'] ?></p>
                                 </div>
-                                <div class="item-price"> NT$ 7,490</div>
-                                <p>數量: 2</p>
-                                <p>小計: NT$ 7,490</p>
+                                <div class="item-price"> NT$ <?= number_format($cart['price']) ?></div>
+                                <p>數量: <?= $cart['quantity'] ?></p>
+                                <p>小計: NT$ <?= number_format($cart['price']*$cart['quantity']) ?></p>
                             </div>
 
                         </div>
                     </li>
-                    <li>
-                        <div class="cover"><img src="./images/small/product19.jpg" alt="">
-
-                        </div>
-
-                        <div class="item-total-wrap">
-                            <div class="item-info">
-                                <div class="item-name">
-                                    <p>HD 800 S Anniversary Edition</p>
-                                    <p>經典開放式旗艦 75週年限量商品</p>
-                                </div>
-                                <div class="item-price">NT$ 10,900</div>
-                                <p>數量: 1</p>
-                                <p>小計: NT$ 10,900</p>
-                            </div>
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="cover"><img src="./images/small/product19.jpg" alt="">
-
-                        </div>
-
-                        <div class="item-total-wrap">
-                            <div class="item-info">
-                                <div class="item-name">
-                                    <p>GSP 670</p>
-                                    <p>頂級無線電競耳機</p>
-                                </div>
-                                <div class="item-price">NT$ 10,900</div>
-                                <p>數量: 1</p>
-                                <p>小計: NT$ 10,900</p>
-                            </div>
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="cover"><img src="./images/small/product19.jpg" alt="">
-
-                        </div>
-
-                        <div class="item-total-wrap">
-                            <div class="item-info">
-                                <div class="item-name">
-                                    <p>GSP 670</p>
-                                    <p>頂級無線電競耳機</p>
-                                </div>
-                                <div class="item-price">NT$ 10,900</div>
-                                <p>數量: 1</p>
-                                <p>小計: NT$ 10,900</p>
-                            </div>
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="cover"><img src="./images/small/product19.jpg" alt="">
-
-                        </div>
-
-                        <div class="item-total-wrap">
-                            <div class="item-info">
-                                <div class="item-name">
-                                    <p>GSP 670</p>
-                                    <p>頂級無線電競耳機</p>
-                                </div>
-                                <div class="item-price">NT$ 10,900</div>
-                                <p>數量: 1</p>
-                                <p>小計: NT$ 10,900</p>
-                            </div>
-
-                        </div>
-                    </li>
+                <?php endforeach; ?>
 
 
                 </ul>
@@ -154,7 +84,7 @@ if ($stmt->rowCount() > 0) {
                     <div class="promo">
                         <label>選擇優惠碼</label>
                         <div class="select">
-                            <?php if ($coupon[0] === '') : ?>
+                            <?php if ($coupon === '') : ?>
                                 <select name="coupon_list" id="coupon_list" disabled>
                                     <option selected="" disabled="">無優惠券</option>
                                 </select>
@@ -162,15 +92,16 @@ if ($stmt->rowCount() > 0) {
                             <?php else : ?>
                                 <select name="coupon_list" id="coupon_list">
                                     <option selected="" disabled="">選擇優惠碼</option>
+                                    
                                     <?php foreach ($coupon as $key => $value) { ?>
                                         <option class="couponOption" onchange="handleCouponChange()" value="<?= $value['coupon_mumber'] ?>" data-discount="<?= $value['discountprice'] ?>"><?= $value['coupon_mumber'] ?></option>
                                     <?php } ?>
-
+                                    
                                 </select>
 
                             <?php endif; ?>
                         </div>
-                        <button class="btn-buy-1">使用</button>
+                        <!-- <button class="btn-buy-1">使用</button> -->
                     </div>
                     <div class="form check-item" id="ship-option">
                         <p>1. 選擇運送方式</p>
@@ -179,10 +110,11 @@ if ($stmt->rowCount() > 0) {
                     </div>
                     <div class="form check-item">
                         <p>2. 選擇付款方式</p>
-                        <input type="radio" id="payment_visa" name="payment" value="visa">
+                        <input type="radio" id="payment_visa" name="payment" value="creditcard">
                         <label for="payment_visa" id="label_payment_visa">信用卡（VISA)</label>
                         <input type="radio" id="cash" name="payment" value="cash">
                         <label for="cash" id="cash">現金付款</label>
+                        <p class="no-payment">請選擇付款方式</p>
                     </div>
                     <div class="form" id="info-option">
                         <p>3. 收件人資訊</p>
@@ -194,14 +126,16 @@ if ($stmt->rowCount() > 0) {
 
                         <label for="rcpt_address">地址</label>
                         <input type="text" id="rcpt_address" name="rcpt_address" placeholder="地址" value="">
+                        <p class="no-address">請填寫地址</p>
 
                     </div>
 
                     <div class="agree check-item">
-                        <input type="checkbox" id="agree-order">
+                        <input type="checkbox" id="agree-order" value="">
                         <label for="agree-order">
-                            <p>我已閱讀並同意購物條款服務條款</p>
+                            <p>我已閱讀並同意購物條款</p>
                         </label>
+                        <p class="no-argeement">請閱讀並同意購物條款</p>
                     </div>
 
                     <div class="total-wrapper">
@@ -264,8 +198,59 @@ if ($stmt->rowCount() > 0) {
 
 
 <script>
+    let couponChoose = null;
+    let payment = null;
     $('.btn-buy').on('click', function() {
-        location.href = "./5_cart3.php"
+        let isPass = true;
+        if($('input[name="payment"]:checked').val() == undefined){
+            isPass = false;
+            $('.no-payment').show();
+        }
+        
+        if($('#rcpt_address').val() === '') {
+            isPass = false;
+            $('.no-address').show();
+        }
+
+        if($('#agree-order').prop('checked') !== true) {
+            isPass = false;
+            $('.no-argeement').show();
+        }
+    
+        if(isPass){
+            $.post('5_cart2_api.php', {
+                rcpt_name: $('#rcpt_name').val(),
+                rcpt_mobile: $('#rcpt_mobile').val(),
+                rcpt_address: $('#rcpt_address').val(),
+                totalPrice: numberWithoutCommas($('#final_price').text()),
+                couponChoose: couponChoose,
+                payment: payment,
+                action: 'add'
+            }, function(data) {
+                // console.log('data',data);
+                location.href = "./5_cart3.php"
+            }, 'json');
+        }
+    })
+
+    $('input[name="payment"]').on('change',function(){
+        console.log($(this).val());
+        payment = $(this).val();
+        if($(this).val() !== ''){
+            $('.no-payment').hide();
+        }
+    })
+
+    $('#rcpt_address').on('keydown',function(){
+        if($('#rcpt_address').val() !== ''){
+            $('.no-address').hide();
+        }
+    })
+
+    $('#agree-order').on('change',function(){
+        if($('#agree-order').prop('checked') === true){
+            $('.no-argeement').hide();
+        }
     })
 </script>
 
@@ -276,7 +261,7 @@ if ($stmt->rowCount() > 0) {
 
     function handleCouponChange() {
         let nowValue = this.value;
-
+        couponChoose = nowValue;
         $('.couponOption').each(function(index, value) {
             if (value.value === nowValue) {
                 let discount = document.querySelector('#discount');

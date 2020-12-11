@@ -36,15 +36,15 @@
             <ul class="detail-line">
                 <li class="det-1">
                     <p>訂單編號</p>
-                    <p>77422</p>
+                    <p><?= $_SESSION['orderDone']['sid'] ?></p>
                 </li>
                 <li class="det-1">
                     <p>日期</p>
-                    <p>2020-12-18</p>
+                    <p><?= $_SESSION['orderDone']['date'] ?></p>
                 </li>
                 <li class="det-1">
                     <p>總金額</p>
-                    <p>NT$ 16,890</p>
+                    <p>NT$ <?= number_format($_SESSION['orderDone']['total']) ?></p>
                 </li>
                 <li>
                     <p>付款方式</p>

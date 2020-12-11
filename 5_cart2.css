@@ -134,7 +134,7 @@
 
 /* 優惠碼下拉選單 */
 #coupon_list,#coupon_code{
-  width: 500px;
+  width: 90%;
   height: 45px;
   padding-bottom: 1rem;
 }
@@ -161,12 +161,13 @@
   width: 450px;
   height: 50px;
   margin-bottom: 1rem;
+  border: 1px solid #ced6e0;
 }
 
 .agree.check-item p{
   margin-top:1.2rem;
+  margin-bottom: 0;
 }
-
 /* 小計 */
 .total-wrapper {
   width: 500px;
@@ -190,6 +191,27 @@
   height: 45px;
   margin-top: 3rem;
   margin-bottom: 5rem;
+}
+
+.no-payment{
+  color: red;
+  display: none;
+}
+
+#rcpt_address{
+  margin-bottom: 0;
+}
+.no-address{
+  color: red;
+  margin-top: 0;
+  margin-left: 50px;
+  display: none;
+}
+
+.agree p.no-argeement{
+  color:red;
+  margin-top: 0;
+  display:none;
 }
 
  
@@ -267,7 +289,16 @@
 
 .agree.check-item p{
   margin-top:1rem;
+  margin-bottom: 0;
   font-size:1rem;
+}
+
+.agree p.no-argeement{
+  margin-top: 0;
+}
+
+.no-address{
+  margin-left: 0px;
 }
 
 /* 選擇優惠碼文字 */

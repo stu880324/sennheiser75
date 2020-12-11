@@ -170,7 +170,17 @@
     })
 
     $('.card-input_button').on('click', function() {
-        location.href = "./5_cart4.php"
+        $.post('5_cart3_api.php', {
+            creditcard_number: $('#cardNumber').val(),
+            creditcard_name: $('#cardHolderValue').val(),
+            expiredMonth: $('#expiredMonth').val(),
+            expiredYear: $('#expiredYear').val(),
+            creditcard_security: $('#cwInput').val(),
+                action: 'add'
+            }, function(data) {
+                console.log('data',data);
+                location.href = "./5_cart4.php"
+            }, 'json');
     })
 </script>
 <?php include __DIR__ . '/parts/6_html_foot.php'; ?>
