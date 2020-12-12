@@ -5,6 +5,8 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
+<?php include __DIR__. '/parts/7_fix-icon.php'; ?>
+
 <?php
 if (!isset($_SESSION)) {
     session_start();
