@@ -1,17 +1,21 @@
-/* div{
+div{
     border: 1px solid red;
+}
+/* body{
+    font-family: "Futura", sans-serif;
 } */
 
 
 /* 這裡banner-container */
 .banner-container{
     background-color: #000000;
-    background-image: url(./images/4_reservation/room1-black.jpg);
+    background-image: url(./images/4_reservation/room1-b.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    height: 800px;
+    /* height: 800px; */
+    padding-bottom: 100px;
 }
 .pic200{
     width: 200px;
@@ -42,10 +46,10 @@
     object-fit: cover;
 }
 .banner-text{
-    background-color: rgba(0, 0, 0, 0.8);
+    /* background-color: rgba(0, 0, 0, 0.8); */
     /* color: #00BBC3; */
-    font-family: "Poppins", sans-serif;
-    color: #000000;
+    font-family: "Futura", sans-serif;
+    color: #ffffff;
     text-align: center;
     margin-top: 100px;
     /* border-bottom:5px solid hsl(29, 58%, 64%); */
@@ -60,9 +64,20 @@
     font-size: 50px;
 }
 .booknow{
-    height: 20px;
-    width: 100px;
-    /* transform: rotateX(90deg); */
+    margin: 0px auto 0px auto;
+    height: 40px;
+    width: 200px;
+    line-height: 40px;
+    border:2px solid transparent;
+    border-image: linear-gradient(to bottom right, #457c86 0%, #d9a26e 100%);
+    border-image-slice: 1;
+    color: #d9a26e;
+}
+.booknow:hover{
+    border:2px solid transparent;
+    border-image: linear-gradient(to bottom right, #d9a26e 0%, #457c86 100%);
+    border-image-slice: 1;
+
 }
 
 
@@ -313,7 +328,6 @@
 }
 .step-text h4{
     color: #d9a26e;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: lighter;
 }
 .step-text p{
