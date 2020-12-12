@@ -36,40 +36,40 @@ if (!isset($_SESSION)) {
 <div class="cart-wrapper" id="cart_list">
     <div class="items-wrapper">
 
-        <?php foreach ($_SESSION['cart'] as $cart) : ?>
+        <?php foreach ($_SESSION['cart'] as $cart): ?>
             <div class="item1">
-                <a class="remove-icon" data-sid="<?php echo $cart['sid'] ?>"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
-                <a href="#" class="item">
-                    <div class="item-img">
-                        <img src="./images/small/product<?= $cart['sid'] ?>.jpg" alt="">
-                    </div>
+            <a class="remove-icon" data-sid="<?php echo $cart['sid'] ?>"><img src="./images/5_cart/remove-icon.svg" alt=""></a>
+            <a href="#" class="item">
+                <div class="item-img">
+                    <img src="./images/small/product<?=$cart['sid']?>.jpg" alt="">
+                </div>
 
-                </a>
-                <div class="item-total-wrapper">
-                    <div class="item-total-wrap">
-                        <div class="item-info">
-                            <div class="item-name">
-                                <p><?= $cart['english_name'] ?></p>
-                                <p><?= $cart['chinese_name'] ?></p>
-                            </div>
-                            <div class="item-price">NT$ <?= number_format($cart['price']) ?></div>
+            </a>
+            <div class="item-total-wrapper">
+                <div class="item-total-wrap">
+                    <div class="item-info">
+                        <div class="item-name">
+                            <p><?= $cart['english_name'] ?></p>
+                            <p><?= $cart['chinese_name'] ?></p>
                         </div>
-                    </div>
-
-                    <div class="item-total-wrap">
-                        <p>數量</p>
-                        <div class="quantity d-flex">
-                            <input class="min" name="" type="button" value="-" />
-                            <input class="text-box" name="" type="text" value="<?= $cart['quantity'] ?>" />
-                            <input class="add" name="" type="button" value="+" />
-                        </div>
-                    </div>
-                    <div class="item-total-wrap ">
-                        <p>小計</p>
-                        <div class="item-wrap-total">NT$ <?= number_format($cart['price'] * $cart['quantity']) ?></div>
+                        <div class="item-price">NT$ <?= number_format($cart['price']) ?></div>
                     </div>
                 </div>
+
+                <div class="item-total-wrap">
+                    <p>數量</p>
+                    <div class="quantity d-flex">
+                        <input class="min" name="" type="button" value="-" />
+                        <input class="text-box" name="" type="text" value="<?= $cart['quantity'] ?>" />
+                        <input class="add" name="" type="button" value="+" />
+                    </div>
+                </div>
+                <div class="item-total-wrap ">
+                    <p>小計</p>
+                    <div class="item-wrap-total">NT$ <?= number_format($cart['price']*$cart['quantity']) ?></div>
+                </div>
             </div>
+        </div>
         <?php endforeach; ?>
     </div>
 
@@ -135,13 +135,13 @@ if (!isset($_SESSION)) {
             let number = $(this).next().val();
             number = +number - 1
             $(this).next().val(number);
-            console.log('number', number);
+            console.log('number',number);
             //取得單價
             let priceNT = $(this).parents('.item-total-wrap').prev().find('.item-price').text()
-            console.log('priceNT', priceNT);
+            console.log('priceNT',priceNT);
             //取得數字版本的單價
             let priceNumber = numberWithoutCommas(priceNT);
-            console.log('priceNumber', priceNumber);
+            console.log('priceNumber',priceNumber);
             //取得數量＊單價
             let totalPriceNumber = priceNumber * number
             console.log('totalPriceNumber', totalPriceNumber)
@@ -208,7 +208,7 @@ if (!isset($_SESSION)) {
 
 <script>
     $('.btn-buy').on('click', function() {
-        location.href = "./5_cart2.php"
+        location.href = "./6_login.php"
     })
     $('.btn-back').on('click', function() {
         location.href = "2_productList.php"

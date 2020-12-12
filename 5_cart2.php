@@ -50,27 +50,27 @@ if ($stmt->rowCount() > 0) {
         <div class="main-wrap d-flex">
             <div class="product-list">
                 <ul>
-                <?php foreach ($_SESSION['cart'] as $cart): ?>
-                    <li>
-                        <div class="cover">
-                            <img src="./images/small/product<?= $cart['sid'] ?>.jpg" alt="">
+                    <?php foreach ($_SESSION['cart'] as $cart) : ?>
+                        <li>
+                            <div class="cover">
+                                <img src="./images/small/product<?= $cart['sid'] ?>.jpg" alt="">
 
-                        </div>
-
-                        <div class="item-total-wrap">
-                            <div class="item-info">
-                                <div class="item-name">
-                                    <p><?= $cart['english_name'] ?></p>
-                                    <p><?= $cart['chinese_name'] ?></p>
-                                </div>
-                                <div class="item-price"> NT$ <?= number_format($cart['price']) ?></div>
-                                <p>數量: <?= $cart['quantity'] ?></p>
-                                <p>小計: NT$ <?= number_format($cart['price']*$cart['quantity']) ?></p>
                             </div>
 
-                        </div>
-                    </li>
-                <?php endforeach; ?>
+                            <div class="item-total-wrap">
+                                <div class="item-info">
+                                    <div class="item-name">
+                                        <p><?= $cart['english_name'] ?></p>
+                                        <p><?= $cart['chinese_name'] ?></p>
+                                    </div>
+                                    <div class="item-price"> NT$ <?= number_format($cart['price']) ?></div>
+                                    <p>數量: <?= $cart['quantity'] ?></p>
+                                    <p>小計: NT$ <?= number_format($cart['price'] * $cart['quantity']) ?></p>
+                                </div>
+
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
 
 
                 </ul>
@@ -92,11 +92,11 @@ if ($stmt->rowCount() > 0) {
                             <?php else : ?>
                                 <select name="coupon_list" id="coupon_list">
                                     <option selected="" disabled="">選擇優惠碼</option>
-                                    
+
                                     <?php foreach ($coupon as $key => $value) { ?>
                                         <option class="couponOption" onchange="handleCouponChange()" value="<?= $value['coupon_mumber'] ?>" data-discount="<?= $value['discountprice'] ?>"><?= $value['coupon_mumber'] ?></option>
                                     <?php } ?>
-                                    
+
                                 </select>
 
                             <?php endif; ?>
@@ -112,9 +112,6 @@ if ($stmt->rowCount() > 0) {
                         <p>2. 選擇付款方式</p>
                         <input type="radio" id="payment_visa" name="payment" value="creditcard">
                         <label for="payment_visa" id="label_payment_visa">信用卡（VISA)</label>
-                        <input type="radio" id="cash" name="payment" value="cash">
-                        <label for="cash" id="cash">現金付款</label>
-                        <p class="no-payment">請選擇付款方式</p>
                     </div>
                     <div class="form" id="info-option">
                         <p>3. 收件人資訊</p>
@@ -202,22 +199,22 @@ if ($stmt->rowCount() > 0) {
     let payment = null;
     $('.btn-buy').on('click', function() {
         let isPass = true;
-        if($('input[name="payment"]:checked').val() == undefined){
+        if ($('input[name="payment"]:checked').val() == undefined) {
             isPass = false;
             $('.no-payment').show();
         }
-        
-        if($('#rcpt_address').val() === '') {
+
+        if ($('#rcpt_address').val() === '') {
             isPass = false;
             $('.no-address').show();
         }
 
-        if($('#agree-order').prop('checked') !== true) {
+        if ($('#agree-order').prop('checked') !== true) {
             isPass = false;
             $('.no-argeement').show();
         }
-    
-        if(isPass){
+
+        if (isPass) {
             $.post('5_cart2_api.php', {
                 rcpt_name: $('#rcpt_name').val(),
                 rcpt_mobile: $('#rcpt_mobile').val(),
@@ -233,22 +230,22 @@ if ($stmt->rowCount() > 0) {
         }
     })
 
-    $('input[name="payment"]').on('change',function(){
+    $('input[name="payment"]').on('change', function() {
         console.log($(this).val());
         payment = $(this).val();
-        if($(this).val() !== ''){
+        if ($(this).val() !== '') {
             $('.no-payment').hide();
         }
     })
 
-    $('#rcpt_address').on('keydown',function(){
-        if($('#rcpt_address').val() !== ''){
+    $('#rcpt_address').on('keydown', function() {
+        if ($('#rcpt_address').val() !== '') {
             $('.no-address').hide();
         }
     })
 
-    $('#agree-order').on('change',function(){
-        if($('#agree-order').prop('checked') === true){
+    $('#agree-order').on('change', function() {
+        if ($('#agree-order').prop('checked') === true) {
             $('.no-argeement').hide();
         }
     })
