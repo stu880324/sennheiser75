@@ -139,6 +139,14 @@
     margin-top: 7rem;
 }
 
+.span.cart{
+  color: #ccc;
+}
+.span.check{
+  color: #ccc;
+}
+
+
   .product-detail{
     width: 100%;
     margin: auto;
@@ -163,8 +171,7 @@
     transform: translateX(0%);
     display: flex;
     width: 30%;
-    margin: 0px auto;
-
+    margin:0;
   }
 
   .det-1{
@@ -174,10 +181,7 @@
     margin-bottom:.5rem;
   }
   
-  .det-1 p{
-    /* margin-right: 1.5rem;
-    display: flex; */
-  }
+  
   
   .top-title h5{
     text-align: center;

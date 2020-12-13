@@ -202,15 +202,15 @@
         <div class="box"></div>
 
         <p class="service5-text">親身體驗</p>
-        <div class="service5"><a href="#"><img src="./images/3_productDetail/service5.jpg" alt=""></a></div>
+        <div class="service5"><a href="./4_reservation.php"><img src="./images/3_productDetail/service5.jpg" alt=""></a></div>
         <p class="service4-text">公司的成立</p>
-        <div class="service4"><a href=""><img src="./images/3_productDetail/service4.jpg" alt=""></a></div>
+        <div class="service4"><a href="#"><img src="./images/3_productDetail/service4.jpg" alt=""></a></div>
         <p class="service1-text">如何挑選耳機</p>
-        <div class="service1"><a href=""><img src="./images/3_productDetail/service1.png" alt=""></a></div>
+        <div class="service1"><a href="./10_blogView.php"><img src="./images/3_productDetail/service1.png" alt=""></a></div>
         <p class="service2-text">為您打造</p>
-        <div class="service2"><a href=""><img src="./images/3_productDetail/service2.png" alt=""></a></div>
+        <div class="service2"><a href="./2_productList.php"><img src="./images/3_productDetail/service2.png" alt=""></a></div>
         <p class="service3-text">科學與工程獎</p>
-        <div class="service3"><a href=""><img src="./images/3_productDetail/service3.png" alt=""></a></div>
+        <div class="service3"><a href="#"><img src="./images/3_productDetail/service3.png" alt=""></a></div>
 
         
 

@@ -549,14 +549,19 @@ hr {
 @media screen and (max-width: 767px) {
   .hero {
     height: 270px;
+    padding-top: 80px;
   }
   .hero-title {
     position: absolute;
     z-index: 2;
-    top: 70%;
+    top: 73%;
     font-size: 42px;
     color: #d9af80;
     font-family: "Raleway", sans-serif;
+  }
+  .arrow {
+    width: 50px;
+    margin: 0px auto 50px auto;
   }
   .know-us {
     width: 100%;
@@ -675,6 +680,22 @@ hr {
     font-size: 8vw;
     color: transparent;
     -webkit-text-stroke: 1px #d9af80;
+  }
+  .text75 {
+    padding: 0 0 0 0;
+  }
+  .text75 h2 {
+    font-size: 24px;
+    padding-top: 10px;
+    padding-left: 8px;
+  }
+  .text75 span {
+    font-size: 14px;
+    padding-top: 0px;
+    padding-left: 8px;
+  }
+  .reservation-text a {
+    font-size: 20px;
   }
   .svg-wrapper svg {
     display: none;

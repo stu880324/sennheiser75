@@ -1,7 +1,7 @@
 <?php include __DIR__. '/parts/1_config.php'; ?>
 <?php include __DIR__. '/parts/2_html_head.php'; ?>
         <!-- 請填入各頁面CSS名稱 -->
-        <link rel="stylesheet" href="<?= WEB_ROOT ?>4_reservation.css">
+        <link rel="stylesheet" href="<?= WEB_ROOT ?>4_reservation1.css">
 
 <?php include __DIR__. '/parts/2_html_head2.php'; ?>
 <?php include __DIR__. '/parts/3_navbar.php'; ?>
@@ -88,20 +88,21 @@
             <div class="banner-text">
                 <h1>75th</h1>
                 <h3>anniversary</h3>
+                
                 <p>
-                    我們萬分期待與你分享這個特別週年，<br>
-                    全因你 - <br>
-                    我們的員工、顧客、朋友以及愛好者 -<br>
-                    塑造了我們的團隊！<br>
-                    這些記憶將帶你展開一段走訪 <br>
-                    關於Sennheiser 歷史、精神、<br>
-                    特別時刻與專業級產品的旅程。
+                    我們萬分期待與您分享這個特別週年<br>
+                    這些記憶將帶您展開一段走訪 <br>
+                    關於Sennheiser 歷史、精神<br>
+                    以及特別時刻與專業級產品的旅程。
                 </p>
                 <p>
-                    無論身處何方，<br>
-                    我們深信，<br>
+                    無論身處何方<br>
+                    我們深信<br>
                     動聽的聲音能連結彼此。
                 </p>
+                <a href="#resForm">
+                    <div class="booknow">直接預約</div>
+                </a>
             </div>
         </div>
          <!-- 右邊 -->
@@ -233,8 +234,8 @@
 
            
 
-<!-- 這裡HE1 he1-container -->
-<div class="container-fluid he1-container">
+<!-- 這裡HE1 he1-container (不要)-->
+<!-- <div class="container-fluid he1-container">
       
     <div class="row">
             <div class="text-effect">
@@ -242,15 +243,15 @@
                 <span>E</span>
                 <span>1</span><br>
             </div>
-    </div>
+    </div> -->
     <!-- <h1>經典大奧重生</h1> -->
     <!-- <h1>超越旗艦靜電耳機</h1> -->
-<div class="row">
+<!-- <div class="row">
     <div class="he1-area">
         <div class="he1-bg"><img src="./images/4_reservation/HE1.jpg" alt=""> </div>
-        
+         -->
         <!-- focus1 -->
-        <div class="focus1 d-flex">
+        <!-- <div class="focus1 d-flex">
             <div class="focus-text text-right">
                 <h4>極致低失真設計</h4>
                 <p>黃金蒸鍍靜電振膜<br>
@@ -258,20 +259,20 @@
                     高純度鍍銀OFC材質打造線材</p>
             </div>
             <img src="./images/4_reservation/focus1.svg" alt="">
-        </div>
+        </div> -->
 
         <!-- focus2 -->
-        <div class="focus2 d-flex">
+        <!-- <div class="focus2 d-flex">
             <img src="./images/4_reservation/focus2.svg" alt="">
             <div class="focus-text">
                 <h4>頂級數位流佈局</h4>
                 <p>8 枚 ESS 9018 DAC 晶片<br>
                     管晶混合全平衡電路</p>
             </div>
-        </div>
+        </div> -->
 
         <!-- focus3 -->
-        <div class="focus3 d-flex">
+        <!-- <div class="focus3 d-flex">
             <img src="./images/4_reservation/focus2.svg" alt="">
             <div class="focus-text">
                 <h4>現代奢華工藝</h4>
@@ -291,7 +292,7 @@
 </div>
 
 
-</div>
+</div> -->
 
   
 
@@ -351,33 +352,39 @@
 </div>
 
 <!-- 這裡報名區 form-container-->
-<div class="container-fluid form-container">
+<div id="resForm" class="container-fluid form-container">
     <h2>線上預約</h2>
     <div class="row">
         
         <!-- <form action="4_reservation_insertAPI.php" method="post"> -->
         <form name="form1" onsubmit="sendForm(); return false;">
-            <!-- 選地區 -->
+            
+        <?php if(empty( $_SESSION['userAccount'])): ?>
+                <a href="./6_login.php"><div class="submit-btn m-5 mb-5">請先登入會員</div></a>
+        <?php else: ?>
+        
+        <!-- 選地區 -->
             <div class="form-group">
                 <label class="label-title" for="location">STORE</label>
-                <select class="form-control" id="location" name="location">
-                  <option>台北三創店</option>
-                  <option>台中展示中心</option>
-                  <option>高雄展示中心</option>
+                <select class="form-control" id="location" name="location" required>
+                    <option>請選擇展間</option>
+                    <option>台北三創店</option>
+                    <option>台中展示中心</option>
+                    <option>高雄展示中心</option>
                 </select>
               </div>
             <!-- 選日期 -->
             <div class="form-group">
               <label class="label-title" for="date">DATE</label>
-              <input type="date" class="form-control" id="date" name="reservation_date">
+              <input type="date" class="form-control" id="date" name="reservation_date" required>
             </div>
             <!-- 選時間 -->
-            <div class="time-form-group">
+            <div class="time-form-group" required>
             
                     <label class="label-title">TIME</label>
                   <div>
                     <div class="form-check">
-                      <input class="input-time" type="radio" name="time" id="time10" value="10:00 - 12:00" checked>
+                      <input class="input-time" type="radio" name="time" id="time10" value="10:00 - 12:00">
                       <label class="label-time" for="time10">
                         10:00 - 12:00
                       </label>
@@ -389,7 +396,7 @@
                       </label>
                     </div>
                     <div class="form-check disabled">
-                      <input class="input-time" type="radio" name="time" id="time14" value="14:00 - 16:00" disabled>
+                      <input class="input-time" type="radio" name="time" id="time14" value="14:00 - 16:00" >
                       <label class="label-time" for="time14">
                         14:00 - 16:00
                       </label>
@@ -401,7 +408,7 @@
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="input-time" type="radio" name="time" id="time18" value="18:00 - 20:00">
+                        <input class="input-time" type="radio" name="time" id="time18" value="18:00 - 20:00" disabled>
                         <label class="label-time" for="time18">
                           18:00 - 20:00
                         </label>
@@ -409,9 +416,7 @@
                   </div>
               </div>
 
-              <?php if(empty( $_SESSION['userAccount'])): ?>
-                <a href="./6_login.php"><div class="submit-btn">請先登入會員</div></a>
-              <?php else: ?>
+             
               <button class="submit-btn"  data-toggle="modal" data-target=".bd-example-modal-lg" type="submit">SEND</button>
         
 
@@ -421,23 +426,21 @@
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content text-center" 
                         style=" 
-                                background:url(./images/4_reservation/model-bg.jpg);
-                                background-repeat:no-repeat;
-                                background-size:contain;
-                                background-position:center;
-                                color:#000; 
-                                height:400px;
-                                border:none;">
+                                background-color:#000;
+                                color:#fff;
+                                border:2px solid transparent;
+                                border-image: linear-gradient(45deg, #457c86 0%, #d9a26e 100%);
+                                border-image-slice: 1;
+                                height:500px;">
                         <h3 class="mt-5">預約成功</h3>
                         我們竭誠歡迎您的到來<br>
                         抵達時向請服務人員出示此畫面<br>
                         亦可至會員中心查詢預約記錄<br>
                         非常感謝您!<br>
                         <br>
-                        日期：${sid}<br>
-                        時間：${sid}<br>
-                        店名：${sid}<br>
-                        地址：${sid}<br>
+                        日期<span id="date-input"></span><br>
+                        時間<span id="time-input"></span><br>
+                        店名<span id="shop-input"></span><br>
                         </div>
                     </div>
                     </div>
@@ -464,6 +467,7 @@
 <!-- 送出預約表單功能 -->
 <script>
     function sendForm(){
+        console.log('hi')
         $.post('4_reservation_insertAPI.php',
             $(document.form1).serialize(), 
             function(data){
@@ -472,31 +476,21 @@
         }, 'json');
     }
 
+    $('#location').on('change',function(){
+        $('#shop-input').text($(this).val())
+    })
+
+    $('#date').on('change',function(){
+        $('#date-input').text($(this).val())
+    })
+
+    $('input[name="time"]').on('change',function(){
+        $('#time-input').text($(this).val())
+    });
 </script>
 
 
-<!-- 轉變背景顏色功能 -->
-<!-- <script>
-    function myFunction() {
-       var element = document.body;
-       element.classList.toggle("dark-mode");
-       $(".number").classList.toggle("dark-mode");
-    };
-</script> -->
 
-
-<!-- 轉換背景功能 -->
-<!-- <script>
-    function myFunction() {
-    let body = document.body;
-       body.classList.toggle("dark-mode");
-
-    let number = 
-       $(".number").classList.toggle("dark-mode-textcolor");
-       $('.number').addClass('dark-mode-textcolor');
-    };
-
-</script> -->
 
 <!-- 滾動視差 -->
 <script src="./stellar.js-master/jquery.stellar.min.js"></script>
@@ -535,7 +529,7 @@
 </script>
 
 
-
+<!-- 小格子自動播放功能 -->
 <script>
     setInterval(()=>{
         $('.pic200-img-wrap.active').each(function(){

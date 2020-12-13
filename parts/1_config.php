@@ -9,12 +9,16 @@ define('WEB_ROOT', '/sennheiser75/');
 if (!isset($_SESSION)) {
     session_start();
 }
-
-
 $db_host = 'localhost';
 $db_name = 'sennheiser75';
 $db_user = 'root';
 $db_pass = '';
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> e4d6ceae4b5441723f1f19ed6ce7dc9c15ab4803
 
 $dsn = "mysql:host={$db_host};dbname={$db_name};charset=utf8";
 $pdo_options = [

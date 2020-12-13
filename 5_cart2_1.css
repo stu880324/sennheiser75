@@ -233,12 +233,6 @@ p{
     padding-left: 1rem;
   }
 
-  .span.cart{
-    color:#ccc ;
-  }
-  .span.finish{
-    color: #ccc;
-  }
 
 /* 左半部商品列 */
 
@@ -279,11 +273,6 @@ p{
   margin-top:1rem;
   border-bottom: none;
 
-}
-
-
-.item-total-wrap{
-  margin:0;
 }
 
 /* 右半部結帳資訊 */

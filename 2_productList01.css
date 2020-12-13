@@ -548,6 +548,9 @@ html {
   .select-area-left {
     width: 100%;
   }
+  .select-area-pic1 img {
+    padding-top: 80px;
+  }
   .select-area-pic2 img {
     visibility: hidden;
   }
@@ -577,7 +580,7 @@ html {
   .earphonebtnright {
     display: flex;
     flex-direction: column;
-    margin: auto 100px;
+    margin: auto;
   }
   .earphone-color-area {
     margin-right: 0px;
@@ -604,6 +607,21 @@ html {
     color: #d9af80;
     padding: 20px 15px;
     background-color: #1b1b1b;
+  }
+  .carousel-paragraph {
+    display: none;
+  }
+  .carousel-nav {
+    display: none;
+  }
+  .carousel-heading:before {
+    content: "";
+  }
+  .carousel-heading {
+    display: none;
+  }
+  .carousel-article {
+    display: none;
   }
 }
 
