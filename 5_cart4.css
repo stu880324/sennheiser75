@@ -44,6 +44,13 @@
   border-color: #000;
 }
 
+.span.cart{
+  color: #ccc;
+}
+.span.check{
+  color: #ccc;
+}
+
 /* 訂單確認 */
 
 .top-title h5{

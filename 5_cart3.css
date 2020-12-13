@@ -45,6 +45,13 @@
   border-color: #000;
 }
 
+.span.cart{
+  color: #ccc;
+}
+
+.span.finish{
+  color: #ccc;
+}
 
 /* 信用卡頁面 */
 .card-wrapper{
