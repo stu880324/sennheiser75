@@ -173,7 +173,9 @@
         </a>
       </div>
       <input type="checkbox" id="showMega-2">
-      <label for="showMega-2" class="mobile-item">RESERVATION</label>
+      <label for="showMega-3" class="mobile-item">
+        <a ID="mobile-item" href="http://localhost/sennheiser75/4_reservation.php">RESERVATION</a>
+      </label>
 
     </li>
 
@@ -186,7 +188,9 @@
         </a>
       </div>
       <input type="checkbox" id="showMega-3">
-      <label for="showMega-3" class="mobile-item">BLOG</label>
+      <label for="showMega-3" class="mobile-item">
+        <a ID="mobile-item" href="http://localhost/sennheiser75/10_blogView.php">BLOG</a>
+      </label>
 
     </li>
 
@@ -195,7 +199,7 @@
 
     <li>
       <div class="list-title">
-        <a ID="member-hover" href="http://localhost/sennheiser75/8_member.php" class="desktop-item">
+        <a ID="member-hover" href="#" class="desktop-item">
           MEMBER
         </a>
       </div>
@@ -219,9 +223,9 @@
                 </a>
               </li>
               <li class="all-title">
-                <a href="#" class="item-list">
-                  <small id="nav-s-title">預約記錄</small>
-                  <small>Book</small>
+                <a href="http://localhost/sennheiser75/8_member.php#" class="item-list">
+                  <small id="nav-s-title">會員中心</small>
+                  <small>Centre</small>
                 </a>
               </li>
               <li class="all-title">
