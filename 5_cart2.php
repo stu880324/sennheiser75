@@ -105,7 +105,7 @@ if ($stmt->rowCount() > 0) {
                     </div>
                     <div class="form check-item" id="ship-option">
                         <p>1. 選擇運送方式</p>
-                        <input type="radio" id="shipment_deliver_to_home" name="shipment" value="deliver_to_home" checked="">
+                        <input type="radio" id="shipment_deliver_to_home" name="shipment" value="deliver_to_home">
                         <label for="shipment_deliver_to_home">宅配</label>
                     </div>
                     <div class="form check-item">
