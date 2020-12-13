@@ -262,6 +262,16 @@
   margin-top: 5rem;
   }
 
+
+  .span.cart{
+    color: #ccc;
+  }
+  
+  .span.finish{
+    color: #ccc;
+  }
+  
+
   .order-list {
     width: 100%;
     border-right: none;
