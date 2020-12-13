@@ -290,7 +290,7 @@ nav input {
   letter-spacing: 1.5px;
   color: #f2f2f2;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 200;
 }
 .content .row p {
   letter-spacing: 1.5px;
@@ -311,7 +311,7 @@ nav input {
   letter-spacing: 1.5px;
   color: #f2f2f2;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 200;
 }
 .content-product .row p {
   letter-spacing: 1.5px;
@@ -330,7 +330,7 @@ nav input {
   letter-spacing: 1.5px;
   color: #f2f2f2;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 200;
 }
 .content-member .row p {
   letter-spacing: 1.5px;
@@ -596,6 +596,28 @@ nav input {
     background: #e3b784c4;
     font-weight: 550;
   }
+
+  .nav-links #mobile-item {
+    display: block;
+    width: 88%;
+    height: 60px;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 450;
+    padding: 0px;
+    margin-left: 20px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    /* border-radius: 5px; */
+    transition: all 0.2s ease;
+    /* background-color: hotpink; */
+  }
+  /* .nav-links #mobile-item:hover {
+    background: #e3b784c4;
+    font-weight: 550;
+  } */
 
   .mega-box {
     position: static;
