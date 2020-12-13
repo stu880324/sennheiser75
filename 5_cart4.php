@@ -11,13 +11,13 @@
     <div class="row">
         <ul class="progressbar">
             <li>
-                <span classactive>購物車 </span>
+                <span class="cart">購物車 </span>
             </li>
             <li>
-                <span>結帳 </span>
+                <span class="check">結帳 </span>
             </li>
             <li class="active">
-                <span>完成</span>
+                <span class="finish">完成</span>
             </li>
         </ul>
     </div>

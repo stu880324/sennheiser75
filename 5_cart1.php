@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS樣式 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart1.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart1_1.css">
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
 
@@ -20,10 +20,10 @@ if (!isset($_SESSION)) {
                 <span>購物車 </span>
             </li>
             <li>
-                <span>結帳 </span>
+                <span class="check">結帳 </span>
             </li>
             <li>
-                <span>完成</span>
+                <span class="finish">完成</span>
             </li>
         </ul>
     </div>
