@@ -82,7 +82,7 @@ if ($stmt->rowCount() > 0) {
             <div class="check-info">
                 <div class="check-info-wrap">
                     <div class="promo">
-                        <label>選擇優惠碼</label>
+                        <h5>選擇優惠碼</h5>
                         <div class="select">
                             <?php if ($coupon === '') : ?>
                                 <select name="coupon_list" id="coupon_list" disabled>
@@ -122,7 +122,7 @@ if ($stmt->rowCount() > 0) {
                         <input type="text" id="rcpt_mobile" name="rcpt_mobile" placeholder="電話" value="<?= $_SESSION['userAccount']['account'] ?>"> <br>
 
                         <label for="rcpt_address">地址</label>
-                        <input type="text" id="rcpt_address" name="rcpt_address" placeholder="地址" value="">
+                        <input type="text" id="rcpt_address" name="rcpt_address" placeholder="請填寫地址" value="">
                         <p class="no-address">請填寫地址</p>
 
                     </div>
@@ -137,7 +137,7 @@ if ($stmt->rowCount() > 0) {
 
                     <div class="total-wrapper">
                         <div class="total_price"><span>小計</span> <span id="total_price">NT$ 10,900</span></div>
-                        <div class="shipfee"><span>運費</span> <span id="shipfee">NT$ 0</span></div>
+                        <div class="shipfee"><span>運費</span> <span id="shipfee">Free</span></div>
                         <div class="discount"><span>折扣</span> <span id="discount">NT$ 0</span></div>
                         <hr>
                         <div class="final_price"><span>總計</span> <span id="final_price">NT$ 10,900</span></div>
@@ -166,7 +166,7 @@ if ($stmt->rowCount() > 0) {
 
     function updatePrice() {
         let subTotal = 0;
-        let shipfee = numberWithoutCommas($('#shipfee').text())
+        // let shipfee = numberWithoutCommas($('#shipfee').text())
         let discount = numberWithoutCommas($('#discount').text())
         $('.item-info > p:last-child').each(function(index) {
             console.log('number', $(this).prev().text().replace('數量: ', ''))
@@ -182,7 +182,7 @@ if ($stmt->rowCount() > 0) {
             subTotal += number * price;
         })
 
-        let totalPrice = subTotal + +shipfee - +discount;
+        let totalPrice = subTotal + - +discount;
 
 
         $('#total_price').text(numberWithCommas(subTotal))

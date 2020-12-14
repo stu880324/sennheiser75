@@ -172,7 +172,6 @@ li.check{
   .detail-line p{
     transform: translateX(0%);
     display: flex;
-    width: 30%;
     margin:0;
   }
 
