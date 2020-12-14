@@ -5,7 +5,7 @@
 }
 .arrow {
   width: 50px;
-  margin: 15px auto 50px auto;
+  margin: 15px auto 0px auto;
   animation: arrow 1s;
   animation-iteration-count: infinite;
 }
