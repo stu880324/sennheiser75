@@ -38,7 +38,7 @@ ul {
 .earphonebtnright {
   display: flex;
   justify-content: space-around;
-  margin: auto 120px;
+  margin: auto 180px;
 }
 .earphonebtnleft {
   display: flex;
@@ -74,10 +74,10 @@ ul {
   list-style: none;
 }
 .earphone-color-area {
-  margin-right: 100px;
+  margin-right: 150px;
 }
 .earphone-feature-area {
-  margin-right: 100px;
+  margin-right: 150px;
 }
 .select-color-p {
   font-size: 14px;
