@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS樣式 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart2.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart2_1.css">
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
 
@@ -29,14 +29,14 @@ if ($stmt->rowCount() > 0) {
 <div class="container">
     <div class="row">
         <ul class="progressbar">
-            <li>
-                <span class="cart">購物車 </span>
+            <li class="cart">
+                <span>購物車 </span>
             </li>
             <li class="active">
                 <span>結帳 </span>
             </li>
-            <li>
-                <span class="finish">完成</span>
+            <li class="finish">
+                <span>完成</span>
             </li>
         </ul>
     </div>
@@ -104,17 +104,17 @@ if ($stmt->rowCount() > 0) {
                         <!-- <button class="btn-buy-1">使用</button> -->
                     </div>
                     <div class="form check-item" id="ship-option">
-                        <p>1. 選擇運送方式</p>
+                        <h5>選擇運送方式</h5>
                         <input type="radio" id="shipment_deliver_to_home" name="shipment" value="deliver_to_home">
                         <label for="shipment_deliver_to_home">宅配</label>
                     </div>
                     <div class="form check-item">
-                        <p>2. 選擇付款方式</p>
+                        <h5>選擇付款方式</h5>
                         <input type="radio" id="payment_visa" name="payment" value="creditcard">
                         <label for="payment_visa" id="label_payment_visa">信用卡（VISA)</label>
                     </div>
                     <div class="form" id="info-option">
-                        <p>3. 收件人資訊</p>
+                        <h5>收件人資訊</h5>
                         <label for="rcpt_name">姓名</label>
                         <input type="text" id="rcpt_name" name="rcpt_name" placeholder="姓名" value="<?= $_SESSION['userAccount']['name'] ?>"> <br>
 

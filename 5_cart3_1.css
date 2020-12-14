@@ -45,11 +45,11 @@
   border-color: #000;
 }
 
-.span.cart{
+li.finish  {
   color: #ccc;
 }
 
-.span.finish{
+ li.cart  {
   color: #ccc;
 }
 

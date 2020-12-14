@@ -19,11 +19,11 @@ if (!isset($_SESSION)) {
             <li class="active">
                 <span>購物車 </span>
             </li>
-            <li>
-                <span class="check">結帳 </span>
+            <li class="check">
+                <span>結帳 </span>
             </li>
-            <li>
-                <span class="finish">完成</span>
+            <li class="finish">
+                <span>完成</span>
             </li>
         </ul>
     </div>
@@ -59,9 +59,9 @@ if (!isset($_SESSION)) {
                     <div class="item-total-wrap">
                         <p>數量</p>
                         <div class="quantity d-flex">
-                            <input class="min" name="" type="button" value="-" />
+                            <input class="min" name="" type="button" value="-" data-sid="<?php echo $cart['sid'] ?>" />
                             <input class="text-box" name="" type="text" value="<?= $cart['quantity'] ?>" />
-                            <input class="add" name="" type="button" value="+" />
+                            <input class="add" name="" type="button" value="+" data-sid="<?php echo $cart['sid'] ?>" />
                         </div>
                     </div>
                     <div class="item-total-wrap ">
@@ -78,7 +78,9 @@ if (!isset($_SESSION)) {
         <div class="total-wrapper">
             <div class="subtotal">小計 <span id="subtotal">0</span>
             </div>
-            <div class="shipfee">運費<span id="shipfee">0</span>
+            <div class="shipfee">運費<span id="shipfee">Free</span>
+            </div>
+            <div class="discount1">折扣<span id="discount1"></span>
             </div>
 
             <hr>
@@ -125,6 +127,14 @@ if (!isset($_SESSION)) {
 
             updateSubtotal();
             updateFinalPrice();
+
+            $.post('5_cart1_api.php', {
+                sid: $(this).data('sid'),
+                number: number,
+                action: 'update'
+            }, function(data) {
+                console.log(data);
+            }, 'json');
         })
 
 
@@ -156,6 +166,14 @@ if (!isset($_SESSION)) {
 
             updateSubtotal();
             updateFinalPrice();
+
+            $.post('5_cart1_api.php', {
+                sid: $(this).data('sid'),
+                number: number,
+                action: 'update'
+            }, function(data) {
+                console.log(data);
+            }, 'json');
         })
 
 
@@ -195,8 +213,7 @@ if (!isset($_SESSION)) {
     function updateFinalPrice() {
 
         let subTotal = numberWithoutCommas($("#subtotal").text())
-        let shipFee = numberWithoutCommas($("#shipfee").text())
-        let finalPrice = +subTotal + +shipFee
+        let finalPrice = +subTotal
 
         $("#final_price").text(numberWithCommas(finalPrice))
     }
@@ -210,7 +227,7 @@ if (!isset($_SESSION)) {
 
 <script>
     $('.btn-buy').on('click', function() {
-        location.href = "./6_login.php"
+        location.href = "./5_cart2.php"
     })
     $('.btn-back').on('click', function() {
         location.href = "2_productList.php"
