@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS樣式 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>2_productList01.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>2_productList1.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
@@ -297,7 +297,7 @@
   <h5 class="award">Sennheiser – 得獎耳機</h5>
   <div class="carousel-big-images">
     <div class="carousel-big-image" data-key="0">
-      <img src="images/2_productList/poductlist-carousel/carousel01.jpg" alt="" />
+      <img src="images/2_productList/poductlist-carousel/carousel-01.jpg" alt="" />
     </div>
     <div class="carousel-big-image" data-key="1">
       <img src="images/2_productList/poductlist-carousel/carousel02.jpg" alt="" />
@@ -314,7 +314,7 @@
   </div>
   <div class="carousel-thumbnails">
     <div class="carousel-thumbnail" tabindex="-1" data-key="0">
-      <img src="images/2_productList/poductlist-carousel/carousel01.jpg" alt="" />
+      <img src="images/2_productList/poductlist-carousel/carousel-01.jpg" alt="" />
       <div class="carousel-cuticle" data-flip-key="cuticle"></div>
     </div>
     <div class="carousel-thumbnail" tabindex="-1" data-key="1">
@@ -387,10 +387,10 @@
 
 <button class="btn-buy" data-toggle="modal" data-target=".bd-example-modal-sm" hidden>加入購物車</button>
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content text-center" style="background-color: #000; color:#fff; height:200px; line-height:200px;">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content text-center" style="background-color: #000; color:#fff; height:200px; line-height:200px;">
       已加入購物車
-      </div>
+    </div>
   </div>
 </div>
 
@@ -696,9 +696,9 @@
 
 <!-- 加入購物車功能 -->
 <script>
-  $('.product-list').on('click','.add-cart-btn', function(event) {
+  $('.product-list').on('click', '.add-cart-btn', function(event) {
     event.preventDefault();
-    console.log('btn',$(this).data('sid'))
+    console.log('btn', $(this).data('sid'))
     $.get('5_addToCart-API.php', {
       sid: $(this).data('sid'),
       quantity: 1,
