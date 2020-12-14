@@ -8,20 +8,20 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
-<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart3.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart3_1.css">
 
 <!-- 進度列 -->
 <div class="container">
     <div class="row">
         <ul class="progressbar">
-            <li>
-                <span class="cart">購物車 </span>
+            <li class="cart">
+                <span>購物車 </span>
             </li>
             <li class="active">
                 <span>結帳 </span>
             </li>
-            <li>
-                <span class="finish">完成</span>
+            <li class="finish">
+                <span>完成</span>
             </li>
         </ul>
     </div>

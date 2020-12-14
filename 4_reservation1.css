@@ -1,6 +1,6 @@
-/* div{
+div{
     border: 1px solid red;
-} */
+}
 /* body{
     font-family: "Futura", sans-serif;
 } */
@@ -69,14 +69,14 @@
     width: 200px;
     line-height: 40px;
     border:2px solid transparent;
-    border-image: linear-gradient(to bottom right, #457c86 0%, #d9a26e 100%);
+    border-image: linear-gradient(to bottom right, #d9a26e 0%, #d9a26e 100%);
     border-image-slice: 1;
     color: #d9a26e;
     font-weight: lighter;
 }
 .booknow:hover{
     border:2px solid transparent;
-    border-image: linear-gradient(to bottom right, #d9a26e 0%, #457c86 100%);
+    border-image: linear-gradient(to bottom right, #d9a26e 0%, #d9a26e 100%);
     border-image-slice: 1;
     font-weight:normal;
 }
@@ -297,7 +297,7 @@
     width: 90%;
     height: 90%;
     position: absolute;
-    left: -20%;
+    left: -60%;
     /* transform: translateX(-50%); */
     top: 150px;
 }
@@ -306,7 +306,7 @@
     width: 90%;
     height: 90%;
     position: absolute;
-    left: -120%;
+    left: -150%;
     /* transform: translateX(-50%); */
     top: 150px;
 }

@@ -5,7 +5,7 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
-<?php include __DIR__. '/parts/7_fix-icon.php'; ?>
+<?php include __DIR__ . '/parts/7_fix-icon.php'; ?>
 
 <?php
 if (!isset($_SESSION)) {
@@ -108,6 +108,7 @@ if (!isset($_SESSION)) {
                         </tr>`;
 
                 for (let k = 0; k < result.order_detail[i].length; k++) {
+                    console.log('loop,k=', k, ' ,result:', result.order_detail[i][k]);
                     html += `<tr>
                             <td style="padding:30px 0">${result.order_detail[i][k].english_name}<br>${result.order_detail[i][k].chinese_name}</td>
                             <td>${result.order_detail[i][k].quantity}</td>
