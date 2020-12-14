@@ -15,13 +15,13 @@
     <div class="row">
         <ul class="progressbar">
             <li>
-                <span classactive>購物車 </span>
+                <span class="cart">購物車 </span>
             </li>
             <li class="active">
                 <span>結帳 </span>
             </li>
             <li>
-                <span>完成</span>
+                <span class="finish">完成</span>
             </li>
         </ul>
     </div>
@@ -170,7 +170,17 @@
     })
 
     $('.card-input_button').on('click', function() {
-        location.href = "./5_cart4.php"
+        $.post('5_cart3_api.php', {
+            creditcard_number: $('#cardNumber').val(),
+            creditcard_name: $('#cardHolderValue').val(),
+            expiredMonth: $('#expiredMonth').val(),
+            expiredYear: $('#expiredYear').val(),
+            creditcard_security: $('#cwInput').val(),
+            action: 'add'
+        }, function(data) {
+            console.log('data', data);
+            location.href = "./5_cart4.php"
+        }, 'json');
     })
 </script>
 <?php include __DIR__ . '/parts/6_html_foot.php'; ?>

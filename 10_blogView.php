@@ -1,12 +1,12 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS名稱 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>10_blogView.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>10_blogView1.css">
 
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
-<?php include __DIR__. '/parts/7_fix-icon.php'; ?>
+<?php include __DIR__ . '/parts/7_fix-icon.php'; ?>
 
 
 <!-- 以下刪除就可以開始編輯 -->
@@ -1055,7 +1055,7 @@
   // tab結束
 
 
-    // slider開始
+  // slider開始
 
   new StickyNavigation();
 
@@ -1116,7 +1116,6 @@
 
 
   // slider 結束
-
 </script>
 <!-- 刪到這裡 -->
 

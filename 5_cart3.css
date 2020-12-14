@@ -45,6 +45,13 @@
   border-color: #000;
 }
 
+.span.cart{
+  color: #ccc;
+}
+
+.span.finish{
+  color: #ccc;
+}
 
 /* 信用卡頁面 */
 .card-wrapper{
@@ -238,8 +245,8 @@
   background-color: #000000;
   color: #fff;
   width: 450px;
-  height: 45px;
   margin-top: 2rem;
+  line-height: 3;
 }
 
 /* RWD部分 */
@@ -254,6 +261,16 @@
   .progressbar li {
   margin-top: 5rem;
   }
+
+
+  .span.cart{
+    color: #ccc;
+  }
+  
+  .span.finish{
+    color: #ccc;
+  }
+  
 
   .order-list {
     width: 100%;

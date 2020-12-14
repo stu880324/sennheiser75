@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS樣式 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart4.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart4_1.css">
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
 
@@ -11,13 +11,13 @@
     <div class="row">
         <ul class="progressbar">
             <li>
-                <span classactive>購物車 </span>
+                <span class="cart">購物車 </span>
             </li>
             <li>
-                <span>結帳 </span>
+                <span class="check">結帳 </span>
             </li>
             <li class="active">
-                <span>完成</span>
+                <span class="finish">完成</span>
             </li>
         </ul>
     </div>
@@ -36,15 +36,15 @@
             <ul class="detail-line">
                 <li class="det-1">
                     <p>訂單編號</p>
-                    <p>77422</p>
+                    <p><?= $_SESSION['orderDone']['sid'] ?></p>
                 </li>
                 <li class="det-1">
                     <p>日期</p>
-                    <p>2020-12-18</p>
+                    <p><?= $_SESSION['orderDone']['date'] ?></p>
                 </li>
                 <li class="det-1">
                     <p>總金額</p>
-                    <p>NT$ 16,890</p>
+                    <p>NT$ <?= number_format($_SESSION['orderDone']['total']) ?></p>
                 </li>
                 <li>
                     <p>付款方式</p>
