@@ -387,10 +387,10 @@
 
 <button class="btn-buy" data-toggle="modal" data-target=".bd-example-modal-sm" hidden>加入購物車</button>
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content text-center" style="background-color: #000; color:#fff; height:200px; line-height:200px;">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content text-center" style="background-color: #000; color:#fff; height:200px; line-height:200px;">
       已加入購物車
-      </div>
+    </div>
   </div>
 </div>
 
@@ -696,9 +696,9 @@
 
 <!-- 加入購物車功能 -->
 <script>
-  $('.product-list').on('click','.add-cart-btn', function(event) {
+  $('.product-list').on('click', '.add-cart-btn', function(event) {
     event.preventDefault();
-    console.log('btn',$(this).data('sid'))
+    console.log('btn', $(this).data('sid'))
     $.get('5_addToCart-API.php', {
       sid: $(this).data('sid'),
       quantity: 1,
