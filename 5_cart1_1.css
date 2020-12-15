@@ -44,13 +44,14 @@
   border-color: #000;
 }
 
-.span.check{
+li.check  {
   color: #ccc;
 }
 
-.span.finish{
+ li.finish  {
   color: #ccc;
 }
+
 
 
 /* 購物車頁面 */
@@ -181,7 +182,7 @@ a {
   height: 100%;
 }
 
-.cart-wrapper .list-inner .total-wrapper .subtotal,.shipfee,.final_price {
+.cart-wrapper .list-inner .total-wrapper .subtotal,.shipfee,.final_price,.discount1 {
   display: flex;
   justify-content: space-between;
   padding: .35rem 0;

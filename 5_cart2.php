@@ -29,14 +29,14 @@ if ($stmt->rowCount() > 0) {
 <div class="container">
     <div class="row">
         <ul class="progressbar">
-            <li>
-                <span class="cart">購物車 </span>
+            <li class="cart">
+                <span>購物車 </span>
             </li>
             <li class="active">
                 <span>結帳 </span>
             </li>
-            <li>
-                <span class="finish">完成</span>
+            <li class="finish">
+                <span>完成</span>
             </li>
         </ul>
     </div>
@@ -82,7 +82,7 @@ if ($stmt->rowCount() > 0) {
             <div class="check-info">
                 <div class="check-info-wrap">
                     <div class="promo">
-                        <label>選擇優惠碼</label>
+                        <h5>選擇優惠碼</h5>
                         <div class="select">
                             <?php if ($coupon === '') : ?>
                                 <select name="coupon_list" id="coupon_list" disabled>
@@ -104,17 +104,17 @@ if ($stmt->rowCount() > 0) {
                         <!-- <button class="btn-buy-1">使用</button> -->
                     </div>
                     <div class="form check-item" id="ship-option">
-                        <p>1. 選擇運送方式</p>
+                        <h5>選擇運送方式</h5>
                         <input type="radio" id="shipment_deliver_to_home" name="shipment" value="deliver_to_home">
                         <label for="shipment_deliver_to_home">宅配</label>
                     </div>
                     <div class="form check-item">
-                        <p>2. 選擇付款方式</p>
+                        <h5>選擇付款方式</h5>
                         <input type="radio" id="payment_visa" name="payment" value="creditcard">
                         <label for="payment_visa" id="label_payment_visa">信用卡（VISA)</label>
                     </div>
                     <div class="form" id="info-option">
-                        <p>3. 收件人資訊</p>
+                        <h5>收件人資訊</h5>
                         <label for="rcpt_name">姓名</label>
                         <input type="text" id="rcpt_name" name="rcpt_name" placeholder="姓名" value="<?= $_SESSION['userAccount']['name'] ?>"> <br>
 
@@ -122,7 +122,7 @@ if ($stmt->rowCount() > 0) {
                         <input type="text" id="rcpt_mobile" name="rcpt_mobile" placeholder="電話" value="<?= $_SESSION['userAccount']['account'] ?>"> <br>
 
                         <label for="rcpt_address">地址</label>
-                        <input type="text" id="rcpt_address" name="rcpt_address" placeholder="地址" value="">
+                        <input type="text" id="rcpt_address" name="rcpt_address" placeholder="請填寫地址" value="">
                         <p class="no-address">請填寫地址</p>
 
                     </div>
@@ -137,7 +137,7 @@ if ($stmt->rowCount() > 0) {
 
                     <div class="total-wrapper">
                         <div class="total_price"><span>小計</span> <span id="total_price">NT$ 10,900</span></div>
-                        <div class="shipfee"><span>運費</span> <span id="shipfee">NT$ 0</span></div>
+                        <div class="shipfee"><span>運費</span> <span id="shipfee">Free</span></div>
                         <div class="discount"><span>折扣</span> <span id="discount">NT$ 0</span></div>
                         <hr>
                         <div class="final_price"><span>總計</span> <span id="final_price">NT$ 10,900</span></div>
@@ -166,7 +166,7 @@ if ($stmt->rowCount() > 0) {
 
     function updatePrice() {
         let subTotal = 0;
-        let shipfee = numberWithoutCommas($('#shipfee').text())
+        // let shipfee = numberWithoutCommas($('#shipfee').text())
         let discount = numberWithoutCommas($('#discount').text())
         $('.item-info > p:last-child').each(function(index) {
             console.log('number', $(this).prev().text().replace('數量: ', ''))
@@ -182,7 +182,7 @@ if ($stmt->rowCount() > 0) {
             subTotal += number * price;
         })
 
-        let totalPrice = subTotal + +shipfee - +discount;
+        let totalPrice = subTotal + - +discount;
 
 
         $('#total_price').text(numberWithCommas(subTotal))

@@ -43,12 +43,16 @@
 .progressbar li.active::before{
   border-color: #000;
 }
-.span.cart{
-  color:#ccc ;
-}
-.span.finish{
+
+
+ li.finish  {
   color: #ccc;
 }
+
+ li.cart  {
+  color: #ccc;
+}
+
 
 /* 購物頁面 */
 .main-wrap.d-flex{
@@ -223,6 +227,10 @@ p{
   display:none;
 }
 
+
+span#discount{
+  color: red;
+}
  
 /* RWD部分 */
 @media (max-width: 767px){
@@ -233,12 +241,7 @@ p{
     padding-left: 1rem;
   }
 
-  .span.cart{
-    color:#ccc ;
-  }
-  .span.finish{
-    color: #ccc;
-  }
+  
 
 /* 左半部商品列 */
 

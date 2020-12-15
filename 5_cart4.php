@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS樣式 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart4_1.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>5_cart4.css">
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
 
@@ -10,14 +10,14 @@
 <div class="container">
     <div class="row">
         <ul class="progressbar">
-            <li>
-                <span class="cart">購物車 </span>
+            <li class="cart">
+                <span>購物車 </span>
             </li>
-            <li>
-                <span class="check">結帳 </span>
+            <li class="check">
+                <span>結帳 </span>
             </li>
             <li class="active">
-                <span class="finish">完成</span>
+                <span>完成</span>
             </li>
         </ul>
     </div>

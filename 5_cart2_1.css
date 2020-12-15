@@ -43,12 +43,16 @@
 .progressbar li.active::before{
   border-color: #000;
 }
-.span.cart{
-  color:#ccc ;
-}
-.span.finish{
+
+
+ li.finish  {
   color: #ccc;
 }
+
+ li.cart  {
+  color: #ccc;
+}
+
 
 /* 購物頁面 */
 .main-wrap.d-flex{
@@ -233,6 +237,7 @@ p{
     padding-left: 1rem;
   }
 
+  
 
 /* 左半部商品列 */
 
@@ -273,6 +278,11 @@ p{
   margin-top:1rem;
   border-bottom: none;
 
+}
+
+
+.item-total-wrap{
+  margin:0;
 }
 
 /* 右半部結帳資訊 */

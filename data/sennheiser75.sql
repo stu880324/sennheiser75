@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- 主機： localhost
--- 產生時間： 2020 年 12 月 14 日 06:30
--- 伺服器版本： 10.4.14-MariaDB
--- PHP 版本： 7.3.23
+-- 產生時間： 2020 年 12 月 14 日 10:14
+-- 伺服器版本： 10.4.16-MariaDB
+-- PHP 版本： 7.3.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -91,8 +91,8 @@ CREATE TABLE `coupon` (
 --
 
 INSERT INTO `coupon` (`sid`, `member_sid`, `coupon_mumber`, `discountprice`) VALUES
-(1, 11, 'QAZ123', -200),
-(2, 1, 'HMG930', -100);
+(1, 11, 'QAZ123', 200),
+(2, 1, 'HMG930', 100);
 
 -- --------------------------------------------------------
 
@@ -154,19 +154,16 @@ CREATE TABLE `orders` (
   `sid` int(11) NOT NULL,
   `member_sid` int(11) NOT NULL,
   `amount` int(11) NOT NULL,
-  `order_date` datetime NOT NULL,
+  `order_date` varchar(255) NOT NULL,
   `coupon_number` varchar(255) NOT NULL,
-  `discountprice` int(11) NOT NULL,
-  `delivery` varchar(255) NOT NULL,
-  `delivery_fee` int(11) NOT NULL,
   `receiver_name` text NOT NULL,
   `receiver_phone` text NOT NULL,
   `receiver_address` text NOT NULL,
-  `receiver_info` text NOT NULL,
   `pay` varchar(11) NOT NULL,
   `creditcard_number` text NOT NULL,
   `creditcard_name` text NOT NULL,
-  `creditcard_date` date NOT NULL,
+  `expiredMonth` varchar(255) NOT NULL,
+  `expiredYear` varchar(255) NOT NULL,
   `creditcard_security` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -174,12 +171,12 @@ CREATE TABLE `orders` (
 -- 傾印資料表的資料 `orders`
 --
 
-INSERT INTO `orders` (`sid`, `member_sid`, `amount`, `order_date`, `coupon_number`, `discountprice`, `delivery`, `delivery_fee`, `receiver_name`, `receiver_phone`, `receiver_address`, `receiver_info`, `pay`, `creditcard_number`, `creditcard_name`, `creditcard_date`, `creditcard_security`) VALUES
-(1, 11, 25980, '2020-11-18 13:27:36', '', 0, 'home', 0, 'ZIYI', '22223333', '台北市信義區', '', 'creditcard', '123456789090', 'ZIYI', '2020-11-28', 222),
-(2, 3, 9900, '2020-11-17 15:13:00', '', 0, 'home', 0, '胡希卉', '0905110005', '台北市大安區', '', 'creditcard', '654321012345', '胡希卉', '2023-09-09', 456),
-(3, 4, 27800, '2020-11-15 12:29:00', '', 0, 'home', 0, '江姿誼', '0978050123', '新北市土城區', '', 'creditcard', '523321772366', '江姿誼', '2025-01-27', 123),
-(4, 2, 18190, '2020-11-20 15:13:00', '', 0, 'home', 0, '呂有容', '0919120034', '台北市萬華區', '', 'creditcard', '954321012326', '呂有容', '2025-02-20', 567),
-(5, 1, 9900, '2020-10-28 16:25:51', 'HMG930', -100, 'home', 0, '徐小姐', '0900123456', '高雄市三民區', '', 'creditcard', '202012180006', 'HsuMissMeng', '2021-05-20', 888);
+INSERT INTO `orders` (`sid`, `member_sid`, `amount`, `order_date`, `coupon_number`, `receiver_name`, `receiver_phone`, `receiver_address`, `pay`, `creditcard_number`, `creditcard_name`, `expiredMonth`, `expiredYear`, `creditcard_security`) VALUES
+(2, 3, 9900, '2020-11-17 15:13:00', '', '胡希卉', '0905110005', '台北市大安區', 'creditcard', '654321012345', '胡希卉', '3', '2023', 456),
+(3, 4, 27800, '2020-11-15 12:29:00', '', '江姿誼', '0978050123', '新北市土城區', 'creditcard', '523321772366', '江姿誼', '5', '2024', 123),
+(4, 2, 18190, '2020-11-20 15:13:00', '', '呂有容', '0919120034', '台北市萬華區', 'creditcard', '954321012326', '呂有容', '7', '2025', 567),
+(5, 1, 9900, '2020-10-28 16:25:51', 'HMG930', '徐小姐', '0900123456', '高雄市三民區', 'creditcard', '202012180006', 'HsuMissMeng', '9', '2021', 888),
+(25, 11, 75470, '2020-12-14', 'QAZ123', 'ZIYI', '22223333', '台北市大安區', 'creditcard', '1234 1234 1234 1234', 'ZIYI', '01', '20', 222);
 
 -- --------------------------------------------------------
 
@@ -191,7 +188,6 @@ CREATE TABLE `order_detail` (
   `sid` int(11) NOT NULL,
   `orders_sid` int(11) NOT NULL,
   `products_sid` int(11) NOT NULL,
-  `price` int(11) NOT NULL,
   `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -199,13 +195,37 @@ CREATE TABLE `order_detail` (
 -- 傾印資料表的資料 `order_detail`
 --
 
-INSERT INTO `order_detail` (`sid`, `orders_sid`, `products_sid`, `price`, `quantity`) VALUES
-(1, 1, 5, 6990, 2),
-(2, 1, 21, 4000, 3),
-(3, 4, 40, 4290, 1),
-(4, 4, 1, 13900, 1),
-(5, 3, 2, 13900, 2),
-(6, 5, 26, 10900, 1);
+INSERT INTO `order_detail` (`sid`, `orders_sid`, `products_sid`, `quantity`) VALUES
+(1, 1, 5, 2),
+(2, 1, 21, 3),
+(3, 4, 40, 1),
+(4, 4, 1, 1),
+(5, 3, 2, 2),
+(6, 5, 26, 1),
+(7, 24, 1, 1),
+(8, 24, 26, 1),
+(9, 25, 9, 1),
+(10, 25, 1, 1),
+(11, 25, 40, 1),
+(12, 25, 33, 1),
+(13, 26, 9, 1),
+(14, 26, 40, 1),
+(15, 27, 9, 1),
+(16, 27, 2, 1),
+(17, 28, 1, 1),
+(18, 28, 2, 1),
+(19, 29, 1, 1),
+(20, 29, 2, 2),
+(21, 30, 9, 2),
+(22, 30, 2, 4),
+(23, 30, 26, 6),
+(24, 31, 9, 5),
+(25, 31, 1, 3),
+(26, 31, 2, 2),
+(27, 31, 40, 1),
+(28, 32, 33, 3),
+(29, 32, 40, 2),
+(30, 32, 10, 1);
 
 -- --------------------------------------------------------
 
@@ -377,6 +397,16 @@ INSERT INTO `reservation` (`sid`, `member_sid`, `reservation_date`, `time`, `loc
 (39, 10, '2020-12-01', '12:00 - 14:00', '台中展示中心', '2020-12-14'),
 (40, 11, '2020-12-15', '10:00 - 12:00', '高雄展示中心', '2020-12-14');
 
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `test`
+--
+
+CREATE TABLE `test` (
+  `test` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- 已傾印資料表的索引
 --
@@ -467,13 +497,13 @@ ALTER TABLE `member`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `products`
