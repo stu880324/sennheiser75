@@ -264,12 +264,12 @@
           </a>
         </div>
       </div>
-      <a class="frame__github" href="#">Sennheiser 慶祝成立75周年</a>
+      <a class="frame__github" href="#">Sennheiser 慶祝成立75週年</a>
       <h2 class="frame__pagetitle">
         75週年，記載著75個精彩時刻
-        <span>2020年是 Sennheiser 創立75周年的重要里程碑！<br />
+        <span>2020年是 Sennheiser 創立75週年的重要里程碑！<br />
           由開始而今，Sennheiser
-          一直在譜寫音響領域的未來，<br />於慶祝周年紀念的同時，<br />Sennheiser將為粉絲推出連串推廣及特別紀念型號，<br />舉辦別出心裁的活動，更會邀請成就今日Sennheiser的員工<br />及業務夥伴分享種種難忘時刻。</span>
+          一直在譜寫音響領域的未來，<br />於慶祝週年紀念的同時，<br />Sennheiser將為粉絲推出連串推廣及特別紀念型號，<br />舉辦別出心裁的活動，更會邀請成就今日Sennheiser的員工<br />及業務夥伴分享種種難忘時刻。</span>
       </h2>
     </div>
 
