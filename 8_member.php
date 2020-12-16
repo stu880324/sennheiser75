@@ -6,7 +6,7 @@
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
-<?php include __DIR__. '/parts/7_fix-icon.php'; ?>
+<?php include __DIR__ . '/parts/7_fix-icon.php'; ?>
 
 <?php
 if (!isset($_SESSION)) {
@@ -81,8 +81,8 @@ if ($stmt3->rowCount() > 0) {
       <tr>
         <td>預約編號</td>
         <td>日期</td>
+        <td>時間</td>
         <td>門市</td>
-        <td>地址</td>
       </tr>
       <?php foreach ($reservation as $r) : ?>
         <tr>
@@ -123,7 +123,7 @@ if ($stmt3->rowCount() > 0) {
     </div>
     <div style="text-align:center;"><button type="button" class="update-user-btn mb-5 mt-4">確定修改</button></div>
 
-    <div class="coupon-title">個人資料修改</div>
+    <div class="coupon-title">密碼修改</div>
     <div class="form-holder mt-3">
       <span class="lnr lnr-lock"></span>
       <p>舊密碼</p>
