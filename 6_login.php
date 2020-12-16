@@ -64,16 +64,16 @@ if (isset($_SERVER['HTTP_REFERER'])) {
                                         })
                                         .then((btnclick) => {
                                                 if (btnclick.isConfirmed) {
-                                                        <?php if($gotoURL === 'http://localhost/sennheiser75/5_cart1.php'):?>
+                                                        <?php if ($gotoURL === 'http://localhost/sennheiser75/5_cart1.php') : ?>
                                                                 window.location.href = "./5_cart2.php"
-                                                        <?php else:?>
+                                                        <?php else : ?>
                                                                 window.location.href = "./8_member.php"
-                                                        <?php endif;?>
+                                                        <?php endif; ?>
                                                 }
                                         })
                         } else {
                                 Swal.fire({
-                                        title: '登入失敗',
+                                        title: '密碼錯誤',
                                         icon: 'error',
                                         confirmButtonColor: '#e3b684',
                                         confirmButtonText: '好'
