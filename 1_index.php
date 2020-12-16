@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS樣式 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>1_index01.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>1_index1.css">
 
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" /> -->
 <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -252,10 +252,16 @@
   <div class="row anniversary">
     <div class="message">Hover effect &mdash; please view on desktop.</div>
 
+
     <div class="frame">
       <div class="frame__title-wrap">
         <div class="frame__links">
-          <a href="#">預約試聽 Reservation</a>
+          <div class="moveright">
+            <img src="images/1_index/icon desing/arrow-left.svg" alt="" />
+          </div>
+          <a href="#">
+            預約試聽 Book Now
+          </a>
         </div>
       </div>
       <a class="frame__github" href="#">Sennheiser 慶祝成立75周年</a>
@@ -267,7 +273,7 @@
       </h2>
     </div>
 
-    <div class="content">
+    <div class="content" id="content75years">
       <img class="content__img" src="images/1_index/75years/01.jpg" alt="Some image" />
       <img class="content__img" src="images/1_index/75years/02.jpg" alt="Some image" />
       <img class="content__img" src="images/1_index/75years/03.jpg" alt="Some image" />
@@ -284,7 +290,7 @@
       <img class="content__img" src="images/1_index/75years/14.jpg" alt="Some image" />
       <img class="content__img" src="images/1_index/75years/15.jpg" alt="Some image" />
       <h3 class="content__title">
-        Celebrating <span class="title75">75</span> Years
+        Celebrating <span class="lighttext">75</span> Years
       </h3>
     </div>
   </div>
@@ -534,7 +540,7 @@
 <!-- 75 JS start -->
 <script src="js/imagesloaded.pkgd.min.js"></script>
 <script src="js/TweenMax.min.js"></script>
-<script src="js/demo.js"></script>
+<script src="js/demo01.js"></script>
 <!-- 75 JS end -->
 
 <?php include __DIR__ . '/parts/6_html_foot.php'; ?>

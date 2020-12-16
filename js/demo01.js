@@ -33,6 +33,8 @@
             posx = ev.clientX + body.scrollLeft + docEl.scrollLeft;
             posy = ev.clientY + body.scrollTop + docEl.scrollTop;
         }
+        posx = ev.clientX
+        posy = ev.clientY
         return {x: posx, y: posy};
     }
 
@@ -41,8 +43,9 @@
     // lastMousePos: last last recorded mouse position (at the time the last image was shown)
     let mousePos = lastMousePos = cacheMousePos = {x: 0, y: 0};
     
+    let eventScope = document.querySelector('.sennheiser-anniversary');
     // update the mouse position
-    window.addEventListener('mousemove', ev => mousePos = getMousePos(ev));
+    eventScope.addEventListener('mousemove', ev => mousePos = getMousePos(ev));
     
     // gets the distance from the current mouse position to the last recorded mouse position
     const getMouseDistance = () => MathUtils.distance(mousePos.x,mousePos.y,lastMousePos.x,lastMousePos.y);
@@ -84,7 +87,7 @@
     class ImageTrail {
         constructor() {
             // images container
-            this.DOM = {content: document.querySelector('.content')};
+            this.DOM = {content: document.querySelector('#content75years')};
             // array of Image objs, one per image element
             this.images = [];
             [...this.DOM.content.querySelectorAll('img')].forEach(img => this.images.push(new Image(img)));
