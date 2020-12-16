@@ -1,0 +1,372 @@
+/* 購物車css樣式 */
+
+/* 打開參考線 */
+/* div {
+  outline: 1px solid turquoise;
+} */
+
+/* 購物進度列 */
+.progressbar {
+  width: 100%;
+  height: 200px ;
+  counter-reset: step;
+  margin-top: 2rem;
+  padding-left:4rem;
+  margin-top: 8rem;
+}
+
+.progressbar li {
+  list-style-type: none;
+  float: left;
+  width: 30.33%;
+  position: relative;
+  text-align: center;
+}
+
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #e6e6e6;
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto 0 auto;
+}
+
+.progressbar li .active{
+  color: #000;
+}
+
+.progressbar li.active::before{
+  border-color: #000;
+}
+
+
+ li.finish  {
+  color: #ccc;
+}
+
+ li.cart  {
+  color: #ccc;
+}
+
+
+/* 購物頁面 */
+.main-wrap.d-flex{
+  width: 86%;
+  margin: 0 auto;
+}
+
+/* 左半部商品列 */
+.product-list {
+  width: 45%;
+  height: fit-content;
+  border-top:1px solid #e6e6e6;
+}
+
+.product-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left:3rem;
+}
+
+.cover img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-list ul li {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: auto;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+  margin:1rem 4rem 3rem 0;
+  padding: 0 0 1rem 0;
+}
+
+
+.item-total-wrap {
+  margin-left: 4rem;
+  margin-bottom: 5rem;
+}
+
+
+/* 右半部結帳資訊 */
+.check-info {
+  width: 45%;
+  margin:0 auto;
+}
+
+.item-info{
+  margin-top:2rem;
+}
+
+.check-info .form {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+p{
+  padding-top:1rem;
+}
+
+
+/* 資訊填寫表格 */
+.check-info-wrap{
+  margin-left:6rem;
+  border-top:1px solid #e6e6e6;
+  background-color: #F9F9F9;
+  padding-left: 3rem;
+}
+
+/* 優惠碼區 */
+.promo{
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+/* 選擇優惠碼文字 */
+/* .promo label{
+  font-size:1rem;
+  border-bottom: 1px solid #e3b684; 
+  margin-bottom: 1rem;
+} */
+
+.select label{
+  font-size:1.5rem;
+}
+
+.select{
+  margin-bottom: 1rem;
+}
+
+/* 優惠碼下拉選單 */
+#coupon_list,#coupon_code{
+  width: 90%;
+  height: 45px;
+  padding-bottom: 1rem;
+}
+
+/* 優惠碼使用按鈕 */
+.btn-buy-1{
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  font-size: .6rem;
+  width: 500px;
+  height: 50px;
+}
+
+
+/* 收件人資訊表格 */
+.form label{
+  margin-right:1rem;
+}
+
+
+
+.form input[type="text"]{
+  width: 450px;
+  height: 50px;
+  margin-bottom: 1rem;
+  border: 1px solid #ced6e0;
+}
+
+.agree.check-item p{
+  margin-top:1.2rem;
+  margin-bottom: 0;
+}
+/* 小計 */
+.total-wrapper {
+  width: 500px;
+  margin-top:2rem;
+}
+.total-wrapper span{
+  padding-right: 6rem;
+}
+
+#total_price,#shipfee,#discount,#final_price {
+  padding-left:6rem;
+  margin-bottom: 1rem;
+}
+
+/* 結帳按鈕 */
+.btn-buy{
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  width: 450px;
+  height: 45px;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.no-payment{
+  color: red;
+  display: none;
+}
+
+#rcpt_address{
+  margin-bottom: 0;
+}
+.no-address{
+  color: red;
+  margin-top: 0;
+  margin-left: 50px;
+  display: none;
+}
+
+.agree p.no-argeement{
+  color:red;
+  margin-top: 0;
+  display:none;
+}
+
+
+span#discount{
+  color: red;
+}
+ 
+/* RWD部分 */
+@media (max-width: 767px){
+  /* 進度列 */
+  .progressbar {
+    width: 100%;
+    height: 120px;
+    padding-left: 1rem;
+  }
+
+  
+
+/* 左半部商品列 */
+
+.main-wrap.d-flex{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-list {
+  width: 100%;
+}
+
+.list-wrapper{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cover img {
+  width: 250px;
+  overflow: hidden;
+}
+
+.item-info {
+   margin:1rem 0 1rem 0;
+}
+
+.item-name, .item-price {
+  font-size: 1.2rem;
+}
+
+.item-total-wrap p {
+  font-size: 1rem;
+}
+
+.product-list ul li {
+  padding: 1.5rem 1rem 0 0;
+  margin-top:1rem;
+  border-bottom: none;
+
+}
+
+
+.item-total-wrap{
+  margin:0;
+}
+
+/* 右半部結帳資訊 */
+.check-info {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 資訊填寫表格 */
+.check-info-wrap{
+  width: 100%;
+  padding:0 1rem 0 1rem;
+  margin:0 auto;
+}
+
+.form input[type="text"]{
+  width: 300px;
+}
+
+.select label{
+  font-size:1rem;
+}
+
+.agree.check-item p{
+  margin-top:1rem;
+  margin-bottom: 0;
+  font-size:1rem;
+}
+
+.agree p.no-argeement{
+  margin-top: 0;
+}
+
+.no-address{
+  margin-left: 0px;
+}
+
+/* 選擇優惠碼文字 */
+.promo label{
+  font-size:1rem;
+}
+
+
+/* 優惠碼下拉選單 */
+#coupon_list,#coupon_code{
+  width: 300px;
+  height: 45px;
+}
+
+/* 優惠碼使用按鈕 */
+.btn-buy-1{
+  width: 300px;
+  height: 45px;
+}
+
+/* 小計 */
+.total-wrapper {
+  width: 300px;
+  margin-top:1rem;
+}
+.total-wrapper span{
+  font-size:1.2rem;
+  padding-right: 1rem;
+}
+
+.total-wrapper hr{
+  display: none;
+}
+
+.final_price{
+  margin-top: 1.5rem;
+  border-top:1px solid #ccc;
+  padding: 1rem 0 1rem 0;
+}
+
+/* 結帳按鈕 */
+.btn-buy{
+  width: 300px;
+  height: 45px;
+}
+
+}
