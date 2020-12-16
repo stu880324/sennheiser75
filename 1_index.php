@@ -259,7 +259,7 @@
           <div class="moveright">
             <img src="images/1_index/icon desing/arrow-left.svg" alt="" />
           </div>
-          <a href="#">
+          <a href="4_reservation.php">
             預約試聽 Book Now
           </a>
         </div>
