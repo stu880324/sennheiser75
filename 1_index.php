@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/parts/1_config.php'; ?>
 <?php include __DIR__ . '/parts/2_html_head.php'; ?>
 <!-- 請填入各頁面CSS樣式 -->
-<link rel="stylesheet" href="<?= WEB_ROOT ?>1_index1.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>1_index01.css">
 
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" /> -->
 <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -9,6 +9,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <link rel="stylesheet" type="text/css" href="css/animate.min.css" rel="external nofollow" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+
+
+<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
 <?php include __DIR__ . '/parts/2_html_head2.php'; ?>
 <?php include __DIR__ . '/parts/3_navbar.php'; ?>
@@ -140,7 +145,7 @@
     <a href="#box-title"><img src="images/1_index/icon desing/arrow.svg" alt="" /></a>
   </div>
 
-  <p class="bestsale-en">2020 best-seller</p>
+  <p class="bestsale-en mt-4">2020 best-seller</p>
   <p class="bestsale-ch">人氣耳機-TOP 3</p>
 
   <div class="top3-area">
@@ -210,7 +215,7 @@
 </div>
 
 <!-- 75週年 -->
-<div class="container-fluid sennheiser-anniversary">
+<!-- <div class="container-fluid sennheiser-anniversary">
   <div class="row anniversary-text">
     <div class="text75">
       <h2>75週年，記載著75個精彩時刻</h2>
@@ -239,7 +244,53 @@
       <a href="4_reservation.php">預約試聽 Book Now</a>
     </div>
   </div>
+</div> -->
+
+
+<!-- 75週年 HTML start -->
+<div class="container-fluid sennheiser-anniversary" style="position:relative;">
+  <div class="row anniversary">
+    <div class="message">Hover effect &mdash; please view on desktop.</div>
+
+    <div class="frame">
+      <div class="frame__title-wrap">
+        <div class="frame__links">
+          <a href="#">預約試聽 Reservation</a>
+        </div>
+      </div>
+      <a class="frame__github" href="#">Sennheiser 慶祝成立75周年</a>
+      <h2 class="frame__pagetitle">
+        75週年，記載著75個精彩時刻
+        <span>2020年是 Sennheiser 創立75周年的重要里程碑！<br />
+          由開始而今，Sennheiser
+          一直在譜寫音響領域的未來，<br />於慶祝周年紀念的同時，<br />Sennheiser將為粉絲推出連串推廣及特別紀念型號，<br />舉辦別出心裁的活動，更會邀請成就今日Sennheiser的員工<br />及業務夥伴分享種種難忘時刻。</span>
+      </h2>
+    </div>
+
+    <div class="content">
+      <img class="content__img" src="images/1_index/75years/01.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/02.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/03.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/04.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/05.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/06.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/07.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/08.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/09.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/10.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/11.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/12.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/13.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/14.jpg" alt="Some image" />
+      <img class="content__img" src="images/1_index/75years/15.jpg" alt="Some image" />
+      <h3 class="content__title">
+        Celebrating <span class="title75">75</span> Years
+      </h3>
+    </div>
+  </div>
 </div>
+<!-- 75週年 HTML end -->
+
 
 <!-- 情境介紹 -->
 <div class="container situation-area">
@@ -479,5 +530,11 @@
     $('#exampleModal').modal('show')
   }
 </script>
+
+<!-- 75 JS start -->
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/demo.js"></script>
+<!-- 75 JS end -->
 
 <?php include __DIR__ . '/parts/6_html_foot.php'; ?>
